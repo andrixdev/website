@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cv>
+	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
+	<!-- HTML entity for line feed: &#10; -->
+	
+	<cake>
+	
+		<slice>
+			<title>Mathematics, Physics and Engineering</title>
+			<institution>Centre International de Valbonne</institution>
+			<place>Valbonne, France</place>
+			<when>Sep 09 - Jul 11</when>
+			<year>2010</year>
+			<what>French "classes préparatoires aux Grandes Ecoles, PSI*"&#10;Two years of intensive studying for competitive exams in May-July 2011.&#10;Project in Particle Astrophysics (Visualization of plasma particles motion within Jupiter magnetosphere)&#10;Mathematics, Physics, Engineering Science, English, French</what>
+			<skill>Hard work</skill>
+		</slice>
+		
+		<slice>
+			<title>General Engineering</title>
+			<institution>Ecole Centrale Lyon</institution>
+			<place>Lyon, France</place>
+			<when>Sep 11 - Apr 13</when>
+			<year>2012</year>
+			<what>A wide variety of courses such as quantum mechanics, accounting, business techniques, signal processing, programming, fluid mechanics, languages, sports, numerical analysis, economics, ethics, and many others.&#10;A few roles in associations such as manager for the Junior Enterprise, editor for the school newspaper, member of theatre improvisation and an a cappella music bands.</what>
+			<skill>Knowledge</skill>
+		</slice>
+		
+		<slice>
+			<title>Webdesign for tourism</title>
+			<institution>Triptra, small tourism business</institution>
+			<place>Melbourne, Australia</place>
+			<when>May 13 - Nov 13</when>
+			<year>2013</year>
+			<what>Developed a set of websites for various activities along the Great Ocean Road, based on CMS Joomla!.&#10;Daily CSS tweaking and JavaScript.</what>
+			<skill>Web development</skill>
+		</slice>
+		
+		<slice>
+			<title>Lieutenant in the French Army</title>
+			<institution>Ecoles de Saint-Cyr Coëtquidan</institution>
+			<place>France</place>
+			<when>Jan 14 - Jul 14</when>
+			<year>2014</year>
+			<what>6 weeks of intensive training at Ecoles de Saint-Cyr Coëtquidan, Brittany&#10;4 weeks of specialization in artillery at Ecole d'Artillerie, Draguignan&#10;3 months as a lieutenant in the mountain forces at 93è Régiment d'Artillerie de Montagne, Varces</what>
+			<skill>Leadership</skill>
+		</slice>
+		
+		<slice>
+			<title>MSc in Human-Computer Interaction</title>
+			<institution>KTH Royal Institute of Technology</institution>
+			<place>Stockholm, Sweden</place>
+			<when>Aug 14 - Jun 15</when>
+			<year>2015</year>
+			<what>Double-Degree with Ecole Centrale Lyon.&#10;One year of courses such as information visualization, interaction design, computer graphics, haptics, web applications and mobile web development.</what>
+			<skill>Creativity</skill>
+		</slice>
+	
+		<slice>
+			<title>Front-end developer</title>
+			<institution>Smile</institution>
+			<place>Lyon, France</place>
+			<when>Nov 15 - Apr 16</when>
+			<year>2016</year>
+			<what>In charge of reshaping the front-end architecture of a Symfony2 web portal in the context of a major design rework.&#10;Technical bond between Smile Digital and the back-end dev team.&#10;Provided trainings on front-end good practices.</what>
+			<skill>Code architecture</skill>
+		</slice>
+		
+		<slice>
+			<title>Improving HSL Recognition Skills with a Color Game</title>
+			<institution>KTH School of Computer Science and Communication</institution>
+			<place>Remote</place>
+			<!--<when>Sep 15 - Aug 16</when>-->
+			<when></when>
+			<year>2016</year>
+			<what>Master thesis project on an e-learning game for improving HSL color recognition skills.&#10;Extensive use of AngularJS and D3.js</what>
+			<skill>Color research</skill>
+		</slice>
+		
+		<slice>
+			<title>Web project manager</title>
+			<institution>SimplX</institution>
+			<place>Lyon, France</place>
+			<when>Jan 17 - Now</when>
+			<year>2017</year>
+			<what>Project manager, Git guru and front-end expert in a full-stack JS development team.&#10;Remote creative coder on thursdays :)</what>
+			<skill>All in one</skill>
+		</slice>
+		
+		<!--
+		<slice>
+			<title>The best master thesis internship ever!</title>
+			<institution>Maybe in your company?</institution>
+			<place></place>
+			<when></when>
+			<year>Next</year>
+			<what>Feel free to contact me for more information about my experience and skills or just for a casual chat :)&#10;You can reach me through the channels on &lt;a href=&#39;../&#39; title=&#39;icosacid.com&#39;&gt;my homepage&lt;/a&gt;</what>
+			<skill>?</skill>
+			<extradelay>12000</extradelay>
+		</slice>
+		-->
+		
+	</cake>
+</cv>

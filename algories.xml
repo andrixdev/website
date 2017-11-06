@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<algories>
+	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
+	<category>
+		<categoryName>Radial</categoryName>
+		<categMoreOnLinks>
+			<codepen>http://codepen.io/collection/DEypoG</codepen>
+			<deviantart>http://icosacid.deviantart.com/gallery/60280598/Radial</deviantart>
+		</categMoreOnLinks>
+		
+		<alg>
+			<title>White Time</title>
+			<artid>2015-4</artid>
+			<date>Feb. 2015</date>
+			<src>radial/white-time.bmp</src>
+			<small>radial/white-time_small.jpg</small>
+			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Rhodo</title>
+			<artid>2015-10</artid>
+			<date>May 2015</date>
+			<src>radial/rhodo.png</src>
+			<small>radial/rhodo_small.jpg</small>
+			<description>Inspired by the infinite generosity of a Swiss family and Lake Geneva's flowery shores in early spring.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Kuzco 5</title>
+			<artid>2015-8</artid>
+			<date>Apr. 2015</date>
+			<src>radial/kuzco5.png</src>
+			<small>radial/kuzco5_small.jpg</small>
+			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Shiver</title>
+			<artid>2015-11</artid>
+			<date>Aug. 2015</date>
+			<src>radial/shiver.jpg</src>
+			<small>radial/shiver_small.jpg</small>
+			<description>Wave artwork designed for textile printing</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Harsh</title>
+			<artid>2015-5</artid>
+			<date>Feb. 2015</date>
+			<src>radial/harsh.bmp</src>
+			<small>radial/harsh_small.jpg</small>
+			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<!--<alg>
+			<title>Program</title>
+			<date>Mar. 2015</date>
+			<src>circular/program.png</src>
+			<small>circular/program_small.jpg</small>
+			<description>My view of a coding project. Bits of code gravitate around one single end. The fully functional application lives in its universe, the operating system.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Override</title>
+			<date>Mar. 2015</date>
+			<src>circular/override.png</src>
+			<small>circular/override_small.jpg</small>
+			<description>Developer coding on top of a pre-existing project, overriding core functions and adding their own.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Beyond Data</title>
+			<date>Apr. 2015</date>
+			<src>circular/beyond-data.png</src>
+			<small>circular/beyond-data_small.jpg</small>
+			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>-->
+	</category>
+	
+	<category>
+		<categoryName>Gravitational</categoryName>
+		<categMoreOnLinks>
+			<codepen>http://codepen.io/collection/AMrBzL</codepen>
+			<deviantart>http://icosacid.deviantart.com/gallery/60280599/Gravitational</deviantart>
+		</categMoreOnLinks>
+		<alg>
+			<title>Nucleus</title>
+			<artid>2016-2</artid>
+			<date>Sep. 2016</date>
+			<src>gravitational/nucleus.png</src>
+			<small>gravitational/nucleus_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Gravitational Blackhole</title>
+			<artid>2016-1</artid>
+			<date>Aug. 2016</date>
+			<src>gravitational/gravitational-blackhole.png</src>
+			<small>gravitational/gravitational-blackhole_small.jpg</small>
+			<description>Each planet leaves an imperceptible mark. Many planets leave many marks.&lt;/br&gt;All planets rotate around a single central mass.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Gandalf Thinking</title>
+			<artid>2015-9</artid>
+			<date>Apr. 2015</date>
+			<src>gravitational/gandalf-thinking.png</src>
+			<small>gravitational/gandalf-thinking_small.jpg</small>
+			<description>Two particle beams attracted either to the top or the bottom, with a stronger gravity for the upper beam.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Flight</title>
+			<artid>2016-3</artid>
+			<date>Sep. 2016</date>
+			<src>gravitational/flight.png</src>
+			<small>gravitational/flight_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>A star of stars</title>
+			<artid>2016-4</artid>
+			<date>Oct. 2016</date>
+			<src>gravitational/star-of-stars.png</src>
+			<small>gravitational/star-of-stars_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;This time the attraction mass orbits around a central particle launching point.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Orb</title>
+			<artid>2016-5</artid>
+			<date>Oct. 2016</date>
+			<src>gravitational/orb.png</src>
+			<small>gravitational/orb_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets. Rendered with hashed trace opacity.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+	</category>
+	
+	<category>
+		<categoryName>Experiments</categoryName>
+		<categMoreOnLinks>
+			<codepen>http://codepen.io/collection/nZOjvP</codepen>
+			<deviantart>http://icosacid.deviantart.com/gallery/60280600/Experiments</deviantart>
+		</categMoreOnLinks>
+		<alg>
+			<title>Hueflow natural</title>
+			<artid>2015-1</artid>
+			<date>Feb. 2015</date>
+			<src>experiments/hueflow-natural.bmp</src>
+			<small>experiments/hueflow-natural_small.jpg</small>
+			<description>Hueflow is the outcome of a project for KTH course Information Visualization by M. Romero.&lt;/br&gt;This ambiant visualization reacts to the electricity and water consumption of a household.&lt;/br&gt;The parameters have a natural oscillation.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>PlayChaos 1</title>
+			<artid>2015-2</artid>
+			<date>Mar. 2015</date>
+			<src>experiments/playchaos1.bmp</src>
+			<small>experiments/playchaos1_small.jpg</small>
+			<description>Morning triangular inspiration. Designed with spreadSVG.js, an SVG graphic library for random generative art I developed a few weeks earlier.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Zeus bolt</title>
+			<artid>2015-3</artid>
+			<date>Feb. 2015</date>
+			<src>experiments/bolt.bmp</src>
+			<small>experiments/bolt_small.jpg</small>
+			<description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas&lt;/br&gt;Artwork generated by voice</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Le lac</title>
+			<artid>2015-7</artid>
+			<date>Mar. 2015</date>
+			<src>experiments/lamartine-le-lac.bmp</src>
+			<small>experiments/lamartine-le-lac_small.jpg</small>
+			<description>Slice of vocal art performed by woman voice reading Le Lac by French poet Alphonse de Lamartine (1820)</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+		<alg>
+			<title>Duel</title>
+			<artid>2015-6</artid>
+			<date>Mar. 2015</date>
+			<src>experiments/duel.bmp</src>
+			<small>experiments/duel_small.jpg</small>
+			<description>The attempts of wisdom to temper anger</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+		<alg>
+			<title>Lightbeams Eye</title>
+			<artid>2017-3</artid>
+			<date>Feb. 2017</date>
+			<src>experiments/lightbeams-eye.jpg</src>
+			<small>experiments/lightbeams-eye_small.jpg</small>
+			<description>Moving particles with simple geometrical drawing contraints provide surprising results. Part of a collection of 25 living artworks coded on CodePen.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+		<alg>
+			<title>Lightbeams Squares</title>
+			<artid>2017-4</artid>
+			<date>Feb. 2017</date>
+			<src>experiments/lightbeams-squares.jpg</src>
+			<small>experiments/lightbeams-squares_small.jpg</small>
+			<description>Moving particles with simple geometrical drawing contraints provide surprising results. Part of a collection of 25 living artworks coded on CodePen.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+		<alg>
+			<title>Hexocet Explode</title>
+			<artid>2017-1</artid>
+			<date>Jan. 2017</date>
+			<src>experiments/hexocet-explode.jpg</src>
+			<small>experiments/hexocet-explode_small.jpg</small>
+			<description>Particles randomly evolve on an hexagonal network and their boredom on grid vertices is expressed through faint widening circles.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+		<alg>
+			<title>Hexocet Fire</title>
+			<artid>2017-2</artid>
+			<date>Jan. 2017</date>
+			<src>experiments/hexocet-fire.jpg</src>
+			<small>experiments/hexocet-fire_small.jpg</small>
+			<description>Particles randomly evolve on an hexagonal network and scar the canvas with fire.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+		<!--<alg>
+			<title>Summer 2015</title>
+			<artid>2015-12</artid>
+			<date>Aug. 2015</date>
+			<src>experiments/summer-2015.png</src>
+			<small>experiments/summer-2015_small.jpg</small>
+			<description>Predominant summer sun reflection on water</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Hueflow real data</title>
+			<date>Feb. 2015</date>
+			<src>experiments/hueflow-realdata.bmp</src>
+			<small>experiments/hueflow-realdata_small.jpg</small>
+			<description>Hueflow is the outcome of a project for KTH course Information Visualization by M. Romero. This ambiant visualization reacts to the electricity and water consumption of a household. The parameters are derived from real data over 1 month.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>Zeus splitted bolts</title>
+			<date>Feb. 2015</date>
+			<src>vocal/boltsplit.bmp</src>
+			<small>vocal/boltsplit_small.jpg</small>
+			<description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>-->
+	</category>
+</algories>

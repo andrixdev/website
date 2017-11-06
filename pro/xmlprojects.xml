@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<projects>
+	<!-- Personl note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
+	<!-- HTML entity for line feed: &#10; -->
+
+	<project>
+		<title>Hue Hunt</title>
+		<description>A color game for hawk-eyed designers&#10;Started with PHP framework Symfony 2&#10;Now under AngularJS</description>
+		<image>img/huehunt.jpg</image>
+		<link>../huehunt</link>
+	</project>
+	
+	<project>
+		<title>HueFlow</title>
+		<description>Casual information visualization of energy and water consumption for smart houses&#10;KTH course DH2321</description>
+		<image>img/hueflow.jpg</image>
+		<link>../infoviz/hueflow</link>
+	</project>
+
+	<project>
+		<title>PlayChaos</title>
+		<description>A user interface for spreadSVG.js&#10;3h project</description>
+		<image>img/playchaos.jpg</image>
+		<link>../playchaos</link>
+	</project>
+	
+	<project>
+		<title>Hue Hunt Results</title>
+		<description>Data analysis interface for Hue Hunt.&#10;Revealed trends in learning HSL with regard to hue and experience.</description>
+		<image>img/huehuntresults.jpg</image>
+		<link>../huehunt/results</link>
+	</project>
+
+	<project>
+		<title>Ever</title>
+		<description>A game for personal knowledge management</description>
+		<image>img/ever.jpg</image>
+		<link>../ever</link>
+	</project>
+
+
+	<project>
+		<title>Augmented Reality Web prototypes</title>
+		<description>Human-Computer Interaction, KTH introductory course</description>
+		<image>img/DH2620.jpg</image>
+		<link>../DH2620</link>
+	</project>
+
+	<project>
+		<title>Fromemo</title>
+		<description>Emotion feedback through digital drawing</description>
+		<image>img/fromemo.jpg</image>
+		<link>../fromemo</link>
+	</project>
+
+	<project>
+		<title>Rayville</title>
+		<description>Some bits of a Joomla! website for a small tourism business in Melbourne surburbs</description>
+		<image>img/rayville.jpg</image>
+		<link>../rayville/rayville-villas</link>
+	</project>
+
+	<project>
+		<title>GroupMerge</title>
+		<description>A GUI for Information Visualization (for Firefox)&#10;1 day project - KTH course DH2321</description>
+		<image>img/groupmerge.jpg</image>
+		<link>../infoviz/groupmerge</link>
+	</project>
+
+	<project>
+		<title>Speakasso</title>
+		<description>Web app to draw on canvas based on voice input&#10;Award-winning KTH project, 7 students</description>
+		<image>img/speakasso.jpg</image>
+		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
+	</project>
+
+	<project>
+		<title>Userainbow</title>
+		<description>Drupal module for designs based on site visitors count</description>
+		<image>img/drup.jpg</image>
+		<link>../drup</link>
+	</project>
+
+	<project>
+		<title>Course in HCI - KTH</title>
+		<description>Introduction to Visualization and Computer Graphics</description>
+		<image>img/DH2320.jpg</image>
+		<link>../DH2320</link>
+	</project>
+
+	<project>
+		<title>Course in HCI - KTH</title>
+		<description>Web apps for mobiles&#10;Google Maps API, RSS reader, PubNub, Geohashing</description>
+		<image>img/mobwebdev.png</image>
+		<link>../mobwebdev</link>
+	</project>
+
+	<project>
+		<title>HappyFactor</title>
+		<description>Using d3.js parallel coordinates library for analyses of multidimensional datasets</description>
+		<image>img/happyfactor.jpg</image>
+		<link>../infoviz/happyfactor</link>
+	</project>
+
+	<project>
+		<title>Brainuke</title>
+		<description>Rehearse your ukulele chords before performing!&#10;Angular app for KTH course Interaction Programming, 4 students</description>
+		<image>img/brainuke.jpg</image>
+		<link>../brainuke</link>
+	</project>
+
+	<project>
+		<title>Brainuke old</title>
+		<description>Aaaand the simplistic version that inspired the Angular project</description>
+		<image>img/brainukeold.jpg</image>
+		<link>../brainuke/old</link>
+	</project>
+
+	<project>
+		<title>Chef</title>
+		<description>Cooking like a boss (for Firefox)</description>
+		<image>img/chef.jpg</image>
+		<link>../chef</link>
+	</project>
+
+	<!--
+	<project>
+		<title>Safecook</title>
+		<description>Choose a delay and David Guetta will periodically remind you that your food might be burning</description>
+		<image></image>
+		<link>../safecook</link>
+	</project>
+	-->
+
+	<project>
+		<title>UScontrol</title>
+		<description>My first JavaScript game at school :')&#10;The back-end doesn't work, sorry guys</description>
+		<image>img/uscontrol.jpg</image>
+		<link>../uscontrol</link>
+	</project>
+
+	<!--
+	<project>
+		<title>Breathe</title>
+		<description>Calm down and keep pace</description>
+		<image>img/breathe.jpg</image>
+		<link>../breathe</link>
+	</project>
+	-->
+
+	<project>
+		<title>Cat</title>
+		<description>Because we're on the Web, and it's about cats!!! O_O</description>
+		<image>img/cat.jpg</image>
+		<link>../cat</link>
+	</project>
+
+	<!--
+	<project>
+		<title>CSSbank</title>
+		<description>Baby steps in CSS</description>
+		<image></image>
+		<link>../cssbank</link>
+	</project>
+	-->
+
+	<project>
+		<title>wtfCSS</title>
+		<description>Why do I keep that on my server, again?</description>
+		<image>img/wtfCSS.jpg</image>
+		<link>../wtfCSS/amonistar</link>
+	</project>
+
+	<project>
+		<title>Army</title>
+		<description>6-months internship in the French Army as an officer&#10;UI for the photos</description>
+		<image>img/army.jpg</image>
+		<link>../army</link>
+	</project>
+
+	<!--
+	<project>
+		<title>Project title</title>
+		<description>Project description</description>
+		<image>Url to thumbnail, preferably 450x300</image>
+		<link>Url to project</link>
+	</project>
+	-->
+
+</projects>

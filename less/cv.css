@@ -1,0 +1,383 @@
+/**
+ * CSS for icosacid.com and icosacid.com/pro
+ * CV
+ *
+ * @author Alexandre Andrieux <alex@icosacid.com>
+ * @since 2015-03
+ */
+
+/** CV form **/
+#cv {
+	position: relative;
+	padding: 50px 0px 10px;
+	min-height: 300px;
+}
+#cv h3 {
+	text-align: center;
+	color: #eee;
+	white-space: pre-wrap;
+	font-size: 60px;
+	background: rgba(0,0,0,0.5);
+	margin-bottom: 25px;
+}
+#cv form#showcv {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+#cv .password input {
+	width: 300px;
+	height: 30px;
+	font-size: 20px;
+	background: #777;
+	border: none;
+	border-radius: 5px;
+	cursor: text;
+	padding: 10px;
+	box-shadow: #000 0px 0px 10px;
+}
+#cv .password input:hover,
+#cv .password input:focus{
+	background: #ccc;
+	box-shadow: hsl(200, 100%, 30%) 0px 0px 15px;
+}
+#cv .show {
+	margin-top: 50px;
+	margin-bottom: -85px;
+}
+#cv .show .load {
+	width: 100px;
+	margin: 20px;
+	height: 49px;
+	padding: 0px 0px;
+}
+#cv .show svg {
+	-webkit-animation: spin 2s linear infinite;
+	-moz-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+#cv p#invalid {
+	text-align: center;
+	color: hsl(200, 100%, 50%);
+	font-size: 20px;
+}
+
+/** CV core **/
+#cvcore {
+}
+#cvcore * {
+	white-space: normal;
+}
+#cvcore > div {
+	margin: 40px 0px;
+}
+/* Generic */
+#cvcore .item {
+	padding: 10px;
+}
+#cvcore .roundicon {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 5px;
+}
+#cvcore .flagicon {
+	width: 50px;
+	border-radius: 2px;
+}
+#cvcore h4 {
+	text-align: center;
+	font-size: 40px;
+	color: #eee;
+	background: radial-gradient(hsla(0, 100%, 100%, 0.15), hsla(0, 100%, 100%, 0.04), hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0));
+	background: #111;
+	width: 86%;
+	margin: auto;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 40px;
+}
+#cvcore div h5 {
+	font-size: 30px;
+	padding: 0px 10px;
+	color: #ddd;
+}
+#cvcore .item .itemhead {
+	text-align: center;
+}
+#cvcore .itemhead img,
+#cvcore .itemhead h5,
+#cvcore .itemhead a {
+	display: inline-block;
+	vertical-align: middle;
+}
+#cvcore .itemhead a {
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 22px;
+	color: hsl(210, 30%, 100%);
+	padding: 0px 10px;
+}
+#cvcore .itemhead a:hover {
+	color: hsl(0, 0%, 100%);
+	text-shadow: 0px 0px 5px hsla(0, 0%, 100%, 0.8);
+}
+#cvcore .moreabout {
+	color: #777;
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+}
+#cvcore .moreabout p {
+	padding: 4px
+}
+/* Specific */
+#cvcore .intro *,
+#cvcore .enjoy,
+#cvcore .abroad,
+#cvcore .schools,
+#cvcore .webskills,
+#cvcore .cake,
+#cvcore .cake .slice,
+#cvcore .recom {
+	display: none;
+	opacity: 0;/* fadeIn on load */
+}
+#cvcore .intro h5.moar {
+	text-align: center;
+	color: hsl(210, 60%, 40%);
+	margin-top: 30px;
+	margin-bottom: -10px;
+	font-size: 35px;
+	font-style: italic;
+	background: none;
+}
+#cvcore .intro p {
+	text-align: center;
+	white-space: pre-wrap;
+	color: #eee;
+	font-size: 25px;
+}
+#cvcore .enjoy .itemhead img {
+	width: 35px;
+}
+#cvcore .abroad {
+	text-align: center;
+}
+#cvcore .languages,
+#cvcore .countries {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 500px;
+	min-width: 40%;
+}
+#cvcore .languages .french img,
+#cvcore .languages .english img {
+	width: 80px;
+}
+#cvcore .languages .swedish img {
+	width: 60px;
+}
+#cvcore .languages .spanish img,
+#cvcore .languages .chinese img {
+	width: 30px;
+}
+#cvcore .countries .france img {
+	width: 80px;
+}
+#cvcore .countries .australia img {
+	width: 40px;
+}
+#cvcore .countries .sweden img {
+	width: 50px;
+}
+#cvcore .schools img {
+	width: 60px;
+	border-radius: 3px;
+}
+#cvcore .schools a {
+	text-decoration: underline;
+	color: #ddd;
+	font-size: 28px;
+}
+#cvcore .schools a:hover {
+	color: #fff;
+	text-shadow: rgba(255,255,255,0.8) 0px 0px 5px;
+}
+#cvcore .webskills h5 {
+	font-size: 25px;
+	text-align: center;
+	margin-top: 15px;
+}
+#cvcore .webskills p {
+	text-align: center;
+	color: #888;
+	max-width: 700px;
+	margin: auto;
+}
+#cvcore .webskills p.overall {
+  font-size: 1.7rem;
+  max-width: 700px;
+  margin: 30px auto 20px;
+  text-shadow: white 0px 0px 3px;
+  color: white;
+}
+#cvcore .codeanddesign {
+	text-align: center;
+}
+#cvcore .webskills .code,
+#cvcore .webskills .design {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px 10px;
+}
+#cvcore .webskills .somexp p:nth-of-type(1) {
+	font-size: 1.5rem;
+}
+#cvcore .webskills .somexp p:nth-of-type(2) {
+	font-size: 1.4rem;
+}
+#cvcore .webskills .somexp p:nth-of-type(3) {
+	font-size: 1.1rem;
+}
+#cvcore .cake {
+	margin-top: 50px;
+	/* Flex as parent */
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+#cvcore .slice {
+	/* Flex as child */
+	margin: 10px auto;
+	/* Flex as parent */
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	
+	padding: 10px;
+	color: white;
+	
+	border: solid 2px rgba(100, 100, 100, 0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	background: linear-gradient(to bottom right, #222, #444);
+	box-shadow: #000 0px 0px 15px;	
+	
+	/* Alternative design */
+	border: none;
+	background: rgba(255, 255, 255, 0.025);
+	box-shadow: none;
+	border-radius: 10px;
+}
+#cvcore .slice:hover {
+	background: linear-gradient(to bottom left, #222, #333);
+}
+#cvcore .slice .left {
+	width: 180px;
+	
+	/* Flex as child */
+	order: 1;
+	margin: auto;
+	flex-basis: 180px;
+	
+	/* Flex as parent */
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+#cvcore .slice .left p.year {
+	order: 1;
+	margin: -15px auto -15px;
+	color: hsl(210, 60%, 40%);
+	font-size: 80px;
+	padding: 0px 10px;
+	text-align: center;
+	width: 100%;
+	text-shadow: rgba(0, 0, 0, 0.75) -1px 0px 10px;
+}
+#cvcore .slice .left p.skill {
+	order: 2;
+	margin: auto;
+	padding: 0px 10px;
+	font-size: 25px;
+	width: 100%;
+	text-align: center;
+	color: #999;
+	text-shadow: rgba(0, 0, 0, 0.6) -1px 0px 4px;
+}
+#cvcore .slice .right {
+	width: 620px;
+	padding: 0px 20px;
+	
+	/* Flex as child */
+	order: 2;
+	margin: auto;
+	flex-basis: 620px;
+}
+#cvcore .slice .right h5 {
+	font-size: 25px;
+	color: #ddd;
+	padding: 0;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+#cvcore .slice .right p {
+	word-wrap: break-work;
+	white-space: pre-wrap;
+	color: #ddd;
+}
+#cvcore .slice .right p.institution {
+	font-size: 20px;
+	color: #888;
+	margin-bottom: 10px;
+}
+#cvcore .slice .right p.when {
+	font-weight: bold;
+}
+#cvcore .slice .right p a {
+	color: #999;
+	cursor: pointer;
+}
+#cvcore .recom {
+
+}
+#cvcore #contact {
+
+}
