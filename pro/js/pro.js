@@ -13,7 +13,6 @@ var menuIsSqueezed = false;
 var menuIsDoingSomething = false;
 var mouseIsOverHead = false;
 var logoAngle = 0;
-//var isMobile defined in index.php
 
 /**
  * Fills the DOM with xmlprojects.xml
@@ -221,7 +220,6 @@ function keyCheckForCV() {
 		
 		// Loading icon will start to whirl in both cases
 		jShow.html(loadDiv);
-		spreadSVG('#cv .show .load', 7, [1]);
 		
 		if (shallPass) {
 			// Loading
@@ -266,7 +264,6 @@ function showCVwithoutKey() {
 		
 		// Loading icon will start to whirl in both cases
 		jShow.html(loadDiv);
-		spreadSVG('#cv .show .load', 7, [1]);
 		
 		// Loading
 		setTimeout(function() {
@@ -450,26 +447,22 @@ function scrollListener() {
  * Squeezes navigation menu: hides tabs
  */
 function squeezeMenu() {
-	if (!isMobile) {
-		jQuery('#head .menu .algories').stop(true).animate({
-			'marginLeft': '-200px'
-		}, 500, function() {
-			jQuery('#head .menu').css('display', 'none');
-		});
-		rotateLogo(120);
-	}
+	jQuery('#head .menu .algories').stop(true).animate({
+		'marginLeft': '-200px'
+	}, 500, function() {
+		jQuery('#head .menu').css('display', 'none');
+	});
+	rotateLogo(120);
 }
 
 /**
  * Expands navigation menu: displays tabs
  */
 function expandMenu() {
-	if (!isMobile) {
-		jQuery('#head .menu').css('display', '').find('.algories').stop(true).animate({
-			'marginLeft': '0px'
-		}, 500);
-		rotateLogo(120);
-	}
+	jQuery('#head .menu').css('display', '').find('.algories').stop(true).animate({
+		'marginLeft': '0px'
+	}, 500);
+	rotateLogo(120);
 }
 
 /**
@@ -493,7 +486,5 @@ jQuery(document).ready(function() {
 		//keyCheckForCV();
 		showCVwithoutKey();
 	});
-	// Logo spreads
-	spreadSVG('#head .logo', 7, [1]);
 });
 

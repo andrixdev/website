@@ -1,0 +1,17 @@
+{
+  "name": "icosacid-website",
+  "version": "1.0.0",
+  "description": "Icosacid website with Vue.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandre Andrieux",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "less": "^3.0.0-alpha.3",
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0"
+  }
+}

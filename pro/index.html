@@ -23,7 +23,10 @@
 	<link rel='stylesheet' type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	
 	<!-- Stylesheets -->
-	<link rel='stylesheet' type='text/css' href="../less/icosalgories.less" />
+	<link rel='stylesheet' type='text/less' href="../less/icosalgories.less" />
+	
+	<!-- Only script in header: less on-the-fly compiler -->
+	<script type='text/javascript' src="../node_modules/less/dist/less.min.js"></script>
 	
 </head>
 <body>
@@ -310,10 +313,14 @@
 		</div>
 	</div>
 	
-<script src="http://code.jquery.com/jquery-3.2.1.min.js" 
-integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-crossorigin="anonymous"></script>
-<script type='text/javascript' src="../js/algories.js"></script>
+	<!-- Libs -->
+	<script type='text/javascript' src="../node_modules/vue/dist/vue.min.js"></script>
+	<!--<script type='text/javascript' src="../node_modules/vue/dist/vue.js"></script>-->
+	<script type='text/javascript' src="../node_modules/vue-router/dist/vue-router.min.js"></script>
+	<script type='text/javascript' src="../node_modules/jquery/dist/jquery.min.js"></script>
+	
+	<!-- Our -->
+	<script type='text/javascript' src="js/pro.js"></script>
 
 </body>
 </html>
