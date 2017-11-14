@@ -232,57 +232,53 @@
 		}
 	}
 
-	.webskills h5 {
-		font-size: 25px;
-		text-align: center;
-		margin-top: 15px;
+	.webskills {
+		h5 {
+			font-size: 25px;
+			text-align: center;
+			margin-top: 15px;
+		}
+		p {
+			text-align: center;
+			color: #888;
+			max-width: 700px;
+			margin: auto;
+
+			&.overall {
+				font-size: 1.7rem;
+				max-width: 700px;
+				margin: 30px auto 20px;
+				text-shadow: white 0px 0px 3px;
+				color: white;
+			}
+		}
+		.codeanddesign {
+			text-align: center;
+
+			.code,
+			.design {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0px 10px;
+			}
+			.somexp p {
+				&:nth-of-type(1) {
+					font-size: 1.5rem;
+				}
+				&:nth-of-type(2) {
+					font-size: 1.4rem;
+				}
+				&:nth-of-type(3) {
+					font-size: 1.1rem;
+				}
+			}
+		}
 	}
-	.webskills p {
-		text-align: center;
-		color: #888;
-		max-width: 700px;
-		margin: auto;
-	}
-	.webskills p.overall {
-		font-size: 1.7rem;
-		max-width: 700px;
-		margin: 30px auto 20px;
-		text-shadow: white 0px 0px 3px;
-		color: white;
-	}
-	.codeanddesign {
-		text-align: center;
-	}
-	.webskills .code,
-	.webskills .design {
-		display: inline-block;
-		vertical-align: middle;
-		padding: 0px 10px;
-	}
-	.webskills .somexp p:nth-of-type(1) {
-		font-size: 1.5rem;
-	}
-	.webskills .somexp p:nth-of-type(2) {
-		font-size: 1.4rem;
-	}
-	.webskills .somexp p:nth-of-type(3) {
-		font-size: 1.1rem;
-	}
+
 	.cake {
 		margin-top: 50px;
-		/* Flex as parent */
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-webkit-flex-flow: column nowrap;
-		-ms-flex-flow: column nowrap;
-		flex-flow: column nowrap;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
+		.flexcol();
+		.flexcenter();
 	}
 	.slice {
 		/* Flex as child */
