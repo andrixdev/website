@@ -1,44 +1,3 @@
-/**
- * CSS for icosacid.com and icosacid.com/pro
- *
- * @author Alexandre Andrieux <alex@icosacid.com>
- * @since 2015-03
- */
-
-/** Boilerplate **/
-*,
-body,
-html {
-	margin: 0;
-	padding: 0;
-	white-space: nowrap;
-	font-family: 'Open Sans Condensed', sans-serif;
-}
-
-html,
-body {
-	height: 100%;
-	width: 100%;
-	/* Starry Night CSS3 pattern by Lea Verou */
-	background-color: black;
-	background-image:
-	radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-	radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-	radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-	radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
-	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-}
-
-/** Generic style **/
-h2 {
-	text-align: center;
-	color: #eee;
-	white-space: pre-wrap;
-	font-size: 60px;
-	background: black;
-	box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 15px;
-}
 
 /** Main container **/
 #whole {
@@ -54,82 +13,6 @@ h2 {
 	h2 {
 		margin-bottom: 0;
 		margin-top: 8px;
-	}
-}
-
-/** Head menu **/
-#head {
-	top: 0;
-	left: 0;
-	position: fixed;
-	width: 100%;
-	height: 80px;
-	overflow: hidden;
-	
-	.logo {
-		width: 80px;
-		height: 80px;
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: inline-block;
-		background: rgba(0, 0, 0, 0.8);
-		padding-top: 4px;
-		
-		img {
-			width: 80px;
-			height: 80px;
-			-webkit-transform-origin: 50% 50%;
-			-moz-transform-origin: 50% 50%;
-			-o-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
-			/*transform: rotate(300deg);*/
-			/* Handled in JS */
-			
-			transition: transform 500ms;
-		}
-	}
-	.menu {
-		display: inline-block;
-		width: 100%;
-		margin-left: 80px;
-		background: rgba(0, 0, 0, 0.8);
-		font-size: 30px;
-		color: rgba(255, 255, 255, 0.8);
-		text-shadow: 0px 0px 1px;
-		text-transform: uppercase;
-		
-		.menu-tab {
-			display: inline-block;
-			height: 80px;
-			
-			p {
-				width: 100%;
-				padding-bottom: 3px;
-				text-align: center;
-				vertical-align: middle;
-				display: inline-block;
-				cursor: pointer;
-				
-				&:hover {
-					color: white;
-					text-shadow: white 0px 0px 3px;
-					cursor: pointer;
-				}
-			}
-		}
-		.algories {
-			width: 150px;
-			margin-left: 0px;
-		}
-		
-		.about {
-			width: 100px;
-		}
-		
-		.contact {
-			width: 120px;			
-		}
 	}
 }
 
@@ -400,20 +283,6 @@ h2 {
 		left: 0; right: 0; bottom: 0; top: 0;
 		width: 80px;
 		height: 80px;
-	}
-}
-
-/** Footer **/
-#footer {
-	margin: 15px;
-	text-align: center;
-	color: #555;
-	
-	p:nth-of-type(1) {
-		font-size: 16px;
-	}
-	p:nth-of-type(2) {
-		font-size: 12px;
 	}
 }
 

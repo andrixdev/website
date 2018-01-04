@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset='utf-8'/>
 	<title>Icosacid | Algorithmic art and expriments</title>
@@ -30,12 +30,95 @@
 	
 </head>
 <body>
-	<div id='whole'>
-		<h2>Algories</h2>
-		<!-- Fill with XHR reading XML with links to imgs -->
+
+<div id="icosacid-website">
+	<div class="header">
+		<div class="menu">
+			<div class='menu-tab home'>
+				<p><router-link to="/">Home</router-link></p>
+			</div>
+			<div class='menu-tab gallery'>
+				<p><router-link to="/gallery">Gallery</router-link></p>
+			</div>
+			<div class='menu-tab projects'>
+				<p><router-link to="/projects">Projects</router-link></p>
+			</div>
+			<div class='menu-tab vjing'>
+				<p><router-link to="/vjing">VJing</router-link></p>
+			</div>
+			<div class='menu-tab about'>
+				<p><router-link to="/about">About</router-link></p>
+			</div>
+			<div class='menu-tab contact'>
+				<p><router-link to="/contact">Contact</router-link></p>
+			</div>
+		</div>
+		<div class="logo">
+			<img src='img/website/icosacidron-svg.svg' />
+		</div>
 	</div>
-	<div id='about'>
-		<h2>About</h2>
+	<div class="core">
+		<router-view></router-view>
+	</div>
+	<div class="footer">
+		<p>From scratch by ten fingers belonging to Alexandre Andrieux @2015</p>
+		<p>Feel free to play with the site's responsiveness and report any bug ;)</p>
+	</div>
+</div>
+
+<template id="home-template">
+	<div id="home">
+		<p>Home view</p>
+	</div>
+</template>
+
+<template id="gallery-template">
+	<div id="gallery">
+		<div id="whole">
+			<h2>Algories</h2>
+			<!-- Fill with XHR reading XML with links to imgs -->
+		</div>
+		<div id="front">
+			<div class="zoom">
+				<img class='loader' src='img/website/icosacidron-svg.svg' />
+				<div class='fullimg'>
+					<img src="/" alt="" />
+				</div>
+				<div class='quit' title="Back to gallery"></div>
+				<div class='details'>
+					<div class='description'>
+						<p class='title'>Title</p>
+						<p class='text'>Lorem</p>
+					</div>
+					<div class='social'>
+						<div class='deviant'>
+
+						</div>
+						<div class='github'>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template id="projects-template">
+	<div id="projects">
+		<p>Projects view</p>
+	</div>
+</template>
+
+<template id="vjing-template">
+	<div id="vjing">
+		<p>Home view</p>
+	</div>
+</template>
+
+<template id="about-template">
+	<div id="about">
+		<h2>Abouteuh</h2>
 		<p>Hi there, my name is Alex and I do algorithmic art.</p>
 		<p>My passion for physics and front-end web programming led me to the universe of particle art.</p>
 		<p>After an award-winning team project at KTH Royal Institute of Technology about creating artworks with voice, I created my own code for art on HTML canvas.</p>
@@ -50,69 +133,23 @@
 		<p class='projectspage'>Aside from working on my algorist skills, I design web interfaces!</p>
 		<p><a href='pro' title="To my project work" alt="Projects page" class='acidbutton'>Go to projects</a></p>
 	</div>
-	<div id='footer'>
-		<p>From scratch by ten fingers belonging to Alexandre Andrieux @2015</p>
-		<p>Feel free to play with the site's responsiveness and report any bug ;)</p>
+</template>
+
+<template id="contact-template">
+	<div id="contact">
+		<p>Contact view</p>
 	</div>
-	<div id='head'>
+</template>
 	
-		<div class='menu'>
-			<div class='menu-tab home'>
-				<p>Home</p>
-			</div>
-			<div class='menu-tab gallery'>
-				<p>Gallery</p>
-			</div>
-			<div class='menu-tab projects'>
-				<p>Projects</p>
-			</div>
-			<div class='menu-tab vjing'>
-				<p>VJing</p>
-			</div>
-			<div class='menu-tab about'>
-				<p>About</p>
-			</div>
-			<div class='menu-tab contact'>
-				<p>Contact</p>
-			</div>
-		</div>
-		
-		<div class='logo'>
-			<img src='img/website/icosacidron-svg.svg' />
-		</div>
-	</div>
-	<div id='front'>
-		<div class='zoom'>
-			<img class='loader' src='img/website/icosacidron-svg.svg' />
-			<div class='fullimg'>
-				<img src="/" alt="" />
-			</div>
-			<div class='quit' title="Back to gallery"></div>
-			<div class='details'>
-				<div class='description'>
-					<p class='title'>Title</p>
-					<p class='text'>Lorem</p>
-				</div>
-				<div class='social'>
-					<div class='deviant'>
-					
-					</div>
-					<div class='github'>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- Libs -->
-	<script type='text/javascript' src="node_modules/vue/dist/vue.min.js"></script>
-	<!--<script type='text/javascript' src="node_modules/vue/dist/vue.js"></script>-->
-	<script type='text/javascript' src="node_modules/vue-router/dist/vue-router.min.js"></script>
-	<script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
-	
-	<!-- Our -->
-	<script type='text/javascript' src="js/algories.js"></script>
+<!-- Libs -->
+<script type='text/javascript' src="node_modules/vue/dist/vue.min.js"></script>
+<!--<script type='text/javascript' src="node_modules/vue/dist/vue.js"></script>-->
+<script type='text/javascript' src="node_modules/vue-router/dist/vue-router.min.js"></script>
+<script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- Ours -->
+<script type='text/javascript' src="js/main.js"></script>
+<script type='text/javascript' src="js/algories.js"></script>
 
 </body>
 </html>
