@@ -27,7 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         mounted: () => { Gallery.go(); }
     };
-    const ProjectsComponent = { template: jQuery('#projects-template').html() };
+    const ProjectsComponent = {
+            template: jQuery('#projects-template').html(),
+            data: () => {
+            return { }
+        },
+        mounted: () => { Projects.go(); }
+    };
     const VjingComponent = { template: jQuery('#vjing-template').html() };
     const AboutComponent = { template: jQuery('#about-template').html() };
     const ContactComponent = { template: jQuery('#contact-template').html() };

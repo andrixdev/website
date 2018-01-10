@@ -1,24 +1,11 @@
-/**
- * JS for icosacid.com/pro
- *
- * @author Alexandre Andrieux <alex@icosacid.com>
- * @since 2015-03
- *
- * Changes in algories.js shall be duplicated in pro.js
- * JS files on respective pages are independent
- */
-
 // Globals
-var menuIsSqueezed = false;
-var menuIsDoingSomething = false;
-var mouseIsOverHead = false;
-var logoAngle = 0;
+let Projects = {};
 
 /**
  * Fills the DOM with xmlprojects.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-function loadProjects(extraCallback) {
+Projects.loadProjects = (extraCallback) => {
 	jQuery
 	.get("xmlprojects.xml", {})
 	.done(function(data) {
@@ -60,13 +47,13 @@ function loadProjects(extraCallback) {
 		
 		extraCallback();
 	});
-}
+};
 
 /**
  * Fills the DOM with xmlcv.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-function loadCV(extraCallback) {
+Projects.loadCV = (extraCallback) => {
 
 	jQuery
 	.get("xmlcv.xml", {})
@@ -195,12 +182,12 @@ function loadCV(extraCallback) {
 		
 		extraCallback();
 	});
-}
+};
 
 /**
  * Submit handler to the form showing CV
  */
-function keyCheckForCV() {
+Projects.keyCheckForCV = () => {
 	jQuery("form#showcv").submit(function(event) {
 
 		// Stop form from submitting normally
@@ -244,12 +231,12 @@ function keyCheckForCV() {
 			}, randomTimeout);
 		}
 	});
-}
+};
 
 /**
  * Submit handler to the form showing CV, without any password
  */
-function showCVwithoutKey() {
+Projects.showCVwithoutKey = () => {
 	jQuery("form#showcv").submit(function(event) {
 
 		// Stop form from submitting normally
@@ -274,12 +261,12 @@ function showCVwithoutKey() {
 			});
 		}, randomTimeout);
 	});
-}
+};
 
 /**
  * User feedback that the entered key is wrong
  */
-function invalidKeyAnimation() {
+Projects.invalidKeyAnimation = () => {
 	// Insert feedback
 	jQuery('form#showcv').after("<p id='invalid'>Invalid key, please try again.</p>");
 	
@@ -292,13 +279,12 @@ function invalidKeyAnimation() {
 		});
 	}, 1500);
 	
-}
+};
 
 /**
  * Listeners on each project
- * ------ COMING: ON CV FORM -------
  */
-function DOMlisteners() {
+Projects.DOMlisteners = () => {
 
 	// Project links
 	jQuery('.project').on({
@@ -370,121 +356,15 @@ function DOMlisteners() {
 			logoCodepen.css('box-shadow', '');
 		}
 	});
-}
+};
 
-/** 
- * Listeners for navigation menu mechanics and tab clicks
- */
-function headListeners() {
-	jQuery('#head').on({
-		mouseenter: function() {
-			mouseIsOverHead = true;
-		}, mouseleave: function() {
-			if (!menuIsSqueezed && jQuery(window).scrollTop() !== 0) {
-				squeezeMenu();
-				menuIsSqueezed = true;
-			}
-			mouseIsOverHead = false;
-		}
-	});
-	jQuery('#head .logo').on({
-		mouseenter: function() {
-			if (menuIsSqueezed) {
-				expandMenu();
-				menuIsSqueezed = false;
-			}
-		}, mouseleave: function() {
-			if (!menuIsSqueezed && jQuery(window).scrollTop() !== 0 && !mouseIsOverHead) {
-				squeezeMenu();
-				menuIsSqueezed = true;
-			}
-		}
-	});
-	jQuery('#head .menu .algories p').on({
-		mouseup: function() {
-			jQuery('html, body').animate({
-				scrollTop: 0
-			}, 1000);
-		}
-	});
-	jQuery('#head .menu .about p').on({
-		mouseup: function() {
-			jQuery('html, body').animate({
-				scrollTop: jQuery('#cv').offset().top
-			}, 1000);
-		}
-	});
-	jQuery('#head .menu .contact p').on({
-		mouseup: function() {
-			jQuery('html, body').animate({
-				scrollTop: jQuery('#about').offset().top
-			}, 1000);
-		}
-	});
-}
-
-/**
- * Listener to expand menu when the page is totally scrolled up (not screwed up!)
- */
-function scrollListener() {
-	jQuery(window).scroll(function() { 
-		if (jQuery(window).scrollTop() == 0 && menuIsSqueezed) {
-			expandMenu();
-			menuIsSqueezed = false;
-		} else if (jQuery(window).scrollTop() == 0 && !menuIsSqueezed) {
-			// Well, that's a good thing
-		} else if (!menuIsSqueezed) {
-			squeezeMenu();
-			menuIsSqueezed = true;
-		}
-		else {
-			// Leave menu squeezed
-		}
-	});
-}
-
-/**
- * Squeezes navigation menu: hides tabs
- */
-function squeezeMenu() {
-	jQuery('#head .menu .algories').stop(true).animate({
-		'marginLeft': '-200px'
-	}, 500, function() {
-		jQuery('#head .menu').css('display', 'none');
-	});
-	rotateLogo(120);
-}
-
-/**
- * Expands navigation menu: displays tabs
- */
-function expandMenu() {
-	jQuery('#head .menu').css('display', '').find('.algories').stop(true).animate({
-		'marginLeft': '0px'
-	}, 500);
-	rotateLogo(120);
-}
-
-/**
- * Rotates top left logo
- * Uses global var logoAngle
- * @param {Number} angleDeg Added angle in degrees
- */
-function rotateLogo(angleDeg) {
-	jQuery('#head .logo svg').css('transform','rotate(' + parseInt(logoAngle + angleDeg) + 'deg)');
-	logoAngle += angleDeg;
-}
 
 /**
  * Initializer
  */
-jQuery(document).ready(function() {
-	loadProjects(function() {
-		DOMlisteners();
-		headListeners();
-		scrollListener();
-		//keyCheckForCV();
-		showCVwithoutKey();
+Projects.go = () => {
+    Gallery.loadProjects(() => {
+        Projects.DOMlisteners();
+		Projects.showCVwithoutKey();
 	});
-});
-
+};
