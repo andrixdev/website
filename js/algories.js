@@ -6,26 +6,26 @@
  *
  * Changes in algories.js shall be duplicated in pro.js
  * JS files on respective pages are independent
+ *
+ * Being re-coded...
  */
 
-// Globals
-var algData = [];
-var menuIsSqueezed = false;
-var mouseIsOverHead = false;
-var mouseIsOverFront = false;
-var logoAngle = 0;
+let Gallery = {
+	algData: [],
+	mouseIsOverFront: false,
+};
 
 /**
  * Fills the DOM with algories.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-function loadAlgories(extraCallback) {
-	var gallery = jQuery('#whole');
+Gallery.loadAlgories = (extraCallback) => {
+	let gallery = jQuery('#whole');
 	jQuery
 	.get("algories.xml", {})
-	.done(function(data) {
+	.done((data) => {
 	
-		var jAlgories = jQuery(data).find('algories');
+		let jAlgories = jQuery(data).find('algories');
 		jAlgories.find('category').each(function() {
 			var categHTML = "";
 			
@@ -84,33 +84,33 @@ function loadAlgories(extraCallback) {
 			
 			gallery.append(categHTML);
 			// Feed global data with categ object
-			algData.push(categObj);
+			Gallery.algData.push(categObj);
 		});
 		
 		extraCallback();
 	});
-}
+};
 
 /**
  * Assuming the global array algData is filled
  * @param {Number} id ID of algory
  * @returns {Object} Algory object
  */
-function getAlg(id) {
-	for (key in algData) {
-		for (key2 in algData[key].alg) {
-			if ('art-id-' + algData[key].alg[key2].id == id) {
-				return algData[key].alg[key2];
+Gallery.getAlg = (id) => {
+	for (key in Gallery.algData) {
+		for (key2 in Gallery.algData[key].alg) {
+			if ('art-id-' + Gallery.algData[key].alg[key2].id == id) {
+				return Gallery.algData[key].alg[key2];
 			}
 		}
 	}
 	console.log('Nothing found with ID ' + id);
-}
+};
 
 /**
  * Listeners on each algory
  */
-function DOMlisteners() {
+Gallery.DOMlisteners = () => {
 	// Algories blocks
 	jQuery('.alg').on({
 		mouseenter: function() {
@@ -120,8 +120,8 @@ function DOMlisteners() {
 			jQuery(this).find('h4.title').css('opacity','0');
 			jQuery(this).css('box-shadow','none');
 		}, mouseup: function() {
-			showFront();
-			fillFront(jQuery(this));
+			Gallery.showFront();
+			Gallery.fillFront(jQuery(this));
 		}
 	});
 	
@@ -162,48 +162,48 @@ function DOMlisteners() {
 			logoCodepen.css('box-shadow', '');
 		}
 	});
-}
+};
 
 /**
  * Listeners for front view
  */
-function frontListeners() {
+Gallery.frontListeners = () => {
 	jQuery('#front .zoom').on({
 		mouseenter: function() {
-			mouseIsOverFront = true;
-			showFrontDetails();
+            Gallery.mouseIsOverFront = true;
+			Gallery.showFrontDetails();
 		}, mouseleave: function() {
-			mouseIsOverFront = false;
-			hideFrontDetails();
+            Gallery.mouseIsOverFront = false;
+            Gallery.hideFrontDetails();
 		}
 	});
 	jQuery('#front').on({
 		mouseup: function() {
-			if (!mouseIsOverFront) {
-				hideFront();
+			if (!Gallery.mouseIsOverFront) {
+                Gallery.hideFront();
 			}
 		}
 	});
 	jQuery('#front .zoom .quit').on({
 		mouseup: function() {
-			hideFront();
+            Gallery.hideFront();
 		}
 	});
-}
+};
 
 /**
  * DOM filler called on demand (click on an algory)
  */
-function fillFront(jAlgNode) {
+Gallery.fillFront = (jAlgNode) => {
 	
-	loadingOn();
+	Gallery.loadingOn();
 	
 	var id = jAlgNode.attr('id');
-	var src = getAlg(id).src;
-	var title = getAlg(id).title;
-	var description = getAlg(id).description;
-	var deviant = getAlg(id).deviant;
-	var github = getAlg(id).github;
+	var src = Gallery.getAlg(id).src;
+	var title = Gallery.getAlg(id).title;
+	var description = Gallery.getAlg(id).description;
+	var deviant = Gallery.getAlg(id).deviant;
+	var github = Gallery.getAlg(id).github;
 	
 	// Image
 	var newImg = new Image();
@@ -230,10 +230,10 @@ function fillFront(jAlgNode) {
 		
 		jQuery('#front .zoom').css('height', height).css('width', width).css('top', top).css('left', left);
 		setTimeout(function() {
-			loadingOff();
+            Gallery.loadingOff();
 			jQuery('#front .zoom .fullimg img').attr('src', self.src);
 		}, 500);
-	}
+	};
 	newImg.src = src;
 	newImg.alt = title;
 	
@@ -249,156 +249,57 @@ function fillFront(jAlgNode) {
 /**
  * Shows front view
  */
-function showFront() {
-	jQuery('#front').css('display','inherit').animate({
+Gallery.showFront = () => {
+	jQuery('#front').css('display', 'inherit').animate({
 		opacity: 1
 	}, 1000);
-}
+};
 
 /**
  * Hides front view
  */
-function hideFront() {
+Gallery.hideFront = () => {
 	jQuery('#front').animate({
 		opacity: 0
 	}, 500, function() {
-		jQuery(this).css('display','none');
+		jQuery(this).css('display', 'none');
 	});
-}
+};
 
 /**
  * Shows details in front view
  */
-function showFrontDetails() {
+Gallery.showFrontDetails = () => {
 	jQuery('#front .zoom .details').css('opacity', 1);
-}
+};
 
 /**
  * Hides details in front view
  */
-function hideFrontDetails() {
+Gallery.hideFrontDetails = () => {
 	jQuery('#front .zoom .details').css('opacity', 0);
-}
-
-/** 
- * Listeners for navigation menu mechanics and tab clicks
- */
-function headListeners() {
-	jQuery('#head').on({
-		mouseenter: function() {
-			mouseIsOverHead = true;
-		}, mouseleave: function() {
-			if (!menuIsSqueezed && jQuery(window).scrollTop() !== 0) {
-				squeezeMenu();
-				menuIsSqueezed = true;
-			}
-			mouseIsOverHead = false;
-		}
-	});
-	jQuery('#head .logo').on({
-		mouseenter: function() {
-			if (menuIsSqueezed) {
-				expandMenu();
-				menuIsSqueezed = false;
-			}
-		}, mouseleave: function() {
-			if (!menuIsSqueezed && jQuery(window).scrollTop() !== 0 && !mouseIsOverHead) {
-				squeezeMenu();
-				menuIsSqueezed = true;
-			}
-		}
-	});
-	jQuery('#head .menu .algories p').on({
-		mouseup: function() {
-			jQuery('html, body').animate({
-				scrollTop: 0
-			}, 1000);
-		}
-	});
-	jQuery('#head .menu .about p').on({
-		mouseup: function() {
-			jQuery('html, body').animate({
-				scrollTop: jQuery('#about').offset().top
-			}, 1000);
-		}
-	});
-}
-
-/**
- * Listener to expand menu when the page is totally scrolled up (not screwed up!)
- */
-function scrollListener() {
-	jQuery(window).scroll(function() { 
-		if (jQuery(window).scrollTop() == 0 && menuIsSqueezed) {
-			expandMenu();
-			menuIsSqueezed = false;
-		} else if (jQuery(window).scrollTop() == 0 && !menuIsSqueezed) {
-			// Well, that's a good thing
-		} else if (!menuIsSqueezed) {
-			squeezeMenu();
-			menuIsSqueezed = true;
-		}
-		else {
-			// Leave menu squeezed
-		}
-	});
-}
-
-/**
- * Squeezes navigation menu: hides tabs
- */
-function squeezeMenu() {
-	jQuery('#head .menu .algories').stop(true).animate({
-		'marginLeft': '-200px'
-	}, 500, function() {
-		jQuery('#head .menu').css('display', 'none');
-	});
-	rotateLogo(120);
-}
-
-/**
- * Expands navigation menu: displays tabs
- */
-function expandMenu() {
-	jQuery('#head .menu').css('display', '').find('.algories').stop(true).animate({
-		'marginLeft': '0px'
-	}, 500);
-	rotateLogo(120);
-}
-
-/**
- * Rotates top left logo
- * Uses global var logoAngle
- * @param {Number} angleDeg Added angle in degrees
- */
-function rotateLogo(angleDeg) {
-	jQuery('#head .logo svg').css('transform','rotate(' + parseInt(logoAngle + angleDeg) + 'deg)');
-	logoAngle += angleDeg;
-}
+};
 
 /**
  * Loading icon within front view - Turn on
  */
-function loadingOn() {
+Gallery.loadingOn = () => {
 	jQuery('.zoom .loader').show();
-}
+};
 
 /**
  * Loading icon within front view - Turn off
  */
-function loadingOff() {
+Gallery.loadingOff = () => {
 	jQuery('.zoom .loader').hide();
-}
+};
 
 /**
  * Initializer
  */
-jQuery(document).ready(function() {
-	loadAlgories(function() {
-		DOMlisteners();
-		headListeners();
-		scrollListener();
-		frontListeners();
-	});
-});
-
+Gallery.go = () => {
+    Gallery.loadAlgories(() => {
+        Gallery.DOMlisteners();
+        Gallery.frontListeners();
+    });
+};

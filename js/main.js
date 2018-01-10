@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // App views
     const HomeComponent = {
         template: jQuery('#home-template').html(),
-        data: function() {
+        data: () => {
             return {
                 exercises: [
                     {
@@ -20,7 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
-    const GalleryComponent = { template: jQuery('#gallery-template').html() };
+    const GalleryComponent = {
+        template: jQuery('#gallery-template').html(),
+        data: () => {
+            return { }
+        },
+        mounted: () => { Gallery.go(); }
+    };
     const ProjectsComponent = { template: jQuery('#projects-template').html() };
     const VjingComponent = { template: jQuery('#vjing-template').html() };
     const AboutComponent = { template: jQuery('#about-template').html() };
