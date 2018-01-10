@@ -37,6 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const VjingComponent = { template: jQuery('#vjing-template').html() };
     const AboutComponent = { template: jQuery('#about-template').html() };
     const ContactComponent = { template: jQuery('#contact-template').html() };
+    const CVComponent = {
+        template: jQuery('#cv-template').html(),
+        data: () => {
+            return { }
+        },
+        mounted: () => { CV.go(); }
+    };
 
     // App routes
     const routes = [
@@ -46,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: '/vjing', component: VjingComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
+        { path: '/cv', component: CVComponent },
     ];
 
     // Build router

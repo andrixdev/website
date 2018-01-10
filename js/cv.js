@@ -1,62 +1,14 @@
 // Globals
-let Projects = {};
+let CV = {};
 
 /**
- * Fills the DOM with xmlprojects.xml
+ * Fills the DOM with cv.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-Projects.loadProjects = (extraCallback) => {
-	jQuery
-	.get("xmlprojects.xml", {})
-	.done(function(data) {
-	
-		var jProjects = jQuery(data).find('projects');
-		
-		jProjects.find('project').each(function(index) {
-			
-			// Get XML content
-			var projectHTML = "";
-			var title = jQuery(this).find('title').text();
-			var description = jQuery(this).find('description').text();
-			var src = jQuery(this).find('image').text();
-			var link = jQuery(this).find('link').text();
-			
-			// Create HTML
-			projectHTML += "<div class='project'>";
-			projectHTML +=   "<div class='left'>";
-			projectHTML +=     "<img src='" + src + "' title='" + title + "' alt='" + title + "' />";
-			projectHTML +=   "</div>";
-			projectHTML +=   "<div class='right'>";
-			projectHTML +=     "<h4>" + title + "</h4>";
-			projectHTML +=     "<p>" + description + "</p>";
-			projectHTML +=     "<a href='" + link + "' target='_blank' alt ='" + title + "' />";
-			projectHTML +=   "</div>";
-			projectHTML += "</div>";
-			
-			// Spread in the DOM
-			jQuery('#projects .show').before(projectHTML);
-			
-		});
-		
-		var firstglance = 6;
-		jQuery('#projects .project').each(function(index) {
-			if (index >= firstglance) {
-				jQuery(this).addClass('hidden');
-			}
-		});
-		
-		extraCallback();
-	});
-};
-
-/**
- * Fills the DOM with xmlcv.xml
- * @param {Function} extraCallback Function called after the DOM is filled
- */
-Projects.loadCV = (extraCallback) => {
+CV.loadCV = (extraCallback) => {
 
 	jQuery
-	.get("xmlcv.xml", {})
+	.get("cv.xml", {})
 	.done(function(data) {
 		
 		var tempo = 0;
@@ -65,23 +17,23 @@ Projects.loadCV = (extraCallback) => {
 		// 1 - Intro
 		//// 1.1 - Header, fading in, staying for a while and then fading out
 		////// Fade in (jQuery.fadeIn won't override CSS)
-		jQuery('#cvcore .intro h5.moar').css('display', 'inherit').animate({
+		jQuery('.cvcore .intro h5.moar').css('display', 'inherit').animate({
 			opacity: 1
 		}, 1000);
 		////// Fade out
 		tempo += 2000;
 		setTimeout(function() {
-			jQuery('#cvcore .intro h5.moar').animate({
+			jQuery('.cvcore .intro h5.moar').animate({
 				opacity: 0
 			}, 2000, function() {
 				// Remove from DOM
-				jQuery('#cvcore .intro h5.moar').remove();
+				jQuery('.cvcore .intro h5.moar').remove();
 			});
 		}, tempo * enable);
 		
 		//// 1.2 - Intro lines, one after the other
 		tempo += 2000;// fadeOut time + 500ms
-		jQuery('#cvcore .intro p').each(function() {
+		jQuery('.cvcore .intro p').each(function() {
 			////// Fade in
 			tempo += 300;
 			var self = this;
@@ -95,7 +47,7 @@ Projects.loadCV = (extraCallback) => {
 		// 2 - Enjoy
 		tempo += 2500;
 		setTimeout(function() {
-			jQuery('#cvcore .enjoy').css('display', 'inherit').animate({
+			jQuery('.cvcore .enjoy').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
 		}, tempo * enable);
@@ -103,7 +55,7 @@ Projects.loadCV = (extraCallback) => {
 		// 3 - Abroad
 		tempo += 2000;
 		setTimeout(function() {
-			jQuery('#cvcore .abroad').css('display', 'inherit').animate({
+			jQuery('.cvcore .abroad').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
 		}, tempo * enable);
@@ -111,7 +63,7 @@ Projects.loadCV = (extraCallback) => {
 		// 4 - Schools
 		tempo += 4000;
 		setTimeout(function() {
-			jQuery('#cvcore .schools').css('display', 'inherit').animate({
+			jQuery('.cvcore .schools').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
 		}, tempo * enable);
@@ -119,7 +71,7 @@ Projects.loadCV = (extraCallback) => {
 		// 5 - Webskills
 		tempo += 1500;
 		setTimeout(function() {
-			jQuery('#cvcore .webskills').css('display', 'inherit').animate({
+			jQuery('.cvcore .webskills').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
 		}, tempo * enable);
@@ -127,7 +79,7 @@ Projects.loadCV = (extraCallback) => {
 		// 6 - CV title
 		tempo += 5000;
 		setTimeout(function() {
-			jQuery('#cvcore .cake').css('display', 'flex').animate({
+			jQuery('.cvcore .cake').css('display', 'flex').animate({
 				opacity: 1
 			}, 1000);
 		}, tempo * enable);
@@ -163,9 +115,9 @@ Projects.loadCV = (extraCallback) => {
 			
 			setTimeout(function() {
 				// DOM fill
-				jQuery('#cvcore .cake').append(sliceHTML);
+				jQuery('.cvcore .cake').append(sliceHTML);
 				// Fade in
-				jQuery('#cvcore .slice').last().css('display', 'flex').animate({
+				jQuery('.cvcore .slice').last().css('display', 'flex').animate({
 					opacity: 1
 				}, 1000);
 			}, tempo * enable);
@@ -175,7 +127,7 @@ Projects.loadCV = (extraCallback) => {
 		// 8 - Recommendations
 		tempo += 4000;
 		setTimeout(function() {
-			jQuery('#cvcore .recom').css('display', 'inherit').animate({
+			jQuery('.cvcore .recom').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
 		}, tempo * enable);
@@ -187,8 +139,8 @@ Projects.loadCV = (extraCallback) => {
 /**
  * Submit handler to the form showing CV
  */
-Projects.keyCheckForCV = () => {
-	jQuery("form#showcv").submit(function(event) {
+CV.keyCheckForCV = () => {
+	jQuery("form.showcv").submit(function(event) {
 
 		// Stop form from submitting normally
 		event.preventDefault();
@@ -214,7 +166,7 @@ Projects.keyCheckForCV = () => {
 			randomTimeout += 1000;
 			setTimeout(function() {
 				// Empty DOM nodes for password entering
-				jQuery('form#showcv, p#invalid').fadeOut(500, function() {
+				jQuery('form.showcv, p#invalid').fadeOut(500, function() {
 					// Fill DOM with CV
 					loadCV();
 				});
@@ -236,8 +188,8 @@ Projects.keyCheckForCV = () => {
 /**
  * Submit handler to the form showing CV, without any password
  */
-Projects.showCVwithoutKey = () => {
-	jQuery("form#showcv").submit(function(event) {
+CV.showCVwithoutKey = () => {
+	jQuery("form.showcv").submit(function(event) {
 
 		// Stop form from submitting normally
 		event.preventDefault();
@@ -255,7 +207,7 @@ Projects.showCVwithoutKey = () => {
 		// Loading
 		setTimeout(function() {
 			// Empty DOM nodes for CV show (here, button only)
-			jQuery('form#showcv').fadeOut(500, function() {
+			jQuery('form.showcv').fadeOut(500, function() {
 				// Fill DOM with CV
 				loadCV();
 			});
@@ -266,9 +218,9 @@ Projects.showCVwithoutKey = () => {
 /**
  * User feedback that the entered key is wrong
  */
-Projects.invalidKeyAnimation = () => {
+CV.invalidKeyAnimation = () => {
 	// Insert feedback
-	jQuery('form#showcv').after("<p id='invalid'>Invalid key, please try again.</p>");
+	jQuery('form.showcv').after("<p id='invalid'>Invalid key, please try again.</p>");
 	
 	// Remove feedback after a while
 	setTimeout(function() {
@@ -282,89 +234,10 @@ Projects.invalidKeyAnimation = () => {
 };
 
 /**
- * Listeners on each project
- */
-Projects.DOMlisteners = () => {
-
-	// Project links
-	jQuery('.project').on({
-		mouseenter: function() {
-			
-		}, mouseleave: function() {
-			
-		}, mouseup: function() {
-			var goToLink = jQuery(this).find('a').attr('href');
-			window.open(goToLink, '_blank');
-		}
-	});
-			
-	// Projects show more button
-	jQuery('#projects .show').on({
-		mouseup: function() {
-		
-			var remain = jQuery('#projects .project.hidden').length;
-			var unveil = 4;
-			
-			jQuery('#projects .project.hidden').each(function(index) {
-				// Unveil the next projects
-				if (index < unveil) {
-					jQuery(this).removeClass('hidden');
-				}
-			});
-			
-			// Hide button if not necessary anymore
-			if (remain <= unveil) {
-				jQuery('#projects .show').css('display', 'none');
-			}
-		}
-	});
-	
-	// About link hover effects
-	var logoMail = jQuery('#about a.mailme');
-	var logoDeviant = jQuery('#about a.deviant');
-	var logoGithub = jQuery('#about a.github');
-	var logoCodepen = jQuery('#about a.codepen');
-	jQuery('#about span.aboutmail').on({
-		mouseenter: function() {
-			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoMail.css('box-shadow', '');// Empty string --> back to static style from .css file!
-		}
-	});
-	jQuery('#about span.aboutdeviant').on({
-		mouseenter: function() {
-			logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoDeviant.css('box-shadow', '');
-		}
-	});
-	jQuery('#about span.aboutgithub').on({
-		mouseenter: function() {
-			logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoGithub.css('box-shadow', '');
-		}
-	});
-	jQuery('#about span.aboutcodepen').on({
-		mouseenter: function() {
-			logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoCodepen.css('box-shadow', '');
-		}
-	});
-};
-
-
-/**
  * Initializer
  */
-Projects.go = () => {
-    Gallery.loadProjects(() => {
-        Projects.DOMlisteners();
+CV.go = () => {
+    CV.loadCV(() => {
 		Projects.showCVwithoutKey();
 	});
 };
