@@ -340,7 +340,7 @@ function DOMlisteners() {
 	var logoCodepen = jQuery('#about a.codepen');
 	jQuery('#about span.aboutmail').on({
 		mouseenter: function() {
-			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoMail.css('box-shadow', '');// Empty string --> back to static style from .css file!
@@ -348,7 +348,7 @@ function DOMlisteners() {
 	});
 	jQuery('#about span.aboutdeviant').on({
 		mouseenter: function() {
-			logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoDeviant.css('box-shadow', '');
@@ -356,7 +356,7 @@ function DOMlisteners() {
 	});
 	jQuery('#about span.aboutgithub').on({
 		mouseenter: function() {
-			logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoGithub.css('box-shadow', '');
@@ -364,7 +364,7 @@ function DOMlisteners() {
 	});
 	jQuery('#about span.aboutcodepen').on({
 		mouseenter: function() {
-			logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoCodepen.css('box-shadow', '');

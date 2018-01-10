@@ -115,7 +115,7 @@ Gallery.DOMlisteners = () => {
 	jQuery('.alg').on({
 		mouseenter: function() {
 			jQuery(this).find('h4.title').css('opacity','1');
-			jQuery(this).css('box-shadow','rgba(255,255,255,0.5) 0px 0px 10px');
+			jQuery(this).css('box-shadow','rgba(255,255,255,0.5) 0 0 10px');
 		}, mouseleave: function() {
 			jQuery(this).find('h4.title').css('opacity','0');
 			jQuery(this).css('box-shadow','none');
@@ -132,7 +132,7 @@ Gallery.DOMlisteners = () => {
 	var logoCodepen = jQuery('#about a.codepen');
 	jQuery('#about span.aboutmail').on({
 		mouseenter: function() {
-			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoMail.css('box-shadow', '');// Empty string --> back to static style from .css file!
@@ -140,7 +140,7 @@ Gallery.DOMlisteners = () => {
 	});
 	jQuery('#about span.aboutdeviant').on({
 		mouseenter: function() {
-			logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoDeviant.css('box-shadow', '');
@@ -148,7 +148,7 @@ Gallery.DOMlisteners = () => {
 	});
 	jQuery('#about span.aboutgithub').on({
 		mouseenter: function() {
-			logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoGithub.css('box-shadow', '');
@@ -156,7 +156,7 @@ Gallery.DOMlisteners = () => {
 	});
 	jQuery('#about span.aboutcodepen').on({
 		mouseenter: function() {
-			logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0px 0px 15px');
+			logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
 		mouseleave: function() {
 			logoCodepen.css('box-shadow', '');
