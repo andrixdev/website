@@ -275,18 +275,8 @@
 		/* Flex as child */
 		margin: 10px auto;
 		/* Flex as parent */
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
+		.flexrow();
+		.flexcenter();
 
 		padding: 10px;
 		color: white;
@@ -302,91 +292,80 @@
 		background: rgba(255, 255, 255, 0.025);
 		box-shadow: none;
 		border-radius: 10px;
-	}
-	.slice:hover {
-		background: linear-gradient(to bottom left, #222, #333);
-	}
-	.slice .left {
-		width: 180px;
 
-		/* Flex as child */
-		order: 1;
-		margin: auto;
-		flex-basis: 180px;
+		&:hover {
+			background: linear-gradient(to bottom left, #222, #333);
+		}
+		.left-side {
+			width: 180px;
 
-		/* Flex as parent */
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-webkit-flex-flow: column nowrap;
-		-ms-flex-flow: column nowrap;
-		flex-flow: column nowrap;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-	}
-	.slice .left p.year {
-		order: 1;
-		margin: -15px auto -15px;
-		color: hsl(210, 60%, 40%);
-		font-size: 80px;
-		padding: 0 10px;
-		text-align: center;
-		width: 100%;
-		text-shadow: rgba(0, 0, 0, 0.75) -1px 0 10px;
-	}
-	.slice .left p.skill {
-		order: 2;
-		margin: auto;
-		padding: 0 10px;
-		font-size: 25px;
-		width: 100%;
-		text-align: center;
-		color: #999;
-		text-shadow: rgba(0, 0, 0, 0.6) -1px 0 4px;
-	}
-	.slice .right {
-		width: 620px;
-		padding: 0 20px;
+			/* Flex as child */
+			order: 1;
+			margin: auto;
+			flex-basis: 180px;
 
-		/* Flex as child */
-		order: 2;
-		margin: auto;
-		flex-basis: 620px;
-	}
-	.slice .right h5 {
-		font-size: 25px;
-		color: #ddd;
-		padding: 0;
-		word-wrap: break-word;
-		white-space: pre-wrap;
-	}
-	.slice .right p {
-		word-wrap: break-word;
-		white-space: pre-wrap;
-		color: #ddd;
-	}
-	.slice .right p.institution {
-		font-size: 20px;
-		color: #888;
-		margin-bottom: 10px;
-	}
-	.slice .right p.when {
-		font-weight: bold;
-	}
-	.slice .right p a {
-		color: #999;
-		cursor: pointer;
+			/* Flex as parent */
+			.flexcol();
+			.flexcenter();
+
+			p.year {
+				order: 1;
+				margin: -15px auto -15px;
+				color: hsl(210, 60%, 40%);
+				font-size: 80px;
+				padding: 0 10px;
+				text-align: center;
+				width: 100%;
+				text-shadow: rgba(0, 0, 0, 0.75) -1px 0 10px;
+			}
+			p.skill {
+				order: 2;
+				margin: auto;
+				padding: 0 10px;
+				font-size: 25px;
+				width: 100%;
+				text-align: center;
+				color: #999;
+				text-shadow: rgba(0, 0, 0, 0.6) -1px 0 4px;
+			}
+		}
+		.right-side {
+			width: 620px;
+			padding: 0 20px;
+
+			/* Flex as child */
+			order: 2;
+			margin: auto;
+			flex-basis: 620px;
+
+			h5 {
+				font-size: 25px;
+				color: #ddd;
+				padding: 0;
+				word-wrap: break-word;
+				white-space: pre-wrap;
+			}
+			p {
+				word-wrap: break-word;
+				white-space: pre-wrap;
+				color: #ddd;
+
+				&.institution {
+					font-size: 20px;
+					color: #888;
+					margin-bottom: 10px;
+				}
+				&.when {
+					font-weight: bold;
+				}
+				a {
+					color: #999;
+					cursor: pointer;
+				}
+			}
+		}
 	}
 	.recom {
 
 	}
-	#contact {
-
-	}
 }
-
-

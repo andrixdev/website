@@ -23,10 +23,10 @@ Projects.loadProjects = (extraCallback) => {
 			
 			// Create HTML
 			projectHTML += "<div class='project'>";
-			projectHTML +=   "<div class='left'>";
+			projectHTML +=   "<div class='left-side'>";
 			projectHTML +=     "<img src='" + src + "' title='" + title + "' alt='" + title + "' />";
 			projectHTML +=   "</div>";
-			projectHTML +=   "<div class='right'>";
+			projectHTML +=   "<div class='right-side'>";
 			projectHTML +=     "<h4>" + title + "</h4>";
 			projectHTML +=     "<p>" + description + "</p>";
 			projectHTML +=     "<a href='" + link + "' target='_blank' alt ='" + title + "' />";

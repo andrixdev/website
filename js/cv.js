@@ -100,11 +100,11 @@ CV.loadCV = (extraCallback) => {
 			var skill = jQuery(this).find('skill').text();
 			
 			sliceHTML += "<div class='slice'>";
-			sliceHTML +=   "<div class='left'>";
+			sliceHTML +=   "<div class='left-side'>";
 			sliceHTML +=     "<p class='year'>" + year + "</p>";
 			sliceHTML +=     "<p class='skill'>" + skill + "</p>";
 			sliceHTML +=   "</div>";
-			sliceHTML +=   "<div class='right'>";
+			sliceHTML +=   "<div class='right-side'>";
 			sliceHTML +=     "<h5>" + title + "</h5>";
 			var sliceBit = institution;
 			sliceBit += (place !== "" && when !== "" ? " - " + place + " (" + when + ")" : "");
