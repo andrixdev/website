@@ -41,27 +41,50 @@
 				<geom sides="4" header="true"></geom>
 				Home
 			</router-link>
-			<router-link to="/gallery" class="menu-tab gallery"><geom sides="0" header="true"></geom>Gallery</router-link>
-			<router-link to="/projects" class="menu-tab projects"><geom sides="4" header="true"></geom>Projects</router-link>
-			<router-link to="/vjing" class="menu-tab vjing"><geom sides="4" header="true"></geom>Vjing</router-link>
-			<router-link to="/about" class="menu-tab about"><geom sides="4" header="true"></geom>About</router-link>
-			<router-link to="/contact" class="menu-tab contact"><geom sides="4" header="true"></geom>Contact</router-link>
-			<router-link to="/cv" class="menu-tab cv"><geom sides="4" header="true"></geom>CV</router-link>
+			<router-link to="/gallery" class="menu-tab gallery">
+				<geom sides="0" header="true"></geom>
+				Gallery
+			</router-link>
+			<router-link to="/projects" class="menu-tab projects">
+				<geom sides="4" header="true" rotate="true"></geom>
+				Projects
+			</router-link>
+			<router-link to="/vjing" class="menu-tab vjing">
+				<geom sides="0" header="true"></geom>
+				Vjing
+			</router-link>
+			<router-link to="/about" class="menu-tab about">
+				<geom sides="4" header="true"></geom>
+				About
+			</router-link>
+			<router-link to="/contact" class="menu-tab contact">
+				<geom sides="0" header="true"></geom>
+				Contact
+			</router-link>
+			<router-link to="/cv" class="menu-tab cv">
+				<geom sides="4" header="true" rotate="true"></geom>
+				CV
+			</router-link>
 		</div>
 	</div>
 	<div class="core">
 		<router-view></router-view>
 	</div>
 	<div class="footer">
-		<p>From scratch by ten fingers belonging to Alexandre Andrieux @2015</p>
-		<p>Feel free to play with the site's responsiveness and report any bug ;)</p>
+		<p>Alexandre Andrieux @2015-2018</p>
+		<p class="crafted">
+			<span>Crafted with</span>
+			<img src='img/website/vue.png' alt="Vue.js" title="Vue JS"/>
+			<span>and</span>
+			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
+		</p>
 	</div>
 </div>
 
 <template id="home-template">
 	<div id="home">
 		<div class="page-header">
-			<geom sides="4"></geom>
+			<geom sides="0"></geom>
 			<h1>Home</h1>
 		</div>
 	</div>
@@ -70,11 +93,10 @@
 <template id="gallery-template">
 	<div id="gallery">
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom sides="4"></geom>
 			<h1>Gallery</h1>
 		</div>
 		<div id="whole">
-			<h2>Algories</h2>
 			<!-- Fill with XHR reading XML with links to imgs -->
 		</div>
 		<div id="front">
@@ -105,7 +127,10 @@
 
 <template id="projects-template">
 	<div id="projects">
-		<h2>Projects and experiments</h2>
+		<div class="page-header">
+			<geom sides="4" rotate="true"></geom>
+			<h1>Projects</h1>
+		</div>
 
 		<div class="show">
 			<input type='submit' class='acidbutton' value="Show more">
@@ -115,38 +140,53 @@
 
 <template id="vjing-template">
 	<div id="vjing">
-		<p>Home view</p>
+		<div class="page-header">
+			<geom sides="0"></geom>
+			<h1>Vjing</h1>
+		</div>
 	</div>
 </template>
 
 <template id="about-template">
 	<div id="about">
-		<h2>About</h2>
-		<p>Hi there, my name is Alex and I do algorithmic art.</p>
-		<p>My passion for physics and front-end web programming led me to the universe of particle art.</p>
-		<p>After an award-winning team project at KTH Royal Institute of Technology about creating artworks with voice, I created my own code for art on HTML canvas.</p>
-		<p>Feel free to share creative thoughts with me :)</p>
-		<p>You can <span class='aboutmail'>email me at alex(at)icosacid.com</span>, check my <span class='aboutdeviant'>Deviant</span><!--, my <span class='aboutgithub'>GitHub</span>--> or my <span class='aboutcodepen'>Codepen</span></p>
-		<div>
-			<a class='mailme' title="Send me an e-mail" href="#" onclick='linkTo_UnCryptMailto("nbjmup+jdptbdjeAhnbjm/dpn?tvckfdu=Nfttbhf gspn jdptbdje/dpn");return false;'></a>
-			<a class='deviant' title="Check my DeviantArt gallery" href="http://icosacid.deviantart.com/" target='_blank'></a>
-			<!--<a class='github' title="Check my repositories on GitHub" href="https://github.com/Icosacid" target='_blank'></a>-->
-			<a class='codepen' title="Play live with my code on Codepen" href="https://codepen.io/Icosacid" target='_blank'></a>
+		<div class="page-header">
+			<geom sides="4"></geom>
+			<h1>About</h1>
 		</div>
-		<p class='projectspage'>Aside from working on my algorist skills, I design web interfaces!</p>
-		<p><a href='pro' title="To my project work" alt="Projects page" class='acidbutton'>Go to projects</a></p>
+
+		<div class="about-me">
+			<p>Hi there, my name is Alex and I do algorithmic art.</p>
+			<p>My passion for physics and front-end web programming led me to the universe of particle art.</p>
+			<p>After an award-winning team project at KTH Royal Institute of Technology about creating artworks with voice, I created my own code for art on HTML canvas.</p>
+			<p>Feel free to share creative thoughts with me :)</p>
+			<p>You can <span class='aboutmail'>email me at alex(at)icosacid.com</span>, check my <span class='aboutdeviant'>Deviant</span><!--, my <span class='aboutgithub'>GitHub</span>--> or my <span class='aboutcodepen'>Codepen</span></p>
+			<div>
+				<a class='mailme' title="Send me an e-mail" href="#" onclick='linkTo_UnCryptMailto("nbjmup+jdptbdjeAhnbjm/dpn?tvckfdu=Nfttbhf gspn jdptbdje/dpn");return false;'></a>
+				<a class='deviant' title="Check my DeviantArt gallery" href="http://icosacid.deviantart.com/" target='_blank'></a>
+				<!--<a class='github' title="Check my repositories on GitHub" href="https://github.com/Icosacid" target='_blank'></a>-->
+				<a class='codepen' title="Play live with my code on Codepen" href="https://codepen.io/Icosacid" target='_blank'></a>
+			</div>
+			<p class='projectspage'>Aside from working on my algorist skills, I design web interfaces!</p>
+			<p><a href='pro' title="To my project work" alt="Projects page" class='acidbutton'>Go to projects</a></p>
+		</div>
 	</div>
 </template>
 
 <template id="contact-template">
 	<div id="contact">
-		<p>Contact view</p>
+		<div class="page-header">
+			<geom sides="0"></geom>
+			<h1>Contact</h1>
+		</div>
 	</div>
 </template>
 
 <template id="cv-template">
 	<div id="cv">
-		<h2>CV</h2>
+		<div class="page-header">
+			<geom sides="4" rotate="true"></geom>
+			<h1>CV</h1>
+		</div>
 		<form class="showcv" action="" method="">
 			<!--<div class='password'>
 				<input type='password' name='password' placeholder="Enter key..." />
@@ -388,7 +428,7 @@
 </template>
 
 <template id="geom-template">
-	<div class="geom" :class="{'in-header': header}">
+	<div class="geom" :class="{'in-header': header, 'is-rotated': rotate}">
 		<div v-if="sides == 4" class="shape square">
 			<div class="inner"></div>
 		</div>

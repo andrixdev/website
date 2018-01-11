@@ -8,15 +8,17 @@
 			height: 20px;
 			background: @blue-20;
 		}
-	}
-	.square {
 
-	}
-	.round {
-		&, .inner {
-			border-radius: 50%;
+		&.square {
+
+		}
+		&.round {
+			&, .inner {
+				border-radius: 50%;
+			}
 		}
 	}
+
 	&.in-header {
 		.shape {
 			background: @blue-50;
@@ -30,4 +32,11 @@
 			}
 		}
 	}
+
+	&.is-rotated {
+		.shape {
+			transform: rotate(45deg);
+		}
+	}
+
 }

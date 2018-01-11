@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Custom components
     Vue.component('geom', {
         template: jQuery('#geom-template').html(),
-        props: ['sides', 'header']
+        props: ['sides', 'header', 'rotate']
     });
 
     // App routes

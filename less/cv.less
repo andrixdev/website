@@ -1,6 +1,5 @@
 #cv {
 	position: relative;
-	padding: 50px 0 10px;
 	min-height: 300px;
 
 	h3 {
@@ -12,15 +11,9 @@
 		margin-bottom: 25px;
 	}
 	form.showcv {
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-justify-content: center;
-		justify-content: center;
-		-webkit-align-items: center;
-		align-items: center;
+		.flexrow();
+		.flexwrap();
+		.flexcenter();
 	}
 	.password input {
 		width: 300px;
