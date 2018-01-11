@@ -19,7 +19,7 @@
 	<link rel='shortcut icon' sizes='128x128' href="img/website/tiny.png">
 	
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto+Slab" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,400i,600,700" rel="stylesheet">
 	<link rel='stylesheet' type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	
 	<!-- Stylesheets -->
@@ -33,31 +33,17 @@
 
 <div id="icosacid-website">
 	<div class="header">
-		<div class="menu">
-			<div class='menu-tab home'>
-				<p><router-link to="/">Home</router-link></p>
-			</div>
-			<div class='menu-tab gallery'>
-				<p><router-link to="/gallery">Gallery</router-link></p>
-			</div>
-			<div class='menu-tab projects'>
-				<p><router-link to="/projects">Projects</router-link></p>
-			</div>
-			<div class='menu-tab vjing'>
-				<p><router-link to="/vjing">VJing</router-link></p>
-			</div>
-			<div class='menu-tab about'>
-				<p><router-link to="/about">About</router-link></p>
-			</div>
-			<div class='menu-tab contact'>
-				<p><router-link to="/contact">Contact</router-link></p>
-			</div>
-			<div class='menu-tab cv'>
-				<p><router-link to="/cv">CV</router-link></p>
-			</div>
-		</div>
 		<div class="logo">
 			<img src='img/website/icosacidron-svg.svg' />
+		</div>
+		<div class="menu">
+			<router-link to="/" class="menu-tab home">Home</router-link>
+			<router-link to="/gallery" class="menu-tab gallery">Gallery</router-link>
+			<router-link to="/projects" class="menu-tab projects">Projects</router-link>
+			<router-link to="/vjing" class="menu-tab vjing">Vjing</router-link>
+			<router-link to="/about" class="menu-tab about">About</router-link>
+			<router-link to="/contact" class="menu-tab contact">Contact</router-link>
+			<router-link to="/cv" class="menu-tab cv">CV</router-link>
 		</div>
 	</div>
 	<div class="core">
