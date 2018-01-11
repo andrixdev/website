@@ -1,34 +1,37 @@
 .header {
 	width: 100%;
-	height: 80px;
 	background: @blue-15;
 	.flexrow();
 	.flexstart();
 	border-bottom: solid 5px @blue-10;
 
 	.logo {
-		width: 90px;
-		height: 80px;
-		padding-top: 10px;
+		width: 80px;
+		position: relative;
 
 		img {
-			width: 80px;
-			height: 80px;
+			width: 65px;
+			height: 65px;
+			.marjinoto();
+			top: 5px;
 		}
 	}
 	.menu {
 		.flexrow();
 
 		.menu-tab {
-			padding: 30px;
+			padding: 20px;
 			transition: background 500ms;
 			.pointer();
+			.flexrow();
 			&:hover,
-			&.active {
-				background: @blue-05;
+			&.router-link-exact-active {
+				&, & .geom .inner {
+					background: @blue-05;
+				}
 			}
 
-			font-size: 1.6rem;
+			font-size: 1.3rem;
 			.uppercase();
 			.weight-200();
 
@@ -36,6 +39,11 @@
 				color: @blue-text;
 				text-decoration: none;
 			}
+
+			.geom {
+				margin-right: 10px;
+			}
+
 
 		}
 	}

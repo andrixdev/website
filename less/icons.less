@@ -1,0 +1,33 @@
+.geom {
+	.shape {
+		background: @blue-50;
+		padding: 5px;
+
+		.inner {
+			width: 20px;
+			height: 20px;
+			background: @blue-20;
+		}
+	}
+	.square {
+
+	}
+	.round {
+		&, .inner {
+			border-radius: 50%;
+		}
+	}
+	&.in-header {
+		.shape {
+			background: @blue-50;
+			padding: 3px;
+
+			.inner {
+				width: 12px;
+				height: 12px;
+				background: @blue-15;
+				transition: background 500ms;
+			}
+		}
+	}
+}

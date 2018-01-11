@@ -37,13 +37,16 @@
 			<img src='img/website/icosacidron-svg.svg' />
 		</div>
 		<div class="menu">
-			<router-link to="/" class="menu-tab home">Home</router-link>
-			<router-link to="/gallery" class="menu-tab gallery">Gallery</router-link>
-			<router-link to="/projects" class="menu-tab projects">Projects</router-link>
-			<router-link to="/vjing" class="menu-tab vjing">Vjing</router-link>
-			<router-link to="/about" class="menu-tab about">About</router-link>
-			<router-link to="/contact" class="menu-tab contact">Contact</router-link>
-			<router-link to="/cv" class="menu-tab cv">CV</router-link>
+			<router-link to="/" class="menu-tab home">
+				<geom sides="4" header="true"></geom>
+				Home
+			</router-link>
+			<router-link to="/gallery" class="menu-tab gallery"><geom sides="0" header="true"></geom>Gallery</router-link>
+			<router-link to="/projects" class="menu-tab projects"><geom sides="4" header="true"></geom>Projects</router-link>
+			<router-link to="/vjing" class="menu-tab vjing"><geom sides="4" header="true"></geom>Vjing</router-link>
+			<router-link to="/about" class="menu-tab about"><geom sides="4" header="true"></geom>About</router-link>
+			<router-link to="/contact" class="menu-tab contact"><geom sides="4" header="true"></geom>Contact</router-link>
+			<router-link to="/cv" class="menu-tab cv"><geom sides="4" header="true"></geom>CV</router-link>
 		</div>
 	</div>
 	<div class="core">
@@ -57,12 +60,19 @@
 
 <template id="home-template">
 	<div id="home">
-		<p>Home view</p>
+		<div class="page-header">
+			<geom sides="4"></geom>
+			<h1>Home</h1>
+		</div>
 	</div>
 </template>
 
 <template id="gallery-template">
 	<div id="gallery">
+		<div class="page-header">
+			<geom sides="0"></geom>
+			<h1>Gallery</h1>
+		</div>
 		<div id="whole">
 			<h2>Algories</h2>
 			<!-- Fill with XHR reading XML with links to imgs -->
@@ -376,7 +386,18 @@
 		</div>
 	</div>
 </template>
-	
+
+<template id="geom-template">
+	<div class="geom" :class="{'in-header': header}">
+		<div v-if="sides == 4" class="shape square">
+			<div class="inner"></div>
+		</div>
+		<div v-if="sides == 0" class="shape round">
+			<div class="inner"></div>
+		</div>
+	</div>
+</template>
+
 <!-- Libs -->
 <script type='text/javascript' src="node_modules/vue/dist/vue.min.js"></script>
 <!--<script type='text/javascript' src="node_modules/vue/dist/vue.js"></script>-->

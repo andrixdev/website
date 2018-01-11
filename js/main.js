@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
         mounted: () => { CV.go(); }
     };
 
+    // Custom components
+    Vue.component('geom', {
+        template: jQuery('#geom-template').html(),
+        props: ['sides', 'header']
+    });
+
     // App routes
     const routes = [
         { path: '/', component: HomeComponent },
