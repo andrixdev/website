@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+	<path class="icosacidron" d="M40,40 m13.85640646055102,7.999999999999999 l-42.112812921102034,0 c 2 5, 2 10, 0 20 c 14.4 -12, 28.8 -12, 46.51281292110203 -12 " stroke="black" stroke-width="1" stroke-linecap="round" fill="#666" transform="rotate(0 40 40)"></path>
+	<path class="icosacidron" d="M40,40 m13.85640646055102,7.999999999999999 l-42.112812921102034,0 c 2 5, 2 10, 0 20 c 14.4 -12, 28.8 -12, 46.51281292110203 -12 " stroke="black" stroke-width="1" stroke-linecap="round" fill="#aaa" transform="rotate(120 40 40)"></path>
+	<path class="icosacidron" d="M40,40 m13.85640646055102,7.999999999999999 l-42.112812921102034,0 c 2 5, 2 10, 0 20 c 14.4 -12, 28.8 -12, 46.51281292110203 -12 " stroke="black" stroke-width="1" stroke-linecap="round" fill="#888" transform="rotate(240 40 40)"></path>
+</svg>
