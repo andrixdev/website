@@ -1,0 +1,254 @@
+/** Main container **/
+.gallery-content {
+	.categ {
+		margin-bottom: 50px;
+		position: relative;
+
+		.categname {
+			.center();
+		}
+		.moron {
+			position: absolute;
+			right: 30px;
+			top: 0;
+			text-shadow: white 0 0 30px;
+
+			p {
+				font-size: 23px;
+				display: inline-block;
+				vertical-align: middle;
+				font-weight: bold;
+				color: #CCC;
+			}
+			a {
+				text-decoration: none;
+				margin: 10px;
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 35px;
+				color: #CCC;
+				cursor: pointer;
+
+				&:hover::before {
+					color: white;
+					text-shadow: white 0 0 15px;
+				}
+			}
+		}
+
+		.categ-content {
+			padding: 15px 15px 50px;
+
+			.flexrow();
+			.flexcenter();
+			.flexwrap();
+
+			.alg {
+				width: 450px;
+				margin: 5px;
+				border-radius: 2px;
+				border: solid 1px rgba(100, 100, 100, 0.8);
+				position: relative;
+				overflow: hidden;
+
+				* {
+					.pointer();
+				}
+				h4.title {
+					color: white;
+					width: 100%;
+					.center();
+					font-size: 25px;
+					padding: 5px 0;
+					line-height: 35px;
+					background: rgba(0,0,0,0.75);
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					transition: opacity 1s;
+				}
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+
+
+
+
+	}
+}
+
+/** Zoom layer **/
+#front {
+	display: none;
+	opacity: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.9);
+
+	.zoom {
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		width: 80%;
+		height: 80%;
+		/* Overriden in JS depending on loaded img dimensions */
+		box-shadow: rgba(0,0,0,0.75) 0 0 35px;
+
+		.fullimg {
+			width: 100%;
+			height: 100%;
+			transition: background 1s;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.quit {
+			/*background: red;*/
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: url('../img/website/cross3.png');
+			opacity: 0.3;
+			background-size: 80% 80%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			cursor: pointer;
+
+			&:hover {
+				background-position: 50% 50%;
+				background-size: 90% 90%;
+				opacity: 0.85;
+			}
+		}
+
+		.details {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			min-height: 10%;
+			opacity: 0;
+			transition: opacity 500ms;
+
+			.description {
+				background: rgba(255, 255, 255, 0.85);
+				width: 100%;
+				height: 100%;
+
+				p.title {
+					width: 100%;
+					text-align: center;
+					font-size: 40px;
+					padding: 10px 0;
+				}
+				p.text {
+					padding-bottom: 20px;
+					font-size: 20px;
+					white-space: pre-wrap;
+					width: 80%;
+					margin-left: 10%;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.loader {
+		/* Loading logo */
+		-webkit-animation:spin 2s linear infinite;
+		-moz-animation:spin 2s linear infinite;
+		animation:spin 2s linear infinite;
+		position: absolute;
+		margin: auto;
+		left: 0; right: 0; bottom: 0; top: 0;
+		width: 80px;
+		height: 80px;
+	}
+}
+
+/* Custom style for each picture (dimensions) */
+.gallery-content .alg img {
+	height: 300px;
+}
+
+/* Radial */
+.gallery-content .alg#art-id-2015-4 img {
+	/* White Time */
+	width: 600px;
+	margin-left: -75px;
+}
+.gallery-content .alg#art-id-2015-5 img {
+	/* Harsh */
+	width: 600px;
+	margin-left: -75px;
+}
+.gallery-content .alg#art-id-2015-8 img {
+	/* Kuzco 5 */
+	width: 550px;
+	margin-left: -50px;
+}
+.gallery-content .alg#art-id-2015-10 img {
+	/* Rhodo */
+	width: 600px;
+	margin-left: -75px;
+}
+.gallery-content .alg#art-id-2015-11 img {
+	/* Shiver */
+	height: 450px;
+	margin-top: -75px;
+	margin-bottom: -75px;
+}
+/* Gravitational */
+.gallery-content .alg#art-id-2016-1 img {
+	/* Gravitational Blackhole */
+	width: 550px;
+	margin-left: -50px;
+}
+.gallery-content .alg#art-id-2015-9 img {
+	/* Gandalf Thinking */
+	width: 500px;
+	margin-left: -25px;
+}
+/* Experiments */
+.gallery-content .alg#art-id-2015-2 img {
+	/* PlayChaos 1 */
+	width: 550px;
+	margin-left: -50px;
+}
+.gallery-content .alg#art-id-2015-3 img {
+	/* Zeus Bolt */
+	width: 600px;
+	margin-left: -75px;
+}
+.gallery-content .alg#art-id-2015-12 img {
+	/* Summer 2015 */
+	width: 600px;
+	margin-left: -65px;
+}
+.gallery-content .alg#art-id-2015-6 img {
+	/* Duel */
+	width: 550px;
+	margin-left: 0;
+}
+.gallery-content .alg#art-id-2017-3 img {
+	/* Lightbeams Eye */
+	width: 570px;
+	margin-left: -55px;
+}
+.gallery-content .alg#art-id-2017-1 img {
+	/* Hexocet Explode */
+	width: 570px;
+	margin-left: -55px;
+}

@@ -11,8 +11,8 @@ CV.loadCV = (extraCallback) => {
 	.get("cv.xml", {})
 	.done(function(data) {
 		
-		var tempo = 0;
-		var enable = 1;
+		let tempo = 0;
+		let enable = 1;
 		
 		// 1 - Intro
 		//// 1.1 - Header, fading in, staying for a while and then fading out
@@ -36,7 +36,7 @@ CV.loadCV = (extraCallback) => {
 		jQuery('.cvcore .intro p').each(function() {
 			////// Fade in
 			tempo += 300;
-			var self = this;
+			let self = this;
 			setTimeout(function() {
 				jQuery(self).css('display', 'inherit').animate({
 					opacity: 1
@@ -90,14 +90,14 @@ CV.loadCV = (extraCallback) => {
 		
 			tempo += 700;
 			
-			var sliceHTML = "";
-			var title = jQuery(this).find('title').text();
-			var institution = jQuery(this).find('institution').text();
-			var place = jQuery(this).find('place').text();
-			var when = jQuery(this).find('when').text();
-			var year = jQuery(this).find('year').text();
-			var what = jQuery(this).find('what').text();
-			var skill = jQuery(this).find('skill').text();
+			let sliceHTML = "";
+			let title = jQuery(this).find('title').text();
+			let institution = jQuery(this).find('institution').text();
+			let place = jQuery(this).find('place').text();
+			let when = jQuery(this).find('when').text();
+			let year = jQuery(this).find('year').text();
+			let what = jQuery(this).find('what').text();
+			let skill = jQuery(this).find('skill').text();
 			
 			sliceHTML += "<div class='slice'>";
 			sliceHTML +=   "<div class='left-side'>";
@@ -106,7 +106,7 @@ CV.loadCV = (extraCallback) => {
 			sliceHTML +=   "</div>";
 			sliceHTML +=   "<div class='right-side'>";
 			sliceHTML +=     "<h5>" + title + "</h5>";
-			var sliceBit = institution;
+			let sliceBit = institution;
 			sliceBit += (place !== "" && when !== "" ? " - " + place + " (" + when + ")" : "");
 			sliceHTML +=     "<p class='institution'>" + sliceBit + "</p>";
 			sliceHTML +=     "<p class='what'>" + what + "</p>";
@@ -148,14 +148,14 @@ CV.keyCheckForCV = () => {
 		
 		// Define regex for key validation. Yeah that's where you can hack into my code to see my CV, derp.
 		// Actually no, regex suck.
-		var input = jQuery('#cv .password input').val();
-		var shallPass = (input.charAt(input.length - 1) == 3);
+		let input = jQuery('#cv .password input').val();
+		let shallPass = (input.charAt(input.length - 1) == 3);
 		
 		// Loading icon start
-		var randomTimeout = 500 + 500 * Math.random();
-		var jShow = jQuery('#cv .show');
-		var button = "<input type='submit' value='Show CV'>";
-		var loadDiv = "<div class='load'></div>";
+		let randomTimeout = 500 + 500 * Math.random();
+		let jShow = jQuery('#cv .show');
+		let button = "<input type='submit' value='Show CV'>";
+		let loadDiv = "<div class='load'></div>";
 		
 		// Loading icon will start to whirl in both cases
 		jShow.html(loadDiv);
@@ -196,10 +196,10 @@ CV.showCVwithoutKey = () => {
 		// Now we're talking.
 		
 		// Loading icon start
-		var randomTimeout = 500 + 500 * Math.random();
-		var jShow = jQuery('#cv .show');
-		var button = "<input type='submit' value='Show CV'>";
-		var loadDiv = "<div class='load'></div>";
+		let randomTimeout = 500 + 500 * Math.random();
+		let jShow = jQuery('#cv .show');
+		let button = "<input type='submit' value='Show CV'>";
+		let loadDiv = "<div class='load'></div>";
 		
 		// Loading icon will start to whirl in both cases
 		jShow.html(loadDiv);

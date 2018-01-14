@@ -2,20 +2,13 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Raleway', sans-serif;
   color: @blue-text;
 }
-h2 {
-  text-align: center;
-  color: @super-light-grey;
-  white-space: pre-wrap;
-  font-size: 60px;
-  background: black;
-  box-shadow: rgba(255, 255, 255, 0.5) 0 0 15px;
-}
-p {
-
-}
 .weight-200 {
   font-weight: 200;
 }
 .weight-300 {
   font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  .weight-300();
 }

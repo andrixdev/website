@@ -20,24 +20,24 @@ let Gallery = {
  * @param {Function} extraCallback Function called after the DOM is filled
  */
 Gallery.loadAlgories = (extraCallback) => {
-	let gallery = jQuery('#whole');
+	let gallery = jQuery('.gallery-content');
 	jQuery
 	.get("algories.xml", {})
 	.done((data) => {
 	
 		let jAlgories = jQuery(data).find('algories');
 		jAlgories.find('category').each(function() {
-			var categHTML = "";
+			let categHTML = "";
 			
 			// Get the name!
-			var categName = jQuery(this).find('categoryName').text();
+			let categName = jQuery(this).find('categoryName').text();
 			categHTML += "<div class='categ'>";
 			categHTML += "<h3 class='categname'>" + categName + "</h3>";
 			
 			// Get the Morons!
-			var morons = jQuery(this).find('categMoreOnLinks');
-			var moronCodepen = morons.find('codepen').text();
-			var moronDeviantart = morons.find('deviantart').text();
+			let morons = jQuery(this).find('categMoreOnLinks');
+			let moronCodepen = morons.find('codepen').text();
+			let moronDeviantart = morons.find('deviantart').text();
 			categHTML += "<div class='moron'>";
 			categHTML += "<p>More on</p>";
 			categHTML += "<a class='fa fa-codepen' href='" + moronCodepen + "' title='See the live collection on CodePen' target='_blank'></a>";
@@ -45,19 +45,21 @@ Gallery.loadAlgories = (extraCallback) => {
 			categHTML += "</div>";
 			
 			// Create categ object
-			var categObj = {
+			let categObj = {
 				categName: categName,
 				alg: []
 			};
+
+			categHTML += "<div class='categ-content'>";
 			
 			jQuery(this).find('alg').each(function() {
-				var title = jQuery(this).find('title').text();
-				var src = "img/" + jQuery(this).find('src').text();
-				var small = "img/" + jQuery(this).find('small').text();
-				var description = jQuery(this).find('description').text();
-				var deviant = jQuery(this).find('deviant').text();
-				var github = jQuery(this).find('github').text();
-				var id = jQuery(this).find('artid').text();
+				let title = jQuery(this).find('title').text();
+				let src = "img/" + jQuery(this).find('src').text();
+				let small = "img/" + jQuery(this).find('small').text();
+				let description = jQuery(this).find('description').text();
+				let deviant = jQuery(this).find('deviant').text();
+				let github = jQuery(this).find('github').text();
+				let id = jQuery(this).find('artid').text();
 				
 				// Fill the DOM
 				categHTML += "<div class='alg' id='art-id-" + id + "' >";
@@ -80,7 +82,7 @@ Gallery.loadAlgories = (extraCallback) => {
 				
 			});
 			
-			categHTML += "</div>";
+			categHTML += "</div></div>";
 			
 			gallery.append(categHTML);
 			// Feed global data with categ object
@@ -126,10 +128,10 @@ Gallery.DOMlisteners = () => {
 	});
 	
 	// About link hover effects
-	var logoMail = jQuery('#about a.mailme');
-	var logoDeviant = jQuery('#about a.deviant');
-	var logoGithub = jQuery('#about a.github');
-	var logoCodepen = jQuery('#about a.codepen');
+	let logoMail = jQuery('#about a.mailme');
+	let logoDeviant = jQuery('#about a.deviant');
+	let logoGithub = jQuery('#about a.github');
+	let logoCodepen = jQuery('#about a.codepen');
 	jQuery('#about span.aboutmail').on({
 		mouseenter: function() {
 			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
@@ -198,25 +200,25 @@ Gallery.fillFront = (jAlgNode) => {
 	
 	Gallery.loadingOn();
 	
-	var id = jAlgNode.attr('id');
-	var src = Gallery.getAlg(id).src;
-	var title = Gallery.getAlg(id).title;
-	var description = Gallery.getAlg(id).description;
-	var deviant = Gallery.getAlg(id).deviant;
-	var github = Gallery.getAlg(id).github;
+	let id = jAlgNode.attr('id');
+	let src = Gallery.getAlg(id).src;
+	let title = Gallery.getAlg(id).title;
+	let description = Gallery.getAlg(id).description;
+	let deviant = Gallery.getAlg(id).deviant;
+	let github = Gallery.getAlg(id).github;
 	
 	// Image
-	var newImg = new Image();
+	let newImg = new Image();
 	newImg.onload = function() {
-		var self = this;
+		let self = this;
 		
-		var height = this.height;
-		var width = this.width;
+		let height = this.height;
+		let width = this.width;
 		
 		// If image is bigger than 0.9*window, rescale
-		var ratioW = this.width / (0.9*jQuery(window).width());
-		var ratioH = this.height / (0.9*jQuery(window).height());
-		var ratio = Math.max(ratioH, ratioW);
+		let ratioW = this.width / (0.9*jQuery(window).width());
+		let ratioH = this.height / (0.9*jQuery(window).height());
+		let ratio = Math.max(ratioH, ratioW);
 		if (ratio > 1 && ratioW > ratioH) {
 			height /= ratioW;
 			width /= ratioW;
@@ -225,8 +227,8 @@ Gallery.fillFront = (jAlgNode) => {
 			width /= ratioH;
 		}
 		
-		var left = (jQuery(window).width() - width)/2;
-		var top = (jQuery(window).height() - height)/2;
+		let left = (jQuery(window).width() - width)/2;
+		let top = (jQuery(window).height() - height)/2;
 		
 		jQuery('#front .zoom').css('height', height).css('width', width).css('top', top).css('left', left);
 		setTimeout(function() {
