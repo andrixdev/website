@@ -1,19 +1,20 @@
 .header {
-	width: 100%;
-	background: @blue-15;
 	.flexrow();
 	.flexstart();
 	border-bottom: solid 5px @blue-10;
+	width: 100%;
+	background: @blue-15;
 
 	.logo {
 		width: 80px;
+		height: 65px;
 		position: relative;
 
 		img {
 			width: 65px;
 			height: 65px;
 			.marjinoto();
-			top: 5px;
+			top: 10px;
 		}
 	}
 	.menu {
@@ -45,6 +46,31 @@
 			}
 
 
+		}
+	}
+	.mobile-menu {
+		display: none;
+	}
+
+	/* Mobile menu */
+	@media (max-width: 1100px) {
+		.flexbetween();
+		.menu {
+			display: none;
+		}
+		.mobile-menu {
+			display: inherit;
+
+			p.fa-bars {
+				font-size: 40px;
+				margin-right: 25px;
+				.pointer();
+
+				&:hover {
+					color: white;
+					.white-shadow();
+				}
+			}
 		}
 	}
 }
