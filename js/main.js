@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
         template: jQuery('#geom-template').html(),
         props: ['sides', 'header', 'rotate']
     });
+    Vue.component('logo-links', {
+        template: jQuery('#logo-links-template').html()
+    });
 
     // App routes
     const routes = [

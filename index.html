@@ -67,9 +67,11 @@
 			</router-link>
 		</div>
 	</div>
+
 	<div class="core">
 		<router-view></router-view>
 	</div>
+
 	<div class="footer">
 		<p>Alexandre Andrieux @2015-2018</p>
 		<p class="crafted">
@@ -81,12 +83,19 @@
 	</div>
 </div>
 
+<!-- View templates -->
 <template id="home-template">
 	<div id="home">
 		<div class="page-header">
 			<geom sides="0"></geom>
 			<h1>Home</h1>
 		</div>
+
+		<div class="page-content">
+
+		</div>
+
+		<logo-links></logo-links>
 	</div>
 </template>
 
@@ -96,36 +105,39 @@
 			<geom sides="4"></geom>
 			<h1>Gallery</h1>
 		</div>
-		<div class="gallery-content">
-			<!-- Fill with XHR reading XML with links to imgs -->
-		</div>
-		<div class="gallery-after">
-			<p>Most artworks are coded, open-source and available on CODEPEN</p>
-			<p>Feel free to also check out my DEVIANTART gallery</p>
-		</div>
-		<div id="front">
-			<div class="zoom">
-				<img class='loader' src='img/website/icosacidron-svg.svg' />
-				<div class='fullimg'>
-					<img src="/" alt="" />
-				</div>
-				<div class='quit' title="Back to gallery"></div>
-				<div class='details'>
-					<div class='description'>
-						<p class='title'>Title</p>
-						<p class='text'>Lorem</p>
+
+		<div class="page-content">
+			<div class="gallery-content">
+				<!-- Fill with XHR reading XML with links to imgs -->
+			</div>
+
+			<!-- Artwork detail container -->
+			<div id="front">
+				<div class="zoom">
+					<img class='loader' src='img/website/icosacidron-svg.svg' />
+					<div class='fullimg'>
+						<img src="/" alt="" />
 					</div>
-					<div class='social'>
-						<div class='deviant'>
-
+					<div class='quit' title="Back to gallery"></div>
+					<div class='details'>
+						<div class='description'>
+							<p class='title'>Title</p>
+							<p class='text'>Lorem</p>
 						</div>
-						<div class='github'>
+						<div class='social'>
+							<div class='deviant'>
 
+							</div>
+							<div class='github'>
+
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<logo-links></logo-links>
 	</div>
 </template>
 
@@ -136,9 +148,11 @@
 			<h1>Projects</h1>
 		</div>
 
-		<div class="show">
-			<input type='submit' class='acidbutton' value="Show more">
+		<div class="page-content">
+
 		</div>
+
+		<logo-links></logo-links>
 	</div>
 </template>
 
@@ -148,6 +162,12 @@
 			<geom sides="0"></geom>
 			<h1>Vjing</h1>
 		</div>
+
+		<div class="page-content">
+
+		</div>
+
+		<logo-links></logo-links>
 	</div>
 </template>
 
@@ -158,7 +178,7 @@
 			<h1>About</h1>
 		</div>
 
-		<div class="">
+		<div class="page-content">
 			<p>Hi there, my name is Alex and I do algorithmic art.</p>
 			<p>My passion for physics and front-end web programming led me to the universe of particle art.</p>
 			<p>After an award-winning team project at KTH Royal Institute of Technology about creating artworks with voice, I created my own code for art on HTML canvas.</p>
@@ -173,6 +193,8 @@
 			<p class='projectspage'>Aside from working on my algorist skills, I design web interfaces!</p>
 			<p><a href='pro' title="To my project work" alt="Projects page" class='acidbutton'>Go to projects</a></p>
 		</div>
+
+		<logo-links></logo-links>
 	</div>
 </template>
 
@@ -183,25 +205,14 @@
 			<h1>Contact</h1>
 		</div>
 
-		<div class="feel-free">
-			<p>Feel free to enquire or share any creative thoughts</p>
-			<p>You can <span class='aboutmail'>email me at alex(at)icosacid.com</span>, check my <span class='aboutdeviant'>Deviant</span>, my <span class='aboutgithub'>GitHub</span> or my <span class='aboutcodepen'>Codepen</span></p>
-			<div class="logo-links">
-				<a class="mailme" title="Send an e-mail" href="#"
-				   onclick='linkTo_UnCryptMailto("nbjmup+jdptbdjeAhnbjm/dpn?tvckfdu=Nfttbhf gspn jdptbdje/dpn");return false;'>
-					<span class="fa fa-envelope-o"></span>
-				</a>
-				<a class="deviant" title="Check my DeviantArt gallery" href="http://icosacid.deviantart.com/" target='_blank'>
-					<span class="fa fa-deviantart"></span>
-				</a>
-				<a class='github' title="Check my repositories on GitHub" href="https://github.com/Icosacid" target='_blank'>
-					<span class="fa fa-github"></span>
-				</a>
-				<a class='codepen' title="Play live with my code on Codepen" href="https://codepen.io/Icosacid" target='_blank'>
-					<span class="fa fa-codepen"></span>
-				</a>
+		<div class="page-content">
+			<div class="feel-free">
+				<p>Feel free to enquire or share any creative thoughts</p>
+				<p>You can <span class='aboutmail'>email me at alex(at)icosacid.com</span>, check my <span class='aboutdeviant'>Deviant</span>, my <span class='aboutgithub'>GitHub</span> or my <span class='aboutcodepen'>Codepen</span></p>
 			</div>
 		</div>
+
+		<logo-links></logo-links>
 	</div>
 </template>
 
@@ -211,246 +222,252 @@
 			<geom sides="4" rotate="true"></geom>
 			<h1>CV</h1>
 		</div>
-		<form class="showcv" action="" method="">
-			<!--<div class='password'>
-				<input type='password' name='password' placeholder="Enter key..." />
-			</div>-->
-			<div class='show'>
-				<input type='submit' class='acidbutton' value="Show CV">
-			</div>
-		</form>
-		<div class='cvcore'>
-			<div class='intro'>
-				<h5 class='moar'>A bit more about me...</h5>
-				<p>My name is Alexandre Andrieux. I code for work and I code for art.</p>
-				<p>Currently working as a project manager in a French team of versatile developers.</p>
-				<p>Together with our clients, we're designing and producing the greatest web and hybrid apps!</p>
-				<!--<p>From sketching to interactive web prototyping, I create user interfaces. And I love that.</p>-->
-				<!--<p>Right now I am working on a master thesis project about color recognition.</p>-->
-				<!--<p>I would love to take a step further in the field of serious gaming.</p>-->
-			</div>
-			<div class='enjoy'>
-				<h4>Things I enjoy</h4>
-				<div class='item'>
-					<div class='itemhead'>
-						<img src='img/shoe.png' alt='Running' />
-						<h5>Running</h5>
-					</div>
-					<div class='moreabout'>
-						<p>Running trails for competition and with friends.</p>
-					</div>
-				</div>
-				<div class='item'>
-					<div class='itemhead'>
-						<img src='img/note.png' alt='Music' />
-						<h5>Music</h5>
-					</div>
-					<div class='moreabout'>
-						<p>On track at the moment: Vivaldi (baroque), Zomboy (electronic) and AC/DC.<br/>Currently working on my piano skills. I enjoy ukulele and violin as well!</p>
-					</div>
-				</div>
-				<div class='item'>
-					<div class='itemhead'>
-						<img src='img/hsl.png' alt='HSL' />
-						<h5>The HSL color scale</h5>
-					</div>
-					<div class='moreabout'>
-						<p>How it empowers our sense of harmony and creativity.</p>
-					</div>
-				</div>
 
-			</div>
-			<div class='abroad'>
-				<div class='languages'>
-					<h4>Languages I speak</h4>
-					<div class='item french'>
+		<div class="page-content">
+			<form class="showcv" action="" method="">
+				<!--<div class='password'>
+                    <input type='password' name='password' placeholder="Enter key..." />
+                </div>-->
+				<div class='show'>
+					<input type='submit' class='acidbutton' value="Show CV">
+				</div>
+			</form>
+			<div class='cvcore'>
+				<div class='intro'>
+					<h5 class='moar'>A bit more about me...</h5>
+					<p>My name is Alexandre Andrieux. I code for work and I code for art.</p>
+					<p>Currently working as a project manager in a French team of versatile developers.</p>
+					<p>Together with our clients, we're designing and producing the greatest web and hybrid apps!</p>
+					<!--<p>From sketching to interactive web prototyping, I create user interfaces. And I love that.</p>-->
+					<!--<p>Right now I am working on a master thesis project about color recognition.</p>-->
+					<!--<p>I would love to take a step further in the field of serious gaming.</p>-->
+				</div>
+				<div class='enjoy'>
+					<h4>Things I enjoy</h4>
+					<div class='item'>
 						<div class='itemhead'>
-							<img class='flagicon' src='img/france.png' alt='French' />
-							<h5>French</h5>
+							<img src='img/shoe.png' alt='Running' />
+							<h5>Running</h5>
 						</div>
 						<div class='moreabout'>
-							<p>My mother tongue</p>
+							<p>Running trails for competition and with friends.</p>
 						</div>
 					</div>
-					<div class='item english'>
+					<div class='item'>
 						<div class='itemhead'>
-							<img class='flagicon' src='img/uk.png' alt='English' />
-							<h5>English</h5>
+							<img src='img/note.png' alt='Music' />
+							<h5>Music</h5>
 						</div>
 						<div class='moreabout'>
-							<p>Fluent</p>
+							<p>On track at the moment: Vivaldi (baroque), Zomboy (electronic) and AC/DC.<br/>Currently working on my piano skills. I enjoy ukulele and violin as well!</p>
 						</div>
 					</div>
-					<div class='item swedish'>
+					<div class='item'>
 						<div class='itemhead'>
-							<img class='flagicon' src='img/sweden.png' alt='Swedish' />
-							<h5>Swedish</h5>
+							<img src='img/hsl.png' alt='HSL' />
+							<h5>The HSL color scale</h5>
 						</div>
 						<div class='moreabout'>
-							<p>Endast om du vill prata om vanliga &auml;mnen.</p>
+							<p>How it empowers our sense of harmony and creativity.</p>
 						</div>
 					</div>
-					<div class='item spanish'>
+
+				</div>
+				<div class='abroad'>
+					<div class='languages'>
+						<h4>Languages I speak</h4>
+						<div class='item french'>
+							<div class='itemhead'>
+								<img class='flagicon' src='img/france.png' alt='French' />
+								<h5>French</h5>
+							</div>
+							<div class='moreabout'>
+								<p>My mother tongue</p>
+							</div>
+						</div>
+						<div class='item english'>
+							<div class='itemhead'>
+								<img class='flagicon' src='img/uk.png' alt='English' />
+								<h5>English</h5>
+							</div>
+							<div class='moreabout'>
+								<p>Fluent</p>
+							</div>
+						</div>
+						<div class='item swedish'>
+							<div class='itemhead'>
+								<img class='flagicon' src='img/sweden.png' alt='Swedish' />
+								<h5>Swedish</h5>
+							</div>
+							<div class='moreabout'>
+								<p>Endast om du vill prata om vanliga &auml;mnen.</p>
+							</div>
+						</div>
+						<div class='item spanish'>
+							<div class='itemhead'>
+								<img class='flagicon' src='img/spain.png' alt='Spanish' />
+								<h5>Spanish</h5>
+								<img class='flagicon' src='img/china.png' alt='Chinese' />
+								<h5>Chinese</h5>
+							</div>
+							<div class='moreabout'>
+								<p>In progress.</p>
+							</div>
+						</div>
+					</div>
+					<div class='countries'>
+						<h4>Countries I lived in</h4>
+						<div class='item france'>
+							<div class='itemhead'>
+								<img class='flagicon' src='img/france.png' alt='France' />
+								<h5>France</h5>
+							</div>
+							<div class='moreabout'>
+								<p>Home country, mainly Cannes (south) and Lyon (center)</p>
+							</div>
+						</div>
+						<div class='item australia'>
+							<div class='itemhead'>
+								<img class='flagicon' src='img/australia.png' alt='Australia' />
+								<h5>Australia</h5>
+							</div>
+							<div class='moreabout'>
+								<p>Melbourne, 6 months</p>
+							</div>
+						</div>
+						<div class='item sweden'>
+
+							<div class='itemhead'>
+								<img class='flagicon' src='img/sweden.png' alt='Sweden' />
+								<h5>Sweden</h5>
+							</div>
+							<div class='moreabout'>
+								<p>Stockholm, 1 year</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='schools'>
+					<h4>Higher education</h4>
+					<div class='item'>
 						<div class='itemhead'>
-							<img class='flagicon' src='img/spain.png' alt='Spanish' />
-							<h5>Spanish</h5>
-							<img class='flagicon' src='img/china.png' alt='Chinese' />
-							<h5>Chinese</h5>
+							<img src='img/ecl.png' alt='ECL' />
+							<a href='https://www.youtube.com/watch?v=K5AtX7GajU8' target='_blank' title='School presentation on Youtube' alt='ECL video'>Ecole Centrale Lyon</a>
+						</div>
+					</div>
+					<div class='item'>
+						<div class='itemhead'>
+							<img src='img/kth.png' alt='KTH' />
+							<a href='https://www.youtube.com/watch?v=IclqryPDGnA' target='_blank' title='School presentation on Youtube' alt='KTH video'>KTH Royal Institute of Technology</a>
+						</div>
+					</div>
+				</div>
+				<div class='webskills'>
+					<h4>My web skills</h4>
+
+					<p class='overall'>Overall, I'm quite an experienced CSS ninja and architect who can handle the newest fancy JS framework and lead projects.</p>
+
+					<h5>Everyday languages</h5>
+					<p>JavaScript, CSS, XML and derived markups</p>
+
+					<h5>Everyday platforms & tools</h5>
+					<p>Git, CodePen, WebStorm, Firefox Dev Tools, Less/Sass, Lodash, NPM</p>
+
+					<div class='codeanddesign'>
+						<div class='code'>
+							<h5>My code is</h5>
+							<p>neat with a rigorous markup</p>
+							<p>cross-browser</p>
+							<p>commented</p>
+							<p>responsive</p>
+						</div>
+						<div class='design'>
+							<h5>My designs aim at</h5>
+							<p>being intuitive</p>
+							<p title="HCI: Human-Computer Interaction">following HCI standards</p>
+							<p>displaying harmonious color patterns</p>
+							<p>receiving iterative user feedback for improvements</p>
+						</div>
+					</div>
+
+					<h5>Some specific experience</h5>
+					<div class='somexp'>
+						<p>Git, Underscore/Lodash, NPM, Bower, Canvas, CSS Flexbox, Bootstrap, VueJS</p>
+						<p>Angular, PubNub, D3.js, TypeScript, Google Analytics, Pure CSS</p>
+						<p>Socket.io, Angular 2, Photoshop, Xiti tracking, Three.js, Web Audio API, XSLT</p>
+						<p>jQuery Mobile, Symfony2, Twig, CMS Wordpress, C++, Python</p>
+						<p>CMS Drupal, CMS Joomla!, Java SE</p>
+					</div>
+
+					<h5>Current personal projects</h5>
+					<p>Javascript tennis with Nik Rowell, creative coder from Minnesota<br/>Algorithmic art: from particles to fluids<br/>Re-coding this website :D</p>
+
+				</div>
+				<div class='cake'>
+					<h4>Education and work</h4>
+				</div>
+				<div class='recom'>
+					<h4>I strongly recommend</h4>
+
+					<div class='item'>
+						<div class='itemhead'>
+							<img class='roundicon' src='img/joshua.jpg' alt='' />
+							<a href='https://www.youtube.com/watch?v=LJS4fBjdPM4' target='_blank' title='Watch on Youtube' alt='Beyond Play: the Art of Creative Coding'>A W3C conference by Joshua Davis: Beyond Play, the Art of Creative Coding</a>
 						</div>
 						<div class='moreabout'>
-							<p>In progress.</p>
+							<p>An inspiring and rejuvenating talk for creative designs</p>
 						</div>
 					</div>
-				</div>
-				<div class='countries'>
-					<h4>Countries I lived in</h4>
-					<div class='item france'>
+
+					<div class='item'>
 						<div class='itemhead'>
-							<img class='flagicon' src='img/france.png' alt='France' />
-							<h5>France</h5>
+							<img class='roundicon' src='img/gamification.png' alt='' />
+							<a href='https://www.coursera.org/course/gamification' target='_blank' title='Coursera: Gamification MOOC' alt='Gamification MOOC'>A MOOC: Gamification, University of Pennsylvania</a>
 						</div>
 						<div class='moreabout'>
-							<p>Home country, mainly Cannes (south) and Lyon (center)</p>
+							<p>by Kevin Werbach and his associates</p>
 						</div>
 					</div>
-					<div class='item australia'>
+
+					<div class='item'>
 						<div class='itemhead'>
-							<img class='flagicon' src='img/australia.png' alt='Australia' />
-							<h5>Australia</h5>
+							<img class='roundicon' src='img/codepenradio.jpg' alt='' />
+							<a href='https://blog.codepen.io/radio/' target='_blank' title='Listen on codepen.io' alt='CodePen Radio'>A podcast: CodePen Radio</a>
 						</div>
 						<div class='moreabout'>
-							<p>Melbourne, 6 months</p>
+							<p>The ins and outs of running a web software business, by the 3 co-founders of codepen.io</p>
 						</div>
 					</div>
-					<div class='item sweden'>
 
+					<div class='item'>
 						<div class='itemhead'>
-							<img class='flagicon' src='img/sweden.png' alt='Sweden' />
-							<h5>Sweden</h5>
+							<img class='roundicon' src='img/wtfviz.jpg' alt='' />
+							<a href='http://viz.wtf/' target='_blank' title='Go to blog viz.wtf' alt='WTF Visualizations'>A blog: WTF visualizations</a>
 						</div>
 						<div class='moreabout'>
-							<p>Stockholm, 1 year</p>
+							<p>How to design a visualization the worst possible way</p>
 						</div>
 					</div>
+
+					<div class='item'>
+						<div class='itemhead'>
+							<img class='roundicon' src='img/androidjones.jpg' alt='' />
+							<a href='http://androidjones.com/gallery/' target='_blank' title='To Android Jones gallery' alt='Android Jones'>A digital artist: Android Jones</a>
+						</div>
+						<div class='moreabout'>
+							<p>Art, powered to the sky.</p>
+						</div>
+					</div>
+
 				</div>
-			</div>
-			<div class='schools'>
-				<h4>Higher education</h4>
-				<div class='item'>
-					<div class='itemhead'>
-						<img src='img/ecl.png' alt='ECL' />
-						<a href='https://www.youtube.com/watch?v=K5AtX7GajU8' target='_blank' title='School presentation on Youtube' alt='ECL video'>Ecole Centrale Lyon</a>
-					</div>
-				</div>
-				<div class='item'>
-					<div class='itemhead'>
-						<img src='img/kth.png' alt='KTH' />
-						<a href='https://www.youtube.com/watch?v=IclqryPDGnA' target='_blank' title='School presentation on Youtube' alt='KTH video'>KTH Royal Institute of Technology</a>
-					</div>
-				</div>
-			</div>
-			<div class='webskills'>
-				<h4>My web skills</h4>
-
-				<p class='overall'>Overall, I'm quite an experienced CSS ninja and architect who can handle the newest fancy JS framework and lead projects.</p>
-
-				<h5>Everyday languages</h5>
-				<p>JavaScript, CSS, XML and derived markups</p>
-
-				<h5>Everyday platforms & tools</h5>
-				<p>Git, CodePen, WebStorm, Firefox Dev Tools, Less/Sass, Lodash, NPM</p>
-
-				<div class='codeanddesign'>
-					<div class='code'>
-						<h5>My code is</h5>
-						<p>neat with a rigorous markup</p>
-						<p>cross-browser</p>
-						<p>commented</p>
-						<p>responsive</p>
-					</div>
-					<div class='design'>
-						<h5>My designs aim at</h5>
-						<p>being intuitive</p>
-						<p title="HCI: Human-Computer Interaction">following HCI standards</p>
-						<p>displaying harmonious color patterns</p>
-						<p>receiving iterative user feedback for improvements</p>
-					</div>
-				</div>
-
-				<h5>Some specific experience</h5>
-				<div class='somexp'>
-					<p>Git, Underscore/Lodash, NPM, Bower, Canvas, CSS Flexbox, Bootstrap, VueJS</p>
-					<p>Angular, PubNub, D3.js, TypeScript, Google Analytics, Pure CSS</p>
-					<p>Socket.io, Angular 2, Photoshop, Xiti tracking, Three.js, Web Audio API, XSLT</p>
-					<p>jQuery Mobile, Symfony2, Twig, CMS Wordpress, C++, Python</p>
-					<p>CMS Drupal, CMS Joomla!, Java SE</p>
-				</div>
-
-				<h5>Current personal projects</h5>
-				<p>Javascript tennis with Nik Rowell, creative coder from Minnesota<br/>Algorithmic art: from particles to fluids<br/>Re-coding this website :D</p>
-
-			</div>
-			<div class='cake'>
-				<h4>Education and work</h4>
-			</div>
-			<div class='recom'>
-				<h4>I strongly recommend</h4>
-
-				<div class='item'>
-					<div class='itemhead'>
-						<img class='roundicon' src='img/joshua.jpg' alt='' />
-						<a href='https://www.youtube.com/watch?v=LJS4fBjdPM4' target='_blank' title='Watch on Youtube' alt='Beyond Play: the Art of Creative Coding'>A W3C conference by Joshua Davis: Beyond Play, the Art of Creative Coding</a>
-					</div>
-					<div class='moreabout'>
-						<p>An inspiring and rejuvenating talk for creative designs</p>
-					</div>
-				</div>
-
-				<div class='item'>
-					<div class='itemhead'>
-						<img class='roundicon' src='img/gamification.png' alt='' />
-						<a href='https://www.coursera.org/course/gamification' target='_blank' title='Coursera: Gamification MOOC' alt='Gamification MOOC'>A MOOC: Gamification, University of Pennsylvania</a>
-					</div>
-					<div class='moreabout'>
-						<p>by Kevin Werbach and his associates</p>
-					</div>
-				</div>
-
-				<div class='item'>
-					<div class='itemhead'>
-						<img class='roundicon' src='img/codepenradio.jpg' alt='' />
-						<a href='https://blog.codepen.io/radio/' target='_blank' title='Listen on codepen.io' alt='CodePen Radio'>A podcast: CodePen Radio</a>
-					</div>
-					<div class='moreabout'>
-						<p>The ins and outs of running a web software business, by the 3 co-founders of codepen.io</p>
-					</div>
-				</div>
-
-				<div class='item'>
-					<div class='itemhead'>
-						<img class='roundicon' src='img/wtfviz.jpg' alt='' />
-						<a href='http://viz.wtf/' target='_blank' title='Go to blog viz.wtf' alt='WTF Visualizations'>A blog: WTF visualizations</a>
-					</div>
-					<div class='moreabout'>
-						<p>How to design a visualization the worst possible way</p>
-					</div>
-				</div>
-
-				<div class='item'>
-					<div class='itemhead'>
-						<img class='roundicon' src='img/androidjones.jpg' alt='' />
-						<a href='http://androidjones.com/gallery/' target='_blank' title='To Android Jones gallery' alt='Android Jones'>A digital artist: Android Jones</a>
-					</div>
-					<div class='moreabout'>
-						<p>Art, powered to the sky.</p>
-					</div>
-				</div>
-
 			</div>
 		</div>
+
+		<logo-links></logo-links>
 	</div>
 </template>
 
+<!-- Components -->
 <template id="geom-template">
 	<div class="geom" :class="{'in-header': header, 'is-rotated': rotate}">
 		<div v-if="sides == 4" class="shape square">
@@ -459,6 +476,24 @@
 		<div v-if="sides == 0" class="shape round">
 			<div class="inner"></div>
 		</div>
+	</div>
+</template>
+
+<template id="logo-links-template">
+	<div class="logo-links">
+		<a class="mailme" title="Send an e-mail" href="#"
+		   onclick='linkTo_UnCryptMailto("nbjmup+jdptbdjeAhnbjm/dpn?tvckfdu=Nfttbhf gspn jdptbdje/dpn");return false;'>
+			<span class="fa fa-envelope-o"></span>
+		</a>
+		<a class="deviant" title="Check my DeviantArt gallery" href="http://icosacid.deviantart.com/" target='_blank'>
+			<span class="fa fa-deviantart"></span>
+		</a>
+		<a class='github' title="Check my repositories on GitHub" href="https://github.com/Icosacid" target='_blank'>
+			<span class="fa fa-github"></span>
+		</a>
+		<a class='codepen' title="Play live with my code on Codepen" href="https://codepen.io/Icosacid" target='_blank'>
+			<span class="fa fa-codepen"></span>
+		</a>
 	</div>
 </template>
 
