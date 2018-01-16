@@ -5,9 +5,7 @@
 	margin-bottom: 50px;
 	
 	h2, p {
-		text-align: center;
-		color: #eee;
-		white-space: pre-wrap;
+		.center();
 	}
 	h2 {
 		font-size: 60px;
@@ -28,60 +26,28 @@
 			margin-top: 15px;
 		}
 	}
-	div {
-		text-align: center;
-		width: 100%;
-		margin-top: 40px;
-	}
-	
-	a.mailme,
-	a.deviant,
-	a.github,
-	a.codepen {
-		margin: 0 35px;
-		display: inline-block;
-		box-shadow: rgba(0,0,0,0.3) 0 0 10px;
-		border-radius: 8px;
-		cursor: pointer;
-		opacity: 0.9;
-		
-		&:hover {
-			box-shadow: rgba(255,255,255,0.7) 0 0 15px;
+
+}
+
+.logo-links {
+	.flexrow();
+	.flexcenter();
+	margin-top: 40px;
+
+	a {
+		color: white;
+		margin: 10px 35px;
+
+		span.fa {
+			//text-shadow: rgba(255, 255, 255, 0.3) 0 0 15px;
+			transform: rotateY(0deg);
+			transition: transform 500ms;
+			font-size: 80px;
+
+			&:hover {
+				text-shadow: rgba(255, 255, 255, 0.85) 0 0 50px;
+				transform: rotateY(180deg);
+			}
 		}
 	}
-	a.mailme {
-		background: url('../img/website/email.jpg');
-		background-size: 100% 100%;
-		width: 120px;
-		height: 90px;
-		margin-top: 50px;
-	}
-	a.deviant {
-		background: url('../img/website/deviant.jpg');
-		background-size: 100% 100%;
-		width: 80px;
-		height: 120px;
-	}
-	a.github {
-		background: url('../img/website/github.jpg');
-		background-size: 100% 100%;
-		width: 110px;
-		height: 110px;
-		border-radius: 50%;
-	}
-	a.codepen {
-		background: url('../img/website/codepen-white.png');
-		background-size: 100% 100%;
-		width: 110px;
-		height: 110px;
-		border-radius: 50%;
-	}
-	p.comingsoon {
-		font-size: 20px;
-	}
-	p.projectspage {
-		margin: 70px auto 20px;
-		font-size: 25px;
-	}
-	
 }
