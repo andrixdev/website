@@ -49,22 +49,26 @@
 				<geom sides="4" header="true" rotate="true"></geom>
 				Projects
 			</router-link>
-			<router-link to="/vjing" class="menu-tab vjing">
+			<router-link to="/animations" class="menu-tab animations">
 				<geom sides="0" header="true"></geom>
+				Animations
+			</router-link>
+			<router-link to="/vjing" class="menu-tab vjing">
+				<geom sides="4" header="true"></geom>
 				Vjing
 			</router-link>
 			<router-link to="/about" class="menu-tab about">
-				<geom sides="4" header="true"></geom>
+				<geom sides="0" header="true"></geom>
 				About
 			</router-link>
 			<router-link to="/contact" class="menu-tab contact">
-				<geom sides="0" header="true"></geom>
+				<geom sides="4" header="true" rotate="true"></geom>
 				Contact
 			</router-link>
-			<router-link to="/cv" class="menu-tab cv">
-				<geom sides="4" header="true" rotate="true"></geom>
+			<!--<router-link to="/cv" class="menu-tab cv">
+				<geom sides="0" header="true"></geom>
 				CV
-			</router-link>
+			</router-link>-->
 		</div>
 		<div class="mobile-menu">
 			<p class="fa fa-bars"></p>
@@ -90,7 +94,7 @@
 <template id="home-template">
 	<div id="home">
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom sides="4"></geom>
 			<h1>Home</h1>
 		</div>
 
@@ -105,7 +109,7 @@
 <template id="gallery-template">
 	<div id="gallery">
 		<div class="page-header">
-			<geom sides="4"></geom>
+			<geom sides="0"></geom>
 			<h1>Gallery</h1>
 		</div>
 
@@ -159,10 +163,25 @@
 	</div>
 </template>
 
+<template id="animations-template">
+	<div id="animations">
+		<div class="page-header">
+			<geom sides="0"></geom>
+			<h1>Animations</h1>
+		</div>
+
+		<div class="page-content">
+
+		</div>
+
+		<logo-links></logo-links>
+	</div>
+</template>
+
 <template id="vjing-template">
 	<div id="vjing">
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom sides="4"></geom>
 			<h1>Vjing</h1>
 		</div>
 
@@ -177,7 +196,7 @@
 <template id="about-template">
 	<div id="about">
 		<div class="page-header">
-			<geom sides="4"></geom>
+			<geom sides="0"></geom>
 			<h1>About</h1>
 		</div>
 
@@ -199,7 +218,7 @@
 <template id="contact-template">
 	<div id="contact">
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom sides="4" rotate="true"></geom>
 			<h1>Contact</h1>
 		</div>
 
@@ -217,22 +236,13 @@
 <template id="cv-template">
 	<div id="cv">
 		<div class="page-header">
-			<geom sides="4" rotate="true"></geom>
+			<geom sides="0"></geom>
 			<h1>CV</h1>
 		</div>
 
 		<div class="page-content">
-			<form class="showcv" action="" method="">
-				<!--<div class='password'>
-                    <input type='password' name='password' placeholder="Enter key..." />
-                </div>-->
-				<div class='show'>
-					<input type='submit' class='acidbutton' value="Show CV">
-				</div>
-			</form>
 			<div class='cvcore'>
 				<div class='intro'>
-					<h5 class='moar'>A bit more about me...</h5>
 					<p>My name is Alexandre Andrieux. I code for work and I code for art.</p>
 					<p>Currently working as a project manager in a French team of versatile developers.</p>
 					<p>Together with our clients, we're designing and producing the greatest web and hybrid apps!</p>

@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         mounted: () => { Projects.go(); }
     };
+    const AnimationsComponent = { template: jQuery('#animations-template').html() };
     const VjingComponent = { template: jQuery('#vjing-template').html() };
     const AboutComponent = { template: jQuery('#about-template').html() };
     const ContactComponent = { template: jQuery('#contact-template').html() };
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
         { path: '/projects', component: ProjectsComponent },
+        { path: '/animations', component: AnimationsComponent },
         { path: '/vjing', component: VjingComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },

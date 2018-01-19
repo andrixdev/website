@@ -12,26 +12,10 @@ CV.loadCV = (extraCallback) => {
 	.done(function(data) {
 		
 		let tempo = 0;
-		let enable = 1;
+		let enable = 0;
 		
 		// 1 - Intro
-		//// 1.1 - Header, fading in, staying for a while and then fading out
-		////// Fade in (jQuery.fadeIn won't override CSS)
-		jQuery('.cvcore .intro h5.moar').css('display', 'inherit').animate({
-			opacity: 1
-		}, 1000);
-		////// Fade out
-		tempo += 2000;
-		setTimeout(function() {
-			jQuery('.cvcore .intro h5.moar').animate({
-				opacity: 0
-			}, 2000, function() {
-				// Remove from DOM
-				jQuery('.cvcore .intro h5.moar').remove();
-			});
-		}, tempo * enable);
-		
-		//// 1.2 - Intro lines, one after the other
+		//// Intro lines, one after the other
 		tempo += 2000;// fadeOut time + 500ms
 		jQuery('.cvcore .intro p').each(function() {
 			////// Fade in
