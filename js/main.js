@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     Vue.component('logo-links', {
         template: jQuery('#logo-links-template').html()
     });
+    Vue.component('coming-soon', {
+        template: jQuery('#coming-soon-template').html()
+    });
 
     // App routes
     const routes = [
