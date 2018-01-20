@@ -48,7 +48,7 @@
 
 		}
 	}
-	.mobile-menu {
+	.mobile-burger {
 		display: none;
 	}
 
@@ -58,10 +58,10 @@
 		.menu {
 			display: none;
 		}
-		.mobile-menu {
+		.mobile-burger {
 			display: inherit;
 
-			p.fa-bars {
+			p.fa {
 				font-size: 40px;
 				margin-right: 25px;
 				.pointer();
@@ -72,5 +72,30 @@
 				}
 			}
 		}
+		&.mobile-menu-open {
+			position: relative;
+
+			.logo {
+				display: none;
+			}
+			.menu {
+				display: inherit;
+				flex-basis: 75%;
+				padding-left: 20px;
+				.flexcol();
+				.flexcenter();
+
+				.menu-tab {
+					width: 100%;
+					.flexstart();
+					padding-left: 20px;
+				}
+			}
+			.mobile-burger {
+				padding: 10px 0 20px 20px;
+				align-self: flex-start;
+			}
+		}
+
 	}
 }

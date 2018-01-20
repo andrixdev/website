@@ -32,11 +32,13 @@
 <body>
 
 <div id="icosacid-website">
-	<div class="header">
+	<div class="header" v-bind:class="{ 'mobile-menu-open': isOpen }">
 		<div class="logo">
-			<img src='img/website/icosacidron-svg-blue.svg' />
+			<router-link to="/" class="menu-tab home">
+				<img src='img/website/icosacidron-svg-blue.svg' />
+			</router-link>
 		</div>
-		<div class="menu">
+		<div class="menu" v-on:click="isOpen = false">
 			<router-link to="/" class="menu-tab home">
 				<geom sides="4" header="true"></geom>
 				Home
@@ -70,8 +72,9 @@
 				CV
 			</router-link>-->
 		</div>
-		<div class="mobile-menu">
-			<p class="fa fa-bars"></p>
+		<div class="mobile-burger" v-on:click="isOpen = !isOpen">
+			<p class="fa fa-bars" v-if="!isOpen"></p>
+			<p class="fa fa-times" v-if="isOpen"></p>
 		</div>
 	</div>
 

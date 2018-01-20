@@ -77,7 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const app = new Vue({
         router,
-        el: '#icosacid-website'
+        el: '#icosacid-website',
+        data: {
+            isOpen: false
+        }
     });//.$mount('#melting-app')
 
 });
