@@ -46,6 +46,61 @@
 		padding: 100px 20px;
 	}
 }
+.page-banner {
+	position: relative;
+	background-image: url('../img/gravitational/orb_colors.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 250px;
+	width: 100%;
+	background-position-y: 50%;
+	.small-mobile-height();
+
+	#home & {
+		background-image: url('../img/misc/hex-fire.jpg');
+		//background-size: 1500px 985px;
+		background-position-x: 50%;
+		@media (max-width: 1000px) { .autoimage(); }
+	}
+	#gallery & {
+		background-image: url('../img/misc/annihilation.png');
+		@media (max-width: 500px) { .autoimage(); }
+	}
+	#projects & {
+		background-image: url('../img/projects/huehuntresults-full.png');
+		background-position-y: 40%;
+		@media (max-width: 500px) { .autoimage(); }
+	}
+	#vjing & {
+		background-image: url('../img/vjing/lama.png');
+		//background-image: url('../img/vjing/eak.jpg');
+		//background-position-y: 50%;
+	}
+	#animations & {
+		background-image: url('../img/misc/sebtest.png');
+		background-position-y: 37%;
+	}
+	#about & {
+		background-image: url('../img/misc/lightbeams-eye.jpg');
+		@media (max-width: 500px) { .autoimage(); }
+	}
+	#contact & {
+		background-image: url('../img/misc/hex-bubbles.jpg');
+		@media (max-width: 500px) { .autoimage(); }
+	}
+	#cv & {
+		// Default orb color image
+	}
+}
+.autoimage {
+	background-size: auto;
+	background-position-x: 50%;
+}
+.small-mobile-height {
+	@media (max-width: 400px) {
+		height: 180px;
+	}
+}
 @keyframes spinblur {
 	from { transform: rotate(0deg); filter: blur(1px); }
 	50% { transform: rotate(180deg); filter: blur(7px); }
