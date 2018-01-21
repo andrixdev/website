@@ -53,16 +53,13 @@
 			border-radius: 2px;
 		}
 		h4 {
-			text-align: center;
-			font-size: 40px;
-			color: #eee;
-			background: radial-gradient(hsla(0, 100%, 100%, 0.15), hsla(0, 100%, 100%, 0.04), hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0));
-			background: #111;
+			.center();
+			font-size: 2rem;
+			background: @blue-15;
 			width: 86%;
 			margin: auto;
 			margin-bottom: 10px;
-			border-radius: 5px;
-			box-shadow: rgba(255, 255, 255, 0.3) 0 0 40px;
+			padding: 8px;
 		}
 		div h5 {
 			font-size: 30px;
@@ -93,10 +90,11 @@
 			opacity: 0;/* fadeIn on load */
 		}
 		.intro {
-			padding: 20px 0;
+			padding: 10px 0 20px;
+
 			p {
 				.center();
-				font-size: 25px;
+				font-size: 1.7rem;
 			}
 		}
 
@@ -104,7 +102,7 @@
 			width: 35px;
 		}
 		.abroad {
-			text-align: center;
+			.center();
 		}
 		.languages,
 		.countries {
@@ -161,21 +159,20 @@
 				margin-top: 15px;
 			}
 			p {
-				text-align: center;
-				color: #888;
-				max-width: 700px;
+				.center();
+				color: #999;
 				margin: auto;
 
 				&.overall {
 					font-size: 1.7rem;
 					max-width: 700px;
 					margin: 30px auto 20px;
-					text-shadow: white 0 0 3px;
+					//text-shadow: white 0 0 3px;
 					color: white;
 				}
 			}
 			.codeanddesign {
-				text-align: center;
+				.center();
 
 				.code,
 				.design {
@@ -183,16 +180,15 @@
 					vertical-align: middle;
 					padding: 0 10px;
 				}
-				.somexp p {
-					&:nth-of-type(1) {
-						font-size: 1.5rem;
-					}
-					&:nth-of-type(2) {
-						font-size: 1.4rem;
-					}
-					&:nth-of-type(3) {
-						font-size: 1.1rem;
-					}
+			}
+			.somexp p {
+				font-size: 1.1rem;
+
+				&:nth-of-type(1) {
+					font-size: 1.5rem;
+				}
+				&:nth-of-type(2) {
+					font-size: 1.4rem;
 				}
 			}
 		}
