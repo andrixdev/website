@@ -103,8 +103,17 @@
 			<h1>Home</h1>
 		</div>
 
-		<div class="page-content">
+		<div class="page-content no-padding">
 			<coming-soon></coming-soon>
+			
+			<div class="home-gallery">
+				<router-link to="/gallery">
+					<h3 class="categname">Gallery</h3>
+					<div class="showcase">
+						<!--<img v-for="img in home.gallery" v-bind:src="img.path" />-->
+					</div>
+				</router-link>
+			</div>
 		</div>
 
 		<logo-links></logo-links>

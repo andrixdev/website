@@ -3,22 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // App views
     const HomeComponent = {
         template: jQuery('#home-template').html(),
+        props: [ 'home' ],
         data: () => {
             return {
-                exercises: [
-                    {
-                        sourceLink: 'http://ravenkwok.com/1194d/',
-                        description: 'Spaces and non-spaces working as anti-volumes arranged in a ordrered manner',
-                        sourceImageLink: 'http://farm6.staticflickr.com/5467/9809073965_52e39099fa_z.jpg',
-                        responsePaths: [
-                            'ex-0-jeanf.jpg',
-                            'ex-0-yngvesin.gif',
-                            'ex-0-icosacid.png'
-                        ]
-                    }
-                ]
+                stuff: [
+                    { ew: 'yeah'},
+                    { ew: 'yeah'}
+                ],
+                home: { }
             }
+        },
+        mounted: () => {
+            console.dir('Home component mounted!!');
+            console.table(this);
+
         }
+
     };
     const GalleryComponent = {
         template: jQuery('#gallery-template').html(),
@@ -78,9 +78,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = new Vue({
         router,
         el: '#icosacid-website',
-        data: {
-            isOpen: false
+        data: () => {
+            return {
+                isOpen: false,
+                home: {
+                    gallery: [
+                        { path: 'img/misc/seadra.png' }
+                    ],
+                    projects: [
+                        { path: 'img/misc/horsea.png' }
+                    ],
+                    animations: [
+
+                    ],
+                    vjing: [
+
+                    ]
+                }
+            }
+        },
+        computed: () => {
+            console.dir('Main Created!!!');
+            console.table(this.$set);
+            let self = this;
+            //this.home.gallery = [{path: 'img/misc/annihilation.png'}];
+
+            /*
+            jQuery
+                .get("algories.xml", {})
+                .done((data) => {
+
+                    let paths = [];
+
+                    let jAlgories = jQuery(data).find('algories');
+                    jAlgories.find('category').each(function() {
+                        jQuery(this).find('alg').each(function() {
+                            let src = "img/" + jQuery(this).find('src').text();
+                            paths.push({ path: src });
+                        });
+                    });
+
+                    self.set(this.gallery, paths, true);
+                });*/
         }
-    });//.$mount('#melting-app')
+    });
 
 });
