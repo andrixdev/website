@@ -73,6 +73,12 @@
 			}
 		}
 	}
+
+	@media (max-width: 800px) {
+		.moron {
+			display: none;
+		}
+	}
 }
 
 /** Zoom layer **/
@@ -85,6 +91,7 @@
 	top: 0;
 	left: 0;
 	background: rgba(255, 255, 255, 0.9);
+	z-index: 1;
 
 	.zoom {
 		position: absolute;

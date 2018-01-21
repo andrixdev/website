@@ -199,6 +199,8 @@ Gallery.frontListeners = () => {
 Gallery.fillFront = (jAlgNode) => {
 	
 	Gallery.loadingOn();
+	// Clear previous img
+    jQuery('#front .zoom .fullimg img').attr('src', '');
 	
 	let id = jAlgNode.attr('id');
 	let src = Gallery.getAlg(id).src;
@@ -231,6 +233,8 @@ Gallery.fillFront = (jAlgNode) => {
 		let top = (jQuery(window).height() - height)/2;
 		
 		jQuery('#front .zoom').css('height', height).css('width', width).css('top', top).css('left', left);
+
+		// Fake timeout
 		setTimeout(function() {
             Gallery.loadingOff();
 			jQuery('#front .zoom .fullimg img').attr('src', self.src);
