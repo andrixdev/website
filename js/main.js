@@ -3,19 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // App views
     const HomeComponent = {
         template: jQuery('#home-template').html(),
-        props: [ 'home' ],
+        props: [ 'bouse' ],
         data: () => {
             return {
                 stuff: [
                     { ew: 'yeah'},
                     { ew: 'yeah'}
-                ],
-                home: { }
+                ]
             }
         },
         mounted: () => {
-            console.dir('Home component mounted!!');
-            console.table(this);
 
         }
 
@@ -94,15 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     vjing: [
 
                     ]
-                }
+                },
+                bouse: ['bouzinit']
             }
         },
         computed: () => {
-            console.dir('Main Created!!!');
-            console.table(this.$set);
-            let self = this;
-            //this.home.gallery = [{path: 'img/misc/annihilation.png'}];
+            return {
+                bouse: ['caca tableau']
+            };
+        },
+        mounted: () => {
+            console.dir('MainMouted!!!');
 
+            console.log('this.bouse');
+            console.log(this);
+
+            this.bouse = ['caca de qualité'];
             /*
             jQuery
                 .get("algories.xml", {})
