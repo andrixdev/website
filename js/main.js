@@ -3,18 +3,57 @@ document.addEventListener('DOMContentLoaded', () => {
     // App views
     const HomeComponent = {
         template: jQuery('#home-template').html(),
-        props: [ 'bouse' ],
-        data: () => {
+        props: ['bouse'],
+        data: function() {
             return {
                 stuff: [
                     { ew: 'yeah'},
                     { ew: 'yeah'}
-                ]
+                ],
+                bouse: 3
+            };
+        },
+        methods: {
+            updateBouse: function(aa) {
+                console.log('Updating bouse...');
+                this.bouse = aa;
             }
         },
-        mounted: () => {
+        computed: function() {
+            return {
+                bouse: '1'
+            }
+        },
+        mounted: function() {
+            this.bouse = 'NEW HOME BOUSE';
+            console.log('HOME UPDATE: ', this.bouse);
 
-        }
+            //this.updateBouse('RHAAAA');
+
+            var self = this;
+            self.bouse = 'Teh';
+            jQuery
+                .get("algories.xml", {})
+                .done(function(data) {
+
+                    let paths = [];
+
+                    let jAlgories = jQuery(data).find('algories');
+                    jAlgories.find('category').each(function() {
+                        jQuery(this).find('alg').each(function() {
+                            let src = "img/" + jQuery(this).find('src').text();
+                            paths.push({ path: src });
+                        });
+                    });
+
+                    console.log(paths);
+
+                    self.bouse = 'caca';
+                    self.updateBouse(paths);
+
+                    //self.set(this.gallery, paths, true);
+                });
+        },
 
     };
     const GalleryComponent = {
@@ -75,42 +114,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = new Vue({
         router,
         el: '#icosacid-website',
-        data: () => {
-            return {
-                isOpen: false,
-                home: {
-                    gallery: [
-                        { path: 'img/misc/seadra.png' }
-                    ],
-                    projects: [
-                        { path: 'img/misc/horsea.png' }
-                    ],
-                    animations: [
+        data: {
+            isOpen: false,
+            home: {
+                gallery: [
+                    { path: 'img/misc/seadra.png' }
+                ],
+                projects: [
+                    { path: 'img/misc/horsea.png' }
+                ],
+                animations: [
 
-                    ],
-                    vjing: [
+                ],
+                vjing: [
 
-                    ]
-                },
-                bouse: ['bouzinit']
+                ]
             }
         },
-        computed: () => {
+        computed: function() {
             return {
                 bouse: ['caca tableau']
             };
         },
-        mounted: () => {
+        methods: {
+            change: function() {
+                this.bouse = 'NEWBOOOOUSE';
+            }
+        },
+        mounted: function() {
+            this.change();
+
             console.dir('MainMouted!!!');
 
             console.log('this.bouse');
-            console.log(this);
+            console.log(this.bouse);
 
             this.bouse = ['caca de qualité'];
-            /*
+
+            var self = this;
             jQuery
                 .get("algories.xml", {})
-                .done((data) => {
+                .done(function(data) {
 
                     let paths = [];
 
@@ -122,8 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
                     });
 
-                    self.set(this.gallery, paths, true);
-                });*/
+                    //self.bouse = 'HAHHAAAAAA';
+
+                    //self.set(this.gallery, paths, true);
+                });
         }
     });
 
