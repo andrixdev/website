@@ -104,14 +104,20 @@
 		</div>
 
 		<div class="page-content no-padding">
-			<coming-soon></coming-soon>
-			
 			<div class="home-gallery">
 				<router-link to="/gallery">
 					<h3 class="categname">Gallery</h3>
 					<div class="showcase">
-						<h1>BOUSE IS : {{ bouse }}</h1>
-						<!--<img v-for="img in home.gallery" v-bind:src="img.path" />-->
+						<img v-for="path in homeGallery" v-bind:src="path" />
+					</div>
+				</router-link>
+			</div>
+
+			<div class="home-projects">
+				<router-link to="/projects">
+					<h3 class="categname">Projects</h3>
+					<div class="showcase">
+						<img v-for="path in homeProjects" v-bind:src="path" />
 					</div>
 				</router-link>
 			</div>

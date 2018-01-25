@@ -1,85 +1,92 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 
     // App views
-    const HomeComponent = {
+    var HomeComponent = {
         template: jQuery('#home-template').html(),
-        props: ['bouse'],
+        props: ['home'],
         data: function() {
             return {
                 stuff: [
                     { ew: 'yeah'},
                     { ew: 'yeah'}
                 ],
-                bouse: 3
+                homeGallery: undefined,
+                homeProjects: undefined
             };
         },
         methods: {
-            updateBouse: function(aa) {
-                console.log('Updating bouse...');
-                this.bouse = aa;
-            }
-        },
-        computed: function() {
-            return {
-                bouse: '1'
+            updateHomeGallery: function(el) {
+                this.homeGallery = el;
+            },
+            updateHomeProjects: function(el) {
+                this.homeProjects = el;
             }
         },
         mounted: function() {
-            this.bouse = 'NEW HOME BOUSE';
-            console.log('HOME UPDATE: ', this.bouse);
-
-            //this.updateBouse('RHAAAA');
-
             var self = this;
-            self.bouse = 'Teh';
+            self.home = 'Teh';// This line used to have the whole lot work
+
+            // Home Gallery
             jQuery
                 .get("algories.xml", {})
                 .done(function(data) {
 
-                    let paths = [];
+                    var paths = [];
 
-                    let jAlgories = jQuery(data).find('algories');
+                    var jAlgories = jQuery(data).find('algories');
                     jAlgories.find('category').each(function() {
                         jQuery(this).find('alg').each(function() {
-                            let src = "img/" + jQuery(this).find('src').text();
-                            paths.push({ path: src });
+                            var path = "img/" + jQuery(this).find('small').text();
+                            paths.push(path);
                         });
                     });
 
-                    console.log(paths);
-
-                    self.bouse = 'caca';
-                    self.updateBouse(paths);
-
-                    //self.set(this.gallery, paths, true);
+                    self.updateHomeGallery(paths);
                 });
-        },
+
+            // Home Projects
+            jQuery
+                .get("projects.xml", {})
+                .done(function(data) {
+
+                    var jProjects = jQuery(data).find('projects');
+                    var paths = [];
+
+                    jProjects.find('project').each(function(index) {
+                        // Get XML content
+                        var path = jQuery(this).find('image').text();
+                        paths.push(path);
+                    });
+
+                    self.updateHomeProjects(paths);
+                });
+        }
 
     };
-    const GalleryComponent = {
+    var GalleryComponent = {
         template: jQuery('#gallery-template').html(),
-        data: () => {
+        data: function() {
             return { }
         },
-        mounted: () => { Gallery.go(); }
+        mounted: function()  { Gallery.go(); }
     };
-    const ProjectsComponent = {
+    var ProjectsComponent = {
             template: jQuery('#projects-template').html(),
-            data: () => {
+            data: function() {
             return { }
         },
-        mounted: () => { Projects.go(); }
+        mounted: function() { Projects.go(); }
     };
-    const AnimationsComponent = { template: jQuery('#animations-template').html() };
-    const VjingComponent = { template: jQuery('#vjing-template').html() };
-    const AboutComponent = { template: jQuery('#about-template').html() };
-    const ContactComponent = { template: jQuery('#contact-template').html() };
-    const CVComponent = {
+    var AnimationsComponent = { template: jQuery('#animations-template').html() };
+    var VjingComponent = { template: jQuery('#vjing-template').html() };
+    var AboutComponent = { template: jQuery('#about-template').html() };
+    var ContactComponent = { template: jQuery('#contact-template').html() };
+    var CVComponent = {
         template: jQuery('#cv-template').html(),
-        data: () => {
+        data: function() {
             return { }
         },
-        mounted: () => { CV.go(); }
+        mounted: function() { CV.go(); }
     };
 
     // Custom components
@@ -95,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // App routes
-    const routes = [
+    var routes = [
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
         { path: '/projects', component: ProjectsComponent },
@@ -103,73 +110,23 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: '/vjing', component: VjingComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
-        { path: '/cv', component: CVComponent },
+        { path: '/cv', component: CVComponent }
     ];
 
     // Build router
-    const router = new VueRouter({
-        routes // short for `routes: routes`
+    var router = new VueRouter({
+        routes: routes
     });
 
-    const app = new Vue({
-        router,
+    var app = new Vue({
+        router: router,
         el: '#icosacid-website',
         data: {
             isOpen: false,
             home: {
-                gallery: [
-                    { path: 'img/misc/seadra.png' }
-                ],
-                projects: [
-                    { path: 'img/misc/horsea.png' }
-                ],
-                animations: [
-
-                ],
-                vjing: [
-
-                ]
+                gallery: [],
+                projects: []
             }
-        },
-        computed: function() {
-            return {
-                bouse: ['caca tableau']
-            };
-        },
-        methods: {
-            change: function() {
-                this.bouse = 'NEWBOOOOUSE';
-            }
-        },
-        mounted: function() {
-            this.change();
-
-            console.dir('MainMouted!!!');
-
-            console.log('this.bouse');
-            console.log(this.bouse);
-
-            this.bouse = ['caca de qualité'];
-
-            var self = this;
-            jQuery
-                .get("algories.xml", {})
-                .done(function(data) {
-
-                    let paths = [];
-
-                    let jAlgories = jQuery(data).find('algories');
-                    jAlgories.find('category').each(function() {
-                        jQuery(this).find('alg').each(function() {
-                            let src = "img/" + jQuery(this).find('src').text();
-                            paths.push({ path: src });
-                        });
-                    });
-
-                    //self.bouse = 'HAHHAAAAAA';
-
-                    //self.set(this.gallery, paths, true);
-                });
         }
     });
 
