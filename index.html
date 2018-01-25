@@ -108,8 +108,14 @@
 				<router-link to="/gallery">
 					<h3 class="categname">Gallery</h3>
 					<div class="showcase">
-						<img v-for="path in homeGallery" v-bind:src="path" />
+						<div class="showcase-wrapper">
+							<img v-for="path in homeGallery" v-bind:src="path" />
+						</div>
+
 					</div>
+					<p class="scroll-left" v-on:click="scrollLeft($event)"><span class="fa fa-chevron-left"></span></p>
+					<p class="scroll-right" v-on:click="scrollRight($event)"><span class="fa fa-chevron-right"></span></p>
+
 				</router-link>
 			</div>
 
@@ -117,7 +123,9 @@
 				<router-link to="/projects">
 					<h3 class="categname">Projects</h3>
 					<div class="showcase">
-						<img v-for="path in homeProjects" v-bind:src="path" />
+						<div class="showcase-wrapper">
+							<img v-for="path in homeProjects" v-bind:src="path" />
+						</div>
 					</div>
 				</router-link>
 			</div>

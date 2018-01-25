@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     { ew: 'yeah'}
                 ],
                 homeGallery: undefined,
-                homeProjects: undefined
+                homeProjects: undefined,
+                scroll: 0,
             };
         },
         methods: {
@@ -20,6 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             updateHomeProjects: function(el) {
                 this.homeProjects = el;
+            },
+            scrollLeft: function(ev) {
+                ev.preventDefault();
+                this.scroll -= 300;
+                if (this.scroll < 0) this.scroll = 0;
+                var $container = jQuery(ev.currentTarget).siblings('.showcase');
+                $container.scrollLeft(this.scroll);
+            },
+            scrollRight: function(ev) {
+                ev.preventDefault();
+                this.scroll += 300;
+                var $container = jQuery(ev.currentTarget).siblings('.showcase');
+                var maxWidth = $container.width() + window.innerWidth;
+                if (this.scroll > maxWidth) this.scroll = maxWidth;
+
+                $container.scrollLeft(this.scroll);
             }
         },
         mounted: function() {
