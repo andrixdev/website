@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ],
                 homeGallery: undefined,
                 homeProjects: undefined,
+                homeAnimations: undefined,
                 scroll: 0,
             };
         },
