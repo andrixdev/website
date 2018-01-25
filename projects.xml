@@ -19,7 +19,7 @@
 
 	<project>
 		<title>PlayChaos</title>
-		<description>A user interface for spreadSVG.js&#10;3h project</description>
+		<description>A user interface for spreadSVG.js&#10;Play the piano and generate art with vector graphics</description>
 		<image>img/projects/playchaos.jpg</image>
 		<link>../playchaos</link>
 	</project>
@@ -33,7 +33,7 @@
 
 	<project>
 		<title>Ever</title>
-		<description>A game for personal knowledge management</description>
+		<description>A game for personal knowledge management&#10;Applied to linguistics</description>
 		<image>img/projects/ever.jpg</image>
 		<link>../ever</link>
 	</project>
@@ -104,7 +104,7 @@
 
 	<project>
 		<title>Brainuke</title>
-		<description>Rehearse your ukulele chords before performing!&#10;Angular app for KTH course Interaction Programming, 4 students</description>
+		<description>Rehearse your ukulele chords before performing!&#10;Angular app for KTH course Interaction Programming&#10;4 students</description>
 		<image>img/projects/brainuke.jpg</image>
 		<link>../brainuke</link>
 	</project>
@@ -134,7 +134,7 @@
 
 	<project>
 		<title>UScontrol</title>
-		<description>My first JavaScript game at school :')&#10;The back-end doesn't work, sorry guys</description>
+		<description>My first JavaScript game at school :')&#10;Broken back-end though</description>
 		<image>img/projects/uscontrol.jpg</image>
 		<link>../uscontrol</link>
 	</project>
@@ -150,7 +150,7 @@
 
 	<project>
 		<title>Cat</title>
-		<description>Because we're on the Web, and it's about cats!!! O_O</description>
+		<description>Cats and gravity O_O</description>
 		<image>img/projects/cat.jpg</image>
 		<link>../cat</link>
 	</project>
@@ -166,7 +166,7 @@
 
 	<project>
 		<title>wtfCSS</title>
-		<description>Why do I keep that on my server, again?</description>
+		<description>Some happy translucid divs</description>
 		<image>img/projects/wtfCSS.jpg</image>
 		<link>../wtfCSS/amonistar</link>
 	</project>
