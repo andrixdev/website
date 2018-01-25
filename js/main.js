@@ -33,7 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 ev.preventDefault();
                 this.scroll += 300;
                 var $container = jQuery(ev.currentTarget).siblings('.showcase');
-                var maxWidth = $container.width() + window.innerWidth;
+                var $wrapper = $container.find('.showcase-wrapper');
+                var wrapperWidthPX = $wrapper.css('width');
+                var wrapperWidth = wrapperWidthPX.substr(0, wrapperWidthPX.length - 2);
+                var maxWidth = wrapperWidth - window.innerWidth;
                 if (this.scroll > maxWidth) this.scroll = maxWidth;
 
                 $container.scrollLeft(this.scroll);

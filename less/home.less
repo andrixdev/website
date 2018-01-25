@@ -20,10 +20,17 @@
 		}
 
 	}
-	.home-gallery .showcase-wrapper { width: 300%; }
-	.home-projects .showcase-wrapper { width: 400%; }
 
-	.home-gallery {
+	/* Rules for width based on screen size */
+	/* Adjust each time there's a new artwork... */
+	.home-gallery .showcase-wrapper {
+		width: 3950px;
+	}
+	.home-projects .showcase-wrapper {
+		width: 4300px;
+	}
+
+	.home-gallery, .home-projects {
 		position: relative;
 	}
 	p.scroll-left,
@@ -49,13 +56,13 @@
 		}
 	}
 	p.scroll-left {
-		left: 5%;
+		left: 50px;
 		span.fa {
 			left: -2px;
 		}
 	}
 	p.scroll-right {
-		right: 5%;
+		right: 50px;
 		span.fa {
 			left: 5px;
 		}

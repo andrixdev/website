@@ -115,7 +115,6 @@
 					</div>
 					<p class="scroll-left" v-on:click="scrollLeft($event)"><span class="fa fa-chevron-left"></span></p>
 					<p class="scroll-right" v-on:click="scrollRight($event)"><span class="fa fa-chevron-right"></span></p>
-
 				</router-link>
 			</div>
 
@@ -127,6 +126,8 @@
 							<img v-for="path in homeProjects" v-bind:src="path" />
 						</div>
 					</div>
+					<p class="scroll-left" v-on:click="scrollLeft($event)"><span class="fa fa-chevron-left"></span></p>
+					<p class="scroll-right" v-on:click="scrollRight($event)"><span class="fa fa-chevron-right"></span></p>
 				</router-link>
 			</div>
 		</div>
