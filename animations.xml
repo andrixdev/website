@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<animations>
+	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
+	<!-- HTML entity for line feed: &#10; -->
+
+	<image>vids/ashtray.mp4</image>
+	<image>vids/begofdest.mp4</image>
+	<image>vids/eleclock.mp4</image>
+	<image>vids/enerclock.mp4</image>
+	<image>vids/glitch.mp4</image>
+	<image>vids/gravart.mp4</image>
+	<image>vids/grid.mp4</image>
+	<image>vids/hexocet.mp4</image>
+	<image>vids/hexofrenzy.mp4</image>
+	<image>vids/kuzco5.mp4</image>
+	<image>vids/lightbeams1.4.mp4</image>
+	<image>vids/lightbeams1.18.mp4</image>
+	<image>vids/lightbeams1.10.mp4</image>
+	<image>vids/lightbeams1.15.mp4</image>
+	<image>vids/magical6.mp4</image>
+	<image>vids/newstellar.mp4</image>
+	<image>vids/orbcolor.mp4</image>
+	<image>vids/radstar.mp4</image>
+	<image>vids/reactor.mp4</image>
+	<image>vids/redgiant.mp4</image>
+	<image>vids/rhodo.mp4</image>
+	<image>vids/rose.mp4</image>
+	<image>vids/shiver.mp4</image>
+	<image>vids/squid.mp4</image>
+	<image>vids/stellar16x.mp4</image>
+
+</animations>

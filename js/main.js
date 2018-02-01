@@ -92,13 +92,63 @@ document.addEventListener('DOMContentLoaded', function() {
         mounted: function()  { Gallery.go(); }
     };
     var ProjectsComponent = {
-            template: jQuery('#projects-template').html(),
-            data: function() {
+        template: jQuery('#projects-template').html(),
+        data: function() {
             return { }
         },
         mounted: function() { Projects.go(); }
     };
-    var AnimationsComponent = { template: jQuery('#animations-template').html() };
+    var AnimationsComponent = {
+        template: jQuery('#animations-template').html(),
+        data: function() {
+            return {
+                animationPaths: [],
+                displayedPaths: []
+            }
+        },
+        methods: {
+            updateAnimationPaths: function(el) {
+                this.animationPaths = el;
+            },
+            updateDisplayedPaths: function(el) {
+                this.displayedPaths = el;
+            },
+            randomizeDisplayedPaths: function() {
+                var paths = [];
+                var total = this.animationPaths.length;
+                var maxAnim = 5;
+
+                // Pick random animations
+                var swapped = randomIndexes(total);
+                var indexes = swapped.slice(0, maxAnim);
+
+                for (var ind = 0; ind < indexes.length; ind++) {
+                    paths.push(this.animationPaths[indexes[ind]]);
+                }
+
+                this.updateDisplayedPaths(paths);
+            }
+        },
+        mounted: function() {
+            var self = this;
+
+            // Store all paths
+            jQuery
+                .get("animations.xml", {})
+                .done(function(data) {
+
+                    var paths = [];
+
+                    var jAnimations = jQuery(data).find('animations');
+                    console.log(jAnimations);
+                    jAnimations.find('image').each(function(el) {
+                        paths.push(jQuery(this).text());
+                    });
+                    self.updateAnimationPaths(paths);
+                    self.randomizeDisplayedPaths();
+                });
+        }
+    };
     var VjingComponent = { template: jQuery('#vjing-template').html() };
     var AboutComponent = { template: jQuery('#about-template').html() };
     var ContactComponent = { template: jQuery('#contact-template').html() };
@@ -152,3 +202,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+// Returns [4, 0, 1, 3, 2] for maxNumber = 5, for instance
+function randomIndexes(maxNumber) {
+    var arr = [];
+
+    while (arr.length < maxNumber) {
+        var newRand = Math.floor(maxNumber * Math.random());
+        var isAlreadyThere = false;
+        for (var i = 0; i < arr.length; i++) {
+            if (newRand == arr[i]) isAlreadyThere = true;
+        }
+        if (!isAlreadyThere) arr.push(newRand);
+    }
+
+    return arr;
+}

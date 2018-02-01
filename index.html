@@ -224,16 +224,10 @@
 
 		<div class="page-content">
 			<!--<video src="vids/kuzco5.mp4" autoplay poster="posterimage.jpg"></video>-->
-			<video src="vids/kuzco5.mp4" autoplay loop muted></video>
-			<video src="vids/stellar16x.mp4" autoplay loop muted></video>
-			<video src="vids/rose.mp4" autoplay loop muted></video>
-			<video src="vids/newstellar.mp4" autoplay loop muted></video>
-			<video src="vids/radstar.mp4" autoplay loop muted></video>
-			<video src="vids/shiver.mp4" autoplay loop muted></video>
-			<video src="vids/magical6.mp4" autoplay loop muted></video>
-			<video src="vids/gravart.mp4" autoplay loop muted></video>
-			<video src="vids/rhodo.mp4" autoplay loop muted></video>
-			<video src="vids/orbcolor.mp4" autoplay loop muted></video>
+			<video v-for="path in displayedPaths" v-bind:src="path" autoplay loop muted></video>
+
+			<button v-on:click="randomizeDisplayedPaths()">Randomize</button>
+
 		</div>
 
 		<logo-links></logo-links>
