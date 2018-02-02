@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
             randomizeDisplayedPaths: function() {
                 var paths = [];
                 var total = this.animationPaths.length;
-                var maxAnim = 5;
+                var maxAnim = 4;
 
                 // Pick random animations
                 var swapped = randomIndexes(total);
