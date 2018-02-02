@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 ],
                 homeGallery: undefined,
                 homeProjects: undefined,
-                homeAnimations: undefined,
+                homeDisplayedAnimations: undefined,
                 scroll: 0,
+                maxAnimHome: 3
             };
         },
         methods: {
@@ -22,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             updateHomeProjects: function(el) {
                 this.homeProjects = el;
+            },
+            updateHomeDisplayedAnimations: function(el) {
+                this.homeDisplayedAnimations = el;
             },
             scrollLeft: function(ev) {
                 ev.preventDefault();
@@ -81,6 +85,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     self.updateHomeProjects(paths);
                 });
+
+            // Home displayed animations (random selections)
+            jQuery
+                .get("animations.xml", {})
+                .done(function(data) {
+
+                    var jAnimations = jQuery(data).find('animations');
+                    var paths = [];
+
+                    jAnimations.find('image').each(function(el) {
+                        // Get XML content
+                        paths.push(jQuery(this).text());
+                    });
+
+                    self.updateHomeDisplayedAnimations(randomizePaths(paths, this.maxAnimHome));
+                });
+
+
         }
 
     };
@@ -103,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
         data: function() {
             return {
                 animationPaths: [],
-                displayedPaths: []
+                displayedPaths: [],
+                maxAnim: 4
             }
         },
         methods: {
@@ -114,19 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.displayedPaths = el;
             },
             randomizeDisplayedPaths: function() {
-                var paths = [];
-                var total = this.animationPaths.length;
-                var maxAnim = 4;
-
-                // Pick random animations
-                var swapped = randomIndexes(total);
-                var indexes = swapped.slice(0, maxAnim);
-
-                for (var ind = 0; ind < indexes.length; ind++) {
-                    paths.push(this.animationPaths[indexes[ind]]);
-                }
-
-                this.updateDisplayedPaths(paths);
+                this.displayedPaths = randomizePaths(this.animationPaths, this.maxAnim);
             }
         },
         mounted: function() {
@@ -140,11 +151,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     var paths = [];
 
                     var jAnimations = jQuery(data).find('animations');
-                    console.log(jAnimations);
                     jAnimations.find('image').each(function(el) {
                         paths.push(jQuery(this).text());
                     });
                     self.updateAnimationPaths(paths);
+
+                    // Now display some of them
                     self.randomizeDisplayedPaths();
                 });
         }
@@ -217,4 +229,25 @@ function randomIndexes(maxNumber) {
     }
 
     return arr;
+}
+
+/**
+ *
+ * @param {Array} paths
+ * @param {Number} maxNumber
+ * @returns Only *maxNumber* randomly chosen paths
+ */
+function randomizePaths(paths, maxNumber) {
+    var output = [];
+    var total = paths.length;
+
+    // Pick random animations
+    var swapped = randomIndexes(total);
+    var indexes = swapped.slice(0, maxNumber);
+
+    for (var ind = 0; ind < indexes.length; ind++) {
+        output.push(paths[indexes[ind]]);
+    }
+
+    return output;
 }

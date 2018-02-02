@@ -134,7 +134,7 @@
 			<div class="home-animations">
 				<router-link to="/animations">
 					<h3 class="categname">Animations</h3>
-
+					<video v-for="path in homeDisplayedAnimations" v-bind:src="path" autoplay loop muted></video>
 				</router-link>
 			</div>
 
