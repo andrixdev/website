@@ -1,18 +1,18 @@
 // Globals
-let CV = {};
+var CV = {};
 
 /**
  * Fills the DOM with cv.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-CV.loadCV = (extraCallback) => {
+CV.loadCV = function(extraCallback) {
 
 	jQuery
 	.get("cv.xml", {})
 	.done(function(data) {
 		
-		let tempo = 0;
-		let enable = 0;
+		var tempo = 0;
+		var enable = 0;
 		
 		// 1 - Intro
 		//// Intro lines, one after the other
@@ -20,7 +20,7 @@ CV.loadCV = (extraCallback) => {
 		jQuery('.cvcore .intro p').each(function() {
 			////// Fade in
 			tempo += 300;
-			let self = this;
+			var self = this;
 			setTimeout(function() {
 				jQuery(self).css('display', 'inherit').animate({
 					opacity: 1
@@ -74,14 +74,14 @@ CV.loadCV = (extraCallback) => {
 		
 			tempo += 700;
 			
-			let sliceHTML = "";
-			let title = jQuery(this).find('title').text();
-			let institution = jQuery(this).find('institution').text();
-			let place = jQuery(this).find('place').text();
-			let when = jQuery(this).find('when').text();
-			let year = jQuery(this).find('year').text();
-			let what = jQuery(this).find('what').text();
-			let skill = jQuery(this).find('skill').text();
+			var sliceHTML = "";
+			var title = jQuery(this).find('title').text();
+			var institution = jQuery(this).find('institution').text();
+			var place = jQuery(this).find('place').text();
+			var when = jQuery(this).find('when').text();
+			var year = jQuery(this).find('year').text();
+			var what = jQuery(this).find('what').text();
+			var skill = jQuery(this).find('skill').text();
 			
 			sliceHTML += "<div class='slice'>";
 			sliceHTML +=   "<div class='left-side'>";
@@ -90,7 +90,7 @@ CV.loadCV = (extraCallback) => {
 			sliceHTML +=   "</div>";
 			sliceHTML +=   "<div class='right-side'>";
 			sliceHTML +=     "<h5>" + title + "</h5>";
-			let sliceBit = institution;
+			var sliceBit = institution;
 			sliceBit += (place !== "" && when !== "" ? " - " + place + " (" + when + ")" : "");
 			sliceHTML +=     "<p class='institution'>" + sliceBit + "</p>";
 			sliceHTML +=     "<p class='what'>" + what + "</p>";
@@ -123,7 +123,7 @@ CV.loadCV = (extraCallback) => {
 /**
  * Submit handler to the form showing CV
  */
-CV.keyCheckForCV = () => {
+CV.keyCheckForCV = function() {
 	jQuery("form.showcv").submit(function(event) {
 
 		// Stop form from submitting normally
@@ -132,14 +132,14 @@ CV.keyCheckForCV = () => {
 		
 		// Define regex for key validation. Yeah that's where you can hack into my code to see my CV, derp.
 		// Actually no, regex suck.
-		let input = jQuery('#cv .password input').val();
-		let shallPass = (input.charAt(input.length - 1) == 3);
+		var input = jQuery('#cv .password input').val();
+		var shallPass = (input.charAt(input.length - 1) == 3);
 		
 		// Loading icon start
-		let randomTimeout = 500 + 500 * Math.random();
-		let jShow = jQuery('#cv .show');
-		let button = "<input type='submit' value='Show CV'>";
-		let loadDiv = "<div class='load'></div>";
+		var randomTimeout = 500 + 500 * Math.random();
+		var jShow = jQuery('#cv .show');
+		var button = "<input type='submit' value='Show CV'>";
+		var loadDiv = "<div class='load'></div>";
 		
 		// Loading icon will start to whirl in both cases
 		jShow.html(loadDiv);
@@ -172,7 +172,7 @@ CV.keyCheckForCV = () => {
 /**
  * Submit handler to the form showing CV, without any password
  */
-CV.showCVwithoutKey = () => {
+CV.showCVwithoutKey = function() {
 	jQuery("form.showcv").submit(function(event) {
 
 		// Stop form from submitting normally
@@ -180,10 +180,10 @@ CV.showCVwithoutKey = () => {
 		// Now we're talking.
 		
 		// Loading icon start
-		let randomTimeout = 500 + 500 * Math.random();
-		let jShow = jQuery('#cv .show');
-		let button = "<input type='submit' value='Show CV'>";
-		let loadDiv = "<div class='load'></div>";
+		var randomTimeout = 500 + 500 * Math.random();
+		var jShow = jQuery('#cv .show');
+		var button = "<input type='submit' value='Show CV'>";
+		var loadDiv = "<div class='load'></div>";
 		
 		// Loading icon will start to whirl in both cases
 		jShow.html(loadDiv);
@@ -202,7 +202,7 @@ CV.showCVwithoutKey = () => {
 /**
  * User feedback that the entered key is wrong
  */
-CV.invalidKeyAnimation = () => {
+CV.invalidKeyAnimation = function() {
 	// Insert feedback
 	jQuery('form.showcv').after("<p id='invalid'>Invalid key, please try again.</p>");
 	
@@ -214,14 +214,13 @@ CV.invalidKeyAnimation = () => {
 			jQuery(this).remove();
 		});
 	}, 1500);
-	
 };
 
 /**
  * Initializer
  */
-CV.go = () => {
-    CV.loadCV(() => {
+CV.go = function() {
+    CV.loadCV(function() {
 		Projects.showCVwithoutKey();
 	});
 };

@@ -10,34 +10,34 @@
  * Being re-coded...
  */
 
-let Gallery = {
+var Gallery = {
 	algData: [],
-	mouseIsOverFront: false,
+	mouseIsOverFront: false
 };
 
 /**
  * Fills the DOM with algories.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-Gallery.loadAlgories = (extraCallback) => {
-	let gallery = jQuery('.gallery-content');
+Gallery.loadAlgories = function(extraCallback) {
+	var gallery = jQuery('.gallery-content');
 	jQuery
 	.get("algories.xml", {})
-	.done((data) => {
+	.done(function(data) {
 	
-		let jAlgories = jQuery(data).find('algories');
+		var jAlgories = jQuery(data).find('algories');
 		jAlgories.find('category').each(function() {
-			let categHTML = "";
+			var categHTML = "";
 			
 			// Get the name!
-			let categName = jQuery(this).find('categoryName').text();
+			var categName = jQuery(this).find('categoryName').text();
 			categHTML += "<div class='categ'>";
 			categHTML += "<h3 class='categname'>" + categName + "</h3>";
 			
 			// Get the Morons!
-			let morons = jQuery(this).find('categMoreOnLinks');
-			let moronCodepen = morons.find('codepen').text();
-			let moronDeviantart = morons.find('deviantart').text();
+			var morons = jQuery(this).find('categMoreOnLinks');
+			var moronCodepen = morons.find('codepen').text();
+			var moronDeviantart = morons.find('deviantart').text();
 			categHTML += "<div class='moron'>";
 			categHTML += "<p>More on</p>";
 			categHTML += "<a class='fa fa-codepen' href='" + moronCodepen + "' title='See the live collection on CodePen' target='_blank'></a>";
@@ -45,7 +45,7 @@ Gallery.loadAlgories = (extraCallback) => {
 			categHTML += "</div>";
 			
 			// Create categ object
-			let categObj = {
+			var categObj = {
 				categName: categName,
 				alg: []
 			};
@@ -53,13 +53,13 @@ Gallery.loadAlgories = (extraCallback) => {
 			categHTML += "<div class='categ-content'>";
 			
 			jQuery(this).find('alg').each(function() {
-				let title = jQuery(this).find('title').text();
-				let src = "img/" + jQuery(this).find('src').text();
-				let small = "img/" + jQuery(this).find('small').text();
-				let description = jQuery(this).find('description').text();
-				let deviant = jQuery(this).find('deviant').text();
-				let github = jQuery(this).find('github').text();
-				let id = jQuery(this).find('artid').text();
+				var title = jQuery(this).find('title').text();
+				var src = "img/" + jQuery(this).find('src').text();
+				var small = "img/" + jQuery(this).find('small').text();
+				var description = jQuery(this).find('description').text();
+				var deviant = jQuery(this).find('deviant').text();
+				var github = jQuery(this).find('github').text();
+				var id = jQuery(this).find('artid').text();
 				
 				// Fill the DOM
 				categHTML += "<div class='alg' id='art-id-" + id + "' >";
@@ -98,7 +98,7 @@ Gallery.loadAlgories = (extraCallback) => {
  * @param {Number} id ID of algory
  * @returns {Object} Algory object
  */
-Gallery.getAlg = (id) => {
+Gallery.getAlg = function(id) {
 	for (key in Gallery.algData) {
 		for (key2 in Gallery.algData[key].alg) {
 			if ('art-id-' + Gallery.algData[key].alg[key2].id == id) {
@@ -112,7 +112,7 @@ Gallery.getAlg = (id) => {
 /**
  * Listeners on each algory
  */
-Gallery.DOMlisteners = () => {
+Gallery.DOMlisteners = function() {
 	// Algories blocks
 	jQuery('.alg').on({
 		mouseenter: function() {
@@ -128,10 +128,10 @@ Gallery.DOMlisteners = () => {
 	});
 	
 	// About link hover effects
-	let logoMail = jQuery('#about a.mailme');
-	let logoDeviant = jQuery('#about a.deviant');
-	let logoGithub = jQuery('#about a.github');
-	let logoCodepen = jQuery('#about a.codepen');
+	var logoMail = jQuery('#about a.mailme');
+	var logoDeviant = jQuery('#about a.deviant');
+	var logoGithub = jQuery('#about a.github');
+	var logoCodepen = jQuery('#about a.codepen');
 	jQuery('#about span.aboutmail').on({
 		mouseenter: function() {
 			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
@@ -169,7 +169,7 @@ Gallery.DOMlisteners = () => {
 /**
  * Listeners for front view
  */
-Gallery.frontListeners = () => {
+Gallery.frontListeners = function() {
 	jQuery('#front .zoom').on({
 		mouseenter: function() {
             Gallery.mouseIsOverFront = true;
@@ -196,31 +196,31 @@ Gallery.frontListeners = () => {
 /**
  * DOM filler called on demand (click on an algory)
  */
-Gallery.fillFront = (jAlgNode) => {
+Gallery.fillFront = function(jAlgNode) {
 	
 	Gallery.loadingOn();
 	// Clear previous img
     jQuery('#front .zoom .fullimg img').attr('src', '');
 	
-	let id = jAlgNode.attr('id');
-	let src = Gallery.getAlg(id).src;
-	let title = Gallery.getAlg(id).title;
-	let description = Gallery.getAlg(id).description;
-	let deviant = Gallery.getAlg(id).deviant;
-	let github = Gallery.getAlg(id).github;
+	var id = jAlgNode.attr('id');
+	var src = Gallery.getAlg(id).src;
+	var title = Gallery.getAlg(id).title;
+	var description = Gallery.getAlg(id).description;
+	var deviant = Gallery.getAlg(id).deviant;
+	var github = Gallery.getAlg(id).github;
 	
 	// Image
-	let newImg = new Image();
+	var newImg = new Image();
 	newImg.onload = function() {
-		let self = this;
+		var self = this;
 		
-		let height = this.height;
-		let width = this.width;
+		var height = this.height;
+		var width = this.width;
 		
 		// If image is bigger than 0.9*window, rescale
-		let ratioW = this.width / (0.9*jQuery(window).width());
-		let ratioH = this.height / (0.9*jQuery(window).height());
-		let ratio = Math.max(ratioH, ratioW);
+		var ratioW = this.width / (0.9*jQuery(window).width());
+		var ratioH = this.height / (0.9*jQuery(window).height());
+		var ratio = Math.max(ratioH, ratioW);
 		if (ratio > 1 && ratioW > ratioH) {
 			height /= ratioW;
 			width /= ratioW;
@@ -229,8 +229,8 @@ Gallery.fillFront = (jAlgNode) => {
 			width /= ratioH;
 		}
 		
-		let left = (jQuery(window).width() - width)/2;
-		let top = (jQuery(window).height() - height)/2;
+		var left = (jQuery(window).width() - width)/2;
+		var top = (jQuery(window).height() - height)/2;
 		
 		jQuery('#front .zoom').css('height', height).css('width', width).css('top', top).css('left', left);
 
@@ -255,7 +255,7 @@ Gallery.fillFront = (jAlgNode) => {
 /**
  * Shows front view
  */
-Gallery.showFront = () => {
+Gallery.showFront = function() {
 	jQuery('#front').css('display', 'inherit').animate({
 		opacity: 1
 	}, 1000);
@@ -264,7 +264,7 @@ Gallery.showFront = () => {
 /**
  * Hides front view
  */
-Gallery.hideFront = () => {
+Gallery.hideFront = function() {
 	jQuery('#front').animate({
 		opacity: 0
 	}, 500, function() {
@@ -275,36 +275,36 @@ Gallery.hideFront = () => {
 /**
  * Shows details in front view
  */
-Gallery.showFrontDetails = () => {
+Gallery.showFrontDetails = function() {
 	jQuery('#front .zoom .details').css('opacity', 1);
 };
 
 /**
  * Hides details in front view
  */
-Gallery.hideFrontDetails = () => {
+Gallery.hideFrontDetails = function() {
 	jQuery('#front .zoom .details').css('opacity', 0);
 };
 
 /**
  * Loading icon within front view - Turn on
  */
-Gallery.loadingOn = () => {
+Gallery.loadingOn = function() {
 	jQuery('.zoom .loader').show();
 };
 
 /**
  * Loading icon within front view - Turn off
  */
-Gallery.loadingOff = () => {
+Gallery.loadingOff = function() {
 	jQuery('.zoom .loader').hide();
 };
 
 /**
  * Initializer
  */
-Gallery.go = () => {
-    Gallery.loadAlgories(() => {
+Gallery.go = function() {
+    Gallery.loadAlgories(function() {
         Gallery.DOMlisteners();
         Gallery.frontListeners();
     });

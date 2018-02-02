@@ -1,25 +1,25 @@
 // Globals
-let Projects = {};
+var Projects = {};
 
 /**
  * Fills the DOM with projects.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-Projects.loadProjects = (extraCallback) => {
+Projects.loadProjects = function(extraCallback) {
 	jQuery
 	.get("projects.xml", {})
 	.done(function(data) {
 	
-		let jProjects = jQuery(data).find('projects');
+		var jProjects = jQuery(data).find('projects');
 		
 		jProjects.find('project').each(function(index) {
 			
 			// Get XML content
-			let projectHTML = "";
-			let title = jQuery(this).find('title').text();
-			let description = jQuery(this).find('description').text();
-			let src = jQuery(this).find('image').text();
-			let link = jQuery(this).find('link').text();
+			var projectHTML = "";
+			var title = jQuery(this).find('title').text();
+			var description = jQuery(this).find('description').text();
+			var src = jQuery(this).find('image').text();
+			var link = jQuery(this).find('link').text();
 			
 			// Create HTML
 			projectHTML += "<div class='project'>";
@@ -45,7 +45,7 @@ Projects.loadProjects = (extraCallback) => {
 /**
  * Listeners on each project
  */
-Projects.DOMlisteners = () => {
+Projects.DOMlisteners = function() {
 
 	// Project links
 	jQuery('.project').on({
@@ -54,7 +54,7 @@ Projects.DOMlisteners = () => {
 		}, mouseleave: function() {
 			
 		}, mouseup: function() {
-			let goToLink = jQuery(this).find('a').attr('href');
+			var goToLink = jQuery(this).find('a').attr('href');
 			window.open(goToLink, '_blank');
 		}
 	});
@@ -63,8 +63,8 @@ Projects.DOMlisteners = () => {
 	jQuery('#projects .show').on({
 		mouseup: function() {
 		
-			let remain = jQuery('#projects .project.hidden').length;
-			let unveil = 4;
+			var remain = jQuery('#projects .project.hidden').length;
+			var unveil = 4;
 			
 			jQuery('#projects .project.hidden').each(function(index) {
 				// Unveil the next projects
@@ -81,10 +81,10 @@ Projects.DOMlisteners = () => {
 	});
 	
 	// About link hover effects
-	let logoMail = jQuery('#about a.mailme');
-	let logoDeviant = jQuery('#about a.deviant');
-	let logoGithub = jQuery('#about a.github');
-	let logoCodepen = jQuery('#about a.codepen');
+	var logoMail = jQuery('#about a.mailme');
+	var logoDeviant = jQuery('#about a.deviant');
+	var logoGithub = jQuery('#about a.github');
+	var logoCodepen = jQuery('#about a.codepen');
 	jQuery('#about span.aboutmail').on({
 		mouseenter: function() {
 			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
@@ -123,8 +123,8 @@ Projects.DOMlisteners = () => {
 /**
  * Initializer
  */
-Projects.go = () => {
-    Projects.loadProjects(() => {
+Projects.go = function() {
+    Projects.loadProjects(function() {
         Projects.DOMlisteners();
 	});
 };
