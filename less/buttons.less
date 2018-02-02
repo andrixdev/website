@@ -1,18 +1,18 @@
 .acidbutton {
-	background: linear-gradient(#aaa, #444);
+	background: @blue-20;
 	border-radius: 2px;
-	padding: 10px 15px;
-	width: 170px;
-	font-size: 25px;
-	font-weight: bold;
+	padding: 0.5em 2em;
+	font-size: 2rem;
+	.weight-200();
 	margin: 20px;
 	border: none;
-	cursor: pointer;
 	box-shadow: #000 0 0 3px;
-	color: #000;
+	color: @white;
 	text-decoration: none;
+	.pointer();
 
 	&:hover {
-		background: linear-gradient(hsl(200, 100%, 50%), hsl(200, 100%, 20%));
+		background: @blue-40;
+		text-shadow: white 0 0 3px;
 	}
 }

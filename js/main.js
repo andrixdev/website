@@ -126,7 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return {
                 animationPaths: [],
                 displayedPaths: [],
-                maxAnim: 4
+                maxAnim: 4,
+                seen: []// Array with indexes of seen animations
             }
         },
         methods: {
@@ -137,7 +138,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.displayedPaths = el;
             },
             randomizeDisplayedPaths: function() {
-                this.displayedPaths = randomizePaths(this.animationPaths, this.maxAnim);
+                this.updateDisplayedPaths(randomizePaths(this.animationPaths, this.maxAnim));
+                this.updateSeenWithNewDisplayedAnimations();
+            },
+            updateSeenWithNewDisplayedAnimations: function() {
+                // Compare with existing stored paths, add only if new
+                // Don't mind about pushing on the very array being looped on
+                var self = this;
+                this.displayedPaths.forEach(function(el) {
+                    var isInSeen = false;
+                    for (var a = 0; a < self.seen.length; a++) {
+                        if (el === self.seen[a]) isInSeen = true;
+                    }
+                    if (!isInSeen) self.seen.push(el);
+                });
             }
         },
         mounted: function() {

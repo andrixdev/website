@@ -224,10 +224,15 @@
 
 		<div class="page-content">
 			<!--<video src="vids/kuzco5.mp4" autoplay poster="posterimage.jpg"></video>-->
-			<video v-for="path in displayedPaths" v-bind:src="path" autoplay loop muted></video>
+			<div class="videos">
+				<video v-for="path in displayedPaths" v-bind:src="path" autoplay loop muted></video>
+			</div>
 
-			<button v-on:click="randomizeDisplayedPaths()">Randomize</button>
+			<div class="randomize">
+				<button class="acidbutton" v-on:click="randomizeDisplayedPaths()">Randomize</button>
+			</div>
 
+			<p class="seen center">Seen: {{ seen.length }}/{{ animationPaths.length }}</p>
 		</div>
 
 		<logo-links></logo-links>
