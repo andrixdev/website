@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 homeGallery: undefined,
                 homeProjects: undefined,
                 homeDisplayedAnimations: undefined,
-                scroll: 0,
                 maxAnimHome: 6
             };
         },
@@ -28,23 +27,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.homeDisplayedAnimations = el;
             },
             scrollLeft: function(ev) {
+                // Prevent rerouting
                 ev.preventDefault();
-                this.scroll -= 300;
-                if (this.scroll < 0) this.scroll = 0;
+
+                // Get scroll value stored in DOM
                 var $container = jQuery(ev.currentTarget).siblings('.showcase');
-                $container.scrollLeft(this.scroll);
+                var scroll = $container.attr('data-scroll');
+
+                // Go back! (prevent negative)
+                scroll -= 300;
+                if (scroll < 0) scroll = 0;
+
+                // Call jQuery scroll and save value back in DOM
+                $container.scrollLeft(scroll);
+                $container.attr('data-scroll', scroll);
             },
             scrollRight: function(ev) {
+                // Prevent rerouting
                 ev.preventDefault();
-                this.scroll += 300;
+
+                // Get scroll value stored in DOM
                 var $container = jQuery(ev.currentTarget).siblings('.showcase');
+                var scroll = $container.attr('data-scroll');
+
+                // Get wrapper data for computation of max scroll based on width
                 var $wrapper = $container.find('.showcase-wrapper');
                 var wrapperWidthPX = $wrapper.css('width');
                 var wrapperWidth = wrapperWidthPX.substr(0, wrapperWidthPX.length - 2);
                 var maxWidth = wrapperWidth - window.innerWidth;
-                if (this.scroll > maxWidth) this.scroll = maxWidth;
 
-                $container.scrollLeft(this.scroll);
+                // Go back! (prevent negative)
+                scroll -= (-300);
+                if (scroll > maxWidth) scroll = maxWidth;
+
+                // Call jQuery scroll and save value back in DOM
+                $container.scrollLeft(scroll);
+                $container.attr('data-scroll', scroll);
             }
         },
         mounted: function() {
