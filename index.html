@@ -90,6 +90,7 @@
 			<span>and</span>
 			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
 		</p>
+		<p class="version">v3.0</p>
 	</div>
 </div>
 
@@ -134,8 +135,15 @@
 			<div class="home-animations">
 				<router-link to="/animations">
 					<h3 class="categname">Animations</h3>
-					<video v-for="path in homeDisplayedAnimations" v-bind:src="path" autoplay loop muted></video>
 				</router-link>
+
+				<div class="videos">
+					<video v-for="path in homeDisplayedAnimations" v-bind:src="path" autoplay loop muted></video>
+				</div>
+				<router-link class="moar" to="/animations">
+					<button class="acidbutton">More animations</button>
+				</router-link>
+
 			</div>
 
 			<div class="home-vjing">
@@ -275,7 +283,7 @@
 				<p>It possibly started back in 2010, when I would study the motion of plasma particles around planets of our solar system.</p>
 				<p>I was enthralled by the intrinsic beauty of force field equations then revealed to me.</p>
 				<br/>
-				<p>As years passed I discovered the creative power of web programming. After an award-winning team project at KTH Royal Institute of Technology about creating artworks with voice in 2014, I started creating my own techniques for creative coding on HTML canvas. The rest followed.</p>
+				<p>As years passed I discovered the creative power of web programming. After an award-winning team project at KTH Royal Institute of Technology about creating artworks with voice in 2014, I started creating my own techniques for creative coding on HTML canvas with JavaScript. The rest followed.</p>
 				<br/>
 				<br/>
 				<p>Since then I have been exploring this simple yet unfathomable question :</p>

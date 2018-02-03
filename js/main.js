@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 homeProjects: undefined,
                 homeDisplayedAnimations: undefined,
                 scroll: 0,
-                maxAnimHome: 3
+                maxAnimHome: 6
             };
         },
         methods: {
@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         paths.push(jQuery(this).text());
                     });
 
-                    self.updateHomeDisplayedAnimations(randomizePaths(paths, this.maxAnimHome));
+                    var somePaths = randomizePaths(paths, self.maxAnimHome);
+                    self.updateHomeDisplayedAnimations(somePaths);
                 });
 
 
