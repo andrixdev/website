@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	// If IE, display fallback view and return false
 	if (isIE()) {
 		var ieBlock = document.getElementById('ie-fallback');
-		document.getElementsByTagName('body')[0].innerHTML = ieBlock.outerHTML;
+		var body = document.getElementsByTagName('body')[0]
+		body.innerHTML = ieBlock.outerHTML;
 		ieBlock.style.display = 'inherit';
+		body.className += ' ie';
 		return false;
 	}
 	
