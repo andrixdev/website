@@ -8,7 +8,7 @@ var CV = {};
 CV.loadCV = function(extraCallback) {
 
 	jQuery
-	.get("cv.xml", {})
+	.get("data/cv.xml", {})
 	.done(function(data) {
 		
 		var tempo = 0;

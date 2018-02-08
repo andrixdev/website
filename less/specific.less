@@ -58,10 +58,15 @@
 	.small-mobile-height();
 
 	#home & {
-		background-image: url('../img/misc/hex-fire.jpg');
+		//background-image: url('../img/misc/hex-fire.jpg');
 		//background-size: 1500px 985px;
 		background-position-x: 50%;
-		@media (max-width: 1000px) { .autoimage(); }
+		//@media (max-width: 1000px) { .autoimage(); }
+		@media (max-width: 800px) {
+			background-image: url('../img/misc/hex-fire.jpg');
+			height: 150px;
+		}
+		@media (max-width: 500px) { .autoimage(); }
 	}
 	#gallery & {
 		background-image: url('../img/misc/annihilation.jpg');

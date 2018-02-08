@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Home Gallery
             jQuery
-                .get("algories.xml", {})
+                .get("data/algories.xml", {})
                 .done(function(data) {
 
                     var paths = [];
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Home Projects
             jQuery
-                .get("projects.xml", {})
+                .get("data/projects.xml", {})
                 .done(function(data) {
 
                     var jProjects = jQuery(data).find('projects');
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Home displayed animations (random selections)
             jQuery
-                .get("animations.xml", {})
+                .get("data/animations.xml", {})
                 .done(function(data) {
 
                     var jAnimations = jQuery(data).find('animations');
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Store all paths
             jQuery
-                .get("animations.xml", {})
+                .get("data/animations.xml", {})
                 .done(function(data) {
 
                     var paths = [];

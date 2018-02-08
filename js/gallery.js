@@ -22,7 +22,7 @@ var Gallery = {
 Gallery.loadAlgories = function(extraCallback) {
 	var gallery = jQuery('.gallery-content');
 	jQuery
-	.get("algories.xml", {})
+	.get("data/algories.xml", {})
 	.done(function(data) {
 	
 		var jAlgories = jQuery(data).find('algories');
