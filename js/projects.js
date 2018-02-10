@@ -7,7 +7,7 @@ var Projects = {};
  */
 Projects.loadProjects = function(extraCallback) {
 	jQuery
-	.get("projects.xml", {})
+	.get("data/projects.xml", {})
 	.done(function(data) {
 	
 		var jProjects = jQuery(data).find('projects');

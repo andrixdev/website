@@ -1,0 +1,23 @@
+body.ie {
+	background: hsl(200, 50%, 10%);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#ie-fallback {
+	margin-top: 50px;
+	text-align: center;
+}
+#ie-fallback img {
+	animation: spin 1s infinite linear;
+}
+#ie-fallback p {
+	color: hsl(200, 50%, 90%);
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 0;
+}
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}

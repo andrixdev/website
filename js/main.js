@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+	
+	// If IE, display fallback view and return false
+	if (isIE()) {
+		var ieBlock = document.getElementById('ie-fallback');
+		var body = document.getElementsByTagName('body')[0]
+		body.innerHTML = ieBlock.outerHTML;
+		ieBlock.style.display = 'inherit';
+		body.className += ' ie';
+		return false;
+	}
+	
     // App views
     var HomeComponent = {
         template: jQuery('#home-template').html(),
@@ -71,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Home Gallery
             jQuery
-                .get("algories.xml", {})
+                .get("data/algories.xml", {})
                 .done(function(data) {
 
                     var paths = [];
@@ -89,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Home Projects
             jQuery
-                .get("projects.xml", {})
+                .get("data/projects.xml", {})
                 .done(function(data) {
 
                     var jProjects = jQuery(data).find('projects');
@@ -106,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Home displayed animations (random selections)
             jQuery
-                .get("animations.xml", {})
+                .get("data/animations.xml", {})
                 .done(function(data) {
 
                     var jAnimations = jQuery(data).find('animations');
@@ -178,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Store all paths
             jQuery
-                .get("animations.xml", {})
+                .get("data/animations.xml", {})
                 .done(function(data) {
 
                     var paths = [];
@@ -283,4 +293,19 @@ function randomizePaths(paths, maxNumber) {
     }
 
     return output;
+}
+
+function isIE() {
+	var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+
+    return (msie > 0 || !!ua.match(/Trident.*rv\:11\./));
+}
+
+function isIEorEdge() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+	var edge = ua.indexOf('Edge/');
+
+    return (msie > 0 || !!ua.match(/Trident.*rv\:11\./) || edge > 0); 
 }
