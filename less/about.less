@@ -3,12 +3,16 @@
 		padding: 60px 20px 70px;
 
 		.statement {
+			width: 90%;
+			margin-left: 5%;
+
 			p {
-				.center();
+				text-align: justify;
 				font-size: 1.5rem;
 
 				&.headline {
 					font-size: 2.5rem;
+					@media (max-width: @sm-md) { text-align: center; }
 				}
 				&.the-question {
 					font-size: 1.75rem;
