@@ -244,6 +244,14 @@ document.addEventListener('DOMContentLoaded', function() {
         routes: routes
     });
 
+    // Scroll to top on route change
+    router.beforeEach(function(to, from, next) {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 100);
+        next();
+    });
+
     var app = new Vue({
         router: router,
         el: '#icosacid-website',
