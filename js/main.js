@@ -205,7 +205,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     var VjingComponent = { template: jQuery('#vjing-template').html() };
-    var AboutComponent = { template: jQuery('#about-template').html() };
+    var AboutComponent = {
+        template: jQuery('#about-template').html(),
+        data: function() {
+            return {
+                showRiddle: false,
+                riddleAnswer: undefined
+            }
+        },
+        methods: {
+            submitRiddle: function() {
+                console.log(this.riddleAnswer);
+                if (true) {
+                    this.animateTryAgain();
+                }
+            },
+            animateTryAgain: function() {
+                var $error = jQuery('.riddle-input p.error');
+                $error.animate({ opacity: 1 }, 500);
+                setTimeout(function() {
+                    $error.animate({ opacity: 0 }, 1000);
+                }, 3000);
+            }
+        }
+    };
     var ContactComponent = { template: jQuery('#contact-template').html() };
     var CVComponent = {
         template: jQuery('#cv-template').html(),

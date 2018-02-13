@@ -298,6 +298,37 @@
 		</div>
 
 		<logo-links></logo-links>
+
+		<div class="resume-riddle center">
+			<div class="flexrow flexcenter" v-if="!showRiddle">
+				<button class="acidbutton" v-on:click="showRiddle = true">See Resume</button>
+			</div>
+
+			<div class="riddle" v-if="showRiddle">
+				<div class="riddle-text">
+					<p class="riddle-intro">Here is a riddle first:</p>
+					<p>
+						<strong><em>
+							I have a root.
+							<br/>
+							I am irrational.
+							<br/>
+							Artists and scientists have discovered my nature and used my value.
+							<br/>
+							What am I?
+						</em></strong>
+					</p>
+				</div>
+
+				<div class="riddle-input">
+					<input v-model="riddleAnswer" placeholder="Type answer here..." />
+					<p class="error">Try again</p>
+				</div>
+
+				<button class="riddle-submit acidbutton" v-on:click="submitRiddle()">Show resume</button>
+
+			</div>
+		</div>
 	</div>
 </template>
 
