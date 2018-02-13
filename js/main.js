@@ -210,13 +210,14 @@ document.addEventListener('DOMContentLoaded', function() {
         data: function() {
             return {
                 showRiddle: false,
-                riddleAnswer: undefined
+                riddleAnswer: ""
             }
         },
         methods: {
             submitRiddle: function() {
-                console.log(this.riddleAnswer);
-                if (true) {
+                if (this.isAnswerValid(this.riddleAnswer)) {
+                    router.push('/cv');
+                } else {
                     this.animateTryAgain();
                 }
             },
@@ -226,6 +227,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(function() {
                     $error.animate({ opacity: 0 }, 1000);
                 }, 3000);
+            },
+            isAnswerValid: function(answer) {
+                var hasGold = answer.indexOf('gold');
+
+                return hasGold;
             }
         }
     };
