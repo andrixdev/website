@@ -229,9 +229,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 3000);
             },
             isAnswerValid: function(answer) {
-                var hasGold = answer.indexOf('gold');
+                var hasGold = answer.indexOf('gold') > -1 || answer.indexOf('Gold') > -1,
+                    hasValue = Math.round(10 * answer) / 10 == 1.6,
+                    hasCommaValue = answer.indexOf('1,6') > -1,
+                    hasPhi = answer.indexOf('phi') > -1 || answer.indexOf('Phi') > -1,
+                    hasRatio = answer.indexOf('ratio') > -1;
 
-                return hasGold;
+                return hasGold || hasValue || hasCommaValue || hasPhi || hasRatio;
             }
         }
     };
