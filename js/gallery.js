@@ -20,7 +20,7 @@ var Gallery = {
  * @param {Function} extraCallback Function called after the DOM is filled
  */
 Gallery.loadAlgories = function(extraCallback) {
-	var gallery = jQuery('.gallery-content');
+	var gallery = jQuery('.animations-content');
 	jQuery
 	.get("data/algories.xml", {})
 	.done(function(data) {
@@ -41,7 +41,7 @@ Gallery.loadAlgories = function(extraCallback) {
 			categHTML += "<div class='moron'>";
 			categHTML += "<p>More on</p>";
 			categHTML += "<a class='fa fa-codepen' href='" + moronCodepen + "' title='See the live collection on CodePen' target='_blank'></a>";
-			categHTML += "<a class='fa fa-deviantart' href='" + moronDeviantart + "' title='See the gallery on DeviantArt' target='_blank'></a>";
+			categHTML += "<a class='fa fa-deviantart' href='" + moronDeviantart + "' title='See the animations on DeviantArt' target='_blank'></a>";
 			categHTML += "</div>";
 			
 			// Create categ object

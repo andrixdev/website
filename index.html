@@ -237,7 +237,6 @@
 				<button class="acidbutton" v-on:click="randomizeDisplayedPaths()">Randomize</button>
 			</div>
 
-
 			<!--<video src="vids/kuzco5.mp4" autoplay poster="posterimage.jpg"></video>-->
 			<div class="videos">
 				<video v-for="path in displayedPaths" v-bind:src="path" autoplay loop muted></video>
@@ -625,11 +624,13 @@
 <script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
 
 <!-- Ours -->
-<script type='text/javascript' src="js/main.js"></script>
+<script type='text/javascript' src="js/utils.js"></script>
+<script type='text/javascript' src="components/animations/animations.js"></script>
 <script type='text/javascript' src="js/gallery.js"></script>
 <script type='text/javascript' src="js/projects.js"></script>
 <script type='text/javascript' src="js/cv.js"></script>
 <script type='text/javascript' src="js/jAntispam.js"></script>
+<script type='text/javascript' src="js/main.js"></script>
 
 </body>
 </html>

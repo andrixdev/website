@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// If IE, display fallback view and return false
 	if (isIE()) {
 		var ieBlock = document.getElementById('ie-fallback');
-		var body = document.getElementsByTagName('body')[0]
+		var body = document.getElementsByTagName('body')[0];
 		body.innerHTML = ieBlock.outerHTML;
 		ieBlock.style.display = 'inherit';
 		body.className += ' ie';
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     };
     var GalleryComponent = {
-        template: jQuery('#gallery-template').html(),
+        template: jQuery('#animations-template').html(),
         data: function() {
             return { }
         },
@@ -149,61 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         mounted: function() { Projects.go(); }
     };
-    var AnimationsComponent = {
-        template: jQuery('#animations-template').html(),
-        data: function() {
-            return {
-                animationPaths: [],
-                displayedPaths: [],
-                maxAnim: 4,
-                seen: []// Array with indexes of seen animations
-            }
-        },
-        methods: {
-            updateAnimationPaths: function(el) {
-                this.animationPaths = el;
-            },
-            updateDisplayedPaths: function(el) {
-                this.displayedPaths = el;
-            },
-            randomizeDisplayedPaths: function() {
-                this.updateDisplayedPaths(randomizePaths(this.animationPaths, this.maxAnim));
-                this.updateSeenWithNewDisplayedAnimations();
-            },
-            updateSeenWithNewDisplayedAnimations: function() {
-                // Compare with existing stored paths, add only if new
-                // Don't mind about pushing on the very array being looped on
-                var self = this;
-                this.displayedPaths.forEach(function(el) {
-                    var isInSeen = false;
-                    for (var a = 0; a < self.seen.length; a++) {
-                        if (el === self.seen[a]) isInSeen = true;
-                    }
-                    if (!isInSeen) self.seen.push(el);
-                });
-            }
-        },
-        mounted: function() {
-            var self = this;
 
-            // Store all paths
-            jQuery
-                .get("data/animations.xml", {})
-                .done(function(data) {
-
-                    var paths = [];
-
-                    var jAnimations = jQuery(data).find('animations');
-                    jAnimations.find('image').each(function(el) {
-                        paths.push(jQuery(this).text());
-                    });
-                    self.updateAnimationPaths(paths);
-
-                    // Now display some of them
-                    self.randomizeDisplayedPaths();
-                });
-        }
-    };
     var VjingComponent = { template: jQuery('#vjing-template').html() };
     var AboutComponent = { template: jQuery('#about-template').html() };
     var ContactComponent = { template: jQuery('#contact-template').html() };
@@ -230,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // App routes
     var routes = [
         { path: '/', component: HomeComponent },
-        { path: '/gallery', component: GalleryComponent },
+        { path: '/animations', component: GalleryComponent },
         { path: '/projects', component: ProjectsComponent },
         { path: '/animations', component: AnimationsComponent },
         { path: '/vjing', component: VjingComponent },
@@ -265,55 +211,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-
-// Returns [4, 0, 1, 3, 2] for maxNumber = 5, for instance
-function randomIndexes(maxNumber) {
-    var arr = [];
-
-    while (arr.length < maxNumber) {
-        var newRand = Math.floor(maxNumber * Math.random());
-        var isAlreadyThere = false;
-        for (var i = 0; i < arr.length; i++) {
-            if (newRand == arr[i]) isAlreadyThere = true;
-        }
-        if (!isAlreadyThere) arr.push(newRand);
-    }
-
-    return arr;
-}
-
-/**
- *
- * @param {Array} paths
- * @param {Number} maxNumber
- * @returns Only *maxNumber* randomly chosen paths
- */
-function randomizePaths(paths, maxNumber) {
-    var output = [];
-    var total = paths.length;
-
-    // Pick random animations
-    var swapped = randomIndexes(total);
-    var indexes = swapped.slice(0, maxNumber);
-
-    for (var ind = 0; ind < indexes.length; ind++) {
-        output.push(paths[indexes[ind]]);
-    }
-
-    return output;
-}
-
-function isIE() {
-	var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-
-    return (msie > 0 || !!ua.match(/Trident.*rv\:11\./));
-}
-
-function isIEorEdge() {
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-	var edge = ua.indexOf('Edge/');
-
-    return (msie > 0 || !!ua.match(/Trident.*rv\:11\./) || edge > 0); 
-}
