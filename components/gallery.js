@@ -20,7 +20,7 @@ var Gallery = {
  * @param {Function} extraCallback Function called after the DOM is filled
  */
 Gallery.loadAlgories = function(extraCallback) {
-	var gallery = jQuery('.animations-content');
+	var gallery = jQuery('.gallery-content');
 	jQuery
 	.get("data/algories.xml", {})
 	.done(function(data) {

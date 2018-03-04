@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // App views
     var HomeComponent = {
         template: jQuery('#home-template').html(),
-        props: ['home'],
         data: function() {
             return {
                 stuff: [
@@ -235,11 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
         router: router,
         el: '#icosacid-website',
         data: {
-            isOpen: false,
-            home: {
-                gallery: [],
-                projects: []
-            }
+            isOpen: false
         }
     });
 

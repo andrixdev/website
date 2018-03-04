@@ -221,6 +221,6 @@ CV.invalidKeyAnimation = function() {
  */
 CV.go = function() {
     CV.loadCV(function() {
-		Projects.showCVwithoutKey();
+		CV.showCVwithoutKey();
 	});
 };

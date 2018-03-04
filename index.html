@@ -93,7 +93,7 @@
 			<span>and</span>
 			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
 		</p>
-		<p class="version">v3.2</p>
+		<p class="version">v3.3</p>
 	</div>
 </div>
 
@@ -275,7 +275,7 @@
 			<h1>About</h1>
 		</div>
 
-		<div class="page-content">
+		<div class="page-content no-padding">
 			<div class="statement">
 				<p class="headline">Hi there, my name is Alex, and I create art with science and technology.</p>
 				<!--<br/>
@@ -298,6 +298,37 @@
 		</div>
 
 		<logo-links></logo-links>
+
+		<div class="resume-riddle center">
+			<div class="flexrow flexcenter" v-if="!showRiddle">
+				<button class="acidbutton" v-on:click="showRiddle = true">See Resume</button>
+			</div>
+
+			<div class="riddle" v-if="showRiddle">
+				<div class="riddle-text">
+					<p class="riddle-intro">Here is a riddle first...</p>
+					<p>
+						<strong><em>
+							I have a root.
+							<br/>
+							I am irrational.
+							<br/>
+							Artists and scientists have discovered my nature and used my value.
+							<br/>
+							What am I?
+						</em></strong>
+					</p>
+				</div>
+
+				<div class="riddle-input">
+					<input v-model="riddleAnswer" placeholder="Type answer here..." />
+					<p class="error">Try again</p>
+				</div>
+
+				<button class="riddle-submit acidbutton" v-on:click="submitRiddle()">Show resume</button>
+
+			</div>
+		</div>
 	</div>
 </template>
 
