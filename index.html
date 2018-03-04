@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<div id="icosacid-website">
+<div id="icosacid-website" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
 	<div class="header" v-bind:class="{ 'mobile-menu-open': isOpen }">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
@@ -87,7 +87,7 @@
 	</div>
 
 	<div class="footer">
-		<p>Alexandre Andrieux @2015-2018</p>
+		<p class="click-and-hue" v-on:click="rotateLeHue()">Alexandre Andrieux @2015-2018</p>
 		<p class="crafted">
 			<span>Crafted with</span>
 			<img src='img/website/vue.png' alt="Vue.js" title="Vue JS"/>

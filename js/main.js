@@ -237,7 +237,14 @@ document.addEventListener('DOMContentLoaded', function() {
         router: router,
         el: '#icosacid-website',
         data: {
-            isOpen: false
+            isOpen: false,
+            hueAngle: 0
+        },
+        methods: {
+            rotateLeHue: function() {
+                this.hueAngle = Math.round(360 * Math.random());
+
+            }
         }
     });
 
