@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-
-
-	// If IE, display fallback view and return false
-	if (isIE()) {
-		var ieBlock = document.getElementById('ie-fallback');
-		var body = document.getElementsByTagName('body')[0];
-		body.innerHTML = ieBlock.outerHTML;
-		ieBlock.style.display = 'inherit';
-		body.className += ' ie';
-		return false;
-	}
+    // If IE, display fallback view and return false
+    if (isIE()) {
+        var ieBlock = document.getElementById('ie-fallback');
+        var body = document.getElementsByTagName('body')[0]
+        body.innerHTML = ieBlock.outerHTML;
+        ieBlock.style.display = 'inherit';
+        body.className += ' ie';
+        return false;
+    }
 
     // App views
     var HomeComponent = {
@@ -138,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     };
     var GalleryComponent = {
-        template: jQuery('#animations-template').html(),
+        template: jQuery('#gallery-template').html(),
         data: function() {
             return { }
         },
@@ -151,65 +149,42 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         mounted: function() { Projects.go(); }
     };
-    var AnimationsComponent = {
-        //template: jQuery('#animations-template').html(),
-        el: '#animations-template',
+
+    var VjingComponent = { template: jQuery('#vjing-template').html() };
+    var AboutComponent = {
+        template: jQuery('#about-template').html(),
         data: function() {
             return {
-                animationPaths: [],
-                displayedPaths: [],
-                maxAnim: 4,
-                seen: [1]// Array with indexes of seen animations
+                showRiddle: false,
+                riddleAnswer: ""
             }
         },
         methods: {
-            updateAnimationPaths: function(el) {
-                this.animationPaths = el;
+            submitRiddle: function() {
+                if (this.isAnswerValid(this.riddleAnswer)) {
+                    router.push('/cv');
+                } else {
+                    this.animateTryAgain();
+                }
             },
-            updateDisplayedPaths: function(el) {
-                this.displayedPaths = el;
+            animateTryAgain: function() {
+                var $error = jQuery('.riddle-input p.error');
+                $error.animate({ opacity: 1 }, 500);
+                setTimeout(function() {
+                    $error.animate({ opacity: 0 }, 1000);
+                }, 3000);
             },
-            randomizeDisplayedPaths: function() {
-                this.updateDisplayedPaths(randomizePaths(this.animationPaths, this.maxAnim));
-                this.updateSeenWithNewDisplayedAnimations();
-            },
-            updateSeenWithNewDisplayedAnimations: function() {
-                // Compare with existing stored paths, add only if new
-                // Don't mind about pushing on the very array being looped on
-                var self = this;
-                this.displayedPaths.forEach(function(el) {
-                    var isInSeen = false;
-                    for (var a = 0; a < self.seen.length; a++) {
-                        if (el === self.seen[a]) isInSeen = true;
-                    }
-                    if (!isInSeen) self.seen.push(el);
-                });
+            isAnswerValid: function(answer) {
+                var hasGold = answer.indexOf('gold') > -1 || answer.indexOf('Gold') > -1,
+                    hasValue = Math.round(10 * answer) / 10 == 1.6,
+                    hasCommaValue = answer.indexOf('1,6') > -1,
+                    hasPhi = answer.indexOf('phi') > -1 || answer.indexOf('Phi') > -1,
+                    hasRatio = answer.indexOf('ratio') > -1;
+
+                return hasGold || hasValue || hasCommaValue || hasPhi || hasRatio;
             }
-        },
-        mounted: function() {
-            var self = this;
-
-            // Store all paths
-            jQuery
-                .get("data/animations.xml", {})
-                .done(function(data) {
-
-                    var paths = [];
-
-                    var jAnimations = jQuery(data).find('animations');
-                    jAnimations.find('image').each(function(el) {
-                        paths.push(jQuery(this).text());
-                    });
-                    self.updateAnimationPaths(paths);
-
-                    // Now display some of them
-                    self.randomizeDisplayedPaths();
-                });
         }
     };
-
-    var VjingComponent = { template: jQuery('#vjing-template').html() };
-    var AboutComponent = { template: jQuery('#about-template').html() };
     var ContactComponent = { template: jQuery('#contact-template').html() };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
@@ -234,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // App routes
     var routes = [
         { path: '/', component: HomeComponent },
-        { path: '/animations', component: GalleryComponent },
+        { path: '/gallery', component: GalleryComponent },
         { path: '/projects', component: ProjectsComponent },
         { path: '/animations', component: AnimationsComponent },
         { path: '/vjing', component: VjingComponent },
@@ -269,4 +244,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-
