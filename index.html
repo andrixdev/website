@@ -37,7 +37,8 @@
 	<div class="header" v-bind:class="{ 'mobile-menu-open': isOpen }">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
-				<img src='img/website/icosacidron-svg-blue.svg' />
+				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
+				<img src='img/triangorot.svg' />
 			</router-link>
 		</div>
 		<div class="menu" v-on:click="isOpen = false">
@@ -242,7 +243,7 @@
 				<video v-for="path in displayedPaths" v-bind:src="path" autoplay loop muted></video>
 			</div>
 
-			</div>
+		</div>
 
 		<logo-links></logo-links>
 	</div>
@@ -618,14 +619,14 @@
 </div>
 
 <!-- Libs -->
-<script type='text/javascript' src="node_modules/vue/dist/vue.min.js"></script>
-<!--<script type='text/javascript' src="node_modules/vue/dist/vue.js"></script>-->
+<!--<script type='text/javascript' src="node_modules/vue/dist/vue.min.js"></script>-->
+<script type='text/javascript' src="node_modules/vue/dist/vue.js"></script>
 <script type='text/javascript' src="node_modules/vue-router/dist/vue-router.min.js"></script>
 <script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
 
 <!-- Ours -->
 <script type='text/javascript' src="js/utils.js"></script>
-<script type='text/javascript' src="components/animations/animations.js"></script>
+<script type='text/javascript' src="components/animations.js"></script>
 <script type='text/javascript' src="js/gallery.js"></script>
 <script type='text/javascript' src="js/projects.js"></script>
 <script type='text/javascript' src="js/cv.js"></script>
