@@ -38,7 +38,7 @@
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
 				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
-				<img src='img/triangorot.svg' />
+				<img src='img/website/triangorot.svg' />
 			</router-link>
 		</div>
 		<div class="menu" v-on:click="isOpen = false">
@@ -635,10 +635,23 @@
 <template id="coming-soon-template">
 	<div class="coming-soon">
 		<div class="logo">
-			<img src='img/website/icosacidron-svg-blue.svg' />
+			<!--<img src='img/website/triangorot.svg' />-->
+			<inline-svg-logo></inline-svg-logo>
 		</div>
 		<p>Coming soon...</p>
 	</div>
+</template>
+
+<template id="inline-svg-logo-template">
+	<svg id="acid-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+
+		<path d=" M 500 380 L 396.08 560 L 603.92 560 L 500 380 M 500 308 L 333.72 600 L 666.28 596 L 500 308" stroke-width="1" stroke="black" fill="hsl(200, 83%, 95%)" fill-rule="evenodd" stroke-linecap="round"></path>
+
+		<path d=" M 500 308 L 333.72 596 L 666.28 596 L 500 308 M 500 212 L 250.58 644 L 749.42 644 L 500 212" stroke-width="1" stroke="black" fill="hsl(200, 83%, 5%)" fill-rule="evenodd" stroke-linecap="round"></path>
+
+		<path d=" M 500 212 L 250.58 644 L 749.42 644 L 500 212 M 500 20 L 84.31 734 L 915.70 740 L 500 20" stroke-width="1" stroke="black" fill="hsl(200, 83%, 42%)" fill-rule="evenodd" stroke-linecap="round"></path>
+
+	</svg>
 </template>
 
 <!-- IE fallback -->

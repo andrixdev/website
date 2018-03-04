@@ -32,10 +32,12 @@
 		width: 150px;
 		height: 150px;
 
-		img {
+		img, svg {
 			width: 150px;
 			height: 150px;
-			animation: spinblur 10s linear infinite;
+			//animation: spinblur 10s linear infinite;
+			animation: spin 3s linear infinite, blur 3s infinite;
+			//opacity: 0.7;
 		}
 	}
 	p {
@@ -110,13 +112,19 @@
 }
 @keyframes spinblur {
 	from { transform: rotate(0deg); filter: blur(1px); }
-	50% { transform: rotate(180deg); filter: blur(7px); }
+	50% { transform: rotate(180deg); filter: blur(15px); }
 	to { transform: rotate(360deg); filter: blur(1px); }
 }
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
+@keyframes blur {
+	from { filter: blur(1px); }
+	50% { filter: blur(30px); }
+	to { filter: blur(1px); }
+}
+
 #ie-fallback {
 	display: none;
 }

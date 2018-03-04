@@ -204,6 +204,9 @@ document.addEventListener('DOMContentLoaded', function() {
     Vue.component('coming-soon', {
         template: jQuery('#coming-soon-template').html()
     });
+    Vue.component('inline-svg-logo', {
+        template: jQuery('#inline-svg-logo-template').html()
+    });
 
     // App routes
     var routes = [
