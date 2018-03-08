@@ -23,7 +23,14 @@
 		<image>img/projects/playchaos.jpg</image>
 		<link>../playchaos</link>
 	</project>
-	
+
+	<project>
+		<title>Infinite</title>
+		<description>Prototyping within 24 hours.&#10;Scaffolding a proof-of-concept web page for a company.</description>
+		<image>img/projects/infinitesmall.jpg</image>
+		<link>../infinitedevelopers</link>
+	</project>
+
 	<project>
 		<title>Hue Hunt Results</title>
 		<description>Data analysis interface for Hue Hunt.&#10;Revealed trends in learning HSL with regard to hue and experience.</description>
@@ -38,12 +45,18 @@
 		<link>../ever</link>
 	</project>
 
-
 	<project>
 		<title>Augmented Reality Web prototypes</title>
 		<description>Human-Computer Interaction, KTH introductory course</description>
 		<image>img/projects/DH2620.jpg</image>
 		<link>../DH2620</link>
+	</project>
+
+	<project>
+		<title>_Transition</title>
+		<description>Showcase page for artistic projet _Transition with lejeanf</description>
+		<image>img/projects/transitionwebsmall.jpg</image>
+		<link>../transition</link>
 	</project>
 
 	<project>
