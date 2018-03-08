@@ -88,6 +88,13 @@
 	</project>
 
 	<project>
+		<title>Melting Space Blog</title>
+		<description>A simple blog in VueJS for the Melting Space label</description>
+		<image>img/projects/meltingspacesmall.jpg</image>
+		<link>https://melting.space/new/#/blog</link>
+	</project>
+
+	<project>
 		<title>Userainbow</title>
 		<description>Drupal module for designs based on site visitors count</description>
 		<image>img/projects/drup.jpg</image>
