@@ -198,6 +198,13 @@
 		<link>../army</link>
 	</project>
 
+	<project>
+		<title>Own website v3</title>
+		<description>Well... this very website!&#10;Kind of a perpetual work in progress</description>
+		<image>img/projects/websitev3small.jpg</image>
+		<link>https://github.com/Icosacid/website/tree/dev</link>
+	</project>
+
 	<!--
 	<project>
 		<title>Project title</title>
