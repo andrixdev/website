@@ -34,8 +34,10 @@
 </head>
 <body>
 
-<div id="icosacid-website" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
-	<div class="header" v-bind:class="{ 'mobile-menu-open': isOpen }">
+<div id="icosacid-website">
+	<div class="header"
+		 v-bind:class="{ 'mobile-menu-open': isOpen }"
+		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
 				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
@@ -82,11 +84,11 @@
 		</div>
 	</div>
 
-	<div class="core">
+	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
 		<router-view></router-view>
 	</div>
 
-	<div class="footer">
+	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
 		<p class="click-and-hue" v-on:click="rotateLeHue()">Alexandre Andrieux @2015-2018</p>
 		<p class="crafted">
 			<span>Crafted with</span>
@@ -664,8 +666,8 @@
 </div>
 
 <!-- Libs -->
-<!--<script type='text/javascript' src="node_modules/vue/dist/vue.min.js"></script>-->
-<script type='text/javascript' src="node_modules/vue/dist/vue.js"></script>
+<script type='text/javascript' src="node_modules/vue/dist/vue.min.js"></script>
+<!--<script type='text/javascript' src="node_modules/vue/dist/vue.js"></script>-->
 <script type='text/javascript' src="node_modules/vue-router/dist/vue-router.min.js"></script>
 <script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
 
