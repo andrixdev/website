@@ -605,6 +605,30 @@
 	</div>
 </template>
 
+<template id="not-found-template">
+	<div id="not-found">
+		<img src="img/website/404.png" title="Page not found" alt="Page not found" />
+		<p class="msg-404">
+			Not found
+		</p>
+		<p>The requested page at <strong>{{ requestedRoute }}</strong> doesn't exist!</p>
+
+		<p class="pre-trouble">For your trouble, here's a glass icosahedron made of divs.</p>
+		<div class="trouble">
+			<div class='icosahedron'>
+				<div class='triangle'>
+					<div class='vertex'></div>
+					<div class='depth1'>
+						<div class='depth2'>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
 <!-- Components -->
 <template id="geom-template">
 	<div class="geom" :class="{'in-header': header, 'is-rotated': rotate}">
@@ -673,10 +697,13 @@
 
 <!-- Ours -->
 <script type='text/javascript' src="js/utils.js"></script>
+<script type='text/javascript' src="components/home.js"></script>
 <script type='text/javascript' src="components/animations.js"></script>
 <script type='text/javascript' src="components/gallery.js"></script>
 <script type='text/javascript' src="components/projects.js"></script>
+<script type='text/javascript' src="components/about.js"></script>
 <script type='text/javascript' src="components/cv.js"></script>
+<script type='text/javascript' src="components/not-found.js"></script>
 <script type='text/javascript' src="js/jAntispam.js"></script>
 <script type='text/javascript' src="js/main.js"></script>
 
