@@ -1,5 +1,5 @@
-# icosacid-website
-Website for icosacid.com
+# alexandrix-website
+Website for alexandrix.com, initially icosacid.com
 
 # Setup
 * Install npm (https://docs.npmjs.com/)

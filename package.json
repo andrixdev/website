@@ -1,7 +1,7 @@
 {
-  "name": "icosacid-website",
+  "name": "alexandrix-website",
   "version": "1.0.0",
-  "description": "Icosacid website with Vue.js",
+  "description": "Alexandrix website with Vue.js",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

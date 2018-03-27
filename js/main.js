@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var app = new Vue({
         router: router,
-        el: '#icosacid-website',
+        el: '#alexandrix-website',
         data: {
             isOpen: false,
             hueAngle: 0
