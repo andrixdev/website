@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     // Build router
-    var router = new VueRouter({
+    Global.router = new VueRouter({
         routes: routes,
         mode: 'history'
     });
 
     // Scroll to top on route change
-    router.beforeEach(function(to, from, next) {
+    Global.router.beforeEach(function(to, from, next) {
         setTimeout(function() {
             window.scrollTo(0, 0);
         }, 100);
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     var app = new Vue({
-        router: router,
+        router: Global.router,
         el: '#alexandrix-website',
         data: {
             isOpen: false,

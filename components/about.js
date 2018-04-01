@@ -9,7 +9,7 @@ var AboutComponent = {
     methods: {
         submitRiddle: function() {
             if (this.isAnswerValid(this.riddleAnswer)) {
-                router.push('/cv');
+                Global.router.push('/cv');
             } else {
                 this.animateTryAgain();
             }
