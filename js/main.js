@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Custom components
+    Vue.component('vue-title', HeadTitleComponent);
     Vue.component('geom', {
         template: jQuery('#geom-template').html(),
         props: ['sides', 'header', 'rotate']

@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset='utf-8'/>
 	<title>Alex Andrix | Algorithmic art and experiments</title>
 	
-	<!-- Meta stuff and icons -->
-	<!--<link rel='icon' type='image/png' href="img/website/icosacidron.png">--->
-	<link rel='icon' type='image/png' href="img/website/triango32.png">
+	<!-- Meta stuff -->
+	<meta charset="utf-8" />
+	<meta name="keywords" content="Alex Andrix, Alexandrix, algorithmic art, digital art, creative coding" />
+	<meta name="author" content="Alex Andrix" />
+	<meta name="description" content="Algorithmic art and experiments" />
+
+	<!-- Icons -->
+	<link rel="icon" type="image/png" href="img/website/triango32.png">
 	<!-- MS -->
-	<meta name='application-name' content="Alex Andrix | Algorithmic art and experiments"/>
+	<meta name="application-name" content="Alex Andrix | Algorithmic art and experiments"/>
 	<!-- i -->
-	<link rel='apple-touch-startup-image' href="img/website/startup.png">
-	<meta name='apple-mobile-web-app-capable' content='yes'>
-	<meta name='apple-mobile-web-app-status-bar-style' content='black'>
-	<link rel='apple-touch-icon-precomposed' sizes='128x128' href="img/website/tiny.png" />
+	<link rel="apple-touch-startup-image" href="img/website/startup.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="img/website/tiny.png" />
 	<!-- Droid -->
-	<meta name='mobile-web-app-capable' content='yes'>
-	<link rel='shortcut icon' sizes='270x270' href="img/website/square.png">
-	<link rel='shortcut icon' sizes='128x128' href="img/website/tiny.png">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" sizes="270x270" href="img/website/square.png">
+	<link rel="shortcut icon" sizes="128x128" href="img/website/tiny.png">
 	
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,400i,600,700" rel="stylesheet">
-	<link rel='stylesheet' type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	
 	<!-- Stylesheets -->
-	<link rel='stylesheet' type='text/less' href="less/main.less" />
-	<link rel='stylesheet' type='text/css' href="css/ie-fallback.css" />
-	
-	
+	<link rel="stylesheet" type="text/less" href="less/main.less" />
+	<link rel="stylesheet" type="text/css" href="css/ie-fallback.css" />
+
 	<!-- Only script in header: less on-the-fly compiler -->
-	<script type='text/javascript' src="node_modules/less/dist/less.min.js"></script>
+	<script type="text/javascript" src="node_modules/less/dist/less.min.js"></script>
 	
 </head>
 <body>
@@ -128,6 +131,7 @@
 <!-- View templates -->
 <template id="home-template">
 	<div id="home">
+		<vue-title title="Alex Andrix | Algorithmic art and experiments"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -192,6 +196,7 @@
 
 <template id="gallery-template">
 	<div id="gallery">
+		<vue-title title="Alex Andrix | Gallery"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -211,6 +216,7 @@
 
 <template id="projects-template">
 	<div id="projects">
+		<vue-title title="Alex Andrix | Projects"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -228,6 +234,7 @@
 
 <template id="animations-template">
 	<div id="animations">
+		<vue-title title="Alex Andrix | Animations"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -254,6 +261,7 @@
 
 <template id="vjing-template">
 	<div id="vjing">
+		<vue-title title="Alex Andrix | VJing"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -271,6 +279,7 @@
 
 <template id="about-template">
 	<div id="about">
+		<vue-title title="Alex Andrix | About"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -337,6 +346,7 @@
 
 <template id="contact-template">
 	<div id="contact">
+		<vue-title title="Alex Andrix | Contact"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -357,6 +367,7 @@
 
 <template id="cv-template">
 	<div id="cv">
+		<vue-title title="Alex Andrix | Resume"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="page-header">
@@ -607,6 +618,7 @@
 
 <template id="not-found-template">
 	<div id="not-found">
+		<vue-title title="Alex Andrix | Algorithmic art and experiments"></vue-title>
 		<img src="img/website/404.png" title="Page not found" alt="Page not found" />
 		<p class="msg-404">
 			Not found
@@ -653,7 +665,7 @@
 		<a class='github' title="Check my repositories on GitHub" href="https://github.com/Icosacid" target='_blank'>
 			<span class="fa fa-github"></span>
 		</a>
-		<a class='codepen' title="Play live with my code on Codepen" href="https://codepen.io/Icosacid" target='_blank'>
+		<a class='codepen' title="Play live with my code on Codepen" href="https://codepen.io/alexandrix" target='_blank'>
 			<span class="fa fa-codepen"></span>
 		</a>
 	</div>
@@ -698,6 +710,7 @@
 <!-- Ours -->
 <script type='text/javascript' src="js/declarations.js"></script>
 <script type='text/javascript' src="js/utils.js"></script>
+<script type='text/javascript' src="components/head-title.js"></script>
 <script type='text/javascript' src="components/home.js"></script>
 <script type='text/javascript' src="components/animations.js"></script>
 <script type='text/javascript' src="components/gallery.js"></script>
