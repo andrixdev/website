@@ -157,6 +157,72 @@
 	</category>
 	
 	<category>
+		<categoryName>_Transition</categoryName>
+		
+		<alg>
+			<title>_Transition sc.6-explosion</title>
+			<artid>2018-1</artid>
+			<date>Apr. 2018</date>
+			<src>transition/tran1.png</src>
+			<small>transition/tran1_small.jpg</small>
+			<description>Visual from final scene of _Transition VR project with lejeanf</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>_Transition sc.5-hurricane</title>
+			<artid>2018-2</artid>
+			<date>Apr. 2018</date>
+			<src>transition/tran2.png</src>
+			<small>transition/tran2_small.jpg</small>
+			<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>_Transition sc.5-strata</title>
+			<artid>2018-3</artid>
+			<date>Apr. 2018</date>
+			<src>transition/tran3.jpg</src>
+			<small>transition/tran3_small.jpg</small>
+			<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>_Transition sc.6-crumbles</title>
+			<artid>2018-4</artid>
+			<date>Apr. 2018</date>
+			<src>transition/tran4.png</src>
+			<small>transition/tran4_small.jpg</small>
+			<description>Visual from last scene of _Transition VR project with lejeanf</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>_Transition sc.5-melting-fields</title>
+			<artid>2018-5</artid>
+			<date>Apr. 2018</date>
+			<src>transition/tran5.png</src>
+			<small>transition/tran5_small.jpg</small>
+			<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		<alg>
+			<title>_Transition sc.6-rebirth</title>
+			<artid>2018-6</artid>
+			<date>Apr. 2018</date>
+			<src>transition/tran6.jpg</src>
+			<small>transition/tran6_small.jpg</small>
+			<description>Visual from last scene of _Transition VR project with lejeanf</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
+	</category>
+	
+	<category>
 		<categoryName>Experiments</categoryName>
 		<categMoreOnLinks>
 			<codepen>http://codepen.io/collection/nZOjvP</codepen>

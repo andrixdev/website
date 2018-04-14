@@ -38,11 +38,13 @@ Gallery.loadAlgories = function(extraCallback) {
 			var morons = jQuery(this).find('categMoreOnLinks');
 			var moronCodepen = morons.find('codepen').text();
 			var moronDeviantart = morons.find('deviantart').text();
-			categHTML += "<div class='moron'>";
-			categHTML += "<p>More on</p>";
-			categHTML += "<a class='fa fa-codepen' href='" + moronCodepen + "' title='See the live collection on CodePen' target='_blank'></a>";
-			categHTML += "<a class='fa fa-deviantart' href='" + moronDeviantart + "' title='See the animations on DeviantArt' target='_blank'></a>";
-			categHTML += "</div>";
+			if (morons.length) {
+                categHTML += "<div class='moron'>";
+                categHTML += "<p>More on</p>";
+                categHTML += "<a class='fa fa-codepen' href='" + moronCodepen + "' title='See the live collection on CodePen' target='_blank'></a>";
+                categHTML += "<a class='fa fa-deviantart' href='" + moronDeviantart + "' title='See the animations on DeviantArt' target='_blank'></a>";
+                categHTML += "</div>";
+			}
 			
 			// Create categ object
 			var categObj = {
