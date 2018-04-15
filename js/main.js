@@ -39,7 +39,37 @@ document.addEventListener('DOMContentLoaded', function() {
     Vue.component('vue-title', HeadTitleComponent);
     Vue.component('geom', {
         template: jQuery('#geom-template').html(),
-        props: ['sides', 'header', 'rotate']
+        props: ['baseSides', 'header', 'rotate'],
+        data: function() {
+            return {
+                newSides: undefined
+            }
+        },
+        mounted: function() {
+            this.newSides = this.baseSides;
+            var self = this;
+            var glitch = function() {
+                self.newSides = self.newSides == 4 ? 0 : 4;
+
+                setTimeout(function() {
+                    self.newSides = self.newSides == 4 ? 0 : 4;
+                }, 80);
+            };
+
+            // Glitch loop
+            setInterval(function() {
+                // 10% chance of glitch
+                if (Math.random() < 0.1) {
+                    // Glitch up to 3 times
+                    var glitches = Math.ceil(3 * Math.random());
+                    for (var g = 0; g < glitches; g++) {
+                        setTimeout(function() {
+                            glitch();
+                        }, g * 150);
+                    }
+                }
+            }, 1000);
+        }
     });
     Vue.component('logo-links', {
         template: jQuery('#logo-links-template').html()

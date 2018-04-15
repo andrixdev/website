@@ -49,35 +49,35 @@
 		</div>
 		<div class="menu" v-on:click="isOpen = false">
 			<router-link to="/" class="menu-tab home">
-				<geom sides="4" header="true"></geom>
+				<geom base-sides="4" header="true"></geom>
 				Home
 			</router-link>
 			<router-link to="/gallery" class="menu-tab gallery">
-				<geom sides="0" header="true"></geom>
+				<geom base-sides="0" header="true"></geom>
 				Gallery
 			</router-link>
 			<router-link to="/projects" class="menu-tab projects">
-				<geom sides="4" header="true" rotate="true"></geom>
+				<geom base-sides="4" header="true" rotate="true"></geom>
 				Projects
 			</router-link>
 			<router-link to="/animations" class="menu-tab animations">
-				<geom sides="0" header="true"></geom>
+				<geom base-sides="0" header="true"></geom>
 				Animations
 			</router-link>
 			<router-link to="/vjing" class="menu-tab vjing">
-				<geom sides="4" header="true"></geom>
+				<geom base-sides="4" header="true"></geom>
 				Vjing
 			</router-link>
 			<router-link to="/about" class="menu-tab about">
-				<geom sides="0" header="true"></geom>
+				<geom base-sides="0" header="true"></geom>
 				About
 			</router-link>
 			<router-link to="/contact" class="menu-tab contact">
-				<geom sides="4" header="true" rotate="true"></geom>
+				<geom base-sides="4" header="true" rotate="true"></geom>
 				Contact
 			</router-link>
 			<!--<router-link to="/cv" class="menu-tab cv">
-				<geom sides="0" header="true"></geom>
+				<geom base-sides="0" header="true"></geom>
 				CV
 			</router-link>-->
 		</div>
@@ -135,7 +135,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="4"></geom>
+			<geom base-sides="4"></geom>
 			<h1>Home</h1>
 		</div>
 
@@ -200,7 +200,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom base-sides="0"></geom>
 			<h1>Gallery</h1>
 		</div>
 
@@ -220,7 +220,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="4" rotate="true"></geom>
+			<geom base-sides="4" rotate="true"></geom>
 			<h1>Projects</h1>
 		</div>
 
@@ -238,7 +238,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom base-sides="0"></geom>
 			<h1>Animations</h1>
 		</div>
 
@@ -265,7 +265,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="4"></geom>
+			<geom base-sides="4"></geom>
 			<h1>Vjing</h1>
 		</div>
 
@@ -283,7 +283,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom base-sides="0"></geom>
 			<h1>About</h1>
 		</div>
 
@@ -350,7 +350,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="4" rotate="true"></geom>
+			<geom base-sides="4" rotate="true"></geom>
 			<h1>Contact</h1>
 		</div>
 
@@ -371,7 +371,7 @@
 		<div class="page-banner"></div>
 
 		<div class="page-header">
-			<geom sides="0"></geom>
+			<geom base-sides="0"></geom>
 			<h1>CV</h1>
 		</div>
 
@@ -644,10 +644,10 @@
 <!-- Components -->
 <template id="geom-template">
 	<div class="geom" :class="{'in-header': header, 'is-rotated': rotate}">
-		<div v-if="sides == 4" class="shape square">
+		<div v-if="newSides == 4" class="shape square">
 			<div class="inner"></div>
 		</div>
-		<div v-if="sides == 0" class="shape round">
+		<div v-if="newSides == 0" class="shape round">
 			<div class="inner"></div>
 		</div>
 	</div>
