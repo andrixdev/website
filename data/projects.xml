@@ -9,12 +9,33 @@
 		<image>img/projects/huehunt.jpg</image>
 		<link>../huehunt</link>
 	</project>
+
+	<project>
+		<title>_Transition</title>
+		<description>VR project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
+		<image>img/projects/transitionwebsmall.jpg</image>
+		<link>../transition</link>
+	</project>
 	
 	<project>
 		<title>HueFlow</title>
 		<description>Casual information visualization of energy and water consumption for smart houses&#10;KTH course DH2321</description>
 		<image>img/projects/hueflow.jpg</image>
 		<link>../infoviz/hueflow</link>
+	</project>
+
+	<project>
+		<title>Speakasso</title>
+		<description>Web app to draw on canvas based on voice input&#10;Award-winning KTH project, 7 students</description>
+		<image>img/projects/speakasso.jpg</image>
+		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
+	</project>
+
+	<project>
+		<title>Hue Hunt Results</title>
+		<description>Data analysis interface for Hue Hunt.&#10;Revealed trends in learning HSL with regard to hue and experience.</description>
+		<image>img/projects/huehuntresults.jpg</image>
+		<link>../huehunt/results</link>
 	</project>
 
 	<project>
@@ -26,16 +47,9 @@
 
 	<project>
 		<title>Infinite</title>
-		<description>Prototyping within 24 hours.&#10;Scaffolding a proof-of-concept web page for a company.</description>
+		<description>Prototyping within 24 hours&#10;Scaffolding a proof-of-concept web page for a company</description>
 		<image>img/projects/infinitesmall.jpg</image>
 		<link>../infinitedevelopers</link>
-	</project>
-
-	<project>
-		<title>Hue Hunt Results</title>
-		<description>Data analysis interface for Hue Hunt.&#10;Revealed trends in learning HSL with regard to hue and experience.</description>
-		<image>img/projects/huehuntresults.jpg</image>
-		<link>../huehunt/results</link>
 	</project>
 
 	<project>
@@ -50,13 +64,6 @@
 		<description>Human-Computer Interaction, KTH introductory course</description>
 		<image>img/projects/DH2620.jpg</image>
 		<link>../DH2620</link>
-	</project>
-
-	<project>
-		<title>_Transition</title>
-		<description>Showcase page for artistic projet _Transition with lejeanf</description>
-		<image>img/projects/transitionwebsmall.jpg</image>
-		<link>../transition</link>
 	</project>
 
 	<project>
@@ -78,13 +85,6 @@
 		<description>A GUI for Information Visualization (for Firefox)&#10;1 day project - KTH course DH2321</description>
 		<image>img/projects/groupmerge.jpg</image>
 		<link>../infoviz/groupmerge</link>
-	</project>
-
-	<project>
-		<title>Speakasso</title>
-		<description>Web app to draw on canvas based on voice input&#10;Award-winning KTH project, 7 students</description>
-		<image>img/projects/speakasso.jpg</image>
-		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
 	</project>
 
 	<project>
