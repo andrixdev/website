@@ -324,6 +324,17 @@
 			<github></github>
 		</alg>
 		
+		<alg>
+			<title>Dipolar Meteors</title>
+			<artid>2018-7</artid>
+			<date>Apr. 2018</date>
+			<src>experiments/meteors.png</src>
+			<small>experiments/meteors_small.jpg</small>
+			<description>Particles under a dipolar magnetic field with CSS filter gooey rendering technique.</description>
+			<deviant></deviant>
+			<github></github>
+		</alg>
+		
 		<!--<alg>
 			<title>Summer 2015</title>
 			<artid>2015-12</artid>
