@@ -7,7 +7,8 @@
 	<meta charset="utf-8" />
 	<meta name="keywords" content="Alex Andrix, Alexandrix, algorithmic art, digital art, creative coding" />
 	<meta name="author" content="Alex Andrix" />
-	<meta name="description" content="Algorithmic art and experiments" />
+	<meta name="description" content="Algorithmic art and experiments | Hi there, my name is Alex and I create art with science and technology." />
+	<link rel="canonical" href="http://alexandrix.com/" />
 
 	<!-- Icons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/website/icons/apple-icon-57x57.png">
@@ -41,6 +42,73 @@
 	
 </head>
 <body>
+
+<template id="about-template">
+	<div id="about">
+		<vue-title title="Alex Andrix | About"></vue-title>
+		<div class="page-banner"></div>
+
+		<div class="page-header">
+			<geom base-sides="0"></geom>
+			<h1>About</h1>
+		</div>
+
+		<div class="page-content no-padding">
+			<div class="statement">
+				<p class="headline">Hi there, my name is Alex, and I create art with science and technology.</p>
+				<!--<br/>
+				<p>My passion for physics and front-end web programming led me to the universe of algorithmic art.</p>-->
+				<br/>
+				<p>It started back in 2010, while studying the motion of plasma particles around the planets of our solar system.</p>
+				<p>I became enthralled by the intrinsic beauty of force field equations they revealed.</p>
+				<br/>
+				<p>As years passed, I discovered the creative power of web programming. After an award-winning team project at KTH Royal Institute of Technology in 2014 involving creating artworks with voice, I started creating my own techniques for creative coding using HTML canvas and JavaScript.</p>
+				<br/>
+				<br/>
+				<p>Since then I have been exploring this question :</p>
+				<p class="the-question">How far can we go with the sublime nature of our universe mechanics?</p>
+				<br/>
+				<br/>
+				<p>Aside from working on my algorist techniques, I manage web projects and code for a human-scale French company based in Lyon.</p>
+				<br/>
+				<p class="feel-free">Thanks for visiting, feel free to share any creative thoughts!</p>
+			</div>
+		</div>
+
+		<logo-links></logo-links>
+
+		<div class="resume-riddle center">
+			<div class="flexrow flexcenter" v-if="!showRiddle">
+				<button class="acidbutton" v-on:click="showRiddle = true">See Resume</button>
+			</div>
+
+			<div class="riddle" v-if="showRiddle">
+				<div class="riddle-text">
+					<p class="riddle-intro">Here is a riddle first...</p>
+					<p>
+						<strong><em>
+							I have a root.
+							<br/>
+							I am irrational.
+							<br/>
+							Artists and scientists have discovered my nature and used my value.
+							<br/>
+							What am I?
+						</em></strong>
+					</p>
+				</div>
+
+				<div class="riddle-input">
+					<input v-model="riddleAnswer" placeholder="Type answer here..." />
+					<p class="error">Try again</p>
+				</div>
+
+				<button class="riddle-submit acidbutton" v-on:click="submitRiddle()">Show resume</button>
+
+			</div>
+		</div>
+	</div>
+</template>
 
 <div id="alexandrix-website">
 	<div class="header"
@@ -282,73 +350,6 @@
 	</div>
 </template>
 
-<template id="about-template">
-	<div id="about">
-		<vue-title title="Alex Andrix | About"></vue-title>
-		<div class="page-banner"></div>
-
-		<div class="page-header">
-			<geom base-sides="0"></geom>
-			<h1>About</h1>
-		</div>
-
-		<div class="page-content no-padding">
-			<div class="statement">
-				<p class="headline">Hi there, my name is Alex, and I create art with science and technology.</p>
-				<!--<br/>
-				<p>My passion for physics and front-end web programming led me to the universe of algorithmic art.</p>-->
-				<br/>
-				<p>It started back in 2010, while studying the motion of plasma particles around the planets of our solar system.</p>
-				<p>I became enthralled by the intrinsic beauty of force field equations they revealed.</p>
-				<br/>
-				<p>As years passed, I discovered the creative power of web programming. After an award-winning team project at KTH Royal Institute of Technology in 2014 involving creating artworks with voice, I started creating my own techniques for creative coding using HTML canvas and JavaScript.</p>
-				<br/>
-				<br/>
-				<p>Since then I have been exploring this question :</p>
-				<p class="the-question">How far can we go with the sublime nature of our universe mechanics?</p>
-				<br/>
-				<br/>
-				<p>Aside from working on my algorist techniques, I manage web projects and code for a human-scale French company based in Lyon.</p>
-				<br/>
-				<p class="feel-free">Thanks for visiting, feel free to share any creative thoughts!</p>
-			</div>
-		</div>
-
-		<logo-links></logo-links>
-
-		<div class="resume-riddle center">
-			<div class="flexrow flexcenter" v-if="!showRiddle">
-				<button class="acidbutton" v-on:click="showRiddle = true">See Resume</button>
-			</div>
-
-			<div class="riddle" v-if="showRiddle">
-				<div class="riddle-text">
-					<p class="riddle-intro">Here is a riddle first...</p>
-					<p>
-						<strong><em>
-							I have a root.
-							<br/>
-							I am irrational.
-							<br/>
-							Artists and scientists have discovered my nature and used my value.
-							<br/>
-							What am I?
-						</em></strong>
-					</p>
-				</div>
-
-				<div class="riddle-input">
-					<input v-model="riddleAnswer" placeholder="Type answer here..." />
-					<p class="error">Try again</p>
-				</div>
-
-				<button class="riddle-submit acidbutton" v-on:click="submitRiddle()">Show resume</button>
-
-			</div>
-		</div>
-	</div>
-</template>
-
 <template id="contact-template">
 	<div id="contact">
 		<vue-title title="Alex Andrix | Contact"></vue-title>
@@ -362,7 +363,10 @@
 		<div class="page-content">
 			<div class="feel-free">
 				<p>Feel free to enquire or share any creative thoughts</p>
-				<p>You can <span class='aboutmail'>email me at alex(at)alexandrix.com</span>, check my <span class='aboutdeviant'>Deviant</span>, my <span class='aboutgithub'>GitHub</span> or my <span class='aboutcodepen'>Codepen</span></p>
+				<p>I don't use any social network, this website is the one and only source of my work</p>
+				<p>Still, my codes are open-source and you are welcome to take a peep!</p>
+				<br/>
+				<p>You can <span class='aboutmail'>email me at alex(at)alexandrix.com</span>, check my <!--<span class='aboutdeviant'>Deviant</span>, my --><span class='aboutgithub'>GitHub</span> or my <span class='aboutcodepen'>Codepen</span></p>
 			</div>
 		</div>
 
@@ -664,9 +668,9 @@
 		   onclick='linkTo_UnCryptMailto("nbjmup+bmfyAbmfyboesjy/dpn");return false;'>
 			<span class="fa fa-envelope-o"></span>
 		</a>
-		<a class="deviant" title="Check my DeviantArt gallery" href="http://icosacid.deviantart.com/" target='_blank'>
+		<!--<a class="deviant" title="Check my DeviantArt gallery" href="http://icosacid.deviantart.com/" target='_blank'>
 			<span class="fa fa-deviantart"></span>
-		</a>
+		</a>-->
 		<a class='github' title="Check my repositories on GitHub" href="https://github.com/Icosacid" target='_blank'>
 			<span class="fa fa-github"></span>
 		</a>

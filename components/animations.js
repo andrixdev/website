@@ -4,7 +4,7 @@ var AnimationsComponent = {
         return {
             animationPaths: [],
             displayedPaths: [],
-            maxAnim: 4,
+            maxAnim: 3,
             seen: []// Array with indexes of seen animations
         }
     },

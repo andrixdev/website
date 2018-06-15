@@ -9,7 +9,7 @@ var HomeComponent = {
             homeGallery: undefined,
             homeProjects: undefined,
             homeDisplayedAnimations: undefined,
-            maxAnimHome: 4
+            maxAnimHome: 2
         };
     },
     methods: {

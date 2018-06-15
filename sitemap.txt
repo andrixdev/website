@@ -1,0 +1,32 @@
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<url>
+		<loc>http://alexandrix.com/</loc>
+		<lastmod>2018-06-15T10:57:53+00:00</lastmod>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://alexandrix.com/gallery</loc>
+		<lastmod>2018-06-15T10:57:53+00:00</lastmod>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://alexandrix.com/projects</loc>
+		<lastmod>2018-06-15T10:57:53+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>http://alexandrix.com/animations</loc>
+		<lastmod>2018-06-15T10:57:53+00:00</lastmod>
+		<priority>0.10</priority>
+	</url>
+	<url>
+		<loc>http://alexandrix.com/about</loc>
+		<lastmod>2018-06-15T10:57:53+00:00</lastmod>
+		<priority>0.50</priority>
+	</url>
+	<url>
+		<loc>http://alexandrix.com/contact</loc>
+		<lastmod>2018-06-15T10:57:53+00:00</lastmod>
+		<priority>0.30</priority>
+	</url>
+</urlset>
