@@ -4,6 +4,13 @@
 	<!-- HTML entity for line feed: &#10; -->
 
 	<project>
+		<title>Kinexperience</title>
+		<description>Interactive icosahedron, with dance researcher Ariane Cassimiro&#10;Exploring a dance framework theory with Kinect and virtual reality</description>
+		<image>img/projects/kinexp.jpg</image>
+		<link>../kinexperience</link>
+	</project>
+
+	<project>
 		<title>Hue Hunt</title>
 		<description>A color game for hawk-eyed designers&#10;Started with PHP framework Symfony 2&#10;Now under AngularJS</description>
 		<image>img/projects/huehunt.jpg</image>
