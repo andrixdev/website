@@ -22,7 +22,7 @@ Projects.loadProjects = function(extraCallback) {
 			var link = jQuery(this).find('link').text();
 			
 			// Create HTML
-			projectHTML += "<div class='project'>";
+			projectHTML += "<div class='project" + (!!link ? "" : " no-link") + "'>";
 			projectHTML +=   "<div class='left-side'>";
 			projectHTML +=     "<img src='" + src + "' title='" + title + "' alt='" + title + "' />";
 			projectHTML +=   "</div>";
@@ -34,7 +34,7 @@ Projects.loadProjects = function(extraCallback) {
 			projectHTML += "</div>";
 			
 			// Spread in the DOM
-			jQuery('#projects .page-content').append(projectHTML);
+			jQuery('#projects .page-content .all-projects').append(projectHTML);
 			
 		});
 		
@@ -55,7 +55,7 @@ Projects.DOMlisteners = function() {
 			
 		}, mouseup: function() {
 			var goToLink = jQuery(this).find('a').attr('href');
-			window.open(goToLink, '_blank');
+			if (!!goToLink) window.open(goToLink, '_blank');
 		}
 	});
 			

@@ -11,19 +11,19 @@
 	</project>
 
 	<project>
+		<title>_Transition</title>
+		<description>Virtual reality project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
+		<image>img/projects/transitionwebsmall.jpg</image>
+		<link>../transition</link>
+	</project>
+
+	<project>
 		<title>Hue Hunt</title>
 		<description>A color game for hawk-eyed designers&#10;Started with PHP framework Symfony 2&#10;Now under AngularJS</description>
 		<image>img/projects/huehunt.jpg</image>
 		<link>../huehunt</link>
 	</project>
 
-	<project>
-		<title>_Transition</title>
-		<description>VR project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
-		<image>img/projects/transitionwebsmall.jpg</image>
-		<link>../transition</link>
-	</project>
-	
 	<project>
 		<title>HueFlow</title>
 		<description>Casual information visualization of energy and water consumption for smart houses&#10;KTH course DH2321</description>
@@ -43,6 +43,13 @@
 		<description>Data analysis interface for Hue Hunt.&#10;Revealed trends in learning HSL with regard to hue and experience.</description>
 		<image>img/projects/huehuntresults.jpg</image>
 		<link>../huehunt/results</link>
+	</project>
+
+	<project>
+		<title>Labomobile #1</title>
+		<description>3-day workshop with a mixed team of comedians, dancers and digital artists&#10;Exploring the concept of identity on stage&#10;Directed by Arnaud Chevalier</description>
+		<image>img/projects/labomobile.jpg</image>
+		<link></link>
 	</project>
 
 	<project>
@@ -157,7 +164,6 @@
 		<image></image>
 		<link>../safecook</link>
 	</project>
-	-->
 
 	<project>
 		<title>UScontrol</title>
@@ -166,14 +172,12 @@
 		<link>../uscontrol</link>
 	</project>
 
-	<!--
 	<project>
 		<title>Breathe</title>
 		<description>Calm down and keep pace</description>
 		<image>img/projects/breathe.jpg</image>
 		<link>../breathe</link>
 	</project>
-	-->
 
 	<project>
 		<title>Cat</title>
@@ -182,14 +186,12 @@
 		<link>../cat</link>
 	</project>
 
-	<!--
 	<project>
 		<title>CSSbank</title>
 		<description>Baby steps in CSS</description>
 		<image></image>
 		<link>../cssbank</link>
 	</project>
-	-->
 
 	<project>
 		<title>wtfCSS</title>
@@ -204,6 +206,7 @@
 		<image>img/projects/army.jpg</image>
 		<link>../army</link>
 	</project>
+	-->
 
 	<project>
 		<title>Own website v3</title>
@@ -217,7 +220,7 @@
 		<title>Project title</title>
 		<description>Project description</description>
 		<image>Url to thumbnail, preferably 450x300</image>
-		<link>Url to project</link>
+		<link>Url to project, nothing if none</link>
 	</project>
 	-->
 
