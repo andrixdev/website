@@ -30,5 +30,44 @@ var AboutComponent = {
 
             return hasGold || hasValue || hasCommaValue || hasPhi || hasRatio;
         }
+    },
+    mounted: function() {
+        // About link hover effects
+        var logoMail = jQuery('#about a.mailme');
+        var logoDeviant = jQuery('#about a.deviant');
+        var logoGithub = jQuery('#about a.github');
+        var logoCodepen = jQuery('#about a.codepen');
+        jQuery('#about span.aboutmail').on({
+            mouseenter: function() {
+                logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
+            },
+            mouseleave: function() {
+                logoMail.css('box-shadow', '');// Empty string --> back to static style from .css file!
+            }
+        });
+        jQuery('#about span.aboutdeviant').on({
+            mouseenter: function() {
+                logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
+            },
+            mouseleave: function() {
+                logoDeviant.css('box-shadow', '');
+            }
+        });
+        jQuery('#about span.aboutgithub').on({
+            mouseenter: function() {
+                logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
+            },
+            mouseleave: function() {
+                logoGithub.css('box-shadow', '');
+            }
+        });
+        jQuery('#about span.aboutcodepen').on({
+            mouseenter: function() {
+                logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
+            },
+            mouseleave: function() {
+                logoCodepen.css('box-shadow', '');
+            }
+        });
     }
 };

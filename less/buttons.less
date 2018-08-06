@@ -16,3 +16,32 @@
 		text-shadow: white 0 0 3px;
 	}
 }
+.radios {
+	.flexrow();
+	.flexcenter();
+
+	.radio {
+		padding: 3px 10px;
+		border-radius: 50px;
+		margin: 10px;
+		.pointer();
+		color: @white;
+
+		span.fa {
+			margin-right: 4px;
+
+			&::before {
+				content: "\f111";// fa-circle
+			}
+		}
+
+		&.active {
+			background: @green;
+
+			span.fa::before {
+				content: "\f192"; // fa-dot-circle
+			}
+		}
+
+	}
+}
