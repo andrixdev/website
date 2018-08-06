@@ -19,8 +19,7 @@
 .radios {
 	.flexrow();
 	.flexcenter();
-	margin-left: 15px;
-	opacity: 0.8;
+	margin-left: 25px;
 
 	.radio {
 		padding: 0.3em 0.7em;
@@ -28,6 +27,7 @@
 		margin: auto 12px;
 		border: solid 0.5px @blue-80;
 		.pointer();
+		opacity: 0.8;
 
 		span.fa {
 			margin-right: 4px;
@@ -39,9 +39,11 @@
 		}
 		&:hover {
 			background: @blue-15;
+			opacity: 0.95;
 		}
 		&.active {
 			background: @blue-10;
+			opacity: 0.95;
 
 			span.fa::before {
 				content: "\f192"; // fa-dot-circle

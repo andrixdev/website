@@ -22,10 +22,12 @@
 			background: @blue-10;
 			max-width: 90%;
 
+			&.hidden {
+				display: none;
+			}
 			&:not(.no-link), &:not(.no-link) > * {
 				.pointer();
 			}
-
 			&:not(.no-link):hover {
 				background: @blue-15;
 			}

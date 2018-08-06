@@ -20,9 +20,10 @@ Projects.loadProjects = function(extraCallback) {
 			var description = jQuery(this).find('description').text();
 			var src = jQuery(this).find('image').text();
 			var link = jQuery(this).find('link').text();
+			var themes = jQuery(this).find('themes').text();
 			
 			// Create HTML
-			projectHTML += "<div class='project" + (!!link ? "" : " no-link") + "'>";
+			projectHTML += "<div class='project" + (!!link ? "" : " no-link") + "' data-filter-tokens='" + themes + "'>";
 			projectHTML +=   "<div class='left-side'>";
 			projectHTML +=     "<img src='" + src + "' title='" + title + "' alt='" + title + "' />";
 			projectHTML +=   "</div>";
@@ -67,6 +68,28 @@ Projects.DOMlisteners = function() {
 		// Otherwise remove class in all neighbours and activate me
 		$me.siblings().removeClass('active');
         $me.addClass('active');
+        var filter = $me.attr('data-filter');
+
+        // If filter allows all, show all projects, otherwise filter
+		if (filter == 'all') {
+            jQuery('.project').each(function() {
+                jQuery(this).removeClass('hidden');
+            });
+        } else {
+            jQuery('.project').each(function() {
+                var $pro = jQuery(this);
+                var tokens = $pro.attr('data-filter-tokens').split(' ');// They're separated by whitespaces in XML
+
+                // Loop on filters, if there's match remove 'hidden' class, otherwise put it
+                var isMatch = false;
+                tokens.forEach(function(token) {
+                    if (token == filter) isMatch = true;
+                });
+
+                if (isMatch) $pro.removeClass('hidden');
+                else $pro.addClass('hidden');
+            });
+		}
 
 	});
 };
