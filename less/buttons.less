@@ -19,27 +19,33 @@
 .radios {
 	.flexrow();
 	.flexcenter();
+	margin-left: 15px;
+	opacity: 0.8;
 
 	.radio {
-		padding: 3px 10px;
-		border-radius: 50px;
-		margin: 10px;
+		padding: 0.3em 0.7em;
+		border-radius: 5000px;
+		margin: auto 12px;
+		border: solid 0.5px @blue-80;
 		.pointer();
-		color: @white;
 
 		span.fa {
 			margin-right: 4px;
 
 			&::before {
 				content: "\f111";// fa-circle
+				//content: "\f0c8";// fa-square
 			}
 		}
-
+		&:hover {
+			background: @blue-15;
+		}
 		&.active {
-			background: @green;
+			background: @blue-10;
 
 			span.fa::before {
 				content: "\f192"; // fa-dot-circle
+				//content: "\f0c8"; // fa-square
 			}
 		}
 
