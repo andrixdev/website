@@ -1,18 +1,22 @@
 .acidbutton {
 	background: @blue-20;
 	border-radius: 2px;
-	padding: 0.5em 2em;
-	font-size: 2rem;
 	.weight-200();
-	margin: 20px;
 	border: none;
 	box-shadow: #000 0 0 3px;
 	color: @white;
 	text-decoration: none;
 	.pointer();
+	padding: .2em .7em;
+	font-size: 1rem;
 
 	&:hover {
 		background: @blue-40;
 		text-shadow: white 0 0 3px;
+	}
+
+	&.huge-btn {
+		padding: 0.5em 2em;
+		font-size: 2rem;
 	}
 }
