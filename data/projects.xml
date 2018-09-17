@@ -3,11 +3,21 @@
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 	<!-- HTML entity for line feed: &#10; -->
 
+	<!-- Possible themes are: Ø (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
 	<project>
 		<title>Kinexperience</title>
 		<description>Interactive icosahedron, with dance researcher Ariane Cassimiro&#10;Exploring a dance framework theory with Kinect and virtual reality</description>
 		<image>img/projects/kinexp.jpg</image>
 		<link>../kinexperience</link>
+		<themes>artistic</themes>
+	</project>
+
+	<project>
+		<title>_Transition</title>
+		<description>Virtual reality project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
+		<image>img/projects/transitionwebsmall.jpg</image>
+		<link>../transition</link>
+		<themes>artistic</themes>
 	</project>
 
 	<project>
@@ -15,20 +25,15 @@
 		<description>A color game for hawk-eyed designers&#10;Started with PHP framework Symfony 2&#10;Now under AngularJS</description>
 		<image>img/projects/huehunt.jpg</image>
 		<link>../huehunt</link>
+		<themes>dataviz</themes>
 	</project>
 
 	<project>
-		<title>_Transition</title>
-		<description>VR project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
-		<image>img/projects/transitionwebsmall.jpg</image>
-		<link>../transition</link>
-	</project>
-	
-	<project>
 		<title>HueFlow</title>
-		<description>Casual information visualization of energy and water consumption for smart houses&#10;KTH course DH2321</description>
+		<description>Casual information visualization of energy and water consumption for smart houses</description>
 		<image>img/projects/hueflow.jpg</image>
 		<link>../infoviz/hueflow</link>
+		<themes>artistic dataviz</themes>
 	</project>
 
 	<project>
@@ -36,6 +41,7 @@
 		<description>Web app to draw on canvas based on voice input&#10;Award-winning KTH project, 7 students</description>
 		<image>img/projects/speakasso.jpg</image>
 		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
+		<themes>artistic dataviz</themes>
 	</project>
 
 	<project>
@@ -43,6 +49,15 @@
 		<description>Data analysis interface for Hue Hunt.&#10;Revealed trends in learning HSL with regard to hue and experience.</description>
 		<image>img/projects/huehuntresults.jpg</image>
 		<link>../huehunt/results</link>
+		<themes>dataviz</themes>
+	</project>
+
+	<project>
+		<title>Labomobile #1</title>
+		<description>3-day workshop with a mixed team of comedians, dancers and digital artists&#10;Exploring the concept of identity on stage&#10;Directed by Arnaud Chevalier</description>
+		<image>img/projects/labomobile.jpg</image>
+		<link></link>
+		<themes>artistic</themes>
 	</project>
 
 	<project>
@@ -50,6 +65,7 @@
 		<description>A user interface for spreadSVG.js&#10;Play the piano and generate art with vector graphics</description>
 		<image>img/projects/playchaos.jpg</image>
 		<link>../playchaos</link>
+		<themes>artistic web</themes>
 	</project>
 
 	<project>
@@ -57,6 +73,7 @@
 		<description>Prototyping within 24 hours&#10;Scaffolding a proof-of-concept web page for a company</description>
 		<image>img/projects/infinitesmall.jpg</image>
 		<link>../infinitedevelopers</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -64,6 +81,7 @@
 		<description>A game for personal knowledge management&#10;Applied to linguistics</description>
 		<image>img/projects/ever.jpg</image>
 		<link>../ever</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -71,6 +89,7 @@
 		<description>Human-Computer Interaction, KTH introductory course</description>
 		<image>img/projects/DH2620.jpg</image>
 		<link>../DH2620</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -78,6 +97,7 @@
 		<description>Emotion feedback through digital drawing</description>
 		<image>img/projects/fromemo.jpg</image>
 		<link>../fromemo</link>
+		<themes>web dataviz</themes>
 	</project>
 
 	<project>
@@ -85,6 +105,7 @@
 		<description>Some bits of a Joomla! website for a small tourism business in Melbourne surburbs</description>
 		<image>img/projects/rayville.jpg</image>
 		<link>../rayville/rayville-villas</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -92,6 +113,7 @@
 		<description>A GUI for Information Visualization (for Firefox)&#10;1 day project - KTH course DH2321</description>
 		<image>img/projects/groupmerge.jpg</image>
 		<link>../infoviz/groupmerge</link>
+		<themes>web dataviz</themes>
 	</project>
 
 	<project>
@@ -99,13 +121,7 @@
 		<description>A simple blog in VueJS for the Melting Space label</description>
 		<image>img/projects/meltingspacesmall.jpg</image>
 		<link>https://melting.space/new/#/blog</link>
-	</project>
-
-	<project>
-		<title>Userainbow</title>
-		<description>Drupal module for designs based on site visitors count</description>
-		<image>img/projects/drup.jpg</image>
-		<link>../drup</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -113,6 +129,7 @@
 		<description>Introduction to Visualization and Computer Graphics</description>
 		<image>img/projects/DH2320.jpg</image>
 		<link>../DH2320</link>
+		<themes></themes>
 	</project>
 
 	<project>
@@ -120,6 +137,7 @@
 		<description>Web apps for mobiles&#10;Google Maps API, RSS reader, PubNub, Geohashing</description>
 		<image>img/projects/mobwebdev.png</image>
 		<link>../mobwebdev</link>
+		<themes></themes>
 	</project>
 
 	<project>
@@ -127,6 +145,7 @@
 		<description>Using d3.js parallel coordinates library for analyses of multidimensional datasets</description>
 		<image>img/projects/happyfactor.jpg</image>
 		<link>../infoviz/happyfactor</link>
+		<themes>dataviz</themes>
 	</project>
 
 	<project>
@@ -134,6 +153,7 @@
 		<description>Rehearse your ukulele chords before performing!&#10;Angular app for KTH course Interaction Programming&#10;4 students</description>
 		<image>img/projects/brainuke.jpg</image>
 		<link>../brainuke</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -141,6 +161,7 @@
 		<description>Aaaand the simplistic version that inspired the Angular project</description>
 		<image>img/projects/brainukeold.jpg</image>
 		<link>../brainuke/old</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -148,54 +169,64 @@
 		<description>Cooking like a boss (for Firefox)</description>
 		<image>img/projects/chef.jpg</image>
 		<link>../chef</link>
+		<themes>web</themes>
 	</project>
 
 	<!--
+	<project>
+		<title>Userainbow</title>
+		<description>Drupal module for designs based on site visitors count</description>
+		<image>img/projects/drup.jpg</image>
+		<link>../drup</link>
+		<themes></themes>
+	</project>
+
 	<project>
 		<title>Safecook</title>
 		<description>Choose a delay and David Guetta will periodically remind you that your food might be burning</description>
 		<image></image>
 		<link>../safecook</link>
+		<themes></themes>
 	</project>
-	-->
 
 	<project>
 		<title>UScontrol</title>
 		<description>My first JavaScript game at school :')&#10;Broken back-end though</description>
 		<image>img/projects/uscontrol.jpg</image>
 		<link>../uscontrol</link>
+		<themes></themes>
 	</project>
 
-	<!--
 	<project>
 		<title>Breathe</title>
 		<description>Calm down and keep pace</description>
 		<image>img/projects/breathe.jpg</image>
 		<link>../breathe</link>
+		<themes></themes>
 	</project>
-	-->
 
 	<project>
 		<title>Cat</title>
 		<description>Cats and gravity O_O</description>
 		<image>img/projects/cat.jpg</image>
 		<link>../cat</link>
+		<themes></themes>
 	</project>
 
-	<!--
 	<project>
 		<title>CSSbank</title>
 		<description>Baby steps in CSS</description>
 		<image></image>
 		<link>../cssbank</link>
+		<themes></themes>
 	</project>
-	-->
 
 	<project>
 		<title>wtfCSS</title>
 		<description>Some happy translucid divs</description>
 		<image>img/projects/wtfCSS.jpg</image>
 		<link>../wtfCSS/amonistar</link>
+		<themes></themes>
 	</project>
 
 	<project>
@@ -203,13 +234,16 @@
 		<description>6-months internship in the French Army as an officer&#10;UI for the photos</description>
 		<image>img/projects/army.jpg</image>
 		<link>../army</link>
+		<themes></themes>
 	</project>
+	-->
 
 	<project>
 		<title>Own website v3</title>
 		<description>Well... this very website!&#10;Kind of a perpetual work in progress</description>
 		<image>img/projects/websitev3small.jpg</image>
 		<link>https://github.com/Icosacid/website/tree/dev</link>
+		<themes>web</themes>
 	</project>
 
 	<!--
@@ -217,7 +251,8 @@
 		<title>Project title</title>
 		<description>Project description</description>
 		<image>Url to thumbnail, preferably 450x300</image>
-		<link>Url to project</link>
+		<link>Url to project, nothing if none</link>
+		<themes></themes>
 	</project>
 	-->
 

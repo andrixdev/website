@@ -20,3 +20,40 @@
 		font-size: 2rem;
 	}
 }
+.radios {
+	.flexrow();
+	.flexcenter();
+	margin-left: 25px;
+
+	.radio {
+		padding: 0.3em 0.7em;
+		border-radius: 5000px;
+		margin: auto 12px;
+		border: solid 0.5px @blue-80;
+		.pointer();
+		opacity: 0.8;
+
+		span.fa {
+			margin-right: 4px;
+
+			&::before {
+				content: "\f111";// fa-circle
+				//content: "\f0c8";// fa-square
+			}
+		}
+		&:hover {
+			background: @blue-15;
+			opacity: 0.95;
+		}
+		&.active {
+			background: @blue-10;
+			opacity: 0.95;
+
+			span.fa::before {
+				content: "\f192"; // fa-dot-circle
+				//content: "\f0c8"; // fa-square
+			}
+		}
+
+	}
+}

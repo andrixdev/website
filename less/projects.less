@@ -1,5 +1,10 @@
 #projects {
-	.page-content {
+	.radios {
+		@media (max-width: 800px) {
+			display: none;
+		}
+	}
+	.all-projects {
 		.flexrow();
 		.flexwrap();
 		.flexcenter();
@@ -17,11 +22,13 @@
 			background: @blue-10;
 			max-width: 90%;
 
-			&, * {
+			&.hidden {
+				display: none;
+			}
+			&:not(.no-link), &:not(.no-link) > * {
 				.pointer();
 			}
-
-			&:hover {
+			&:not(.no-link):hover {
 				background: @blue-15;
 			}
 			.left-side {
@@ -71,5 +78,16 @@
 			opacity: 0;
 		}
 	}
+	.ongoing {
+		padding: 20px 20px 80px;
+		.center();
 
+		h2 {
+			margin-bottom: 10px;
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1.3rem;
+		}
+	}
 }

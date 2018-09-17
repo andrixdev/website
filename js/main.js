@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         mounted: function() { Projects.go(); }
     };
     var VjingComponent = { template: jQuery('#vjing-template').html() };
-    var ContactComponent = { template: jQuery('#contact-template').html() };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
         data: function() {

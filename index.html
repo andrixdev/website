@@ -5,7 +5,7 @@
 	
 	<!-- Meta stuff -->
 	<meta charset="utf-8" />
-	<meta name="keywords" content="Alex Andrix, Alexandrix, algorithmic art, digital art, creative coding" />
+	<meta name="keywords" content="Alex Andrix, Alexandrix, creative coding, algorithmic art, digital art" />
 	<meta name="author" content="Alex Andrix" />
 	<meta name="description" content="Algorithmic art and experiments | Hi there, my name is Alex and I create art with science and technology." />
 	<link rel="canonical" href="http://alexandrix.com/" />
@@ -42,6 +42,45 @@
 	
 </head>
 <body>
+
+<template id="projects-template">
+	<div id="projects">
+		<vue-title title="Alex Andrix | Projects"></vue-title>
+		<div class="page-banner"></div>
+
+		<div class="page-header">
+			<geom base-sides="4" rotate="true"></geom>
+			<h1>Projects</h1>
+			<div class="radios">
+				<p class="radio active" data-filter="all">
+					<span class="fa"></span> all
+				</p>
+				<p class="radio" data-filter="artistic">
+					<span class="fa"></span> artistic
+				</p>
+				<p class="radio" data-filter="web">
+					<span class="fa"></span> web
+				</p>
+				<p class="radio" data-filter="dataviz">
+					<span class="fa"></span> data visualization
+				</p>
+			</div>
+		</div>
+
+		<div class="page-content">
+			<div class="all-projects">
+				<!-- Filled with XHR reading XML content -->
+			</div>
+			<div class="ongoing">
+				<h2>On track</h2>
+				<p><strong>Variations Physiques</strong> - Laboratoire de Physique de l'ENS de Lyon - Sept/oct 2018</p>
+				<p><strong>Kinexperience</strong> sprint 2 - Les Subsistances, Lyon - Jan/feb 2019</p>
+			</div>
+		</div>
+
+		<logo-links></logo-links>
+	</div>
+</template>
 
 <template id="about-template">
 	<div id="about">
@@ -172,7 +211,7 @@
 			<span>and</span>
 			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
 		</p>
-		<p class="version">v3.5</p>
+		<p class="version">v3.6</p>
 	</div>
 
 	<!-- Artwork detail container for Gallery (has to be here for CSS reasons) -->
@@ -302,26 +341,8 @@
 
 		<div class="page-content no-padding">
 			<div class="gallery-content">
-				<!-- Fill with XHR reading XML with links to imgs -->
+				<!-- Filled with XHR reading XML content -->
 			</div>
-		</div>
-
-		<logo-links></logo-links>
-	</div>
-</template>
-
-<template id="projects-template">
-	<div id="projects">
-		<vue-title title="Alex Andrix | Projects"></vue-title>
-		<div class="page-banner"></div>
-
-		<div class="page-header">
-			<geom base-sides="4" rotate="true"></geom>
-			<h1>Projects</h1>
-		</div>
-
-		<div class="page-content">
-
 		</div>
 
 		<logo-links></logo-links>
@@ -387,7 +408,7 @@
 			<div class="feel-free">
 				<p>Feel free to enquire or share any creative thoughts</p>
 				<p>I don't use any social network, this website is the one and only source of my work</p>
-				<p>Still, my codes are open-source and you are welcome to take a peep!</p>
+				<p>Still, my code is open-source and you are welcome to take a peep!</p>
 				<br/>
 				<p>You can <span class='aboutmail'>email me at alex(at)alexandrix.com</span>, check my <!--<span class='aboutdeviant'>Deviant</span>, my --><span class='aboutgithub'>GitHub</span> or my <span class='aboutcodepen'>Codepen</span></p>
 			</div>
@@ -469,13 +490,13 @@
 						<p>CMS Drupal, CMS Joomla!, Wordpress, Java SE, C++</p>
 					</div>
 
-					<h5>Current personal projects</h5>
+					<h5>Current projects</h5>
 					<p>
-						JS/WebGL tennis with Nik Rowell, creative coder from Minnesota
+						Transition: from organic to digital, with 3D artist jeanf
 						<br/>
-						Transition: from organic to digital, with 3D artist lejeanf
+						Kinexperience, VR and motion capture, with dance researcher Ariane Cassimiro
 						<br/>
-						Re-coding this website!
+						Variations Physiques, making art with the science of plasma (ENS de Lyon)
 					</p>
 
 				</div>
@@ -636,7 +657,7 @@
 							<a href='http://androidjones.com/gallery/' target='_blank' title='To Android Jones gallery' alt='Android Jones'>A digital artist: Android Jones</a>
 						</div>
 						<div class='moreabout'>
-							<p>Art, powered to the sky.</p>
+							<p>Master in technique and creativity</p>
 						</div>
 					</div>
 
@@ -748,6 +769,7 @@
 <script type='text/javascript' src="components/gallery.js"></script>
 <script type='text/javascript' src="components/projects.js"></script>
 <script type='text/javascript' src="components/about.js"></script>
+<script type='text/javascript' src="components/contact.js"></script>
 <script type='text/javascript' src="components/cv.js"></script>
 <script type='text/javascript' src="components/not-found.js"></script>
 <script type='text/javascript' src="js/jAntispam.js"></script>
