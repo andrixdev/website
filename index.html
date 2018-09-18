@@ -204,7 +204,12 @@
 	</div>
 
 	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
-		<p class="click-and-hue" v-on:click="rotateLeHue()">Alex Andrix @2015-2018</p>
+		<div class="flexrow flexcenter flexchildrenend">
+			<img class="footer-logo" src="img/website/triango.svg" />
+			<p class="click-and-hue" v-on:click="rotateLeHue()">
+				&nbsp;ALEX ANDRIX @2015-2018
+			</p>
+		</div>
 		<p class="crafted">
 			<span>Crafted with</span>
 			<img src='img/website/vue.png' alt="Vue.js" title="Vue JS"/>
