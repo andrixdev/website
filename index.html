@@ -48,7 +48,7 @@
 		<vue-title title="Alex Andrix | Projects"></vue-title>
 		<div class="page-banner"></div>
 
-		<div class="page-header">
+		<div class="title-block page-header">
 			<geom base-sides="4" rotate="true"></geom>
 			<h1>Projects</h1>
 			<div class="radios">
@@ -87,7 +87,7 @@
 		<vue-title title="Alex Andrix | About"></vue-title>
 		<div class="page-banner"></div>
 
-		<div class="page-header">
+		<div class="title-block page-header">
 			<geom base-sides="0"></geom>
 			<h1>About</h1>
 		</div>
@@ -350,7 +350,7 @@
 		<vue-title title="Alex Andrix | Algorithmic art and experiments"></vue-title>
 		<div class="page-banner"></div>
 
-		<div class="page-header">
+		<div class="title-block page-header">
 			<geom base-sides="4"></geom>
 			<h1>Home</h1>
 		</div>
@@ -443,7 +443,7 @@
 		<vue-title title="Alex Andrix | Gallery"></vue-title>
 		<div class="page-banner"></div>
 
-		<div class="page-header">
+		<div class="title-block page-header">
 			<geom base-sides="0"></geom>
 			<h1>Gallery</h1>
 		</div>
@@ -459,44 +459,40 @@
 </template>
 
 <template id="more-template">
-	<div id="animations">
+	<div id="more">
 		<vue-title title="Alex Andrix | More"></vue-title>
-		<div class="page-banner"></div>
 
-		<div class="page-header">
-			<geom base-sides="0"></geom>
-			<h1>Animations</h1>
-		</div>
+		<div id="animations">
+			<div class="page-banner"></div>
 
-		<div class="page-content">
-			<p class="seen center">Seen: {{ seenAnims.length }}/{{ animationPaths.length }}</p>
-			<div class="randomize">
-				<button class="acidbutton huge-btn" v-on:click="randomizeDisplayedPaths()">Randomize</button>
+			<div class="title-block page-header">
+				<geom base-sides="0"></geom>
+				<h1>Animations</h1>
 			</div>
 
-			<!--<video src="vids/kuzco5.mp4" autoplay poster="posterimage.jpg"></video>-->
-			<div class="videos">
-				<video v-for="path in displayedPaths" v-bind:src="path" autoplay loop muted></video>
+			<div class="page-content">
+				<p class="seen center">Seen: {{ seenAnims.length }}/{{ animationPaths.length }}</p>
+				<div class="randomize">
+					<button class="acidbutton huge-btn" v-on:click="randomizeDisplayedPaths()">Randomize</button>
+				</div>
+
+				<!--<video src="vids/kuzco5.mp4" autoplay poster="posterimage.jpg"></video>-->
+				<div class="videos">
+					<video v-for="path in displayedPaths" v-bind:src="path" autoplay loop muted></video>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="vjing">
+			<div class="title-block">
+				<geom base-sides="4"></geom>
+				<h1>Vjing</h1>
 			</div>
 
-		</div>
-
-		<logo-links></logo-links>
-	</div>
-</template>
-
-<template id="vjing-template">
-	<div id="vjing">
-		<vue-title title="Alex Andrix | VJing"></vue-title>
-		<div class="page-banner"></div>
-
-		<div class="page-header">
-			<geom base-sides="4"></geom>
-			<h1>Vjing</h1>
-		</div>
-
-		<div class="page-content">
-			<coming-soon></coming-soon>
+			<div class="page-content">
+				<coming-soon></coming-soon>
+			</div>
 		</div>
 
 		<logo-links></logo-links>

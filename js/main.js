@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         mounted: function() { Projects.go(); }
     };
-    var VjingComponent = { template: jQuery('#vjing-template').html() };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
         data: function() {
@@ -86,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { path: '/gallery', component: GalleryComponent },
         { path: '/projects', component: ProjectsComponent },
         { path: '/more', component: MoreComponent },
-        { path: '/vjing', component: VjingComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
         { path: '/cv', component: CVComponent },
