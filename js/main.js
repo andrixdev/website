@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
         { path: '/projects', component: ProjectsComponent },
-        { path: '/animations', component: AnimationsComponent },
+        { path: '/more', component: MoreComponent },
         { path: '/vjing', component: VjingComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },

@@ -1,5 +1,6 @@
-var AnimationsComponent = {
-    template: jQuery('#animations-template').html(),
+// This components gathers several previous or new components
+var MoreComponent = {
+    template: jQuery('#more-template').html(),
     data: function() {
         return {
             animationPaths: [],
@@ -24,18 +25,18 @@ var AnimationsComponent = {
             // Don't mind about pushing on the very array being looped on
             var self = this;
             this.displayedPaths.forEach(function(el) {
-                var isInSeen = false;
+                var isInSeenAnims = false;
                 for (var a = 0; a < self.seenAnims.length; a++) {
                     if (el === self.seenAnims[a]) isInSeenAnims = true;
                 }
                 if (!isInSeenAnims) self.seenAnims.push(el);
             });
-        }
+        },
     },
     mounted: function() {
         var self = this;
 
-        // Store all paths
+        // Store all animation paths
         jQuery
             .get("data/animations.xml", {})
             .done(function(data) {
