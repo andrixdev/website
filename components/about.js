@@ -87,6 +87,7 @@ var AboutComponent = {
                 "sometimes use CSS for art tricks on top of JS canvas lol",
                 "should take a nap and so do you",
                 "hope the timing of this animation is just right",
+                "like it when you scroll",
             ], indexx = 0, self = this;
 
             // (global function in utils.js)
