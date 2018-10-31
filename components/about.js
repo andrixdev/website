@@ -3,7 +3,8 @@ var AboutComponent = {
     data: function() {
         return {
             showRiddle: false,
-            riddleAnswer: ""
+            riddleAnswer: "",
+            currentPolyam: "work with scientists"
         }
     },
     methods: {
@@ -29,6 +30,77 @@ var AboutComponent = {
                 hasRatio = answer.indexOf('ratio') > -1;
 
             return hasGold || hasValue || hasCommaValue || hasPhi || hasRatio;
+        },
+        startPolyam: function() {
+            var options = [
+                "work with scientists",
+                "run",
+                "am nomad",
+                "created my own task management tool in CSS format",
+                "only read news on Wikipedia",
+                "advocate for data privacy",
+                "use Firefox",
+                "overuse Notepad++ which is great",
+                "give talks on creative coding",
+                "code",
+                "don't care about the newest shit",
+                "keep away from social media",
+                "like CodePen",
+                "practice a massage technique between acupressure and shiatsu",
+                "would probably love to get in touch with you",
+                "have a minimalistic lifestyle",
+                "try to workout",
+                "write stuff",
+                "directed a short film with only particles in it",
+                "lived in Australia and Sweden",
+                "was raised in France",
+                "enjoy maaany kinds of music",
+                "git push",
+                "have a zero inbox approach to email management",
+                "advocate for long lunch breaks",
+                "always carry an icosahedron with me in case of fire",
+                "like a good whisky",
+                "spent a few years in Lyon",
+                "am shy deep inside",
+                "rely much on karma for projects",
+                "will teach soon",
+                "make art exhibitions with JavaScript",
+                "once was an army officer in mountain troops",
+                "walked the Great Ocean Road but saw no koala",
+                "bought my last video game in 2012, damn",
+                "just can't draw real stuff",
+                "dance hunggar kung-fu",
+                "have a dream",
+                "live projected my face at night on a huge tree then freaked out",
+                "spin pens",
+                "carry an APC MINI in case of accidental VJ session",
+                "compressed my entire digital self to 58Go in 2017",
+                "don't have a long-term goal in mind, just directional gut feelings",
+                "read self-optimization, tech and management articles for 5 years then stopped",
+                "was initially inspired by Joshua Davis W3C talk on creative coding",
+                "shake hands",
+                "write in 1st person to you on my website because it's cooler",
+                "coded an e-learning game on the HSL color model for fun (and for my thesis)",
+                "can instantly guess the Hue of things (HSL color space)",
+                "like JavaScript but got tired of frameworks",
+                "am concerned about CSS specificity management in web projects",
+                "sometimes use CSS for art tricks on top of JS canvas lol",
+                "should take a nap and so do you",
+                "hope the timing of this animation is just right",
+            ], indexx = 0, self = this;
+
+            // (global function in utils.js)
+            var indexes = randomIndexes(options.length);
+	        var newFrame = function() {
+		        indexx++;
+		        indexx = indexx % options.length;
+		        var polyam = options[indexes[indexx]];
+		        var durationMS = Math.max(1000, polyam.length * 40);
+		        self.currentPolyam = polyam;
+		        setTimeout(newFrame, durationMS);
+	        };
+
+            newFrame();
         }
     },
     mounted: function() {
@@ -69,5 +141,8 @@ var AboutComponent = {
                 logoCodepen.css('box-shadow', '');
             }
         });
+
+        // Start polyam animation
+        this.startPolyam();
     }
 };
