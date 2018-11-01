@@ -4,6 +4,7 @@
 	<!-- HTML entity for line feed: &#10; -->
 
 	<!-- Possible themes are: Ø (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
+
 	<project>
 		<title>Kinexperience</title>
 		<description>Interactive icosahedron, with dance researcher Ariane Cassimiro&#10;Exploring a dance framework theory with Kinect and virtual reality</description>
@@ -74,6 +75,14 @@
 		<image>img/projects/infinitesmall.jpg</image>
 		<link>../infinitedevelopers</link>
 		<themes>web</themes>
+	</project>
+
+	<project>
+		<title>Variations Physiques Gallery</title>
+		<description>Online digital version of fabric artworks gallery</description>
+		<image>img/projects/varphygallery.jpg</image>
+		<link>../varphygallery</link>
+		<themes>artistic web</themes>
 	</project>
 
 	<project>
