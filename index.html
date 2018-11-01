@@ -5,7 +5,7 @@
 	
 	<!-- Meta stuff -->
 	<meta charset="utf-8" />
-	<meta name="keywords" content="Alex Andrix, Alexandrix, creative coding, algorithmic art, digital art" />
+	<meta name="keywords" content="Alex Andrix, Alexandrix, creative coding, algorithmic art, digital art, particles" />
 	<meta name="author" content="Alex Andrix" />
 	<meta name="description" content="Algorithmic art and experiments | Hi there, my name is Alex and I create art with science and technology." />
 	<link rel="canonical" href="http://alexandrix.com/" />
@@ -73,8 +73,10 @@
 			</div>
 			<div class="ongoing">
 				<h2>On track</h2>
-				<p><strong>Variations Physiques</strong> - Laboratoire de Physique de l'ENS de Lyon - Sept/oct 2018</p>
+				<p><strong>L'Instant Mobile</strong> - Website for Arnaud Chevalier theatre crew</p>
+				<p><strong>ECL digital art exhibition</strong> - Ecole Centrale de Lyon - Nov 2018</p>
 				<p><strong>Kinexperience</strong> sprint 2 - Les Subsistances, Lyon - Jan/feb 2019</p>
+				<!--<p><strong>Variations Physiques</strong> - Laboratoire de Physique de l'ENS de Lyon - Sept/oct 2018</p>-->
 			</div>
 		</div>
 
@@ -203,7 +205,7 @@
 
 			<div class="flexcol flexcenter pic">
 				<img src="img/misc/picbw.png" alt="Alex Andrix picture" title="Sorta me in 2018" />
-				<p class="asif">@credits - asiftherewerecreditsIjuststoodinmyhotelroom & photoshoppedthisthingbecausesomeoneaskedforit :)</p>
+				<p class="asif">@credits - asiftherewerecreditsIjuststoodinmyhotelroom & photoshoppedthisthingbecausesomeoneaskedforit</p>
 			</div>
 
 			<br/>
@@ -221,6 +223,7 @@
 
 		<div class="about-links">
 			<div class="page-content">
+				<br/>
 				<p>
 					Art exhibition at École Normale Supérieure de Lyon, Fête de la Science (FR, 2018), <a href="https://bibli.ec-lyon.fr/actualites/2018/exposition-physique-art-numerique-dynamique-fluides" target="_blank">Ecole Centrale de Lyon article</a>, <a href="http://www.ens-lyon.fr/evenement/savoirs/physique-art-numerique-et-dynamique-des-fluides" target="_blank">ENS article</a>, ENS tweets: <a href="https://twitter.com/ENSdeLyon/status/1050307559851212801" target="_blank">1</a>, <a href="https://twitter.com/ENSdeLyon/status/1051101730178564096" target="_blank">2</a>, <a href="https://twitter.com/ENSdeLyon/status/1051102365707919360" target="_blank">3</a>
 				</p>
@@ -388,33 +391,6 @@
 		</div>
 
 		<div class="page-content no-padding">
-			<div class="home-whatsnew">
-				<h3>What's new</h3>
-				<hr/>
-				<p>Art-science exhibition at ENS de Lyon - Oct. 2018</p>
-				<p>Printed artworks, interactive screens, VR experience</p>
-				<br/>
-				<div class="varphy-spoiler flexrow flexcenter">
-					<img src="img/varphy/expo-2-tiny.jpg" alt="Variations Physiques exhibition"/>
-					<img src="img/varphy/expo-1-tiny.jpg" alt="Variations Physiques exhibition"/>
-					<img src="img/varphy/expo-3-tiny.jpg" alt="Variations Physiques exhibition"/>
-				</div>
-				<a class="acidbutton" href="https://bibli.ec-lyon.fr/actualites/2018/exposition-physique-art-numerique-dynamique-fluides" target="_blank">More about the exhibition</a>
-				<br/>
-				<hr/>
-				<p>Kinexperience dance project at Subsistances - Feb. 2019</p>
-				<br/>
-				<a class="acidbutton" href="./kinexperience" target="_blank">More about Kinexperience</a>
-				<br/>
-				<hr/>
-				<p>New _Transition VR experience trailer</p>
-				<br/>
-				<div class="trailer">
-					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nQqBPO8K01A?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-				</div>
-				<br/>
-				<a class="acidbutton" href="./transition" target="_blank">More about _Transition</a>
-			</div>
 
 			<div class="home-gallery">
 				<router-link to="/gallery">
@@ -442,26 +418,63 @@
 				</router-link>
 			</div>
 
-			<div class="home-animations">
-				<router-link to="/animations">
-					<h3 class="categname">Animations</h3>
-				</router-link>
+			<div class="home-whatsnew">
+				<h3 class="categname">What's new</h3>
+				<div class="whatsnew-content">
 
-				<div class="videos">
-					<video v-for="path in homeDisplayedAnimations" v-bind:src="path" autoplay loop muted></video>
+					<!-- Varphy trailer -->
+					<div class="news-block">
+						<p>Variations Physiques VR trailer</p>
+						<br/>
+						<div class="trailer">
+							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nQqBPO8K01A?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<hr/>
+
+					<!-- Varphy exhib -->
+					<div class="news-block news-varphy-exhib">
+						<p>Art-science exhibition at ENS de Lyon - Oct. 2018</p>
+						<p>Printed artworks, interactive screens, VR experience</p>
+						<br/>
+						<div class="varphy-spoiler flexrow flexcenter">
+							<img src="img/varphy/expo-2-tiny.jpg" alt="Variations Physiques exhibition"/>
+							<img src="img/varphy/expo-1-tiny.jpg" alt="Variations Physiques exhibition"/>
+							<img src="img/varphy/expo-3-tiny.jpg" alt="Variations Physiques exhibition"/>
+						</div>
+						<div>
+							<a class="acidbutton" href="https://bibli.ec-lyon.fr/actualites/2018/exposition-physique-art-numerique-dynamique-fluides" target="_blank">More about the exhibition</a>
+						</div>
+						<br/>
+						<div>
+							<a class="acidbutton" href="./varphygallery" target="_blank">To the digital gallery</a>
+						</div>
+					</div>
+
+					<hr/>
+
+					<!-- Kinexperience -->
+					<div class="news-block">
+						<p>Kinexperience dance project at Subsistances - Feb. 2019</p>
+						<br/>
+						<a class="acidbutton" href="./kinexperience" target="_blank">More about Kinexperience</a>
+					</div>
+
+					<hr/>
+
+					<!-- _Transition trailer -->
+					<div class="news-block">
+						<p>New _Transition VR experience trailer</p>
+						<br/>
+						<div class="trailer">
+							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nQqBPO8K01A?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						</div>
+						<br/>
+						<a class="acidbutton" href="./transition" target="_blank">More about _Transition</a>
+					</div>
 				</div>
-				<router-link class="moar" to="/animations">
-					<button class="acidbutton huge-btn">More animations</button>
-				</router-link>
 
-			</div>
-
-			<div class="home-vjing">
-				<router-link to="/vjing">
-					<h3 class="categname">Vjing</h3>
-
-					<coming-soon></coming-soon>
-				</router-link>
 			</div>
 
 		</div>

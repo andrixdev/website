@@ -35,7 +35,7 @@ var AboutComponent = {
             var options = [
                 "work with scientists",
                 "run",
-                "am nomad",
+                //"am nomad",
                 "created my own task management tool in CSS format",
                 "only read news on Wikipedia",
                 "advocate for data privacy",
@@ -63,11 +63,10 @@ var AboutComponent = {
                 "spent a few years in Lyon",
                 "am shy deep inside",
                 "rely much on karma for projects",
-                "will teach soon",
+                "will teach some day soon",
                 "make art exhibitions with JavaScript",
                 "once was an army officer in mountain troops",
-                "walked the Great Ocean Road but saw no koala",
-                "bought my last video game in 2012, damn",
+                "hiked the Great Ocean Walk but saw no koala",
                 "just can't draw real stuff",
                 "dance hunggar kung-fu",
                 "have a dream",
@@ -80,7 +79,7 @@ var AboutComponent = {
                 "was initially inspired by Joshua Davis W3C talk on creative coding",
                 "shake hands",
                 "write in 1st person to you on my website because it's cooler",
-                "coded an e-learning game on the HSL color model for fun (and for my thesis)",
+                "coded an e-learning game on the HSL color model",// for fun (and for my thesis)",
                 "can instantly guess the Hue of things (HSL color space)",
                 "like JavaScript but got tired of frameworks",
                 "am concerned about CSS specificity management in web projects",
@@ -88,6 +87,8 @@ var AboutComponent = {
                 "should take a nap and so do you",
                 "hope the timing of this animation is just right",
                 "like it when you scroll",
+                "made this website open-source",
+
             ], indexx = 0, self = this;
 
             // (global function in utils.js)

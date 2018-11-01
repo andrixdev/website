@@ -8,8 +8,6 @@ var HomeComponent = {
             ],
             homeGallery: undefined,
             homeProjects: undefined,
-            homeDisplayedAnimations: undefined,
-            maxAnimHome: 2
         };
     },
     methods: {
@@ -18,9 +16,6 @@ var HomeComponent = {
         },
         updateHomeProjects: function(el) {
             this.homeProjects = el;
-        },
-        updateHomeDisplayedAnimations: function(el) {
-            this.homeDisplayedAnimations = el;
         },
         scrollLeft: function(ev) {
             // Prevent rerouting
@@ -63,7 +58,7 @@ var HomeComponent = {
     },
     mounted: function() {
         var self = this;
-        self.home = 'Teh';// This line used to have the whole lot work
+        self.home = 'Teh';// This line is used to have the whole lot work
 
         // Home Gallery
         jQuery
@@ -99,25 +94,5 @@ var HomeComponent = {
 
                 self.updateHomeProjects(paths);
             });
-
-        // Home displayed animations (random selections)
-        jQuery
-            .get("data/animations.xml", {})
-            .done(function(data) {
-
-                var jAnimations = jQuery(data).find('animations');
-                var paths = [];
-
-                jAnimations.find('image').each(function(el) {
-                    // Get XML content
-                    paths.push(jQuery(this).text());
-                });
-
-                var somePaths = randomizePaths(paths, self.maxAnimHome);
-                self.updateHomeDisplayedAnimations(somePaths);
-            });
-
-
     }
-
 };
