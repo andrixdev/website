@@ -51,7 +51,7 @@ var AboutComponent = {
                 "have a minimalistic lifestyle",
                 "try to workout",
                 "write stuff",
-                "directed a short film with only particles in it",
+                "made a short animated film with only particles in it",
                 "lived in Australia and Sweden",
                 "was raised in France",
                 "enjoy maaany kinds of music",
@@ -88,7 +88,7 @@ var AboutComponent = {
                 "hope the timing of this animation is just right",
                 "like it when you scroll",
                 "made this website open-source",
-
+                // "like it when you read my open-source code on Github and see the comments ;)"
             ], indexx = 0, self = this;
 
             // (global function in utils.js)
