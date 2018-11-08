@@ -1,18 +1,13 @@
 /**
- * JS for icosacid.com
- *
- * @author Alexandre Andrieux <alex@icosacid.com>
- * @since 2015-03
- *
- * Changes in algories.js shall be duplicated in pro.js
- * JS files on respective pages are independent
- *
  * Being re-coded...
  */
 
 var Gallery = {
 	algData: [],
-	mouseIsOverFront: false
+	mouseIsOverFront: false,
+	isFrontShown: false,
+	shouldShowFront: false,
+	timeout: undefined
 };
 
 /**
@@ -109,6 +104,7 @@ Gallery.getAlg = function(id) {
 		}
 	}
 	console.log('Nothing found with ID ' + id);
+	return false;
 };
 
 /**
@@ -116,7 +112,7 @@ Gallery.getAlg = function(id) {
  */
 Gallery.DOMlisteners = function() {
 	// Algories blocks
-	jQuery('.alg').on({
+	jQuery('.alg').off().on({
 		mouseenter: function() {
 			jQuery(this).find('h4.title').css('opacity','1');
 			jQuery(this).css('box-shadow','rgba(255,255,255,0.5) 0 0 10px');
@@ -124,8 +120,14 @@ Gallery.DOMlisteners = function() {
 			jQuery(this).find('h4.title').css('opacity','0');
 			jQuery(this).css('box-shadow','none');
 		}, mouseup: function() {
-			Gallery.showFront();
-			Gallery.fillFront(jQuery(this));
+			//Gallery.fillFront(jQuery(this).attr('id'));
+			//Gallery.showFront();
+			// Update route history
+			Global.router.push({
+				path: 'gallery', query: { artwork: jQuery(this).attr('id') }
+			});
+			//Gallery.fillFront(jQuery(this).attr('id'));
+			//Gallery.showFront();
 		}
 	});
 	
@@ -134,7 +136,7 @@ Gallery.DOMlisteners = function() {
 	var logoDeviant = jQuery('#about a.deviant');
 	var logoGithub = jQuery('#about a.github');
 	var logoCodepen = jQuery('#about a.codepen');
-	jQuery('#about span.aboutmail').on({
+	jQuery('#about span.aboutmail').off().on({
 		mouseenter: function() {
 			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
@@ -142,7 +144,7 @@ Gallery.DOMlisteners = function() {
 			logoMail.css('box-shadow', '');// Empty string --> back to static style from .css file!
 		}
 	});
-	jQuery('#about span.aboutdeviant').on({
+	jQuery('#about span.aboutdeviant').off().on({
 		mouseenter: function() {
 			logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
@@ -150,7 +152,7 @@ Gallery.DOMlisteners = function() {
 			logoDeviant.css('box-shadow', '');
 		}
 	});
-	jQuery('#about span.aboutgithub').on({
+	jQuery('#about span.aboutgithub').off().on({
 		mouseenter: function() {
 			logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
@@ -158,7 +160,7 @@ Gallery.DOMlisteners = function() {
 			logoGithub.css('box-shadow', '');
 		}
 	});
-	jQuery('#about span.aboutcodepen').on({
+	jQuery('#about span.aboutcodepen').off().on({
 		mouseenter: function() {
 			logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
 		},
@@ -172,7 +174,7 @@ Gallery.DOMlisteners = function() {
  * Listeners for front view
  */
 Gallery.frontListeners = function() {
-	jQuery('#front .zoom').on({
+	jQuery('#front .zoom').off().on({
 		mouseenter: function() {
             Gallery.mouseIsOverFront = true;
 			Gallery.showFrontDetails();
@@ -181,16 +183,20 @@ Gallery.frontListeners = function() {
             Gallery.hideFrontDetails();
 		}
 	});
-	jQuery('#front').on({
+	jQuery('#front').off().on({
 		mouseup: function() {
-			if (!Gallery.mouseIsOverFront) {
-                Gallery.hideFront();
+			if (Gallery.isFrontShown && !Gallery.mouseIsOverFront) {
+				Global.router.push({
+					path: 'gallery', query: { artwork: 0 }
+				});
 			}
 		}
 	});
-	jQuery('#front .zoom .quit').on({
+	jQuery('#front .zoom .quit').off().on({
 		mouseup: function() {
-            Gallery.hideFront();
+			Global.router.push({
+				path: 'gallery', query: { artwork: 0 }
+			});
 		}
 	});
 };
@@ -198,22 +204,25 @@ Gallery.frontListeners = function() {
 /**
  * DOM filler called on demand (click on an algory)
  */
-Gallery.fillFront = function(jAlgNode) {
-	
+Gallery.fillFront = function(id) {
+
+	var alg = Gallery.getAlg(id);
+	if (!alg) return false;
+
 	Gallery.loadingOn();
 	// Clear previous img
     jQuery('#front .zoom .fullimg img').attr('src', '');
-	
-	var id = jAlgNode.attr('id');
-	var src = Gallery.getAlg(id).src;
-	var title = Gallery.getAlg(id).title;
-	var description = Gallery.getAlg(id).description;
-	var deviant = Gallery.getAlg(id).deviant;
-	var github = Gallery.getAlg(id).github;
+
+	var src = alg.src;
+	var title = alg.title;
+	var description = alg.description;
+	var deviant = alg.deviant;
+	var github = alg.github;
 	
 	// Image
 	var newImg = new Image();
 	newImg.onload = function() {
+		jQuery('#front .zoom .fullimg img').attr('src', '');
 		var self = this;
 		
 		var height = this.height;
@@ -237,7 +246,8 @@ Gallery.fillFront = function(jAlgNode) {
 		jQuery('#front .zoom').css('height', height).css('width', width).css('top', top).css('left', left);
 
 		// Fake timeout
-		setTimeout(function() {
+		clearTimeout(Gallery.timeout);
+		Gallery.timeout = setTimeout(function() {
             Gallery.loadingOff();
 			jQuery('#front .zoom .fullimg img').attr('src', self.src);
 		}, 500);
@@ -252,26 +262,27 @@ Gallery.fillFront = function(jAlgNode) {
 	// Social stuff
 	jQuery('#front .zoom .details .social .deviant').html(deviant);
 	jQuery('#front .zoom .details .social .github').html(github);
-}
+
+	return true;
+};
 
 /**
  * Shows front view
  */
 Gallery.showFront = function() {
-	jQuery('#front').css('display', 'inherit').animate({
-		opacity: 1
-	}, 1000);
+	Gallery.isFrontShown = true;
+
+	jQuery('#front').css('display', 'inherit');
+
 };
 
 /**
  * Hides front view
  */
 Gallery.hideFront = function() {
-	jQuery('#front').animate({
-		opacity: 0
-	}, 500, function() {
-		jQuery(this).css('display', 'none');
-	});
+	Gallery.isFrontShown = false;
+
+	jQuery('#front').css('display', 'none');
 };
 
 /**
@@ -306,8 +317,66 @@ Gallery.loadingOff = function() {
  * Initializer
  */
 Gallery.go = function() {
+	console.log('New GALGO')
     Gallery.loadAlgories(function() {
+    	console.log('New Algories loaded');
         Gallery.DOMlisteners();
         Gallery.frontListeners();
+
+        console.log('shouldShowFront is ', Gallery.shouldShowFront);
+	    if (Gallery.shouldShowFront) {
+		    // Get ID
+		    var artworkID = location.search.split('artwork=')[1];
+		    Gallery.fillFront(artworkID);
+		    Gallery.showFront();
+	    } else {
+		    // Close potentially open front mode
+		    Gallery.hideFront();
+	    }
+
+        /*
+	    window.onhashchange = function() {
+	    	console.log('onhashchange triggered');
+		    // If hash doesn't contain 'art-id', hide front
+		    if (location.hash.indexOf('art-id') === -1) {
+		    	console.log('A')
+			    if (Gallery.isFrontShown) Gallery.hideFront();
+		    } else {
+			    console.log('B')
+			    var artworkID = location.search.split('artwork=')[1];
+			    console.log('Filling front with ID ' + artworkID)
+			    if (artworkID && artworkID.indexOf('art-id') > -1) {
+				    console.log('C')
+				    Gallery.fillFront(artworkID);
+				    Gallery.showFront();
+			    }
+		    }
+	    };
+
+        // Fill with artwork if ID is given (/gallery?artwork=345)
+        var artworkID = location.search.split('artwork=')[1];
+        console.log('Filling front with ID ' + artworkID)
+        if (artworkID && artworkID.indexOf('art-id') > -1) {
+        	Gallery.fillFront(artworkID);
+	        Gallery.showFront();
+        }
+
+        // Detect artwork ID, if no ID or if ID doesn't contain art-id, then not front mode
+
+		*/
+
     });
+};
+Gallery.applyState = function() {
+	if (!Gallery.algData.length) Gallery.go();
+	else {
+		if (Gallery.shouldShowFront) {
+			// Get ID
+			var artworkID = location.search.split('artwork=')[1];
+			if (Gallery.fillFront(artworkID)) Gallery.showFront();
+		} else {
+			// Close potentially open front mode
+			Gallery.hideFront();
+		}
+	}
 };

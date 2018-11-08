@@ -79,7 +79,7 @@
 /** Zoom layer **/
 #front {
 	display: none;
-	opacity: 0;
+	opacity: 1;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -162,15 +162,57 @@
 		}
 	}
 
-	.loader {
-		/* Loading logo */
+	/*.loader {
 		-webkit-animation: spin 2s linear infinite;
 		-moz-animation: spin 2s linear infinite;
 		animation: spin 2s linear infinite;
 		.marjinoto();
 		width: 120px;
 		height: 120px;
+	}*/
+	.loader {
+		width: 120px;
+		height: 170px;
+		.marjinoto();
+
+		.loader-animation {
+			position: relative;
+			width: 120px;
+			height: 120px;
+			margin-bottom: 10px;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 120px;
+				height: 120px;
+				transform-origin: 50% 70%;
+				animation: sway-revert 3000ms infinite linear;
+				z-index: 1;
+
+				&:nth-of-type(1) {
+					animation-delay: 0ms;
+					z-index: 1;
+				}
+				&:nth-of-type(2) {
+					animation-delay: 1500ms;
+					z-index: 1;
+					opacity: 0;
+				}
+			}
+		}
+		p.loadingtext {
+			color: @blue-10;
+		}
 	}
+}
+@keyframes sway-revert {
+	from { transform: scale(1); z-index: 3; opacity: 1; }
+	10% { transform: scale(0.15); z-index: 3; }
+	30% { z-index: 1; }
+	60% { z-index: 2; }
+	to { transform: scale(1); opacity: 1; }
 }
 
 @media (min-width: 500px) {

@@ -97,12 +97,69 @@ document.addEventListener('DOMContentLoaded', function() {
         mode: 'history'
     });
 
+    /*
+    // New Vueless router
+    Global.router2 = {
+        currentPath: location.pathname
+    };
+
+    Global.router2.init = function() {
+	    location.lasthash = [];
+	    callComponent(location.pathname);
+    };
+
+	function updateHistory(curr) {
+		location.lasthash.push(location.hash);
+		location.hash = curr;
+		if (location.href.indexOf("#") > -1) {
+			location.assign(location.href.replace(/\/?#/, "/"));
+		}
+	}
+	function goBack() {
+		location.hash = location.lasthash[location.lasthash.length-1];
+		location.lasthash.pop();
+	}
+	function callComponent(hash) {
+	    console.log('Component hash is ' + hash);
+    }
+    jQuery('[data-navto]').on('click', function() {
+        console.log('Klik');
+        Global.router2.navigate(jQuery(this).attr('data-navto'));
+    });
+    Global.router2.navigate = function(newHash) {
+        if (location.hash == newHash) return false;
+
+	    updateHistory(newHash);
+	    callComponent(newHash);
+    };
+	Global.router2.init();
+
+    */
+
     // Scroll to top on route change
     Global.router.beforeEach(function(to, from, next) {
+
+
         setTimeout(function() {
-            window.scrollTo(0, 0);
+        	// Scroll back to top unless it's some gallery internal navigation
+	        if (to.fullPath.indexOf('gallery') === -1 && from.fullPath.indexOf('gallery') === -1) {
+		        window.scrollTo(0, 0);
+	        }
+
         }, 100);
         next();
+
+	    console.log('Before Each called');
+	    // If back button from front Gallery mode, close it
+	    console.log(to.fullPath, from.fullPath);
+	    if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) {
+		    console.log(to.fullPath, from.fullPath);
+		    // Going to Gallery or coming from it
+		    if (to.fullPath.indexOf('art-id') === -1) Gallery.shouldShowFront = false;
+		    else Gallery.shouldShowFront = true;
+		    Gallery.applyState();
+	    }
+
     });
 
     var app = new Vue({
