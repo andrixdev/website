@@ -327,8 +327,7 @@ Gallery.go = function() {
 	    if (Gallery.shouldShowFront) {
 		    // Get ID
 		    var artworkID = location.search.split('artwork=')[1];
-		    Gallery.fillFront(artworkID);
-		    Gallery.showFront();
+		    if (Gallery.fillFront(artworkID)) Gallery.showFront();
 	    } else {
 		    // Close potentially open front mode
 		    Gallery.hideFront();
