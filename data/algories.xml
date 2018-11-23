@@ -7,7 +7,7 @@
 
 		<alg>
 			<title>Offset</title>
-			<artid>2018-8</artid>
+			<artid>2018-9</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/offset.jpg</src>
 			<small>varphy/artworks/offset_small.jpg</small>
@@ -15,7 +15,7 @@
 		</alg>
 		<alg>
 			<title>The Momentum Parade</title>
-			<artid>2018-9</artid>
+			<artid>2018-10</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/the-momentum-parade.png</src>
 			<small>varphy/artworks/the-momentum-parade_small.jpg</small>
@@ -23,7 +23,7 @@
 		</alg>
 		<alg>
 			<title>La Course de l'Etoile Double</title>
-			<artid>2018-10</artid>
+			<artid>2018-11</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/la-course-de-l-etoile-double.png</src>
 			<small>varphy/artworks/la-course-de-l-etoile-double_small.jpg</small>
@@ -31,7 +31,7 @@
 		</alg>
 		<alg>
 			<title>Laplacian Sunrise</title>
-			<artid>2018-11</artid>
+			<artid>2018-12</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/laplacian-sunrise.png</src>
 			<small>varphy/artworks/laplacian-sunrise_small.jpg</small>
@@ -39,7 +39,7 @@
 		</alg>
 		<alg>
 			<title>L'Oeil de Dérive</title>
-			<artid>2018-12</artid>
+			<artid>2018-13</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/l-oeil-de-derive.jpg</src>
 			<small>varphy/artworks/l-oeil-de-derive_small.jpg</small>
@@ -47,7 +47,7 @@
 		</alg>
 		<alg>
 			<title>The Lagrangian Exploration Module</title>
-			<artid>2018-13</artid>
+			<artid>2018-14</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/the-lagrangian-exploration-module.png</src>
 			<small>varphy/artworks/the-lagrangian-exploration-module_small.jpg</small>
@@ -55,7 +55,7 @@
 		</alg>
 		<alg>
 			<title>Rupture</title>
-			<artid>2018-14</artid>
+			<artid>2018-15</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/rupture.png</src>
 			<small>varphy/artworks/rupture_small.jpg</small>
@@ -63,7 +63,7 @@
 		</alg>
 		<alg>
 			<title>Magnetosphere 210</title>
-			<artid>2018-15</artid>
+			<artid>2018-16</artid>
 			<date>Sep. 2018</date>
 			<src>varphy/artworks/magnetosphere-210.png</src>
 			<small>varphy/artworks/magnetosphere-210_small.jpg</small>
@@ -274,6 +274,15 @@
 			<small>experiments/hueflow-natural_small.jpg</small>
 			<description>Hueflow is the outcome of a project for KTH course Information Visualization by M. Romero.&lt;/br&gt;This ambiant visualization reacts to the electricity and water consumption of a household.&lt;/br&gt;The parameters have a natural oscillation.</description>
 		</alg>-->
+
+		<alg>
+			<title>Dipolar Phoenix</title>
+			<artid>2018-8</artid>
+			<date>July 2018</date>
+			<src>experiments/dipolar-phoenix.png</src>
+			<small>experiments/dipolar-phoenix_small.jpg</small>
+			<description>Fire magnetosphere radiating heat through square-shaped particles.</description>
+		</alg>
 		<alg>
 			<title>PlayChaos 1</title>
 			<artid>2015-2</artid>
