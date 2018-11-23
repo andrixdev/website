@@ -25,8 +25,9 @@ Gallery.loadAlgories = function(extraCallback) {
 			var categHTML = "";
 			
 			// Get the name!
-			var categName = jQuery(this).find('categoryName').text();
-			categHTML += "<div class='categ'>";
+			var categName = jQuery(this).find('categoryName').text(),
+				className = jQuery(this).find('categoryClass').text();
+			categHTML += "<div class='categ " + className + "'>";
 			categHTML += "<h3 class='categname'>" + categName + "</h3>";
 			
 			// Get the Morons!
@@ -54,8 +55,6 @@ Gallery.loadAlgories = function(extraCallback) {
 				var src = "img/" + jQuery(this).find('src').text();
 				var small = "img/" + jQuery(this).find('small').text();
 				var description = jQuery(this).find('description').text();
-				var deviant = jQuery(this).find('deviant').text();
-				var github = jQuery(this).find('github').text();
 				var id = jQuery(this).find('artid').text();
 				
 				// Fill the DOM
@@ -63,7 +62,6 @@ Gallery.loadAlgories = function(extraCallback) {
 				
 				categHTML += "<img src='" + small + "' alt ='" + title + "'/>";
 				categHTML += "<h4 class='title'>" + title + "</h4>";
-				// No deviant or github in the DOM at the moment
 				categHTML += "</div>";
 				
 				// Fill the categ object
@@ -73,8 +71,6 @@ Gallery.loadAlgories = function(extraCallback) {
 					src: src,
 					small: small,
 					description: description,
-					deviant: deviant,
-					github: github
 				});
 				
 			});
@@ -128,44 +124,6 @@ Gallery.DOMlisteners = function() {
 			});
 			//Gallery.fillFront(jQuery(this).attr('id'));
 			//Gallery.showFront();
-		}
-	});
-	
-	// About link hover effects
-	var logoMail = jQuery('#about a.mailme');
-	var logoDeviant = jQuery('#about a.deviant');
-	var logoGithub = jQuery('#about a.github');
-	var logoCodepen = jQuery('#about a.codepen');
-	jQuery('#about span.aboutmail').off().on({
-		mouseenter: function() {
-			logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoMail.css('box-shadow', '');// Empty string --> back to static style from .css file!
-		}
-	});
-	jQuery('#about span.aboutdeviant').off().on({
-		mouseenter: function() {
-			logoDeviant.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoDeviant.css('box-shadow', '');
-		}
-	});
-	jQuery('#about span.aboutgithub').off().on({
-		mouseenter: function() {
-			logoGithub.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoGithub.css('box-shadow', '');
-		}
-	});
-	jQuery('#about span.aboutcodepen').off().on({
-		mouseenter: function() {
-			logoCodepen.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
-		},
-		mouseleave: function() {
-			logoCodepen.css('box-shadow', '');
 		}
 	});
 };
@@ -317,13 +275,10 @@ Gallery.loadingOff = function() {
  * Initializer
  */
 Gallery.go = function() {
-	console.log('New GALGO')
     Gallery.loadAlgories(function() {
-    	console.log('New Algories loaded');
         Gallery.DOMlisteners();
         Gallery.frontListeners();
 
-        console.log('shouldShowFront is ', Gallery.shouldShowFront);
 	    if (Gallery.shouldShowFront) {
 		    // Get ID
 		    var artworkID = location.search.split('artwork=')[1];
@@ -332,38 +287,6 @@ Gallery.go = function() {
 		    // Close potentially open front mode
 		    Gallery.hideFront();
 	    }
-
-        /*
-	    window.onhashchange = function() {
-	    	console.log('onhashchange triggered');
-		    // If hash doesn't contain 'art-id', hide front
-		    if (location.hash.indexOf('art-id') === -1) {
-		    	console.log('A')
-			    if (Gallery.isFrontShown) Gallery.hideFront();
-		    } else {
-			    console.log('B')
-			    var artworkID = location.search.split('artwork=')[1];
-			    console.log('Filling front with ID ' + artworkID)
-			    if (artworkID && artworkID.indexOf('art-id') > -1) {
-				    console.log('C')
-				    Gallery.fillFront(artworkID);
-				    Gallery.showFront();
-			    }
-		    }
-	    };
-
-        // Fill with artwork if ID is given (/gallery?artwork=345)
-        var artworkID = location.search.split('artwork=')[1];
-        console.log('Filling front with ID ' + artworkID)
-        if (artworkID && artworkID.indexOf('art-id') > -1) {
-        	Gallery.fillFront(artworkID);
-	        Gallery.showFront();
-        }
-
-        // Detect artwork ID, if no ID or if ID doesn't contain art-id, then not front mode
-
-		*/
-
     });
 };
 Gallery.applyState = function() {

@@ -3,6 +3,7 @@
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 	<category>
 		<categoryName>Radial</categoryName>
+		<categoryClass>radial</categoryClass>
 		<categMoreOnLinks>
 			<codepen>http://codepen.io/collection/DEypoG</codepen>
 			<deviantart>http://icosacid.deviantart.com/gallery/60280598/Radial</deviantart>
@@ -15,8 +16,6 @@
 			<src>radial/white-time.bmp</src>
 			<small>radial/white-time_small.jpg</small>
 			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Rhodo</title>
@@ -25,8 +24,6 @@
 			<src>radial/rhodo.png</src>
 			<small>radial/rhodo_small.jpg</small>
 			<description>Inspired by the infinite generosity of a Swiss family and Lake Geneva's flowery shores in early spring.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Kuzco 5</title>
@@ -35,8 +32,6 @@
 			<src>radial/kuzco5.png</src>
 			<small>radial/kuzco5_small.jpg</small>
 			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Shiver</title>
@@ -45,8 +40,6 @@
 			<src>radial/shiver.jpg</src>
 			<small>radial/shiver_small.jpg</small>
 			<description>Wave artwork designed for textile printing</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Harsh</title>
@@ -55,8 +48,6 @@
 			<src>radial/harsh.bmp</src>
 			<small>radial/harsh_small.jpg</small>
 			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<!--<alg>
 			<title>Program</title>
@@ -64,8 +55,6 @@
 			<src>circular/program.png</src>
 			<small>circular/program_small.jpg</small>
 			<description>My view of a coding project. Bits of code gravitate around one single end. The fully functional application lives in its universe, the operating system.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Override</title>
@@ -73,8 +62,6 @@
 			<src>circular/override.png</src>
 			<small>circular/override_small.jpg</small>
 			<description>Developer coding on top of a pre-existing project, overriding core functions and adding their own.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Beyond Data</title>
@@ -82,13 +69,12 @@
 			<src>circular/beyond-data.png</src>
 			<small>circular/beyond-data_small.jpg</small>
 			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>-->
 	</category>
 	
 	<category>
 		<categoryName>Gravitational</categoryName>
+		<categoryClass>gravitational</categoryClass>
 		<categMoreOnLinks>
 			<codepen>http://codepen.io/collection/AMrBzL</codepen>
 			<deviantart>http://icosacid.deviantart.com/gallery/60280599/Gravitational</deviantart>
@@ -100,8 +86,6 @@
 			<src>gravitational/nucleus.png</src>
 			<small>gravitational/nucleus_small.jpg</small>
 			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Gravitational Blackhole</title>
@@ -110,8 +94,6 @@
 			<src>gravitational/gravitational-blackhole.png</src>
 			<small>gravitational/gravitational-blackhole_small.jpg</small>
 			<description>Each planet leaves an imperceptible mark. Many planets leave many marks.&lt;/br&gt;All planets rotate around a single central mass.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Gandalf Thinking</title>
@@ -120,8 +102,6 @@
 			<src>gravitational/gandalf-thinking.png</src>
 			<small>gravitational/gandalf-thinking_small.jpg</small>
 			<description>Two particle beams attracted either to the top or the bottom, with a stronger gravity for the upper beam.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Flight</title>
@@ -130,8 +110,6 @@
 			<src>gravitational/flight.png</src>
 			<small>gravitational/flight_small.jpg</small>
 			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>A star of stars</title>
@@ -140,8 +118,6 @@
 			<src>gravitational/star-of-stars.png</src>
 			<small>gravitational/star-of-stars_small.jpg</small>
 			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;This time the attraction mass orbits around a central particle launching point.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Orb</title>
@@ -150,15 +126,85 @@
 			<src>gravitational/orb.png</src>
 			<small>gravitational/orb_small.jpg</small>
 			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets. Rendered with hashed trace opacity.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 	</category>
 	
 	<category>
-		<categoryName>_Transition</categoryName>
+		<categoryName>Variations Physiques</categoryName>
+		<categoryClass>varphy</categoryClass>
+
+		<alg>
+			<title>Offset</title>
+			<artid>2018-8</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/offset.jpg</src>
+			<small>varphy/artworks/offset_small.jpg</small>
+			<description>Histoire pointilliste d'un nuage de particules soumis à un attracteur gravitationnel en mouvement linéaire impossible, légèrement assymétrique.</description>
+		</alg>
+		<alg>
+			<title>The Momentum Parade</title>
+			<artid>2018-9</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/the-momentum-parade.png</src>
+			<small>varphy/artworks/the-momentum-parade_small.jpg</small>
+			<description>A rotating galaxy emits stardust particles. Under the gravitational force of an invisible attractor, their trails depict a gigantic orb of possibilities.</description>
+		</alg>
+		<alg>
+			<title>La Course de l'Etoile Double</title>
+			<artid>2018-10</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/la-course-de-l-etoile-double.png</src>
+			<small>varphy/artworks/la-course-de-l-etoile-double_small.jpg</small>
+			<description>Les deux âmes de l'étoile double chutent vers l'infini. Une planète, léger spectateur, semble suivre avec curiosité leur valse gravitationnelle.</description>
+		</alg>
+		<alg>
+			<title>Laplacian Sunrise</title>
+			<artid>2018-11</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/laplacian-sunrise.png</src>
+			<small>varphy/artworks/laplacian-sunrise_small.jpg</small>
+			<description>Sunrise over a world of particles driven by magnetic field force.</description>
+		</alg>
+		<alg>
+			<title>L'Oeil de Dérive</title>
+			<artid>2018-12</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/l-oeil-de-derive.jpg</src>
+			<small>varphy/artworks/l-oeil-de-derive_small.jpg</small>
+			<description>L'apparente nature uniforme de la colonne de plasma révèle en fait des ondes de dérive, tourbillons spontanés qui enroulent le plasma en une conformation hélicoïdale. Réalisé uniquement avec des triangles.</description>
+		</alg>
+		<alg>
+			<title>The Lagrangian Exploration Module</title>
+			<artid>2018-13</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/the-lagrangian-exploration-module.png</src>
+			<small>varphy/artworks/the-lagrangian-exploration-module_small.jpg</small>
+			<description>Irregular icosahedron for particles observation.</description>
+		</alg>
+		<alg>
+			<title>Rupture</title>
+			<artid>2018-14</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/rupture.png</src>
+			<small>varphy/artworks/rupture_small.jpg</small>
+			<description>Interprétation libre.</description>
+		</alg>
+		<alg>
+			<title>Magnetosphere 210</title>
+			<artid>2018-15</artid>
+			<date>Sep. 2018</date>
+			<src>varphy/artworks/magnetosphere-210.png</src>
+			<small>varphy/artworks/magnetosphere-210_small.jpg</small>
+			<description>A cloud of particles explodes in the empty space. Nothing but a dipolar magnetic field. The neon beams represent the travel volume of plasma particles within a lone magnetosphere.</description>
+		</alg>
 		
+	</category>
+
+	<category>
+		<categoryName>_Transition</categoryName>
+		<categoryClass>transition</categoryClass>
+
 		<alg>
 			<title>_Transition sc.6-explosion</title>
 			<artid>2018-1</artid>
@@ -166,8 +212,6 @@
 			<src>transition/tran1.png</src>
 			<small>transition/tran1_small.jpg</small>
 			<description>Visual from final scene of _Transition VR project with lejeanf</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>_Transition sc.5-hurricane</title>
@@ -176,8 +220,6 @@
 			<src>transition/tran2.png</src>
 			<small>transition/tran2_small.jpg</small>
 			<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>_Transition sc.5-strata</title>
@@ -186,8 +228,6 @@
 			<src>transition/tran3.jpg</src>
 			<small>transition/tran3_small.jpg</small>
 			<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>_Transition sc.6-crumbles</title>
@@ -196,8 +236,6 @@
 			<src>transition/tran4.png</src>
 			<small>transition/tran4_small.jpg</small>
 			<description>Visual from last scene of _Transition VR project with lejeanf</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>_Transition sc.5-melting-fields</title>
@@ -206,8 +244,6 @@
 			<src>transition/tran5.png</src>
 			<small>transition/tran5_small.jpg</small>
 			<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>_Transition sc.6-rebirth</title>
@@ -216,18 +252,18 @@
 			<src>transition/tran6.jpg</src>
 			<small>transition/tran6_small.jpg</small>
 			<description>Visual from last scene of _Transition VR project with lejeanf</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
-		
+
 	</category>
 	
 	<category>
 		<categoryName>Experiments</categoryName>
+		<categoryClass>experiments</categoryClass>
 		<categMoreOnLinks>
 			<codepen>http://codepen.io/collection/nZOjvP</codepen>
 			<deviantart>http://icosacid.deviantart.com/gallery/60280600/Experiments</deviantart>
 		</categMoreOnLinks>
+
 		<alg>
 			<title>Hueflow natural</title>
 			<artid>2015-1</artid>
@@ -235,8 +271,6 @@
 			<src>experiments/hueflow-natural.bmp</src>
 			<small>experiments/hueflow-natural_small.jpg</small>
 			<description>Hueflow is the outcome of a project for KTH course Information Visualization by M. Romero.&lt;/br&gt;This ambiant visualization reacts to the electricity and water consumption of a household.&lt;/br&gt;The parameters have a natural oscillation.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>PlayChaos 1</title>
@@ -245,8 +279,6 @@
 			<src>experiments/playchaos1.bmp</src>
 			<small>experiments/playchaos1_small.jpg</small>
 			<description>Morning triangular inspiration. Designed with spreadSVG.js, an SVG graphic library for random generative art I developed a few weeks earlier.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Zeus bolt</title>
@@ -255,8 +287,6 @@
 			<src>experiments/bolt.bmp</src>
 			<small>experiments/bolt_small.jpg</small>
 			<description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas&lt;/br&gt;Artwork generated by voice</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Le lac</title>
@@ -265,8 +295,6 @@
 			<src>experiments/lamartine-le-lac.bmp</src>
 			<small>experiments/lamartine-le-lac_small.jpg</small>
 			<description>Slice of vocal art performed by woman voice reading Le Lac by French poet Alphonse de Lamartine (1820)</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 		<alg>
@@ -276,8 +304,6 @@
 			<src>experiments/duel.bmp</src>
 			<small>experiments/duel_small.jpg</small>
 			<description>The attempts of wisdom to temper anger</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 		<alg>
@@ -287,8 +313,6 @@
 			<src>experiments/lightbeams-eye.jpg</src>
 			<small>experiments/lightbeams-eye_small.jpg</small>
 			<description>Moving particles with simple geometrical drawing contraints provide surprising results. Part of a collection of 25 living artworks coded on CodePen.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 		<alg>
@@ -298,8 +322,6 @@
 			<src>experiments/lightbeams-squares.jpg</src>
 			<small>experiments/lightbeams-squares_small.jpg</small>
 			<description>Moving particles with simple geometrical drawing contraints provide surprising results. Part of a collection of 25 living artworks coded on CodePen.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 		<alg>
@@ -309,8 +331,6 @@
 			<src>experiments/hexocet-explode.jpg</src>
 			<small>experiments/hexocet-explode_small.jpg</small>
 			<description>Particles randomly evolve on an hexagonal network and their boredom on grid vertices is expressed through faint widening circles.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 		<alg>
@@ -320,8 +340,6 @@
 			<src>experiments/hexocet-fire.jpg</src>
 			<small>experiments/hexocet-fire_small.jpg</small>
 			<description>Particles randomly evolve on an hexagonal network and scar the canvas with fire.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 		<alg>
@@ -331,8 +349,6 @@
 			<src>experiments/meteors.png</src>
 			<small>experiments/meteors_small.jpg</small>
 			<description>Particles under a dipolar magnetic field with CSS filter gooey rendering technique.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		
 		<!--<alg>
@@ -342,8 +358,6 @@
 			<src>experiments/summer-2015.png</src>
 			<small>experiments/summer-2015_small.jpg</small>
 			<description>Predominant summer sun reflection on water</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Hueflow real data</title>
@@ -351,8 +365,6 @@
 			<src>experiments/hueflow-realdata.bmp</src>
 			<small>experiments/hueflow-realdata_small.jpg</small>
 			<description>Hueflow is the outcome of a project for KTH course Information Visualization by M. Romero. This ambiant visualization reacts to the electricity and water consumption of a household. The parameters are derived from real data over 1 month.</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>
 		<alg>
 			<title>Zeus splitted bolts</title>
@@ -360,8 +372,6 @@
 			<src>vocal/boltsplit.bmp</src>
 			<small>vocal/boltsplit_small.jpg</small>
 			<description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas</description>
-			<deviant></deviant>
-			<github></github>
 		</alg>-->
 	</category>
 </algories>
