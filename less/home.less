@@ -26,6 +26,26 @@
 				@media (max-width: @sm-md) {
 					margin: 20px 10px;
 				}
+				&.news-ecl-vr {
+					img {
+						height: 220px;
+						max-width: 100%;
+						margin: 10px;
+					}
+					@media (max-width: @xs-sm) {
+						.flexrow { .flexcol(); }
+						img {
+							width: 300px;
+							height: auto;
+						}
+					}
+				}
+				&.news-ecl-exhib {
+					img {
+						width: 400px;
+						max-width: 100%;
+					}
+				}
 				&.news-varphy-trailer {
 					.trailer {
 						@media (max-width: 650px) {
