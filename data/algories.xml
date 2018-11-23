@@ -2,135 +2,6 @@
 <algories>
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 	<category>
-		<categoryName>Radial</categoryName>
-		<categoryClass>radial</categoryClass>
-		<categMoreOnLinks>
-			<codepen>http://codepen.io/collection/DEypoG</codepen>
-			<deviantart>http://icosacid.deviantart.com/gallery/60280598/Radial</deviantart>
-		</categMoreOnLinks>
-		
-		<alg>
-			<title>White Time</title>
-			<artid>2015-4</artid>
-			<date>Feb. 2015</date>
-			<src>radial/white-time.bmp</src>
-			<small>radial/white-time_small.jpg</small>
-			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
-		</alg>
-		<alg>
-			<title>Rhodo</title>
-			<artid>2015-10</artid>
-			<date>May 2015</date>
-			<src>radial/rhodo.png</src>
-			<small>radial/rhodo_small.jpg</small>
-			<description>Inspired by the infinite generosity of a Swiss family and Lake Geneva's flowery shores in early spring.</description>
-		</alg>
-		<alg>
-			<title>Kuzco 5</title>
-			<artid>2015-8</artid>
-			<date>Apr. 2015</date>
-			<src>radial/kuzco5.png</src>
-			<small>radial/kuzco5_small.jpg</small>
-			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
-		</alg>
-		<alg>
-			<title>Shiver</title>
-			<artid>2015-11</artid>
-			<date>Aug. 2015</date>
-			<src>radial/shiver.jpg</src>
-			<small>radial/shiver_small.jpg</small>
-			<description>Wave artwork designed for textile printing</description>
-		</alg>
-		<alg>
-			<title>Harsh</title>
-			<artid>2015-5</artid>
-			<date>Feb. 2015</date>
-			<src>radial/harsh.bmp</src>
-			<small>radial/harsh_small.jpg</small>
-			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
-		</alg>
-		<!--<alg>
-			<title>Program</title>
-			<date>Mar. 2015</date>
-			<src>circular/program.png</src>
-			<small>circular/program_small.jpg</small>
-			<description>My view of a coding project. Bits of code gravitate around one single end. The fully functional application lives in its universe, the operating system.</description>
-		</alg>
-		<alg>
-			<title>Override</title>
-			<date>Mar. 2015</date>
-			<src>circular/override.png</src>
-			<small>circular/override_small.jpg</small>
-			<description>Developer coding on top of a pre-existing project, overriding core functions and adding their own.</description>
-		</alg>
-		<alg>
-			<title>Beyond Data</title>
-			<date>Apr. 2015</date>
-			<src>circular/beyond-data.png</src>
-			<small>circular/beyond-data_small.jpg</small>
-			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
-		</alg>-->
-	</category>
-	
-	<category>
-		<categoryName>Gravitational</categoryName>
-		<categoryClass>gravitational</categoryClass>
-		<categMoreOnLinks>
-			<codepen>http://codepen.io/collection/AMrBzL</codepen>
-			<deviantart>http://icosacid.deviantart.com/gallery/60280599/Gravitational</deviantart>
-		</categMoreOnLinks>
-		<alg>
-			<title>Nucleus</title>
-			<artid>2016-2</artid>
-			<date>Sep. 2016</date>
-			<src>gravitational/nucleus.png</src>
-			<small>gravitational/nucleus_small.jpg</small>
-			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
-		</alg>
-		<alg>
-			<title>Gravitational Blackhole</title>
-			<artid>2016-1</artid>
-			<date>Aug. 2016</date>
-			<src>gravitational/gravitational-blackhole.png</src>
-			<small>gravitational/gravitational-blackhole_small.jpg</small>
-			<description>Each planet leaves an imperceptible mark. Many planets leave many marks.&lt;/br&gt;All planets rotate around a single central mass.</description>
-		</alg>
-		<alg>
-			<title>Gandalf Thinking</title>
-			<artid>2015-9</artid>
-			<date>Apr. 2015</date>
-			<src>gravitational/gandalf-thinking.png</src>
-			<small>gravitational/gandalf-thinking_small.jpg</small>
-			<description>Two particle beams attracted either to the top or the bottom, with a stronger gravity for the upper beam.</description>
-		</alg>
-		<alg>
-			<title>Flight</title>
-			<artid>2016-3</artid>
-			<date>Sep. 2016</date>
-			<src>gravitational/flight.png</src>
-			<small>gravitational/flight_small.jpg</small>
-			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
-		</alg>
-		<alg>
-			<title>A star of stars</title>
-			<artid>2016-4</artid>
-			<date>Oct. 2016</date>
-			<src>gravitational/star-of-stars.png</src>
-			<small>gravitational/star-of-stars_small.jpg</small>
-			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;This time the attraction mass orbits around a central particle launching point.</description>
-		</alg>
-		<alg>
-			<title>Orb</title>
-			<artid>2016-5</artid>
-			<date>Oct. 2016</date>
-			<src>gravitational/orb.png</src>
-			<small>gravitational/orb_small.jpg</small>
-			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets. Rendered with hashed trace opacity.</description>
-		</alg>
-		
-	</category>
-	
-	<category>
 		<categoryName>Variations Physiques</categoryName>
 		<categoryClass>varphy</categoryClass>
 
@@ -198,6 +69,137 @@
 			<small>varphy/artworks/magnetosphere-210_small.jpg</small>
 			<description>A cloud of particles explodes in the empty space. Nothing but a dipolar magnetic field. The neon beams represent the travel volume of plasma particles within a lone magnetosphere.</description>
 		</alg>
+
+	</category>
+
+	<category>
+		<categoryName>Radial</categoryName>
+		<categoryClass>radial</categoryClass>
+		<categMoreOnLinks>
+			<codepen>http://codepen.io/collection/DEypoG</codepen>
+			<deviantart>http://icosacid.deviantart.com/gallery/60280598/Radial</deviantart>
+		</categMoreOnLinks>
+		
+		<alg>
+			<title>White Time</title>
+			<artid>2015-4</artid>
+			<date>Feb. 2015</date>
+			<src>radial/white-time.bmp</src>
+			<small>radial/white-time_small.jpg</small>
+			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
+		</alg>
+		<alg>
+			<title>Rhodo</title>
+			<artid>2015-10</artid>
+			<date>May 2015</date>
+			<src>radial/rhodo.png</src>
+			<small>radial/rhodo_small.jpg</small>
+			<description>Inspired by the infinite generosity of a Swiss family and Lake Geneva's flowery shores in early spring.</description>
+		</alg>
+		<alg>
+			<title>Kuzco 5</title>
+			<artid>2015-8</artid>
+			<date>Apr. 2015</date>
+			<src>radial/kuzco5.png</src>
+			<small>radial/kuzco5_small.jpg</small>
+			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
+		</alg>
+		<!--
+		<alg>
+			<title>Shiver</title>
+			<artid>2015-11</artid>
+			<date>Aug. 2015</date>
+			<src>radial/shiver.jpg</src>
+			<small>radial/shiver_small.jpg</small>
+			<description>Wave artwork designed for textile printing</description>
+		</alg>
+		-->
+		<alg>
+			<title>Harsh</title>
+			<artid>2015-5</artid>
+			<date>Feb. 2015</date>
+			<src>radial/harsh.bmp</src>
+			<small>radial/harsh_small.jpg</small>
+			<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
+		</alg>
+		<!--<alg>
+			<title>Program</title>
+			<date>Mar. 2015</date>
+			<src>circular/program.png</src>
+			<small>circular/program_small.jpg</small>
+			<description>My view of a coding project. Bits of code gravitate around one single end. The fully functional application lives in its universe, the operating system.</description>
+		</alg>
+		<alg>
+			<title>Override</title>
+			<date>Mar. 2015</date>
+			<src>circular/override.png</src>
+			<small>circular/override_small.jpg</small>
+			<description>Developer coding on top of a pre-existing project, overriding core functions and adding their own.</description>
+		</alg>
+		<alg>
+			<title>Beyond Data</title>
+			<date>Apr. 2015</date>
+			<src>circular/beyond-data.png</src>
+			<small>circular/beyond-data_small.jpg</small>
+			<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
+		</alg>-->
+	</category>
+	
+	<category>
+		<categoryName>Gravitation</categoryName>
+		<categoryClass>gravitation</categoryClass>
+		<categMoreOnLinks>
+			<codepen>http://codepen.io/collection/AMrBzL</codepen>
+			<deviantart>http://icosacid.deviantart.com/gallery/60280599/Gravitational</deviantart>
+		</categMoreOnLinks>
+		<alg>
+			<title>Nucleus</title>
+			<artid>2016-2</artid>
+			<date>Sep. 2016</date>
+			<src>gravitational/nucleus.png</src>
+			<small>gravitational/nucleus_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
+		</alg>
+		<alg>
+			<title>Gravitational Blackhole</title>
+			<artid>2016-1</artid>
+			<date>Aug. 2016</date>
+			<src>gravitational/gravitational-blackhole.png</src>
+			<small>gravitational/gravitational-blackhole_small.jpg</small>
+			<description>Each planet leaves an imperceptible mark. Many planets leave many marks.&lt;/br&gt;All planets rotate around a single central mass.</description>
+		</alg>
+		<alg>
+			<title>Gandalf Thinking</title>
+			<artid>2015-9</artid>
+			<date>Apr. 2015</date>
+			<src>gravitational/gandalf-thinking.png</src>
+			<small>gravitational/gandalf-thinking_small.jpg</small>
+			<description>Two particle beams attracted either to the top or the bottom, with a stronger gravity for the upper beam.</description>
+		</alg>
+		<alg>
+			<title>Flight</title>
+			<artid>2016-3</artid>
+			<date>Sep. 2016</date>
+			<src>gravitational/flight.png</src>
+			<small>gravitational/flight_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
+		</alg>
+		<alg>
+			<title>A star of stars</title>
+			<artid>2016-4</artid>
+			<date>Oct. 2016</date>
+			<src>gravitational/star-of-stars.png</src>
+			<small>gravitational/star-of-stars_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;This time the attraction mass orbits around a central particle launching point.</description>
+		</alg>
+		<alg>
+			<title>Orb</title>
+			<artid>2016-5</artid>
+			<date>Oct. 2016</date>
+			<src>gravitational/orb.png</src>
+			<small>gravitational/orb_small.jpg</small>
+			<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets. Rendered with hashed trace opacity.</description>
+		</alg>
 		
 	</category>
 
@@ -257,21 +259,21 @@
 	</category>
 	
 	<category>
-		<categoryName>Experiments</categoryName>
-		<categoryClass>experiments</categoryClass>
+		<categoryName>Miscellaneous</categoryName>
+		<categoryClass>misc</categoryClass>
 		<categMoreOnLinks>
 			<codepen>http://codepen.io/collection/nZOjvP</codepen>
 			<deviantart>http://icosacid.deviantart.com/gallery/60280600/Experiments</deviantart>
 		</categMoreOnLinks>
 
-		<alg>
+		<!--<alg>
 			<title>Hueflow natural</title>
 			<artid>2015-1</artid>
 			<date>Feb. 2015</date>
 			<src>experiments/hueflow-natural.bmp</src>
 			<small>experiments/hueflow-natural_small.jpg</small>
 			<description>Hueflow is the outcome of a project for KTH course Information Visualization by M. Romero.&lt;/br&gt;This ambiant visualization reacts to the electricity and water consumption of a household.&lt;/br&gt;The parameters have a natural oscillation.</description>
-		</alg>
+		</alg>-->
 		<alg>
 			<title>PlayChaos 1</title>
 			<artid>2015-2</artid>
