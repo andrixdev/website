@@ -74,7 +74,7 @@ var AboutComponent = {
                 "spin pens",
                 "carry an APC MINI in case of accidental VJ session",
                 "compressed my entire digital self to 58Go in 2017",
-                "don't have a long-term goal in mind, just directional gut feelings",
+                //"don't have a long-term goal in mind, just directional gut feelings",
                 "read self-optimization, tech and management articles for 5 years then stopped",
                 "was initially inspired by Joshua Davis W3C talk on creative coding",
                 "shake hands",
