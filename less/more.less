@@ -56,7 +56,32 @@
 			height: 260px;
 			border-radius: 2px;
 			border: solid 1px rgba(100, 100, 100, 0.7);
+			.img-placeholder();
 		}
 	}
 
+}
+
+#ownership {
+	.ownership-block {
+		margin: 10px;
+		max-width: 250px;
+		.flexrow();
+		.flexcenter();
+
+		img {
+			height: 80px;
+			margin-right: 10px;
+		}
+		p {
+			font-size: 0.8rem;
+		}
+		p.ref::before {
+			content: "ref: ";
+		}
+		p.owner {
+			font-size: 0.6rem;
+			font-style: italic;
+		}
+	}
 }
