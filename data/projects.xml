@@ -6,8 +6,16 @@
 	<!-- Possible themes are: Ø (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
 
 	<project>
+		<title>Variations Physiques vol. 1</title>
+		<description>Film and VR experience within turbulence, magnetic fields and space&#10;A story of scientific research led by French physicists</description>
+		<image>img/projects/varphylm-sc2-small.jpg</image>
+		<link>https://vimeo.com/296754990</link>
+		<themes>artistic</themes>
+	</project>
+
+	<project>
 		<title>Kinexperience</title>
-		<description>Interactive icosahedron, with dance researcher Ariane Cassimiro&#10;Exploring a dance framework theory with Kinect and virtual reality</description>
+		<description>Interactive icosahedron, with dance researcher Ariane Cassimiro and tech-art Yves Brozat&#10;Exploring a dance framework theory with Kinect and virtual reality</description>
 		<image>img/projects/kinexp.jpg</image>
 		<link>../kinexperience</link>
 		<themes>artistic</themes>
@@ -57,7 +65,7 @@
 		<title>Labomobile #1</title>
 		<description>3-day workshop with a mixed team of comedians, dancers and digital artists&#10;Exploring the concept of identity on stage&#10;Directed by Arnaud Chevalier</description>
 		<image>img/projects/labomobile.jpg</image>
-		<link></link>
+		<link>https://vimeo.com/307727440</link>
 		<themes>artistic</themes>
 	</project>
 
