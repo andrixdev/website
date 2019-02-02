@@ -94,5 +94,27 @@ var HomeComponent = {
 
                 self.updateHomeProjects(paths);
             });
+
+        // I don't give a f*ck about JS frameworks anymore, jQuery does the job man
+        jQuery('.news-block').hide();
+        var shaun = 4, maxNews = jQuery('.news-block').length;
+        var showMore = function(shown) {
+            // Fade in a certain number of news
+	        for (var s = 1; s < shown; s++) {
+		        jQuery('.news-block:nth-of-type(' + s + ')').fadeIn(500);
+	        }
+
+	        // Hide LoadMore button if we reached max
+	        if (shown >= maxNews) {
+		        jQuery('.loadmore').hide();
+            }
+        };
+        showMore(shaun);
+        jQuery('.loadmore').on('click', function() {
+            shaun += 3;
+            showMore(shaun);
+        });
+
+
     }
 };
