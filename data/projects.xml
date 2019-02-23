@@ -6,6 +6,14 @@
 	<!-- Possible themes are: Ø (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
 
 	<project>
+		<title>Portraits, n°1</title>
+		<description>Scientific collaboration and creation&#10;With L. Bellon at Laboratoire de Physique ENS Lyon</description>
+		<image>img/projects/portraits1.jpg</image>
+		<link>https://alexandrix.com/blog/portraits/</link>
+		<themes>artistic</themes>
+	</project>
+
+	<project>
 		<title>Variations Physiques vol. 1</title>
 		<description>Film and VR experience within turbulence, magnetic fields and space&#10;A story of scientific research led by French physicists</description>
 		<image>img/projects/varphylm-sc2-small.jpg</image>
