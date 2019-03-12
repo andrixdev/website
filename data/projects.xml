@@ -87,7 +87,7 @@
 
 	<project>
 		<title>PlayChaos</title>
-		<description>A user interface for spreadSVG.js&#10;Play the piano and generate art with vector graphics</description>
+		<description>A user interface for spreadSVG.js&#10;Play the piano and generate shapes with vector graphics</description>
 		<image>img/projects/playchaos.jpg</image>
 		<link>../playchaos</link>
 		<themes>artistic web</themes>
