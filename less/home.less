@@ -28,9 +28,10 @@
 				margin: 30px;
 				background: rgba(255, 255, 255, 0.04);
 				padding: 25px;
+				position: relative;
 
 				@media (max-width: @sm-md) {
-					margin: 20px 10px;
+					margin: 25px 10px;
 				}
 				&.news-djerba-article-1 {
 					img {
@@ -45,7 +46,8 @@
 						margin: 20px 10px 10px;
 					}
 				}
-				&.news-portraits-1-start {
+				&.news-portraits-1-start,
+				&.news-portraits-1-end {
 					img {
 						max-height: 220px;
 						max-width: 100%;
@@ -109,6 +111,17 @@
 							.flexcol();
 						}
 					}
+				}
+
+				p.article-date {
+					position: absolute;
+					left: 0;
+					right: 0;
+					.center();
+					bottom: -20px;
+					font-size: .7rem;
+					color: rgba(255, 255, 255, 0.3);
+
 				}
 			}
 			.loadmore-holder {
