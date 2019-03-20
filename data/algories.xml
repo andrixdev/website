@@ -2,6 +2,75 @@
 <algories>
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 	<category>
+		<categoryName>Latest</categoryName>
+		<categoryClass>latest</categoryClass>
+		
+		<alg>
+			<title>Dame Recherche</title>
+			<artid>2019-6</artid>
+			<date>Mar. 2019</date>
+			<src>2019/dame-recherche.jpg</src>
+			<small>2019/dame-recherche-mini.jpg</small>
+			<description>Commission for Grand Lyon, Prix Jeune Chercheur 2019&lt;/br&gt;Inspired by 6 research topics. Face drawing from Alex B.</description>
+		</alg>
+		
+		<alg>
+			<title>Fun in Djerba</title>
+			<artid>2019-5</artid>
+			<date>Mar. 2019</date>
+			<src>2019/fun-in-djerba.jpg</src>
+			<small>2019/fun-in-djerba-mini.jpg</small>
+			<description>-</description>
+		</alg>
+		
+		<alg>
+			<title>Djerba Sunset Phoenix</title>
+			<artid>2019-4</artid>
+			<date>Mar. 2019</date>
+			<src>2019/djerba-sunset-phoenix.jpg</src>
+			<small>2019/djerba-sunset-phoenix-mini.jpg</small>
+			<description>-</description>
+		</alg>
+		
+		<alg>
+			<title>Nanonoise (Portraits n°1)</title>
+			<artid>2019-3</artid>
+			<date>Feb. 2019</date>
+			<src>2019/nanonoise.jpg</src>
+			<small>2019/nanonoise-mini.jpg</small>
+			<description>Scientific collaboration with L. Bellon at Laboratoire de Physique ENS Lyon&lt;/br&gt;Nanomechanics and thermal noise, project Portraits, n°1</description>
+		</alg>
+		
+		<alg>
+			<title>Tunnel Of Love</title>
+			<artid>2019-2</artid>
+			<date>Jan. 2019</date>
+			<src>2019/tol.jpg</src>
+			<small>2019/tol-mini.jpg</small>
+			<description>-</description>
+		</alg>
+		
+		<alg>
+			<title>Unexpected Sunrise</title>
+			<artid>2019-1</artid>
+			<date>Jan. 2019</date>
+			<src>2019/unex.jpg</src>
+			<small>2019/unex-mini.jpg</small>
+			<description>-</description>
+		</alg>
+		
+		<alg>
+			<title>Rayonnement</title>
+			<artid>2018-17</artid>
+			<date>Nov. 2018</date>
+			<src>misc/rayonnement.jpg</src>
+			<small>misc/rayonnement_small.jpg</small>
+			<description>Commission for Ecole Centrale de Lyon, France</description>
+		</alg>
+
+	</category>
+	
+	<category>
 		<categoryName>Variations Physiques</categoryName>
 		<categoryClass>varphy</categoryClass>
 
