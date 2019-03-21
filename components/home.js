@@ -75,6 +75,9 @@ var HomeComponent = {
                     });
                 });
 
+                // Shuffle all images
+                shuffle(paths);
+
                 self.updateHomeGallery(paths);
             });
 
