@@ -98,6 +98,7 @@ var HomeComponent = {
                 self.updateHomeProjects(paths);
             });
 
+        // Show older news
         // I don't give a f*ck about JS frameworks anymore, jQuery does the job man
         jQuery('.news-block').hide();
         var shaun = 4, maxNews = jQuery('.news-block').length;
@@ -118,6 +119,14 @@ var HomeComponent = {
             showMore(shaun);
         });
 
+	    // Show older news
+	    // I don't give a f*ck about JS frameworks anymore, jQuery does the job man
+	    jQuery('.past-dates').hide();
+
+	    jQuery('button.load-past-dates').on('click', function() {
+		    jQuery('.past-dates').show();
+		    jQuery('.past-dates-holder').hide();
+	    });
 
     }
 };
