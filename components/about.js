@@ -145,6 +145,6 @@ var AboutComponent = {
         });
 
         // Start polyam animation
-        this.startPolyam();
+        //this.startPolyam();
     }
 };
