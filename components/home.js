@@ -101,7 +101,7 @@ var HomeComponent = {
         // Show older news
         // I don't give a f*ck about JS frameworks anymore, jQuery does the job man
         jQuery('.news-block').hide();
-        var shaun = 4, maxNews = jQuery('.news-block').length;
+        var shaun = 7, maxNews = jQuery('.news-block').length;
         var showMore = function(shown) {
             // Fade in a certain number of news
 	        for (var s = 1; s < shown; s++) {
@@ -123,9 +123,9 @@ var HomeComponent = {
 	    // I don't give a f*ck about JS frameworks anymore, jQuery does the job man
 	    jQuery('.past-dates').hide();
 
-	    jQuery('button.load-past-dates').on('click', function() {
+	    jQuery('.load-past-dates').on('click', function() {
 		    jQuery('.past-dates').show();
-		    jQuery('.past-dates-holder').hide();
+		    jQuery('.showmore-toggle-bar').hide();
 	    });
 
     }

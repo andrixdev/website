@@ -12,7 +12,7 @@ body {
 	height: 100%;
 	width: 100%;
 	/* Starry Night CSS3 pattern by Lea Verou */
-	background-color: @blue-05;
+	background-color: @background-color;
 	/*background-image:
 					radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
 					radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
@@ -25,11 +25,11 @@ body {
 	padding-top: 70px;
 }
 .title-block {
-	background: @blue-20;
+	background: @title-block-color;
 	padding: 15px 30px;
 	.flexrow();
 	.flexstart();
-	border-top: solid 5px @blue-10;
+	border-top: solid 5px @title-block-border-color;
 
 	.geom {
 		margin-right: 20px;
@@ -47,8 +47,41 @@ h3.categname,
 	/* Yeah stupid selector but reminds me it's mainly for h3's */
 	.center();
 	padding: 10px 0;
-	background: @blue-25;
-	border-bottom: solid 5px @blue-10;
-	border-top: solid 5px @blue-10;
+	background: @category-title-color;
+	border-bottom: solid 5px @category-title-border-color;
+	border-top: solid 5px @category-title-border-color;
 	font-size: 2.1rem;
+}
+.showmore-toggle-bar {
+	position: relative;
+	cursor: pointer;
+
+	hr {
+		margin: 30px 0 15px;
+		width: 60%;
+		margin-left: 20%;
+		border-color: rgba(255, 255, 255, 0.2);
+
+		@media (max-width: 800px) {
+			width: 90%;
+			margin-left: 5%;
+		}
+	}
+	p.show-text {
+		background: @background-color;
+		color: rgba(255, 255, 255, 0.45);
+		.marjinoto();
+		height: 20px;
+		width: 150px;
+		padding: 0 10px;
+		text-align: center;
+	}
+	.caretcaret {
+		width: 20px;
+		height: 20px;
+		background: red;
+		cursor: pointer;
+		.marjinoto();
+		top: 20px;
+	}
 }

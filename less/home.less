@@ -5,143 +5,134 @@
 	.home-whatsnew {
 		.whatsnew-content {
 			padding: 10px 15px 30px;
-			.center();
-			.flexrow();
-			.flexwrap();
-			.flexcenter();
 
-			h3 {
-				font-size: 1.5rem;
-			}
-			hr {
-				margin: 20px 0 15px;
-				width: 60%;
-				margin-left: 20%;
-				border-color: rgba(255, 255, 255, 0.2);
+			.news-blocks {
+				.center();
+				.flexrow();
+				.flexwrap();
+				.flexcenter();
 
-				@media (max-width: 800px) {
-					width: 90%;
-					margin-left: 5%;
-				}
-            }
-			.news-block {
-				margin: 30px;
-				background: rgba(255, 255, 255, 0.04);
-				padding: 25px;
-				position: relative;
+				.news-block {
+					margin: 30px;
+					background: rgba(255, 255, 255, 0.04);
+					padding: 25px;
+					position: relative;
 
-				@media (max-width: @sm-md) {
-					margin: 25px 10px;
-				}
-				&.news-varphy-subs {
-					img {
-						max-width: 100%;
+					@media (max-width: @sm-md) {
+						margin: 25px 10px;
 					}
-					img.img-1 {
-						max-height: 200px;
-					}
-					.friend-logos {
-						padding-top: 10px;
-						.flexrow();
-						.flexwrap();
-
+					&.news-varphy-subs {
 						img {
-							max-height: 100px;
-							margin: 20px;
+							max-width: 100%;
+						}
+						img.img-1 {
+							max-height: 200px;
+						}
+						.friend-logos {
+							padding-top: 10px;
+							.flexrow();
+							.flexwrap();
+
+							img {
+								max-height: 100px;
+								margin: 20px;
+							}
 						}
 					}
-				}
-				&.news-djerba-article-1 {
-					img {
-						width: 350px;
-						max-width: 100%;
-					}
-				}
-				&.news-technicarticle {
-					img.exhib-time {
-						max-height: 220px;
-						max-width: 100%;
-						margin: 20px 10px 10px;
-					}
-				}
-				&.news-portraits-1-start,
-				&.news-portraits-1-end {
-					img {
-						max-height: 220px;
-						max-width: 100%;
-						margin: 10px;
-					}
-				}
-				&.news-kinexp {
-					img {
-						max-height: 220px;
-						max-width: 100%;
-					}
-				}
-				&.news-ecl-vr {
-					img {
-						height: 200px;
-						max-width: 100%;
-						margin: 10px;
-					}
-					@media (max-width: @xs-sm) {
-						.flexrow { .flexcol(); }
+					&.news-djerba-article-1 {
 						img {
-							width: 300px;
-							height: auto;
+							width: 350px;
+							max-width: 100%;
 						}
 					}
-				}
-				&.news-ecl-exhib {
-					img {
-						width: 400px;
-						max-width: 100%;
-					}
-					.button-container {
-						padding-top: 20px;
-					}
-				}
-				&.news-varphy-trailer {
-					.trailer {
-						@media (max-width: 650px) {
-							margin: -30px 0;
-						}
-						@media (max-width: 530px) {
-							margin: -60px 0;
-						}
-						@media (max-width: 450px) {
-							margin: -80px 0;
-						}
-						@media (max-width: 380px) {
-							margin: -100px 0;
+					&.news-technicarticle {
+						img.exhib-time {
+							max-height: 220px;
+							max-width: 100%;
+							margin: 20px 10px 10px;
 						}
 					}
-				}
-				&.news-varphy-exhib {
-					.varphy-spoiler {
-						margin-bottom: 10px;
+					&.news-portraits-1-start,
+					&.news-portraits-1-end {
 						img {
-							width: 180px;
+							max-height: 220px;
+							max-width: 100%;
 							margin: 10px;
-							border: #222 1px solid;
 						}
-						@media (max-width: 500px) {
-							.flexcol();
+					}
+					&.news-kinexp {
+						img {
+							max-height: 220px;
+							max-width: 100%;
 						}
+					}
+					&.news-ecl-vr {
+						img {
+							height: 200px;
+							max-width: 100%;
+							margin: 10px;
+						}
+						@media (max-width: @xs-sm) {
+							.flexrow { .flexcol(); }
+							img {
+								width: 300px;
+								height: auto;
+							}
+						}
+					}
+					&.news-ecl-exhib {
+						img {
+							width: 400px;
+							max-width: 100%;
+						}
+						.button-container {
+							padding-top: 20px;
+						}
+					}
+					&.news-varphy-trailer {
+						.trailer {
+							@media (max-width: 650px) {
+								margin: -30px 0;
+							}
+							@media (max-width: 530px) {
+								margin: -60px 0;
+							}
+							@media (max-width: 450px) {
+								margin: -80px 0;
+							}
+							@media (max-width: 380px) {
+								margin: -100px 0;
+							}
+						}
+					}
+					&.news-varphy-exhib {
+						.varphy-spoiler {
+							margin-bottom: 10px;
+							img {
+								width: 180px;
+								margin: 10px;
+								border: #222 1px solid;
+							}
+							@media (max-width: 500px) {
+								.flexcol();
+							}
+						}
+					}
+
+					p.article-date {
+						position: absolute;
+						left: 0;
+						right: 0;
+						.center();
+						bottom: -20px;
+						font-size: .7rem;
+						color: rgba(255, 255, 255, 0.3);
+
 					}
 				}
 
-				p.article-date {
-					position: absolute;
-					left: 0;
-					right: 0;
-					.center();
-					bottom: -20px;
-					font-size: .7rem;
-					color: rgba(255, 255, 255, 0.3);
-
-				}
 			}
+
 			.loadmore-holder {
 				flex-basis: 100%;
 			}
@@ -154,11 +145,14 @@
 		}
 	}
 	.home-dates {
-		.dates-content {
-			padding: 40px 30px;
+		.dates-content .future-dates,
+		.dates-content .past-dates {
 			.center();
 			.flexcol();
 			.flexcenter();
+		}
+		.dates-content {
+			padding: 40px 30px;
 
 			.date-block {
 				margin-bottom: 15px;
