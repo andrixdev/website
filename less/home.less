@@ -21,7 +21,8 @@
 					margin: 20px;
 				}
 				img {
-					width: 200px;
+					width: 180px;
+					min-width: 180px;
 				}
 				p {
 					font-size: 1.2rem;
@@ -66,6 +67,22 @@
 
 					@media (max-width: @sm-md) {
 						margin: 25px 10px;
+					}
+					&.news-m2-gallery {
+						img {
+							width: 240px;
+							max-width: 100%;
+						}
+					}
+					&.news-dame-recherche {
+						img {
+							width: 180px;
+							margin: 10px;
+
+							&:nth-of-type(1) {
+								height: 270px;
+							}
+						}
 					}
 					&.news-varphy-subs {
 						img {
