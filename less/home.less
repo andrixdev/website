@@ -2,6 +2,52 @@
 	a {
 		text-decoration: none;
 	}
+	.home-hot {
+		h5 {
+			font-size: 2rem;
+			margin: 30px auto 20px 20px;
+		}
+		.hot-items {
+			margin-left: 30px;
+			.flexrow();
+			.flexwrap();
+			.flexstart();
+
+			.hot-item {
+				.flexrow();
+				.flexcenter();
+
+				& > * {
+					margin: 20px;
+				}
+				img {
+					width: 200px;
+				}
+				p {
+					font-size: 1.2rem;
+					.center();
+				}
+				p.fat {
+					font-size: 2rem;
+				}
+				a {
+					text-decoration: underline;
+				}
+			}
+			@media (max-width: 800px) {
+				.flexcenter();
+				.hot-item {
+					.flexcol();
+					margin: 20px auto;
+
+					& > * {
+						margin: 5px;
+					}
+				}
+			}
+		}
+	}
+
 	.home-whatsnew {
 		.whatsnew-content {
 			padding: 10px 15px 30px;
