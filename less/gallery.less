@@ -68,6 +68,15 @@
 				}
 			}
 		}
+		/* Special treats */
+		&.latest .categ-content .alg, /* 2019 A0 section */
+		&.varphy .categ-content .alg { /* Varphy A0 section */
+			// Force fixed height and width to prevent Safari mysterious bug
+			&, & img {
+				width: 212px;
+				height: 300px;
+			}
+		}
 	}
 
 	@media (max-width: 800px) {
@@ -216,23 +225,6 @@
 	to { transform: scale(1); opacity: 1; }
 }
 
-/* Custom style for each picture/category (dimensions) */
-/* Varphy section */
-.gallery-content .categ.varphy .categ-content .alg {
-	width: auto;
-
-	img {
-		max-width: 300px;
-	}
-}
-/* 2019 section */
-.gallery-content .categ.latest .categ-content .alg {
-	width: auto;
-
-	img {
-		max-width: 300px;
-	}
-}
 @media (min-width: 500px) {
 
 	.gallery-content .alg img {

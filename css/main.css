@@ -851,6 +851,7 @@ h6 {
 .gallery-content .categ {
   margin-bottom: 50px;
   position: relative;
+  /* Special treats */
 }
 .gallery-content .categ .moron {
   position: absolute;
@@ -919,6 +920,17 @@ h6 {
   min-width: 150px;
   min-height: 200px;
   background: rgba(255, 255, 255, 0.05);
+}
+.gallery-content .categ.latest .categ-content .alg,
+.gallery-content .categ.varphy .categ-content .alg {
+  /* Varphy A0 section */
+}
+.gallery-content .categ.latest .categ-content .alg,
+.gallery-content .categ.varphy .categ-content .alg,
+.gallery-content .categ.latest .categ-content .alg img,
+.gallery-content .categ.varphy .categ-content .alg img {
+  width: 212px;
+  height: 300px;
 }
 @media (max-width: 800px) {
   .gallery-content .moron {
@@ -1073,21 +1085,6 @@ h6 {
     transform: scale(1);
     opacity: 1;
   }
-}
-/* Custom style for each picture/category (dimensions) */
-/* Varphy section */
-.gallery-content .categ.varphy .categ-content .alg {
-  width: auto;
-}
-.gallery-content .categ.varphy .categ-content .alg img {
-  max-width: 300px;
-}
-/* 2019 section */
-.gallery-content .categ.latest .categ-content .alg {
-  width: auto;
-}
-.gallery-content .categ.latest .categ-content .alg img {
-  max-width: 300px;
 }
 @media (min-width: 500px) {
   .gallery-content .alg img {
