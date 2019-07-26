@@ -967,14 +967,9 @@ h6 {
   left: 0;
   right: 0;
   margin: auto;
-  /* Overriden in JS depending on loaded img dimensions */
   box-shadow: rgba(0, 0, 0, 0.75) 0 0 35px;
 }
-#front .zoom .fullimg {
-  transition: background 1s;
-}
 #front .zoom .quit {
-  /*background: red;*/
   width: 40px;
   height: 40px;
   position: absolute;
