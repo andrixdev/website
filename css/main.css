@@ -514,7 +514,7 @@ h6 {
   /* Rules for width based on screen size */
   /* Adjust each time there's a new artwork... */
 }
-#home a {
+#home a.home-category-link {
   text-decoration: none;
 }
 #home .home-hot h5 {
@@ -603,6 +603,9 @@ h6 {
     margin: 25px 10px;
   }
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop {
+  max-width: 500px;
+}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-tvgre img {
   width: 350px;
 }
@@ -610,7 +613,7 @@ h6 {
   width: 350px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
-  width: 240px;
+  width: 350px;
   max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-dame-recherche img {
