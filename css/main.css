@@ -962,21 +962,16 @@ h6 {
 }
 #front .zoom {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   /* Overriden in JS depending on loaded img dimensions */
   box-shadow: rgba(0, 0, 0, 0.75) 0 0 35px;
 }
 #front .zoom .fullimg {
-  width: 100%;
-  height: 100%;
   transition: background 1s;
-}
-#front .zoom .fullimg img {
-  width: 100%;
-  height: 100%;
 }
 #front .zoom .quit {
   /*background: red;*/
@@ -1018,12 +1013,12 @@ h6 {
 #front .zoom .details .description p.title {
   width: 100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 1.5em;
   padding: 10px 0;
 }
 #front .zoom .details .description p.text {
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 1em;
   width: 80%;
   margin-left: 10%;
   text-align: center;

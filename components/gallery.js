@@ -7,7 +7,8 @@ var Gallery = {
 	mouseIsOverFront: false,
 	isFrontShown: false,
 	shouldShowFront: false,
-	timeout: undefined
+	timeout: undefined,
+	currentImageObject: undefined
 };
 
 /**
@@ -157,6 +158,18 @@ Gallery.frontListeners = function() {
 			});
 		}
 	});
+	var resizingEventCount = 0;
+	jQuery(window).off().on('resize', function() {
+		resizingEventCount++;
+		setTimeout(function() {
+			resizingEventCount--;
+			if (resizingEventCount == 0) {
+				// Actual resize action
+				Gallery.adjustFrontImageSize();
+			}
+		}, 500);
+		// Ca marche du feu de Dieu, comme disait l'autre
+	});
 };
 
 /**
@@ -169,7 +182,7 @@ Gallery.fillFront = function(id) {
 
 	Gallery.loadingOn();
 	// Clear previous img
-    jQuery('#front .zoom .fullimg img').attr('src', '');
+    jQuery('#front .zoom img.fullone').attr('src', '');
 
 	var src = alg.src;
 	var title = alg.title;
@@ -179,36 +192,19 @@ Gallery.fillFront = function(id) {
 	
 	// Image
 	var newImg = new Image();
+	Gallery.currentImageObject = newImg;// Store globally for .on('resize') action without reloading image
 	newImg.onload = function() {
-		jQuery('#front .zoom .fullimg img').attr('src', '');
-		var self = this;
-		
-		var height = this.height;
-		var width = this.width;
-		
-		// If image is bigger than 0.9*window, rescale
-		var ratioW = this.width / (0.9*jQuery(window).width());
-		var ratioH = this.height / (0.9*jQuery(window).height());
-		var ratio = Math.max(ratioH, ratioW);
-		if (ratio > 1 && ratioW > ratioH) {
-			height /= ratioW;
-			width /= ratioW;
-		} else if (ratio > 1 && ratioH > ratioW) {
-			height /= ratioH;
-			width /= ratioH;
-		}
-		
-		var left = (jQuery(window).width() - width)/2;
-		var top = (jQuery(window).height() - height)/2;
-		
-		jQuery('#front .zoom').css('height', height).css('width', width).css('top', top).css('left', left);
+		jQuery('#front .zoom img.fullone').attr('src', '');
+
+		Gallery.adjustFrontImageSize();
 
 		// Fake timeout
 		clearTimeout(Gallery.timeout);
+		var self = this;
 		Gallery.timeout = setTimeout(function() {
             Gallery.loadingOff();
-			jQuery('#front .zoom .fullimg img').attr('src', self.src);
-		}, 500);
+			jQuery('#front .zoom img.fullone').attr('src', self.src);
+		}, 300);
 	};
 	newImg.src = src;
 	newImg.alt = title;
@@ -225,13 +221,37 @@ Gallery.fillFront = function(id) {
 };
 
 /**
+ * Computes preview width and height based on current window size
+ * And applies CSS rules to both .zoom container and image
+ *
+ * @returns Object {w, h}
+ */
+Gallery.adjustFrontImageSize = function() {
+	var h = Gallery.currentImageObject.height;
+	var w = Gallery.currentImageObject.width;
+
+	// If image is bigger than 0.9*window, rescale
+	var ratioW = w / (0.9 * jQuery(window).width());
+	var ratioH = h / (0.9 * jQuery(window).height());
+	var ratio = Math.max(ratioH, ratioW);
+	if (ratio > 1 && ratioW > ratioH) {
+		h /= ratioW;
+		w /= ratioW;
+	} else if (ratio > 1 && ratioH > ratioW) {
+		h /= ratioH;
+		w /= ratioH;
+	}
+
+	jQuery('#front .zoom, #front .zoom img.fullone').css('height', h).css('width', w);
+};
+
+/**
  * Shows front view
  */
 Gallery.showFront = function() {
 	Gallery.isFrontShown = true;
 
 	jQuery('#front').css('display', 'inherit');
-
 };
 
 /**
