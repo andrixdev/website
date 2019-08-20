@@ -623,6 +623,9 @@ h6 {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-dame-recherche img:nth-of-type(1) {
   height: 270px;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-digital-arts-camp img {
+  width: 350px;
+}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-subs img {
   max-width: 100%;
 }
