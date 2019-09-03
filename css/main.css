@@ -603,17 +603,18 @@ h6 {
     margin: 25px 10px;
   }
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop {
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
   max-width: 500px;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-tvgre img {
-  width: 350px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-mea-wip img {
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-wip img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-website img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-tvgre img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-mea-wip img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
   width: 350px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
-  width: 350px;
   max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-dame-recherche img {

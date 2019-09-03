@@ -115,7 +115,7 @@ var HomeComponent = {
         };
         showMore(shaun);
         jQuery('.loadmore').on('click', function() {
-            shaun += 3;
+            shaun += 4;
             showMore(shaun);
         });
 
