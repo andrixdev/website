@@ -6,6 +6,22 @@
 	<!-- Possible themes are: Ø (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
 
 	<project>
+		<title>Variations Physiques vol. 2</title>
+		<description>Film and VR experience, stellar formation, blackholes, gravitational waves and emergence&#10;A new story inspired by French physicists</description>
+		<image>img/projects/vp2-wip.jpg</image>
+		<link>http://variationsphysiques.fr/</link>
+		<themes>artistic</themes>
+	</project>
+
+	<project>
+		<title>GRETSI VR 2019</title>
+		<description>Live virtual world creation at GRETSI 2019 symposium on signal processing</description>
+		<image>img/projects/gretsivr2019.jpg</image>
+		<link>http://alexandrix.com/blog/a-live-virtual-world-creation/</link>
+		<themes>artistic</themes>
+	</project>
+
+	<project>
 		<title>Portraits, n°1</title>
 		<description>Scientific collaboration and creation&#10;With L. Bellon at Laboratoire de Physique ENS Lyon</description>
 		<image>img/projects/portraits1.jpg</image>
@@ -17,7 +33,7 @@
 		<title>Variations Physiques vol. 1</title>
 		<description>Film and VR experience within turbulence, magnetic fields and space&#10;A story of scientific research led by French physicists</description>
 		<image>img/projects/varphylm-sc2-small.jpg</image>
-		<link>https://vimeo.com/296754990</link>
+		<link>http://variationsphysiques.fr/</link>
 		<themes>artistic</themes>
 	</project>
 
