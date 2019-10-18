@@ -412,6 +412,10 @@ h6 {
 .header .menu .menu-tab.router-link-exact-active .geom .inner {
   background: hsl(200, 50%, 5%);
 }
+.header .menu .menu-tab.two-lines-tab {
+  padding: 13px;
+  font-size: 1rem;
+}
 .header .menu .menu-tab,
 .header .menu .menu-tab:visited,
 .header .menu .menu-tab:focus {
@@ -467,6 +471,9 @@ h6 {
     /* Pull to left or top */
     justify-content: flex-start;
     padding-left: 20px;
+  }
+  .header.mobile-menu-open .menu .menu-tab.two-lines-tab {
+    padding: 15px 20px;
   }
   .header.mobile-menu-open .mobile-burger {
     padding: 10px 0 20px 20px;

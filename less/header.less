@@ -38,7 +38,10 @@
 			font-size: 1.3rem;
 			.uppercase();
 			.weight-200();
-
+			&.two-lines-tab {
+				padding: 13px;
+				font-size: 1rem;
+			}
 			&, &:visited, &:focus {
 				color: @text-color;
 				text-decoration: none;
@@ -47,8 +50,6 @@
 			.geom {
 				margin-right: 10px;
 			}
-
-
 		}
 	}
 	.mobile-burger {
@@ -92,6 +93,10 @@
 					width: 100%;
 					.flexstart();
 					padding-left: 20px;
+
+					&.two-lines-tab {
+						padding: 15px 20px;
+					}
 				}
 			}
 			.mobile-burger {

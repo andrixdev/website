@@ -395,9 +395,9 @@
 				<geom base-sides="4" header="true"></geom>
 				Home
 			</router-link>
-			<router-link to="/gallery" class="menu-tab gallery">
+			<router-link to="/gallery" class="menu-tab two-lines-tab gallery">
 				<geom base-sides="0" header="true"></geom>
-				Gallery
+				Algorithmic</br>Paintings
 			</router-link>
 			<router-link to="/projects" class="menu-tab projects">
 				<geom base-sides="4" header="true" rotate="true"></geom>
@@ -518,7 +518,7 @@
 
 			<div class="home-gallery">
 				<router-link class="home-category-link" to="/gallery">
-					<h3 class="categname">Gallery</h3>
+					<h3 class="categname">Algorithmic Paintings</h3>
 					<div class="showcase" data-scroll="0">
 						<div class="showcase-wrapper">
 							<img v-for="path in homeGallery" v-bind:src="path" />
@@ -1098,12 +1098,12 @@
 
 <template id="gallery-template">
 	<div id="gallery">
-		<vue-title title="Alex Andrix | Gallery"></vue-title>
+		<vue-title title="Alex Andrix | Algorithmic art gallery"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="title-block">
 			<geom base-sides="0"></geom>
-			<h1>Gallery</h1>
+			<h1>Algorithmic Paintings</h1>
 		</div>
 
 		<div class="page-content no-padding">
