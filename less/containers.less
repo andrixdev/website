@@ -95,3 +95,66 @@ h3.categname,
 		}
 	}
 }
+
+.fullwidth-project {
+	padding: 25px;
+	&:nth-of-type(2n) {
+		background: @blue-08;
+	}
+
+	& > .flexrow {
+
+		// Wrap sub elements first, then ok for the main wrap if screen too smol
+		@media (max-width: 980px) {
+
+			&, &.flexend, &.flexstart {
+				.flexwrap();
+				.flexcenter();
+				.center();
+			}
+
+		}
+	}
+
+	iframe {
+		margin: 15px 30px;
+	}
+	h4 {
+		font-size: 1.8rem;
+		margin-bottom: 20px;
+	}
+	.side {
+		margin: 15px;
+
+		img {
+			border-radius: 2px;
+			border: solid 1px rgba(100, 100, 100, 0.5);
+		}
+	}
+	.project-snapshots {
+		// Somehow you can't call .flexrow()
+		// Need to use DOM class
+		.flexwrap();
+		.flexstart();
+		margin: 20px 0;
+
+		& > div,
+		& > img {
+			margin: 0 10px 10px 0;
+		}
+		& > img {
+			max-width: 200px;
+			max-height: 200px;
+		}
+		@media (max-width: 980px) { .flexcenter(); }
+	}
+	.sub-gallery {
+		margin-top: 20px;
+		// Somehow you can't call .flexrow()
+		// Need to use DOM class
+		.flexwrap();
+		.flexstart();
+		@media (max-width: 980px) { .flexcenter(); }
+	}
+
+}

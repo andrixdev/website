@@ -288,3 +288,141 @@
 		margin-left: -55px;
 	}
 }
+
+.alg {
+	margin: 5px;
+	border-radius: 2px;
+	border: solid 1px rgba(100, 100, 100, 0.7);
+	position: relative;
+	overflow: hidden;
+
+	* {
+		.pointer();
+	}
+	h4.title {
+		color: white;
+		width: 100%;
+		.center();
+		font-size: 25px;
+		padding: 5px 0;
+		line-height: 35px;
+		background: rgba(0,0,0,0.75);
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 1s;
+	}
+	img {
+		width: 100%;
+		display: block;
+		.img-placeholder();
+	}
+}
+
+.alg.landscape {
+	& {
+		width: 450px;
+	}
+	&, & img {
+
+	}
+}
+.alg.portrait {
+	// Force fixed height and width to prevent Safari mysterious bug
+	&, & img {
+		width: 140px;
+		height: 200px;
+	}
+}
+.alg.main-img.portrait {
+	&, & img {
+		width: 224px;
+		height: 320px;
+		flex-shrink: 0;
+	}
+}
+.gallery-content-2 {
+	.categ {
+
+	}
+}
+
+// New gallery exceptions, only for landscape images because they all have erratic formats
+@media (min-width: 500px) {
+
+	.gallery-content-2 .alg.landscape {
+		// Base treat
+		img {
+			height: 300px;
+		}
+		&#art-id-2015-4 img {
+			/* White Time */
+			width: 600px;
+			margin-left: -75px;
+		}
+		&#art-id-2015-5 img {
+			/* Harsh */
+			width: 600px;
+			margin-left: -75px;
+		}
+		&#art-id-2015-8 img {
+			/* Kuzco 5 */
+			width: 550px;
+			margin-left: -50px;
+		}
+		&#art-id-2015-10 img {
+			/* Rhodo */
+			width: 600px;
+			margin-left: -75px;
+		}
+		&#art-id-2015-11 img {
+			/* Shiver */
+			height: 450px;
+			margin-top: -75px;
+			margin-bottom: -75px;
+		}
+		/* Gravitational */
+		&#art-id-2016-1 img {
+			/* Gravitational Blackhole */
+			width: 550px;
+			margin-left: -50px;
+		}
+		&#art-id-2015-9 img {
+			/* Gandalf Thinking */
+			width: 500px;
+			margin-left: -25px;
+		}
+		/* Experiments */
+		&#art-id-2015-2 img {
+			/* PlayChaos 1 */
+			width: 550px;
+			margin-left: -50px;
+		}
+		&#art-id-2015-3 img {
+			/* Zeus Bolt */
+			width: 600px;
+			margin-left: -75px;
+		}
+		&#art-id-2015-12 img {
+			/* Summer 2015 */
+			width: 600px;
+			margin-left: -65px;
+		}
+		&#art-id-2015-6 img {
+			/* Duel */
+			width: 550px;
+			margin-left: 0;
+		}
+		&#art-id-2017-3 img {
+			/* Lightbeams Eye */
+			width: 570px;
+			margin-left: -55px;
+		}
+		&#art-id-2017-1 img {
+			/* Hexocet Explode */
+			width: 570px;
+			margin-left: -55px;
+		}
+	}
+}
