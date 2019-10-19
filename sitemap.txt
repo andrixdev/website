@@ -6,12 +6,12 @@
 	</url>
 	<url>
 		<loc>http://alexandrix.com/gallery</loc>
-		<lastmod>2019-07-26T00:00:00+00:00</lastmod>
+		<lastmod>2019-10-20T00:00:00+00:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://alexandrix.com/projects</loc>
-		<lastmod>2019-03-20T00:00:00+00:00</lastmod>
+		<loc>http://alexandrix.com/web-dataviz</loc>
+		<lastmod>2019-10-20T00:00:00+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>

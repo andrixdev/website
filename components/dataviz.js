@@ -35,7 +35,7 @@ Projects.loadProjects = function(extraCallback) {
 			projectHTML += "</div>";
 			
 			// Spread in the DOM
-			jQuery('#projects .page-content .all-projects').append(projectHTML);
+			jQuery('#web-dataviz .page-content .all-projects').append(projectHTML);
 			
 		});
 		
@@ -61,6 +61,7 @@ Projects.DOMlisteners = function() {
 	});
 			
 	// Header radios
+	/*
 	jQuery('.radio').on('click', function() {
 		var $me = jQuery(this);
 		// Don't do a thing if I'm already selected
@@ -92,6 +93,7 @@ Projects.DOMlisteners = function() {
 		}
 
 	});
+	*/
 };
 
 

@@ -41,14 +41,73 @@
 </head>
 <body>
 
-<template id="projects-template">
-	<div id="projects">
-		<vue-title title="Alex Andrix | Projects"></vue-title>
+<template id="vr-template">
+	<div id="vr">
+		<vue-title title="Alex Andrix | Virtual reality"></vue-title>
+		<div class="page-banner"></div>
+
+		<div class="title-block">
+			<geom base-sides="0"></geom>
+			<h1>Virtual Reality</h1>
+		</div>
+
+		<div class="page-content no-padding">
+			<div class="vr-content">
+				<div class="vr-projects">
+
+					<div class="fullpage-project">
+						<iframe src="https://player.vimeo.com/video/296754990" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+						<div class='side'>
+							<h4>Variations Physiques vol. 1</h4>
+							<p>Film and VR experience within turbulence, magnetic fields and space<br/>A story of scientific research led by French physicists</p>
+
+							<div class="project-snapshots">
+								<img src="img/projects/varphylm-sc2-small.jpg" />
+								<img src="img/projects/varphylm-sc2-small.jpg" />
+								<img src="img/projects/varphylm-sc2-small.jpg" />
+							</div>
+
+							<a class="acidbutton" href="http://variations-physiques.fr/" target="_blank">To official website</a>
+						</div>
+
+					</div>
+
+					<div class="fullpage-project">
+						<div class='side'>
+							<h4>Variations Physiques vol. 2</h4>
+							<p>Film and VR experience, stellar formation, blackholes, gravitational waves and emergence<br/>A new story inspired by French physicists</p>
+
+							<div class="project-snapshots">
+								<img src="img/projects/vp2-wip.jpg" />
+								<img src="img/projects/vp2-wip.jpg" />
+								<img src="img/projects/vp2-wip.jpg" />
+							</div>
+
+							<a class="acidbutton" href="http://variations-physiques.fr/" target="_blank">To official website</a>
+						</div>
+
+						<iframe src="https://player.vimeo.com/video/296754990" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<logo-links></logo-links>
+	</div>
+</template>
+
+<template id="web-dataviz-template">
+	<div id="web-dataviz">
+		<vue-title title="Alex Andrix | Web & Data Visualization"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="title-block">
 			<geom base-sides="4" rotate="true"></geom>
-			<h1>Projects</h1>
+			<h1>Web & Data Visualization</h1>
+			<!--
 			<div class="radios">
 				<p class="radio active" data-filter="all">
 					<span class="fa"></span> all
@@ -63,12 +122,14 @@
 					<span class="fa"></span> data visualization
 				</p>
 			</div>
+			-->
 		</div>
 
 		<div class="page-content">
 			<div class="all-projects">
 				<!-- Filled with XHR reading XML content -->
 			</div>
+			<!--
 			<div class="ongoing">
 				<h2>On track</h2>
 				<p><strong>ECL digital art exhibition</strong> - Ecole Centrale de Lyon - Nov 2018 to Feb 2019</p>
@@ -76,6 +137,7 @@
 				<!--<p><strong>Kinexperience</strong> sprint 2 - Les Subsistances, Lyon - Jan/feb 2019</p>-->
 				<!--<p><strong>Variations Physiques</strong> - Laboratoire de Physique de l'ENS de Lyon - Sept/oct 2018</p>-->
 			</div>
+			-->
 		</div>
 
 		<logo-links></logo-links>
@@ -399,20 +461,24 @@
 				<geom base-sides="0" header="true"></geom>
 				Algorithmic</br>Paintings
 			</router-link>
-			<router-link to="/projects" class="menu-tab projects">
+			<router-link to="/vr" class="menu-tab two-lines-tab vr">
 				<geom base-sides="4" header="true" rotate="true"></geom>
-				Projects
+				Virtual</br>Reality
+			</router-link>
+			<router-link to="/web-dataviz" class="menu-tab two-lines-tab web-dataviz">
+				<geom base-sides="0" header="true"></geom>
+				Web & Data</br>Visualization
 			</router-link>
 			<router-link to="/more" class="menu-tab more">
-				<geom base-sides="0" header="true"></geom>
+				<geom base-sides="4" header="true"></geom>
 				More
 			</router-link>
 			<router-link to="/about" class="menu-tab about">
-				<geom base-sides="4" header="true"></geom>
+				<geom base-sides="4" header="true" rotate="true"></geom>
 				About
 			</router-link>
 			<router-link to="/contact" class="menu-tab contact">
-				<geom base-sides="4" header="true" rotate="true"></geom>
+				<geom base-sides="0" header="true"></geom>
 				Contact
 			</router-link>
 			<!--<router-link to="/cv" class="menu-tab cv">
@@ -443,7 +509,7 @@
 			<span>and</span>
 			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
 		</p>
-		<p class="version">v3.9</p>
+		<p class="version">v4.0</p>
 	</div>
 
 	<!-- Artwork detail container for Gallery (has to be here for CSS reasons) -->
@@ -529,9 +595,9 @@
 				</router-link>
 			</div>
 
-			<div class="home-projects">
-				<router-link class="home-category-link" to="/projects">
-					<h3 class="categname">Projects</h3>
+			<div class="home-web-dataviz">
+				<router-link class="home-category-link" to="/web-dataviz">
+					<h3 class="categname">Web & Data Visualization</h3>
 					<div class="showcase" data-scroll="0">
 						<div class="showcase-wrapper">
 							<img v-for="path in homeProjects" v-bind:src="path" />
@@ -1492,11 +1558,9 @@
 
 					<h5>Current projects</h5>
 					<p>
-						Transition: from organic to digital, with 3D artist jeanf
+						Portraits: algorithmic paintings based on the work of researchers
 						<br/>
-						Kinexperience, VR and motion capture, with dance researcher Ariane Cassimiro
-						<br/>
-						Variations Physiques, making art with the science of plasma (ENS de Lyon)
+						Variations Physiques: virtual reality trips inspired by physics
 					</p>
 
 				</div>
@@ -1767,7 +1831,7 @@
 <script type='text/javascript' src="components/home.js"></script>
 <script type='text/javascript' src="components/more.js"></script>
 <script type='text/javascript' src="components/gallery.js"></script>
-<script type='text/javascript' src="components/projects.js"></script>
+<script type='text/javascript' src="components/dataviz.js"></script>
 <script type='text/javascript' src="components/about.js"></script>
 <script type='text/javascript' src="components/contact.js"></script>
 <script type='text/javascript' src="components/cv.js"></script>

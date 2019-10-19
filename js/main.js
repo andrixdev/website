@@ -19,11 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
         mounted: function()  { Gallery.go(); }
     };
     var ProjectsComponent = {
-        template: jQuery('#projects-template').html(),
+        template: jQuery('#web-dataviz-template').html(),
         data: function() {
             return { }
         },
         mounted: function() { Projects.go(); }
+    };
+    var VRComponent = {
+        template: jQuery('#vr-template').html(),
+        data: function() {
+            return { }
+        },
+        mounted: function() { }
     };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
@@ -83,7 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var routes = [
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
-        { path: '/projects', component: ProjectsComponent },
+        { path: '/projects', redirect: '/web-dataviz' },
+        { path: '/web-dataviz', component: ProjectsComponent },
+        { path: '/vr', component: VRComponent },
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
