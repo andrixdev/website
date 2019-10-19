@@ -1,38 +1,42 @@
 #vr {
 	.fullpage-project {
-		padding: 20px;
+		padding: 25px;
 		&:nth-of-type(2n) {
 			background: @blue-08;
 		}
 
-		h4 {
-			font-size: 1.8rem;
-			margin-bottom: 20px;
-		}
-
 		.flexrow();
 		.flexcenter();
+		.flexwrap();
+
 		iframe {
 			//width: 400px;
-			margin: auto 30px;
+			margin: 15px 30px;
 		}
-		img {
-			border-radius: 2px;
-			border: solid 1px rgba(100, 100, 100, 0.5);
-		}
-		img.preview-img {
-			width: 250px;
-
-		}
-		.project-snapshots {
-			.flexrow();
-			.flexwrap();
-			.flexstart();
-			margin: 20px 0;
-
+		.side {
+			margin: 15px;
+			h4 {
+				font-size: 1.8rem;
+				margin-bottom: 20px;
+			}
 			img {
-				margin: 0 15px 15px 0;
-				height: 80px;
+				border-radius: 2px;
+				border: solid 1px rgba(100, 100, 100, 0.5);
+			}
+			img.preview-img {
+				width: 250px;
+
+			}
+			.project-snapshots {
+				.flexrow();
+				.flexwrap();
+				.flexstart();
+				margin: 20px 0;
+
+				img {
+					margin: 0 15px 15px 0;
+					height: 80px;
+				}
 			}
 		}
 
