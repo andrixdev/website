@@ -5,6 +5,7 @@
 
 	<!-- Possible themes are: Ø (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
 
+	<!--
 	<project>
 		<title>Variations Physiques vol. 2</title>
 		<description>Film and VR experience, stellar formation, blackholes, gravitational waves and emergence&#10;A new story inspired by French physicists</description>
@@ -46,19 +47,20 @@
 	</project>
 
 	<project>
-		<title>Exhibition at Ecole Centrale de Lyon</title>
-		<description>1m90x2m69 artworks displayed at Ecole Centrale de Lyon from Nov. 2018 to Feb. 2019&#10;Opening talk on particle art</description>
-		<image>img/projects/exhibeclbw.jpg</image>
-		<link>https://bibli.ec-lyon.fr/actualites/2018/exposition-alex-andrix-deambulatoire</link>
-		<themes>artistic</themes>
-	</project>
-
-	<project>
 		<title>_Transition</title>
 		<description>Virtual reality project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
 		<image>img/projects/transitionwebsmall.jpg</image>
 		<link>../transition</link>
 		<themes>artistic</themes>
+	</project>
+-->
+
+	<project>
+		<title>Hue Flow</title>
+		<description>Casual information visualization of energy and water consumption for smart houses</description>
+		<image>img/projects/hueflow.jpg</image>
+		<link>../infoviz/hueflow</link>
+		<themes>artistic dataviz</themes>
 	</project>
 
 	<project>
@@ -70,19 +72,11 @@
 	</project>
 
 	<project>
-		<title>HueFlow</title>
-		<description>Casual information visualization of energy and water consumption for smart houses</description>
+		<title>SimplX</title>
+		<description>Front-end web development and agile project management&#10;Worked on 17 projects of various scales and nature&#10;Creative coding research 20% of time</description>
 		<image>img/projects/hueflow.jpg</image>
-		<link>../infoviz/hueflow</link>
-		<themes>artistic dataviz</themes>
-	</project>
-
-	<project>
-		<title>Speakasso</title>
-		<description>Web app to draw on canvas based on voice input&#10;Award-winning KTH project, 7 students</description>
-		<image>img/projects/speakasso.jpg</image>
-		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
-		<themes>artistic dataviz</themes>
+		<link>https://website.simplx.fr</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
@@ -94,11 +88,11 @@
 	</project>
 
 	<project>
-		<title>Labomobile #1</title>
-		<description>3-day workshop with a mixed team of comedians, dancers and digital artists&#10;Exploring the concept of identity on stage&#10;Directed by Arnaud Chevalier</description>
-		<image>img/projects/labomobile.jpg</image>
-		<link>https://vimeo.com/307727440</link>
-		<themes>artistic</themes>
+		<title>Speakasso</title>
+		<description>Web app to draw on canvas based on voice input&#10;Award-winning KTH project, 7 students</description>
+		<image>img/projects/speakasso.jpg</image>
+		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
+		<themes>artistic dataviz</themes>
 	</project>
 
 	<project>
@@ -126,11 +120,11 @@
 	</project>
 
 	<project>
-		<title>Ever</title>
-		<description>A game for personal knowledge management&#10;Applied to linguistics</description>
-		<image>img/projects/ever.jpg</image>
-		<link>../ever</link>
-		<themes>web</themes>
+		<title>HappyFactor</title>
+		<description>Using d3.js parallel coordinates library for analyses of multidimensional datasets</description>
+		<image>img/projects/happyfactor.jpg</image>
+		<link>../infoviz/happyfactor</link>
+		<themes>dataviz</themes>
 	</project>
 
 	<project>
@@ -138,6 +132,22 @@
 		<description>Human-Computer Interaction, KTH introductory course</description>
 		<image>img/projects/DH2620.jpg</image>
 		<link>../DH2620</link>
+		<themes>web</themes>
+	</project>
+
+	<project>
+		<title>Melting Space Blog</title>
+		<description>A simple blog in VueJS for the Melting Space label</description>
+		<image>img/projects/meltingspacesmall.jpg</image>
+		<link>https://melting.space/new/#/blog</link>
+		<themes>web</themes>
+	</project>
+
+	<project>
+		<title>Ever</title>
+		<description>A game for personal knowledge management&#10;Applied to linguistics</description>
+		<image>img/projects/ever.jpg</image>
+		<link>../ever</link>
 		<themes>web</themes>
 	</project>
 
@@ -150,27 +160,11 @@
 	</project>
 
 	<project>
-		<title>Rayville</title>
-		<description>Some bits of a Joomla! website for a small tourism business in Melbourne surburbs</description>
-		<image>img/projects/rayville.jpg</image>
-		<link>../rayville/rayville-villas</link>
-		<themes>web</themes>
-	</project>
-
-	<project>
 		<title>GroupMerge</title>
 		<description>A GUI for Information Visualization (for Firefox)&#10;1 day project - KTH course DH2321</description>
 		<image>img/projects/groupmerge.jpg</image>
 		<link>../infoviz/groupmerge</link>
 		<themes>web dataviz</themes>
-	</project>
-
-	<project>
-		<title>Melting Space Blog</title>
-		<description>A simple blog in VueJS for the Melting Space label</description>
-		<image>img/projects/meltingspacesmall.jpg</image>
-		<link>https://melting.space/new/#/blog</link>
-		<themes>web</themes>
 	</project>
 
 	<project>
@@ -182,19 +176,45 @@
 	</project>
 
 	<project>
+		<title>Own website v4</title>
+		<description>This very website&#10;Kind of a perpetual work in progress&#10;Open-source code available on GitHub</description>
+		<image>img/projects/websitev3small.jpg</image>
+		<link>https://github.com/Icosacid/website/tree/dev</link>
+		<themes>web</themes>
+	</project>
+
+	<project>
+		<title>Exhibition at Ecole Centrale de Lyon</title>
+		<description>1m90x2m69 artworks displayed at Ecole Centrale de Lyon from Nov. 2018 to Feb. 2019&#10;Opening talk on particle art</description>
+		<image>img/projects/exhibeclbw.jpg</image>
+		<link>https://bibli.ec-lyon.fr/actualites/2018/exposition-alex-andrix-deambulatoire</link>
+		<themes>artistic</themes>
+	</project>
+
+	<!--
+
+	<project>
+		<title>Labomobile #1</title>
+		<description>3-day workshop with a mixed team of comedians, dancers and digital artists&#10;Exploring the concept of identity on stage&#10;Directed by Arnaud Chevalier</description>
+		<image>img/projects/labomobile.jpg</image>
+		<link>https://vimeo.com/307727440</link>
+		<themes>artistic</themes>
+	</project>
+
+	<project>
+		<title>Rayville</title>
+		<description>Some bits of a Joomla! website for a small tourism business in Melbourne surburbs</description>
+		<image>img/projects/rayville.jpg</image>
+		<link>../rayville/rayville-villas</link>
+		<themes>web</themes>
+	</project>
+
+	<project>
 		<title>Course in HCI - KTH</title>
 		<description>Web apps for mobiles&#10;Google Maps API, RSS reader, PubNub, Geohashing</description>
 		<image>img/projects/mobwebdev.png</image>
 		<link>../mobwebdev</link>
 		<themes></themes>
-	</project>
-
-	<project>
-		<title>HappyFactor</title>
-		<description>Using d3.js parallel coordinates library for analyses of multidimensional datasets</description>
-		<image>img/projects/happyfactor.jpg</image>
-		<link>../infoviz/happyfactor</link>
-		<themes>dataviz</themes>
 	</project>
 
 	<project>
@@ -221,7 +241,6 @@
 		<themes>web</themes>
 	</project>
 
-	<!--
 	<project>
 		<title>Userainbow</title>
 		<description>Drupal module for designs based on site visitors count</description>
@@ -285,17 +304,7 @@
 		<link>../army</link>
 		<themes></themes>
 	</project>
-	-->
 
-	<project>
-		<title>Own website v3</title>
-		<description>Well... this very website!&#10;Kind of a perpetual work in progress</description>
-		<image>img/projects/websitev3small.jpg</image>
-		<link>https://github.com/Icosacid/website/tree/dev</link>
-		<themes>web</themes>
-	</project>
-
-	<!--
 	<project>
 		<title>Project title</title>
 		<description>Project description</description>

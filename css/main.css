@@ -147,7 +147,7 @@ h3.categname,
   flex-wrap: wrap;
   /* Pull to left or top */
   justify-content: flex-start;
-  margin: 20px 0;
+  margin: 15px 0 0;
 }
 .fullwidth-project .project-snapshots > div,
 .fullwidth-project .project-snapshots > img {
@@ -355,6 +355,12 @@ h6 {
 .acidbutton.big-btn {
   padding: 0.4em 1em;
   font-size: 1.5rem;
+}
+button.acidbutton {
+  margin: 1em 0;
+}
+button.acidbutton a {
+  text-decoration: none;
 }
 .radios {
   display: flex;
@@ -811,6 +817,9 @@ h6 {
   bottom: -20px;
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.3);
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block button.acidbutton {
+  margin-bottom: 0;
 }
 #home .home-whatsnew .whatsnew-content .loadmore-holder {
   flex-basis: 100%;
@@ -1352,7 +1361,7 @@ h6 {
     display: none;
   }
 }
-#web-dataviz .all-projects {
+#web-dataviz .web-dataviz-projects {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -1362,7 +1371,7 @@ h6 {
   justify-content: center;
   padding: 20px 15px 60px;
 }
-#web-dataviz .all-projects .project {
+#web-dataviz .web-dataviz-projects .project {
   margin: 10px;
   padding: 15px;
   display: flex;
@@ -1377,59 +1386,59 @@ h6 {
   background: hsl(200, 50%, 10%);
   max-width: 90%;
 }
-#web-dataviz .all-projects .project.hidden {
+#web-dataviz .web-dataviz-projects .project.hidden {
   display: none;
 }
-#web-dataviz .all-projects .project:not(.no-link),
-#web-dataviz .all-projects .project:not(.no-link) > * {
+#web-dataviz .web-dataviz-projects .project:not(.no-link),
+#web-dataviz .web-dataviz-projects .project:not(.no-link) > * {
   cursor: pointer;
 }
-#web-dataviz .all-projects .project:not(.no-link):hover {
+#web-dataviz .web-dataviz-projects .project:not(.no-link):hover {
   background: hsl(200, 50%, 15%);
 }
-#web-dataviz .all-projects .project .left-side img {
+#web-dataviz .web-dataviz-projects .project .left-side img {
   width: 400px;
   max-width: 100%;
   border-radius: 2px;
   border: solid 1px rgba(100, 100, 100, 0.5);
 }
-#web-dataviz .all-projects .project .right-side {
+#web-dataviz .web-dataviz-projects .project .right-side {
   font-size: 20px;
   padding: 10px 15px 10px 25px;
   width: 500px;
 }
-#web-dataviz .all-projects .project .right-side h4 {
+#web-dataviz .web-dataviz-projects .project .right-side h4 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: white;
   text-shadow: rgba(255, 255, 255, 0.5) 0 0 1px;
 }
-#web-dataviz .all-projects .project .right-side p {
+#web-dataviz .web-dataviz-projects .project .right-side p {
   font-size: 1.2rem;
   white-space: pre-wrap;
 }
 @media (max-width: 850px) {
-  #web-dataviz .all-projects .project {
+  #web-dataviz .web-dataviz-projects .project {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
   }
-  .ie #web-dataviz .all-projects .project > * {
+  .ie #web-dataviz .web-dataviz-projects .project > * {
     width: 100%;
   }
-  #web-dataviz .all-projects .project .right-side {
+  #web-dataviz .web-dataviz-projects .project .right-side {
     text-align: center;
     max-width: 100%;
   }
-  #web-dataviz .all-projects .project .right-side h4 {
+  #web-dataviz .web-dataviz-projects .project .right-side h4 {
     margin-top: 5px;
   }
 }
-#web-dataviz .all-projects .show {
+#web-dataviz .web-dataviz-projects .show {
   text-align: center;
 }
-#web-dataviz .all-projects .hidden {
+#web-dataviz .web-dataviz-projects .hidden {
   display: none;
   opacity: 0;
 }

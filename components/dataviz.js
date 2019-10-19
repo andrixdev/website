@@ -35,7 +35,7 @@ Projects.loadProjects = function(extraCallback) {
 			projectHTML += "</div>";
 			
 			// Spread in the DOM
-			jQuery('#web-dataviz .page-content .all-projects').append(projectHTML);
+			jQuery('#web-dataviz .page-content .web-dataviz-projects').append(projectHTML);
 			
 		});
 		
