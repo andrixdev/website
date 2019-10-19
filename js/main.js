@@ -32,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         mounted: function() { }
     };
+    var CreativeCodingComponent = {
+        template: jQuery('#cc-template').html(),
+        data: function() {
+            return { }
+        },
+        mounted: function() { }
+    };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
         data: function() {
@@ -93,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { path: '/projects', redirect: '/web-dataviz' },
         { path: '/web-dataviz', component: ProjectsComponent },
         { path: '/vr', component: VRComponent },
+        { path: '/creative-coding', component: CreativeCodingComponent },
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },

@@ -184,37 +184,33 @@
 		<div class="title-block">
 			<geom base-sides="4" rotate="true"></geom>
 			<h1>Web & Data Visualization</h1>
-			<!--
-			<div class="radios">
-				<p class="radio active" data-filter="all">
-					<span class="fa"></span> all
-				</p>
-				<p class="radio" data-filter="artistic">
-					<span class="fa"></span> artistic
-				</p>
-				<p class="radio" data-filter="web">
-					<span class="fa"></span> web
-				</p>
-				<p class="radio" data-filter="dataviz">
-					<span class="fa"></span> data visualization
-				</p>
-			</div>
-			-->
 		</div>
 
 		<div class="page-content">
-			<div class="all-projects">
-				<!-- Filled with XHR reading XML content -->
+			<div class="web-dataviz-projects">
+
 			</div>
-			<!--
-			<div class="ongoing">
-				<h2>On track</h2>
-				<p><strong>ECL digital art exhibition</strong> - Ecole Centrale de Lyon - Nov 2018 to Feb 2019</p>
-				<p><strong>Portraits, n°1</strong> - Laboratoire de Physique de l'ENS de Lyon - Feb 2019</p>
-				<!--<p><strong>Kinexperience</strong> sprint 2 - Les Subsistances, Lyon - Jan/feb 2019</p>-->
-				<!--<p><strong>Variations Physiques</strong> - Laboratoire de Physique de l'ENS de Lyon - Sept/oct 2018</p>-->
+		</div>
+
+		<logo-links></logo-links>
+	</div>
+</template>
+
+<template id="cc-template">
+	<div id="cc">
+		<vue-title title="Alex Andrix | Creative Coding"></vue-title>
+		<div class="page-banner"></div>
+
+		<div class="title-block">
+			<geom base-sides="4" rotate="true"></geom>
+			<h1>Creative Coding</h1>
+		</div>
+
+		<div class="page-content">
+			<p>Since 2014 I have been exploring creation with programming. Although some <em>creative coding</em> can be found in all my projects, this page presents a few code snippets that were spread to a wider community of developers, mostly on the CodePen platform.</p>
+			-- CodePen creative coding mashup --
+			<div class="cc-projects">
 			</div>
-			-->
 		</div>
 
 		<logo-links></logo-links>
@@ -546,16 +542,20 @@
 				<geom base-sides="0" header="true"></geom>
 				Web & Data</br>Visualization
 			</router-link>
-			<router-link to="/more" class="menu-tab more">
+			<router-link to="/creative-coding" class="menu-tab two-lines-tab creative-coding">
 				<geom base-sides="4" header="true"></geom>
+				Creative</br>Coding
+			</router-link>
+			<router-link to="/more" class="menu-tab more">
+				<geom base-sides="4" header="true" rotate="true"></geom>
 				More
 			</router-link>
 			<router-link to="/about" class="menu-tab about">
-				<geom base-sides="4" header="true" rotate="true"></geom>
+				<geom base-sides="0" header="true"></geom>
 				About
 			</router-link>
 			<router-link to="/contact" class="menu-tab contact">
-				<geom base-sides="0" header="true"></geom>
+				<geom base-sides="4" header="true" rotate="true"></geom>
 				Contact
 			</router-link>
 			<!--<router-link to="/cv" class="menu-tab cv">
