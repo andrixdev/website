@@ -528,7 +528,7 @@ button.acidbutton + button.acidbutton {
   background: hsl(200, 50%, 5%);
 }
 .header .menu .menu-tab.two-lines-tab {
-  padding: 10px;
+  padding: 11px;
   font-size: 0.9rem;
 }
 .header .menu .menu-tab,
@@ -1037,9 +1037,8 @@ button.acidbutton + button.acidbutton {
   color: white;
   width: 100%;
   text-align: center;
-  font-size: 25px;
-  padding: 5px 0;
-  line-height: 35px;
+  font-size: 1.5rem;
+  padding: 0.5em 0;
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: 0;
