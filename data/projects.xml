@@ -183,6 +183,8 @@
 		<themes>web</themes>
 	</project>
 
+	<!--
+
 	<project>
 		<title>Exhibition at Ecole Centrale de Lyon</title>
 		<description>1m90x2m69 artworks displayed at Ecole Centrale de Lyon from Nov. 2018 to Feb. 2019&#10;Opening talk on particle art</description>
@@ -190,8 +192,6 @@
 		<link>https://bibli.ec-lyon.fr/actualites/2018/exposition-alex-andrix-deambulatoire</link>
 		<themes>artistic</themes>
 	</project>
-
-	<!--
 
 	<project>
 		<title>Labomobile #1</title>

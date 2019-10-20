@@ -312,7 +312,7 @@
 		transition: opacity 1s;
 	}
 	img {
-		width: 100%;
+		//width: 100%;
 		display: block;
 		.img-placeholder();
 	}
@@ -320,7 +320,7 @@
 
 .alg.landscape {
 	& {
-		width: 450px;
+		width: 330px;
 	}
 	&, & img {
 
@@ -331,13 +331,26 @@
 	&, & img {
 		width: 140px;
 		height: 200px;
+
+		.uncateg & {
+			width: 156px;
+			height: 220px;
+		}
 	}
+}
+.alg.main-img {
+	flex-shrink: 0;
 }
 .alg.main-img.portrait {
 	&, & img {
 		width: 224px;
 		height: 320px;
-		flex-shrink: 0;
+	}
+}
+.alg.main-img.landscape {
+	&, & img {
+		width: 390px;
+		height: 260px;
 	}
 }
 .gallery-content-2 {
@@ -347,80 +360,60 @@
 }
 
 // New gallery exceptions, only for landscape images because they all have erratic formats
-@media (min-width: 500px) {
-
+@media (min-width: 450px) {
 	.gallery-content-2 .alg.landscape {
 		// Base treat
 		img {
-			height: 300px;
+			height: 220px;
 		}
-		&#art-id-2015-4 img {
-			/* White Time */
-			width: 600px;
-			margin-left: -75px;
+
+		// Specific overrides
+		/* White Time */
+		&#art-id-2015-4 img { margin-left: -50px; }
+		/* Harsh */
+		&#art-id-2015-5 img { margin-left: -53px; }
+		/* Kuzco 5 */
+		&#art-id-2015-8 img { margin-left: -35px; }
+		/* Le Lac */
+		&#art-id-2015-7 img { width: 330px; }
+		/* Rhodo */
+		&#art-id-2015-10 img { margin-left: -37px; }
+		&.main-img#art-id-2015-10 img {
+			margin-left: -47px;
+			height: 260px;
+			width: 485px;
 		}
-		&#art-id-2015-5 img {
-			/* Harsh */
-			width: 600px;
-			margin-left: -75px;
-		}
-		&#art-id-2015-8 img {
-			/* Kuzco 5 */
-			width: 550px;
-			margin-left: -50px;
-		}
-		&#art-id-2015-10 img {
-			/* Rhodo */
-			width: 600px;
-			margin-left: -75px;
-		}
-		&#art-id-2015-11 img {
-			/* Shiver */
-			height: 450px;
-			margin-top: -75px;
-			margin-bottom: -75px;
-		}
-		/* Gravitational */
-		&#art-id-2016-1 img {
-			/* Gravitational Blackhole */
-			width: 550px;
-			margin-left: -50px;
-		}
-		&#art-id-2015-9 img {
-			/* Gandalf Thinking */
-			width: 500px;
-			margin-left: -25px;
-		}
-		/* Experiments */
-		&#art-id-2015-2 img {
-			/* PlayChaos 1 */
-			width: 550px;
-			margin-left: -50px;
-		}
-		&#art-id-2015-3 img {
-			/* Zeus Bolt */
-			width: 600px;
-			margin-left: -75px;
-		}
-		&#art-id-2015-12 img {
-			/* Summer 2015 */
-			width: 600px;
-			margin-left: -65px;
-		}
-		&#art-id-2015-6 img {
-			/* Duel */
-			width: 550px;
-			margin-left: 0;
-		}
-		&#art-id-2017-3 img {
-			/* Lightbeams Eye */
-			width: 570px;
-			margin-left: -55px;
-		}
-		&#art-id-2017-1 img {
-			/* Hexocet Explode */
-			width: 570px;
-			margin-left: -55px;
-		}
+		/* Gravitational Blackhole */
+		&#art-id-2016-1 img { margin-left: -50px; }
+		/* Nucleus */
+		&#art-id-2016-2 img { width: 330px; }
+		/* Flight */
+		&#art-id-2016-3 img { width: 330px;	}
+		&.main-img#art-id-2016-3 img { width: 390px; height: 260px; }
+		/* Orb */
+		&#art-id-2016-5 img { width: 330px;	}
+		/* Gandalf Thinking */
+		&#art-id-2015-9 img { margin-left: -35px; }
+		/* PlayChaos 1 */
+		&#art-id-2015-2 img { margin-left: -50px; }
+		/* Zeus Bolt */
+		&#art-id-2015-3 img { margin-left: -75px; }
+		/* Lightbeams Eye */
+		&#art-id-2017-3 img { margin-left: -46px; }
+		/* Hexocet Explode */
+		&#art-id-2017-1 img { margin-left: -55px; }
+		/* Diploar Phoenix */
+		&#art-id-2018-8 img { margin-left: -8px; }
 	}
 }
+@media (max-width: 450px) {
+	.alg {
+		width: 100% !important;
+		height: auto !important;
+	}
+	.alg img {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+

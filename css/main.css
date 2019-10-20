@@ -165,9 +165,8 @@ h3.categname,
 }
 .fullwidth-project .sub-gallery {
   margin-top: 20px;
+  display: flex;
   flex-wrap: wrap;
-  /* Pull to left or top */
-  justify-content: flex-start;
 }
 @media (max-width: 980px) {
   .fullwidth-project .sub-gallery {
@@ -528,7 +527,7 @@ button.acidbutton + button.acidbutton {
   background: hsl(200, 50%, 5%);
 }
 .header .menu .menu-tab.two-lines-tab {
-  padding: 11px;
+  padding: 11px 14px 11px 11px;
   font-size: 0.9rem;
 }
 .header .menu .menu-tab,
@@ -1038,7 +1037,7 @@ button.acidbutton + button.acidbutton {
   width: 100%;
   text-align: center;
   font-size: 1.5rem;
-  padding: 0.5em 0;
+  padding: 0.7em 0;
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: 0;
@@ -1296,9 +1295,8 @@ button.acidbutton + button.acidbutton {
   color: white;
   width: 100%;
   text-align: center;
-  font-size: 25px;
-  padding: 5px 0;
-  line-height: 35px;
+  font-size: 1.2rem;
+  padding: 0.7em 0;
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: 0;
@@ -1307,99 +1305,121 @@ button.acidbutton + button.acidbutton {
   transition: opacity 1s;
 }
 .alg img {
-  width: 100%;
   display: block;
   min-width: 50px;
   min-height: 50px;
   background: rgba(255, 255, 255, 0.05);
 }
 .alg.landscape {
-  width: 450px;
+  width: 330px;
 }
 .alg.portrait,
 .alg.portrait img {
   width: 140px;
   height: 200px;
 }
+.uncateg .alg.portrait,
+.uncateg .alg.portrait img {
+  width: 156px;
+  height: 220px;
+}
+.alg.main-img {
+  flex-shrink: 0;
+}
 .alg.main-img.portrait,
 .alg.main-img.portrait img {
   width: 224px;
   height: 320px;
-  flex-shrink: 0;
 }
-@media (min-width: 500px) {
+.alg.main-img.landscape,
+.alg.main-img.landscape img {
+  width: 390px;
+  height: 260px;
+}
+@media (min-width: 450px) {
   .gallery-content-2 .alg.landscape {
-    /* Gravitational */
-    /* Experiments */
+    /* White Time */
+    /* Harsh */
+    /* Kuzco 5 */
+    /* Le Lac */
+    /* Rhodo */
+    /* Gravitational Blackhole */
+    /* Nucleus */
+    /* Flight */
+    /* Orb */
+    /* Gandalf Thinking */
+    /* PlayChaos 1 */
+    /* Zeus Bolt */
+    /* Lightbeams Eye */
+    /* Hexocet Explode */
+    /* Diploar Phoenix */
   }
   .gallery-content-2 .alg.landscape img {
-    height: 300px;
+    height: 220px;
   }
   .gallery-content-2 .alg.landscape#art-id-2015-4 img {
-    /* White Time */
-    width: 600px;
-    margin-left: -75px;
+    margin-left: -50px;
   }
   .gallery-content-2 .alg.landscape#art-id-2015-5 img {
-    /* Harsh */
-    width: 600px;
-    margin-left: -75px;
+    margin-left: -53px;
   }
   .gallery-content-2 .alg.landscape#art-id-2015-8 img {
-    /* Kuzco 5 */
-    width: 550px;
-    margin-left: -50px;
+    margin-left: -35px;
+  }
+  .gallery-content-2 .alg.landscape#art-id-2015-7 img {
+    width: 330px;
   }
   .gallery-content-2 .alg.landscape#art-id-2015-10 img {
-    /* Rhodo */
-    width: 600px;
-    margin-left: -75px;
+    margin-left: -37px;
   }
-  .gallery-content-2 .alg.landscape#art-id-2015-11 img {
-    /* Shiver */
-    height: 450px;
-    margin-top: -75px;
-    margin-bottom: -75px;
+  .gallery-content-2 .alg.landscape.main-img#art-id-2015-10 img {
+    margin-left: -47px;
+    height: 260px;
+    width: 485px;
   }
   .gallery-content-2 .alg.landscape#art-id-2016-1 img {
-    /* Gravitational Blackhole */
-    width: 550px;
     margin-left: -50px;
   }
+  .gallery-content-2 .alg.landscape#art-id-2016-2 img {
+    width: 330px;
+  }
+  .gallery-content-2 .alg.landscape#art-id-2016-3 img {
+    width: 330px;
+  }
+  .gallery-content-2 .alg.landscape.main-img#art-id-2016-3 img {
+    width: 390px;
+    height: 260px;
+  }
+  .gallery-content-2 .alg.landscape#art-id-2016-5 img {
+    width: 330px;
+  }
   .gallery-content-2 .alg.landscape#art-id-2015-9 img {
-    /* Gandalf Thinking */
-    width: 500px;
-    margin-left: -25px;
+    margin-left: -35px;
   }
   .gallery-content-2 .alg.landscape#art-id-2015-2 img {
-    /* PlayChaos 1 */
-    width: 550px;
     margin-left: -50px;
   }
   .gallery-content-2 .alg.landscape#art-id-2015-3 img {
-    /* Zeus Bolt */
-    width: 600px;
     margin-left: -75px;
   }
-  .gallery-content-2 .alg.landscape#art-id-2015-12 img {
-    /* Summer 2015 */
-    width: 600px;
-    margin-left: -65px;
-  }
-  .gallery-content-2 .alg.landscape#art-id-2015-6 img {
-    /* Duel */
-    width: 550px;
-    margin-left: 0;
-  }
   .gallery-content-2 .alg.landscape#art-id-2017-3 img {
-    /* Lightbeams Eye */
-    width: 570px;
-    margin-left: -55px;
+    margin-left: -46px;
   }
   .gallery-content-2 .alg.landscape#art-id-2017-1 img {
-    /* Hexocet Explode */
-    width: 570px;
     margin-left: -55px;
+  }
+  .gallery-content-2 .alg.landscape#art-id-2018-8 img {
+    margin-left: -8px;
+  }
+}
+@media (max-width: 450px) {
+  .alg {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .alg img {
+    width: 100% !important;
+    height: auto !important;
   }
 }
 @media (max-width: 800px) {
