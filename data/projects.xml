@@ -74,7 +74,7 @@
 	<project>
 		<title>SimplX</title>
 		<description>Front-end web development and agile project management&#10;Worked on 17 projects of various scales and nature&#10;Creative coding research 20% of time</description>
-		<image>img/projects/hueflow.jpg</image>
+		<image>img/projects/simplx-mini-2.jpg</image>
 		<link>https://website.simplx.fr</link>
 		<themes>web</themes>
 	</project>
@@ -93,22 +93,6 @@
 		<image>img/projects/speakasso.jpg</image>
 		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
 		<themes>artistic dataviz</themes>
-	</project>
-
-	<project>
-		<title>PlayChaos</title>
-		<description>A user interface for spreadSVG.js&#10;Play the piano and generate shapes with vector graphics</description>
-		<image>img/projects/playchaos.jpg</image>
-		<link>../playchaos</link>
-		<themes>artistic web</themes>
-	</project>
-
-	<project>
-		<title>Infinite</title>
-		<description>Prototyping within 24 hours&#10;Scaffolding a proof-of-concept web page for a company</description>
-		<image>img/projects/infinitesmall.jpg</image>
-		<link>../infinitedevelopers</link>
-		<themes>web</themes>
 	</project>
 
 	<project>
@@ -173,6 +157,22 @@
 		<image>img/projects/DH2320.jpg</image>
 		<link>../DH2320</link>
 		<themes></themes>
+	</project>
+
+	<project>
+		<title>PlayChaos</title>
+		<description>A user interface for spreadSVG.js&#10;Play the piano and generate shapes with vector graphics</description>
+		<image>img/projects/playchaos.jpg</image>
+		<link>../playchaos</link>
+		<themes>artistic web</themes>
+	</project>
+
+	<project>
+		<title>Infinite</title>
+		<description>Prototyping within 24 hours&#10;Scaffolding a proof-of-concept web page for a company</description>
+		<image>img/projects/infinitesmall.jpg</image>
+		<link>../infinitedevelopers</link>
+		<themes>web</themes>
 	</project>
 
 	<project>
