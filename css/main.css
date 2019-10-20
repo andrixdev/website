@@ -28,7 +28,7 @@ body {
 	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;*/
 }
 #alexandrix-website {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 .title-block {
   background: hsl(200, 50%, 20%);
@@ -131,12 +131,6 @@ h3.categname,
 }
 .fullwidth-project iframe {
   margin: 15px 30px;
-  flex-shrink: 0;
-}
-@media (max-width: 980px) {
-  .fullwidth-project iframe {
-    flex-shrink: 1;
-  }
 }
 .fullwidth-project h4 {
   font-size: 1.8rem;
@@ -201,6 +195,29 @@ h3.categname,
     /* Centers child elements */
     justify-content: center;
   }
+}
+.statement {
+  padding: 60px 0;
+  width: 90%;
+  margin-left: 5%;
+}
+.statement p {
+  text-align: center;
+  font-size: 2rem;
+}
+.statement p.headline {
+  font-size: 2.5rem;
+}
+@media (max-width: 991px) {
+  .statement p.headline {
+    text-align: center;
+  }
+}
+.statement p.the-question {
+  font-size: 1.75rem;
+}
+.statement p.feel-free {
+  font-size: 1.75rem;
 }
 /* Dark template */
 /* White template WIP */
@@ -470,13 +487,13 @@ button.acidbutton + button.acidbutton {
   /* Mobile menu */
 }
 .header .logo {
-  width: 80px;
-  height: 65px;
+  width: 70px;
+  height: 55px;
   position: relative;
 }
 .header .logo img {
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   /* DON'T FORGET position: relative ON THE PARENT */
   /* AND TO GIMME A HEIGHT AND WIDTH */
   margin: auto;
@@ -493,14 +510,14 @@ button.acidbutton + button.acidbutton {
   align-items: center;
 }
 .header .menu .menu-tab {
-  padding: 20px;
+  padding: 18px 12px;
   transition: background 500ms;
   cursor: pointer;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 200;
 }
@@ -511,8 +528,8 @@ button.acidbutton + button.acidbutton {
   background: hsl(200, 50%, 5%);
 }
 .header .menu .menu-tab.two-lines-tab {
-  padding: 13px;
-  font-size: 1rem;
+  padding: 10px;
+  font-size: 0.9rem;
 }
 .header .menu .menu-tab,
 .header .menu .menu-tab:visited,
@@ -1590,38 +1607,6 @@ button.acidbutton + button.acidbutton {
 #ownership .ownership-block p.owner {
   font-size: 0.6rem;
   font-style: italic;
-}
-#about .page-content .statement {
-  padding: 60px 0;
-  width: 90%;
-  margin-left: 5%;
-}
-#about .page-content .statement p {
-  text-align: center;
-  font-size: 2rem;
-}
-#about .page-content .statement p.headline {
-  font-size: 2.5rem;
-}
-@media (max-width: 991px) {
-  #about .page-content .statement p.headline {
-    text-align: center;
-  }
-}
-#about .page-content .statement p.the-question {
-  font-size: 1.75rem;
-}
-#about .page-content .statement p.feel-free {
-  font-size: 1.75rem;
-}
-#about .page-content .pic img {
-  width: 650px;
-  max-width: 100%;
-}
-#about .page-content .pic p.asif {
-  margin-top: 5px;
-  font-size: 0.6rem;
-  text-align: center;
 }
 #about .about-links {
   padding: 30px 60px 60px;
