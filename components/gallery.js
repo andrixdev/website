@@ -1,7 +1,3 @@
-/**
- * Being re-coded...
- */
-
 var Gallery = {
 	algData: [],
 	mouseIsOverFront: false,
@@ -15,6 +11,7 @@ var Gallery = {
  * Fills the DOM with algories.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
+/*
 Gallery.loadAlgories = function(extraCallback) {
 	var gallery = jQuery('.gallery-content');
 	jQuery
@@ -86,6 +83,45 @@ Gallery.loadAlgories = function(extraCallback) {
 		extraCallback();
 	});
 };
+*/
+Gallery.loadAlgories2 = function(extraCallback) {
+	jQuery
+		.get("data/algories-2.xml", {})
+		.done(function(data) {
+
+			var DOMgallery = jQuery('.gallery-content-2');
+			var jAlgories = jQuery(data).find('algories');
+
+			// Data retrieval and DOM fill
+			jAlgories.find('alg').each(function() {
+				var title = jQuery(this).find('title').text();
+				var src = "img/" + jQuery(this).find('src').text();
+				var small = "img/" + jQuery(this).find('small').text();
+				var description = jQuery(this).find('description').text();
+				var id = jQuery(this).find('artid').text();
+
+				// Fill the DOM
+				var markup = "";
+				markup += "<img src='" + small + "' alt ='" + title + "'/>";
+				markup += "<h4 class='title'>" + title + "</h4>";
+
+				// Fill the gallery data object
+				Gallery.algData.push({
+					id: id,
+					title: title,
+					src: src,
+					small: small,
+					description: description,
+					markup: markup
+				});
+
+				// Come on, fill the DOhomM
+				DOMgallery.find('.alg#' + 'art-id-' + id).html(markup);
+			});
+
+			extraCallback();
+		});
+};
 
 /**
  * Assuming the global array algData is filled
@@ -94,10 +130,8 @@ Gallery.loadAlgories = function(extraCallback) {
  */
 Gallery.getAlg = function(id) {
 	for (key in Gallery.algData) {
-		for (key2 in Gallery.algData[key].alg) {
-			if ('art-id-' + Gallery.algData[key].alg[key2].id == id) {
-				return Gallery.algData[key].alg[key2];
-			}
+		if ('art-id-' + Gallery.algData[key].id == id) {
+			return Gallery.algData[key];
 		}
 	}
 	console.log('Nothing found with ID ' + id);
@@ -187,8 +221,6 @@ Gallery.fillFront = function(id) {
 	var src = alg.src;
 	var title = alg.title;
 	var description = alg.description;
-	var deviant = alg.deviant;
-	var github = alg.github;
 	
 	// Image
 	var newImg = new Image();
@@ -212,10 +244,6 @@ Gallery.fillFront = function(id) {
 	// Description
 	jQuery('#front .zoom .details .description p.title').html(title);
 	jQuery('#front .zoom .details .description p.text').html(description);
-	
-	// Social stuff
-	jQuery('#front .zoom .details .social .deviant').html(deviant);
-	jQuery('#front .zoom .details .social .github').html(github);
 
 	return true;
 };
@@ -295,7 +323,7 @@ Gallery.loadingOff = function() {
  * Initializer
  */
 Gallery.go = function() {
-    Gallery.loadAlgories(function() {
+    Gallery.loadAlgories2(function() {
         Gallery.DOMlisteners();
         Gallery.frontListeners();
 

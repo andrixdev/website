@@ -118,13 +118,15 @@ h3.categname,
 
 	iframe {
 		margin: 15px 30px;
+		//flex-shrink: 0;
+		//@media (max-width: 980px) {	flex-shrink: 1; }
 	}
 	h4 {
 		font-size: 1.8rem;
 		margin-bottom: 20px;
 	}
 	.side {
-		margin: 15px;
+		margin: 15px 25px;
 
 		img {
 			border-radius: 2px;
@@ -143,8 +145,8 @@ h3.categname,
 			margin: 0 10px 10px 0;
 		}
 		& > img {
-			max-width: 200px;
-			max-height: 200px;
+			max-width: 170px;
+			max-height: 100px;
 		}
 		@media (max-width: 980px) { .flexcenter(); }
 	}
@@ -154,6 +156,12 @@ h3.categname,
 		// Need to use DOM class
 		.flexwrap();
 		.flexstart();
+		@media (max-width: 980px) { .flexcenter(); }
+	}
+	.double-button-row {
+		.flexrow();
+		.flexstart();
+		.flexwrap();
 		@media (max-width: 980px) { .flexcenter(); }
 	}
 

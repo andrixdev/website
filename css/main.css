@@ -131,13 +131,19 @@ h3.categname,
 }
 .fullwidth-project iframe {
   margin: 15px 30px;
+  flex-shrink: 0;
+}
+@media (max-width: 980px) {
+  .fullwidth-project iframe {
+    flex-shrink: 1;
+  }
 }
 .fullwidth-project h4 {
   font-size: 1.8rem;
   margin-bottom: 20px;
 }
 .fullwidth-project .side {
-  margin: 15px;
+  margin: 15px 25px;
 }
 .fullwidth-project .side img {
   border-radius: 2px;
@@ -154,8 +160,8 @@ h3.categname,
   margin: 0 10px 10px 0;
 }
 .fullwidth-project .project-snapshots > img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 170px;
+  max-height: 100px;
 }
 @media (max-width: 980px) {
   .fullwidth-project .project-snapshots {
@@ -171,6 +177,27 @@ h3.categname,
 }
 @media (max-width: 980px) {
   .fullwidth-project .sub-gallery {
+    /* Centers child elements */
+    justify-content: center;
+  }
+}
+.fullwidth-project .double-button-row {
+  /* Pull to left or top */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+@media (max-width: 980px) {
+  .fullwidth-project .double-button-row,
+  .fullwidth-project .double-button-row.flexend,
+  .fullwidth-project .double-button-row.flexstart {
+    flex-wrap: wrap;
+    /* Centers child elements */
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 980px) {
+  .fullwidth-project .double-button-row {
     /* Centers child elements */
     justify-content: center;
   }
@@ -361,6 +388,9 @@ button.acidbutton {
 }
 button.acidbutton a {
   text-decoration: none;
+}
+button.acidbutton + button.acidbutton {
+  margin-left: 1em;
 }
 .radios {
   display: flex;
