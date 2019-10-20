@@ -1519,6 +1519,11 @@ button.acidbutton + button.acidbutton {
 #web-dataviz .ongoing p {
   font-size: 1.3rem;
 }
+#cc .cc-main-img {
+  width: 450px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
 #blog .blawg {
   display: flex;
   flex-flow: row nowrap;
