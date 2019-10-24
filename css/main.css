@@ -131,6 +131,7 @@ h3.categname,
 }
 .fullwidth-project iframe {
   margin: 15px 30px;
+  flex-shrink: 0;
 }
 .fullwidth-project h4 {
   font-size: 1.8rem;
@@ -728,6 +729,7 @@ button.acidbutton + button.acidbutton {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
   max-width: 500px;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-conflu img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-music img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-wip img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-website img,
@@ -1188,7 +1190,7 @@ button.acidbutton + button.acidbutton {
 }
 @keyframes sway-revert {
   from {
-    transform: scale(1);
+    transiform: scale(1);
     z-index: 3;
     opacity: 1;
   }
