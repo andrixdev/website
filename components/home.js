@@ -100,8 +100,8 @@ var HomeComponent = {
 
         // Show older news
         // I don't give a f*ck about JS frameworks anymore, jQuery does the job man
-        jQuery('.news-block').hide();
-        var shaun = 7, maxNews = jQuery('.news-block').length;
+        jQuery('.news-blscrollock').hide();
+        var shaun = 12, maxNews = jQuery('.news-block').length;
         var showMore = function(shown) {
             // Fade in a certain number of news
 	        for (var s = 1; s <= shown; s++) {

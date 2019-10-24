@@ -166,7 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
         next();
 
-	    console.log('Before Each called');
 	    // If back button from front Gallery mode, close it
 	    console.log(to.fullPath, from.fullPath);
 	    if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) {
