@@ -22,5 +22,19 @@
 		.flexrow();
 		.flexcenter();
 		align-self: stretch;
+
+		// On mobile, force new project tile display (flexcol)
+		@media (max-width: 850px) {
+			.flexcol();
+
+			.right-side {
+				.center();
+				max-width: 100%;
+
+				h4 {
+					margin-top: 5px;
+				}
+			}
+		}
 	}
 }
