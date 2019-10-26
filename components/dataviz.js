@@ -23,7 +23,7 @@ Projects.loadProjects = function(extraCallback) {
 			var themes = jQuery(this).find('themes').text();
 			
 			// Create HTML
-			projectHTML += "<div class='project" + (!!link ? "" : " no-link") + "' data-filter-tokens='" + themes + "'>";
+			projectHTML += "<div class='project-tile" + (!!link ? "" : " no-link") + "' data-filter-tokens='" + themes + "'>";
 			projectHTML +=   "<div class='left-side'>";
 			projectHTML +=     "<img src='" + src + "' title='" + title + "' alt='" + title + "' />";
 			projectHTML +=   "</div>";

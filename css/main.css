@@ -113,6 +113,63 @@ h3.categname,
 .showmore-toggle-bar:hover .caretcaret .fa::before {
   color: rgba(255, 255, 255, 0.6);
 }
+.project-tile {
+  margin: 10px;
+  padding: 15px;
+  border: solid hsl(200, 50%, 15%) 2px;
+  border-radius: 1px;
+  background: hsl(200, 50%, 10%);
+  max-width: 90%;
+}
+.project-tile.hidden {
+  display: none;
+}
+.project-tile:not(.no-link),
+.project-tile:not(.no-link) > * {
+  cursor: pointer;
+}
+.project-tile:not(.no-link):hover {
+  background: hsl(200, 50%, 15%);
+}
+.project-tile .left-side img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 2px;
+  border: solid 1px rgba(100, 100, 100, 0.5);
+}
+.project-tile .right-side {
+  font-size: 20px;
+  padding: 10px 15px 10px 25px;
+  width: 500px;
+}
+.project-tile .right-side h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 0 1px;
+}
+.project-tile .right-side p {
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+}
+@media (max-width: 850px) {
+  .project-tile {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .ie .project-tile > * {
+    width: 100%;
+  }
+  .project-tile .right-side {
+    text-align: center;
+    max-width: 100%;
+  }
+  .project-tile .right-side h4 {
+    margin-top: 5px;
+  }
+}
 .fullwidth-project {
   padding: 25px;
 }
@@ -132,6 +189,11 @@ h3.categname,
 .fullwidth-project iframe {
   margin: 15px 30px;
   flex-shrink: 0;
+}
+@media (max-width: 1150px) {
+  .fullwidth-project iframe {
+    flex-shrink: 1;
+  }
 }
 .fullwidth-project h4 {
   font-size: 1.8rem;
@@ -1439,70 +1501,6 @@ button.acidbutton + button.acidbutton {
   justify-content: center;
   padding: 20px 15px 60px;
 }
-#web-dataviz .web-dataviz-projects .project {
-  margin: 10px;
-  padding: 15px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Centers child elements */
-  justify-content: center;
-  align-self: stretch;
-  border: solid hsl(200, 50%, 15%) 2px;
-  border-radius: 1px;
-  background: hsl(200, 50%, 10%);
-  max-width: 90%;
-}
-#web-dataviz .web-dataviz-projects .project.hidden {
-  display: none;
-}
-#web-dataviz .web-dataviz-projects .project:not(.no-link),
-#web-dataviz .web-dataviz-projects .project:not(.no-link) > * {
-  cursor: pointer;
-}
-#web-dataviz .web-dataviz-projects .project:not(.no-link):hover {
-  background: hsl(200, 50%, 15%);
-}
-#web-dataviz .web-dataviz-projects .project .left-side img {
-  width: 400px;
-  max-width: 100%;
-  border-radius: 2px;
-  border: solid 1px rgba(100, 100, 100, 0.5);
-}
-#web-dataviz .web-dataviz-projects .project .right-side {
-  font-size: 20px;
-  padding: 10px 15px 10px 25px;
-  width: 500px;
-}
-#web-dataviz .web-dataviz-projects .project .right-side h4 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: white;
-  text-shadow: rgba(255, 255, 255, 0.5) 0 0 1px;
-}
-#web-dataviz .web-dataviz-projects .project .right-side p {
-  font-size: 1.2rem;
-  white-space: pre-wrap;
-}
-@media (max-width: 850px) {
-  #web-dataviz .web-dataviz-projects .project {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .ie #web-dataviz .web-dataviz-projects .project > * {
-    width: 100%;
-  }
-  #web-dataviz .web-dataviz-projects .project .right-side {
-    text-align: center;
-    max-width: 100%;
-  }
-  #web-dataviz .web-dataviz-projects .project .right-side h4 {
-    margin-top: 5px;
-  }
-}
 #web-dataviz .web-dataviz-projects .show {
   text-align: center;
 }
@@ -1510,16 +1508,18 @@ button.acidbutton + button.acidbutton {
   display: none;
   opacity: 0;
 }
-#web-dataviz .ongoing {
-  padding: 20px 20px 80px;
-  text-align: center;
+#web-dataviz .project-tile {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  /* Centers child elements */
+  justify-content: center;
+  align-self: stretch;
 }
-#web-dataviz .ongoing h2 {
-  margin-bottom: 10px;
-  font-size: 2rem;
-}
-#web-dataviz .ongoing p {
-  font-size: 1.3rem;
+#cc iframe {
+  margin: 25px;
+  flex-shrink: 1;
 }
 #cc .cc-main-img {
   width: 450px;
@@ -1538,7 +1538,36 @@ button.acidbutton + button.acidbutton {
 #blog .blawg img {
   height: 250px;
   max-width: 100%;
-  margin-right: 30px;
+  margin: 20px 30px;
+}
+@media (max-width: 980px) {
+  #blog .blawg {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+#vp-extras .project-tile {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  /* Centers child elements */
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.ie #vp-extras .project-tile > * {
+  width: 100%;
+}
+#vp-extras iframe,
+#vp-extras a {
+  margin: 20px;
+}
+#vp-extras img {
+  max-width: 100%;
+}
+#vp-extras p {
+  text-align: center;
 }
 #animations p.seen {
   margin-bottom: 0;

@@ -7,13 +7,29 @@
 		img {
 			height: 250px;
 			max-width: 100%;
-			margin-right: 30px;
+			margin: 20px 30px;
+		}
+		@media (max-width: 980px) {
+			.flexwrap();
+			.center();
 		}
 	}
 }
 #vp-extras {
-	iframe {
-		margin: 25px;
+	.project-tile {
+		.flexcol();
+		.flexcenter();
+		.flexwrap();
+		padding: 20px;
+	}
+	iframe, a {
+		margin: 20px;
+	}
+	img {
+		max-width: 100%;
+	}
+	p {
+		.center();
 	}
 }
 #animations {

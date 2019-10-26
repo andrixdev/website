@@ -10,67 +10,6 @@
 		.flexcenter();
 		padding: 20px 15px 60px;
 
-		.project {
-			margin: 10px;
-			padding: 15px;
-			.flexrow();
-			.flexcenter();
-			align-self: stretch;
-			border: solid @blue-15 2px;
-			border-radius: @border-radius;
-			background: @blue-10;
-			max-width: 90%;
-
-			&.hidden {
-				display: none;
-			}
-			&:not(.no-link), &:not(.no-link) > * {
-				.pointer();
-			}
-			&:not(.no-link):hover {
-				background: @blue-15;
-			}
-			.left-side {
-				//box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
-
-				img {
-					width: 400px;
-					max-width: 100%;
-					border-radius: 2px;
-					border: solid 1px rgba(100, 100, 100, 0.5);
-				}
-			}
-			.right-side {
-				font-size: 20px;
-				padding: 10px 15px 10px 25px;
-				width: 500px;
-
-				h4 {
-					font-size: 1.5rem;
-					margin-bottom: 15px;
-					color: white;
-					text-shadow: rgba(255, 255, 255, 0.5) 0 0 1px;
-				}
-				p {
-					font-size: 1.2rem;
-					white-space: pre-wrap;
-				}
-			}
-
-			// On mobile, force new project tile display (flexcol)
-			@media (max-width: 850px) {
-				.flexcol();
-
-				.right-side {
-					.center();
-					max-width: 100%;
-
-					h4 {
-						margin-top: 5px;
-					}
-				}
-			}
-		}
 		.show {
 			.center();
 		}
@@ -79,16 +18,9 @@
 			opacity: 0;
 		}
 	}
-	.ongoing {
-		padding: 20px 20px 80px;
-		.center();
-
-		h2 {
-			margin-bottom: 10px;
-			font-size: 2rem;
-		}
-		p {
-			font-size: 1.3rem;
-		}
+	.project-tile {
+		.flexrow();
+		.flexcenter();
+		align-self: stretch;
 	}
 }
