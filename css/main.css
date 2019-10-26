@@ -1655,6 +1655,9 @@ button.acidbutton + button.acidbutton {
   font-size: 0.6rem;
   font-style: italic;
 }
+#about img.blob {
+  width: 100px;
+}
 #about .about-links {
   padding: 30px 60px 60px;
 }
@@ -1707,17 +1710,22 @@ button.acidbutton + button.acidbutton {
   margin-top: 10px;
 }
 #contact .page-content {
-  padding: 80px 0 40px;
+  padding: 60px 0 40px;
 }
 #contact .page-content .feel-free p {
   text-align: center;
   font-size: 1.5rem;
 }
 #contact .page-content .feel-free p:nth-of-type(1) {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 #contact .page-content .feel-free p:nth-of-type(2) {
   margin-top: 15px;
+}
+#contact .page-content img.contact-st-img {
+  width: 250px;
+  border-radius: 3px;
+  margin: 100px 20px;
 }
 #contact .logo-links {
   background: none;
@@ -2163,33 +2171,30 @@ button.acidbutton + button.acidbutton {
 }
 .page-banner {
   position: relative;
-  background-image: url('../img/gravitational/orb_colors_jpg.jpg');
-  background-image: url('../img/radial/rhodo_jpg.jpg');
   filter: contrast(110%);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  height: 250px;
+  height: 180px;
   width: 100%;
   background-position-y: 50%;
 }
 @media (max-width: 400px) {
   .page-banner {
-    height: 180px;
+    height: 100px;
   }
 }
 #home .page-banner {
-  background-position-x: 50%;
-}
-@media (max-width: 800px) {
-  #home .page-banner {
-    height: 150px;
-  }
+  background-image: url('../img/misc/header/heeader-vp-5.jpg');
+  background-position-y: 25%;
 }
 #gallery .page-banner {
   background-image: url('../img/misc/annihilation.jpg');
 }
+#vr .page-banner {
+  background-image: url('../img/misc/header/heeader-vp-9.jpg');
+}
 @media (max-width: 500px) {
-  #gallery .page-banner {
+  #vr .page-banner {
     background-size: auto;
     background-position-x: 50%;
   }
@@ -2198,33 +2203,18 @@ button.acidbutton + button.acidbutton {
   background-image: url('../img/projects/huehuntresults-full.png');
   background-position-y: 40%;
 }
-@media (max-width: 500px) {
-  #web-dataviz .page-banner {
-    background-size: auto;
-    background-position-x: 50%;
-  }
+#cc .page-banner {
+  background-image: url('../img/misc/header/header-orb-colors.jpg');
 }
 #more .page-banner {
-  background-image: url('../img/misc/tran4.jpg');
-  background-position-y: 37%;
+  background-image: url('../img/misc/header/heeader-vp-1.jpg');
+  background-position-y: 32%;
 }
 #about .page-banner {
-  background-image: url('../img/misc/lightbeams-eye.jpg');
-}
-@media (max-width: 500px) {
-  #about .page-banner {
-    background-size: auto;
-    background-position-x: 50%;
-  }
+  background-image: url('../img/misc/header/header-rhodo.jpg');
 }
 #contact .page-banner {
   background-image: url('../img/misc/hex-bubbles.jpg');
-}
-@media (max-width: 500px) {
-  #contact .page-banner {
-    background-size: auto;
-    background-position-x: 50%;
-  }
 }
 .autoimage {
   background-size: auto;
@@ -2232,7 +2222,7 @@ button.acidbutton + button.acidbutton {
 }
 @media (max-width: 400px) {
   .small-mobile-height {
-    height: 180px;
+    height: 100px;
   }
 }
 @keyframes spinblur {

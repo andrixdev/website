@@ -48,12 +48,10 @@
 }
 .page-banner {
 	position: relative;
-	background-image: url('../img/gravitational/orb_colors_jpg.jpg');
-	background-image: url('../img/radial/rhodo_jpg.jpg');
 	filter: contrast(110%);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	height: 250px;
+	height: 180px;
 	width: 100%;
 	background-position-y: 50%;
 	.small-mobile-height();
@@ -61,32 +59,41 @@
 	#home & {
 		//background-image: url('../img/misc/hex-fire.jpg');
 		//background-size: 1500px 985px;
-		background-position-x: 50%;
-		//@media (max-width: 1000px) { .autoimage(); }
-		@media (max-width: 800px) {  height: 150px;
-		}
+		//background-position-x: 50%;
+		background-image: url('../img/misc/header/heeader-vp-5.jpg');
+		background-position-y: 25%;
 	}
 	#gallery & {
 		background-image: url('../img/misc/annihilation.jpg');
+		//@media (max-width: 500px) { .autoimage(); }
+	}
+	#vr & {
+		background-image: url('../img/misc/header/heeader-vp-9.jpg');
 		@media (max-width: 500px) { .autoimage(); }
 	}
 	#web-dataviz & {
 		background-image: url('../img/projects/huehuntresults-full.png');
 		background-position-y: 40%;
-		@media (max-width: 500px) { .autoimage(); }
+		//@media (max-width: 500px) { .autoimage(); }
+	}
+	#cc & {
+		background-image: url('../img/misc/header/header-orb-colors.jpg');
+		//@media (max-width: 500px) { .autoimage(); }
 	}
 	#more & {
 		//background-image: url('../img/misc/sebtest.jpg');
-		background-image: url('../img/misc/tran4.jpg');
-		background-position-y: 37%;
+		//background-image: url('../img/misc/tran4.jpg');
+		background-image: url('../img/misc/header/heeader-vp-1.jpg');
+		background-position-y: 32%;
 	}
 	#about & {
-		background-image: url('../img/misc/lightbeams-eye.jpg');
-		@media (max-width: 500px) { .autoimage(); }
+		//background-image: url('../img/misc/lightbeams-eye.jpg');
+		background-image: url('../img/misc/header/header-rhodo.jpg');
+		//@media (max-width: 500px) { .autoimage(); }
 	}
 	#contact & {
 		background-image: url('../img/misc/hex-bubbles.jpg');
-		@media (max-width: 500px) { .autoimage(); }
+		//@media (max-width: 500px) { .autoimage(); }
 	}
 	#cv & {
 		// Default orb color image
@@ -98,7 +105,7 @@
 }
 .small-mobile-height {
 	@media (max-width: 400px) {
-		height: 180px;
+		height: 100px;
 	}
 }
 @keyframes spinblur {
