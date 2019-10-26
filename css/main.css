@@ -1655,6 +1655,9 @@ button.acidbutton + button.acidbutton {
   font-size: 0.6rem;
   font-style: italic;
 }
+#about .page-content {
+  background: black;
+}
 #about img.blob {
   width: 100px;
 }
@@ -1723,7 +1726,7 @@ button.acidbutton + button.acidbutton {
   margin-top: 15px;
 }
 #contact .page-content img.contact-st-img {
-  width: 250px;
+  width: 300px;
   border-radius: 3px;
   margin: 100px 20px;
 }
