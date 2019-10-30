@@ -1655,7 +1655,7 @@ button.acidbutton + button.acidbutton {
   font-size: 0.6rem;
   font-style: italic;
 }
-#about .page-content {
+#about .statement-page-content {
   background: black;
 }
 #about img.blob {

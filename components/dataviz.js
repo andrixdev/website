@@ -49,7 +49,7 @@ Projects.loadProjects = function(extraCallback) {
 Projects.DOMlisteners = function() {
 
 	// Project links
-	jQuery('.project').on({
+	jQuery('.web-dataviz-projects .project-tile').on({
 		mouseenter: function() {
 			
 		}, mouseleave: function() {
