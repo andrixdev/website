@@ -782,6 +782,12 @@ button.acidbutton + button.acidbutton {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
   width: 350px;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-sharing p.vp2-sharing-list {
+  font-size: 0.85em;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-sharing img {
+  width: 550px;
+}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
   max-width: 100%;
 }

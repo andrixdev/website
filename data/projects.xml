@@ -123,7 +123,7 @@
 		<title>Melting Space Blog</title>
 		<description>A simple blog in VueJS for the Melting Space label</description>
 		<image>img/projects/meltingspacesmall.jpg</image>
-		<link>https://melting.space/new/#/blog</link>
+		<link>https://melting.space/#/blog</link>
 		<themes>web</themes>
 	</project>
 
