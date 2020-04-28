@@ -769,6 +769,10 @@ button.acidbutton + button.acidbutton {
     margin: 25px 10px;
   }
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img {
+  width: 350px;
+  background: white;
+}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
   max-width: 500px;

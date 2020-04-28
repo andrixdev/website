@@ -127,6 +127,7 @@
 		<themes>web</themes>
 	</project>
 
+	<!--
 	<project>
 		<title>Ever</title>
 		<description>A game for personal knowledge management&#10;Applied to linguistics</description>
@@ -134,6 +135,7 @@
 		<link>../ever</link>
 		<themes>web</themes>
 	</project>
+	-->
 
 	<project>
 		<title>Fromemo</title>
