@@ -159,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setTimeout(function() {
         	// Scroll back to top unless it's some gallery internal navigation
-	        //if (to.fullPath.indexOf('gallery') === -1 && from.fullPath.indexOf('gallery') === -1) {
+	        if (!(to.fullPath.indexOf('gallery') > -1 && from.fullPath.indexOf('gallery') > -1)) {
 		        window.scrollTo(0, 0);
-	        //}
+	        }
         }, 100);
         next();
 

@@ -8,82 +8,9 @@ var Gallery = {
 };
 
 /**
- * Fills the DOM with algories.xml
+ * Fills the DOM with algories-2.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-/*
-Gallery.loadAlgories = function(extraCallback) {
-	var gallery = jQuery('.gallery-content');
-	jQuery
-	.get("data/algories.xml", {})
-	.done(function(data) {
-	
-		var jAlgories = jQuery(data).find('algories');
-		jAlgories.find('category').each(function() {
-			var categHTML = "";
-			
-			// Get the name!
-			var categName = jQuery(this).find('categoryName').text(),
-				className = jQuery(this).find('categoryClass').text();
-			categHTML += "<div class='categ " + className + "'>";
-			categHTML += "<h3 class='categname'>" + categName + "</h3>";
-			
-			// Get the Morons!
-			var morons = jQuery(this).find('categMoreOnLinks');
-			var moronCodepen = morons.find('codepen').text();
-			var moronDeviantart = morons.find('deviantart').text();
-			if (morons.length) {
-                categHTML += "<div class='moron'>";
-                categHTML += "<p>More on</p>";
-                categHTML += "<a class='fa fa-codepen' href='" + moronCodepen + "' title='See the live collection on CodePen' target='_blank'></a>";
-                categHTML += "<a class='fa fa-deviantart' href='" + moronDeviantart + "' title='See the animations on DeviantArt' target='_blank'></a>";
-                categHTML += "</div>";
-			}
-			
-			// Create categ object
-			var categObj = {
-				categName: categName,
-				alg: []
-			};
-
-			categHTML += "<div class='categ-content'>";
-			
-			jQuery(this).find('alg').each(function() {
-				var title = jQuery(this).find('title').text();
-				var src = "img/" + jQuery(this).find('src').text();
-				var small = "img/" + jQuery(this).find('small').text();
-				var description = jQuery(this).find('description').text();
-				var id = jQuery(this).find('artid').text();
-				
-				// Fill the DOM
-				categHTML += "<div class='alg' id='art-id-" + id + "' >";
-				
-				categHTML += "<img src='" + small + "' alt ='" + title + "'/>";
-				categHTML += "<h4 class='title'>" + title + "</h4>";
-				categHTML += "</div>";
-				
-				// Fill the categ object
-				categObj.alg.push({
-					id: id,
-					title: title,
-					src: src,
-					small: small,
-					description: description,
-				});
-				
-			});
-			
-			categHTML += "</div></div>";
-			
-			gallery.append(categHTML);
-			// Feed global data with categ object
-			Gallery.algData.push(categObj);
-		});
-		
-		extraCallback();
-	});
-};
-*/
 Gallery.loadAlgories2 = function(extraCallback) {
 	jQuery
 		.get("data/algories-2.xml", {})
