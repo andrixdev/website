@@ -1,9 +1,51 @@
 #about {
-	.statement-page-content {
+	.statement-page-content,
+	.showmore-toggle-bar p.show-text {
 		background: black;
 	}
+
+	// Intro text on About and Contact pages
+	.statement {
+		padding: 60px 0 40px;
+		width: 90%;
+		margin-left: 5%;
+
+		.statement-core p {
+			text-align: center;
+			font-size: 1.5rem;
+			.weight-300();
+
+			&.headline {
+				font-size: 2.5rem;
+				@media (max-width: @sm-md) { text-align: center; }
+			}
+			&.the-question {
+				font-size: 1.75rem;
+			}
+			&.feel-free {
+				font-size: 1.75rem;
+			}
+		}
+	}
+
 	img.blob {
 		width: 100px;
+	}
+
+	.showmore-toggle-bar p.show-text {
+		width: 210px;
+	}
+
+	.longer-bio {
+		padding: 0 0 20px;
+		width: 90%;
+		margin-left: 5%;
+		.weight-200();
+
+		p {
+			text-align: justify;
+			font-size: 1rem;
+		}
 	}
 
 	.about-links {

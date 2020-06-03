@@ -56,17 +56,6 @@ h3.categname,
 	position: relative;
 	cursor: pointer;
 
-	hr {
-		margin: 30px 0 15px;
-		width: 60%;
-		margin-left: 20%;
-		border-color: rgba(255, 255, 255, 0.2);
-
-		@media (max-width: 800px) {
-			width: 90%;
-			margin-left: 5%;
-		}
-	}
 	p.show-text {
 		background: @background-color;
 		color: rgba(255, 255, 255, 0.45);
@@ -208,26 +197,4 @@ h3.categname,
 		@media (max-width: 980px) { .flexcenter(); }
 	}
 
-}
-// Intro text on About and Contact pages
-.statement {
-	padding: 60px 0;
-	width: 90%;
-	margin-left: 5%;
-
-	p {
-		text-align: center;
-		font-size: 1.5rem;
-
-		&.headline {
-			font-size: 2.5rem;
-			@media (max-width: @sm-md) { text-align: center; }
-		}
-		&.the-question {
-			font-size: 1.75rem;
-		}
-		&.feel-free {
-			font-size: 1.75rem;
-		}
-	}
 }

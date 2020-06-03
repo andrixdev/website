@@ -25,15 +25,15 @@ var HomeComponent = {
 
 	        // Hide LoadMore button if we reached max
 	        if (shown >= maxNews) {
-		        jQuery('.loadmore').hide();
+		        jQuery('.showmore-toggle-bar.load-more-news').hide();
             }
         };
         showMore(shaun);
-        jQuery('.loadmore').on('click', function() {
+        jQuery('.load-more-news').on('click', function() {
             shaun += 4;
             showMore(shaun);
         });
-        jQuery('.loadmore').on('mouseenter', function() {
+        jQuery('.load-more-news').on('mouseenter', function() {
             shaun += 4;
             showMore(shaun);
         });
@@ -44,8 +44,9 @@ var HomeComponent = {
 
 	    jQuery('.load-past-dates').on('click', function() {
 		    jQuery('.past-dates').show();
-		    jQuery('.showmore-toggle-bar').hide();
+		    jQuery('.showmore-toggle-bar.load-past-dates').hide();
 	    });
+
 
     }
 };

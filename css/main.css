@@ -64,18 +64,6 @@ h3.categname,
   position: relative;
   cursor: pointer;
 }
-.showmore-toggle-bar hr {
-  margin: 30px 0 15px;
-  width: 60%;
-  margin-left: 20%;
-  border-color: rgba(255, 255, 255, 0.2);
-}
-@media (max-width: 800px) {
-  .showmore-toggle-bar hr {
-    width: 90%;
-    margin-left: 5%;
-  }
-}
 .showmore-toggle-bar p.show-text {
   background: hsl(200, 50%, 5%);
   color: rgba(255, 255, 255, 0.45);
@@ -240,29 +228,6 @@ h3.categname,
     justify-content: center;
   }
 }
-.statement {
-  padding: 60px 0;
-  width: 90%;
-  margin-left: 5%;
-}
-.statement p {
-  text-align: center;
-  font-size: 1.5rem;
-}
-.statement p.headline {
-  font-size: 2.5rem;
-}
-@media (max-width: 991px) {
-  .statement p.headline {
-    text-align: center;
-  }
-}
-.statement p.the-question {
-  font-size: 1.75rem;
-}
-.statement p.feel-free {
-  font-size: 1.75rem;
-}
 /* Dark template */
 /* White template WIP */
 /*
@@ -396,6 +361,18 @@ p.credits {
   opacity: 0.4;
   font-size: 0.7rem;
   text-align: center;
+}
+hr {
+  margin: 30px 0 15px;
+  width: 60%;
+  margin-left: 20%;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 800px) {
+  hr {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 h1,
 h2,
@@ -777,6 +754,7 @@ button.acidbutton + button.acidbutton {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
   max-width: 500px;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdlkv-attractors img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-conflu img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-music img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-wip img,
@@ -1669,11 +1647,49 @@ button.acidbutton + button.acidbutton {
   font-size: 0.6rem;
   font-style: italic;
 }
-#about .statement-page-content {
+#about .statement-page-content,
+#about .showmore-toggle-bar p.show-text {
   background: black;
+}
+#about .statement {
+  padding: 60px 0 40px;
+  width: 90%;
+  margin-left: 5%;
+}
+#about .statement .statement-core p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+#about .statement .statement-core p.headline {
+  font-size: 2.5rem;
+}
+@media (max-width: 991px) {
+  #about .statement .statement-core p.headline {
+    text-align: center;
+  }
+}
+#about .statement .statement-core p.the-question {
+  font-size: 1.75rem;
+}
+#about .statement .statement-core p.feel-free {
+  font-size: 1.75rem;
 }
 #about img.blob {
   width: 100px;
+}
+#about .showmore-toggle-bar p.show-text {
+  width: 210px;
+}
+#about .longer-bio {
+  padding: 0 0 20px;
+  width: 90%;
+  margin-left: 5%;
+  font-weight: 200;
+}
+#about .longer-bio p {
+  text-align: justify;
+  font-size: 1rem;
 }
 #about .about-links {
   padding: 30px 60px 60px;

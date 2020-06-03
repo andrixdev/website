@@ -56,6 +56,14 @@
 -->
 
 	<project>
+		<title>Astrophysion</title>
+		<description>Prototype for visualization of position-intensity datasets with Unity VFX Graph.&#10;Applicable to multi-dimensional scalar and vector fields.&#10;Using stars &amp; dark matter simulation data from CRAL.</description>
+		<image>img/projects/astrophysion-preview-small.jpg</image>
+		<link>https://vimeo.com/424084195</link>
+		<themes>dataviz</themes>
+	</project>
+
+	<project>
 		<title>Hue Flow</title>
 		<description>Casual information visualization of energy and water consumption for smart houses</description>
 		<image>img/projects/hueflow.jpg</image>

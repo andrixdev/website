@@ -144,6 +144,13 @@ var AboutComponent = {
             }
         });
 
+        jQuery('.longer-bio').hide();
+
+        jQuery('.load-longer-bio').on('click', function() {
+            jQuery('.longer-bio').show();
+            jQuery('.showmore-toggle-bar.load-longer-bio').hide();
+        });
+
         // Start polyam animation
         //this.startPolyam();
     }
