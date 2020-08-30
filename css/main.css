@@ -1699,6 +1699,10 @@ button.acidbutton + button.acidbutton {
     padding: 30px 25px;
   }
 }
+#about .about-links h4 {
+  font-size: 1.3rem;
+  margin: 1em 0 0.5em;
+}
 #about .about-links p {
   text-align: left;
   font-size: 1rem;
