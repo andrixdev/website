@@ -2186,10 +2186,10 @@ button.acidbutton + button.acidbutton {
 }
 .logo-links a {
   color: white;
-  margin: 10px 35px;
+  margin: 10px 25px;
 }
 .logo-links a span.fa {
-  font-size: 80px;
+  font-size: 60px;
 }
 .logo-links a span.fa:hover {
   text-shadow: rgba(255, 255, 255, 0.85) 0 0 50px;

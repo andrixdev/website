@@ -9,6 +9,7 @@ var ContactComponent = {
         var logoDeviant = jQuery('#contact a.deviant');
         var logoGithub = jQuery('#contact a.github');
         var logoCodepen = jQuery('#contact a.codepen');
+        var logoVimeo = jQuery('#contact a.vimeo');
         jQuery('#contact span.aboutmail').on({
             mouseenter: function() {
                 logoMail.css('text-shadow', 'rgba(255, 255, 255, 0.85) 0 0 50px');
@@ -39,6 +40,14 @@ var ContactComponent = {
             },
             mouseleave: function() {
                 logoCodepen.css('text-shadow', '');
+            }
+        });
+        jQuery('#contact span.aboutvimeo').on({
+            mouseenter: function() {
+                logoVimeo.css('text-shadow', 'rgba(255, 255, 255, 0.85) 0 0 50px');
+            },
+            mouseleave: function() {
+                logoVimeo.css('text-shadow', '');
             }
         });
     }

@@ -111,6 +111,7 @@ var AboutComponent = {
         var logoDeviant = jQuery('#about a.deviant');
         var logoGithub = jQuery('#about a.github');
         var logoCodepen = jQuery('#about a.codepen');
+        var logoVimeo = jQuery('#about a.vimeo');
         jQuery('#about span.aboutmail').on({
             mouseenter: function() {
                 logoMail.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
@@ -141,6 +142,14 @@ var AboutComponent = {
             },
             mouseleave: function() {
                 logoCodepen.css('box-shadow', '');
+            }
+        });
+        jQuery('#about span.aboutvimeo').on({
+            mouseenter: function() {
+                logoVimeo.css('box-shadow', 'rgba(255,255,255,0.7) 0 0 15px');
+            },
+            mouseleave: function() {
+                logoVimeo.css('box-shadow', '');
             }
         });
 
