@@ -664,7 +664,7 @@
 <div id="alexandrix-website">
 	<div class="header"
 		 v-bind:class="{ 'mobile-menu-open': isOpen }"
-		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
+		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
 				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
@@ -715,11 +715,11 @@
 		</div>
 	</div>
 
-	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
+	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
 		<router-view></router-view>
 	</div>
 
-	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
+	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
 		<div class="flexrow flexcenter flexchildrenend">
 			<img class="footer-logo" src="img/website/triango.svg" />
 			<p class="click-and-hue" v-on:click="rotateLeHue()">

@@ -182,13 +182,30 @@ document.addEventListener('DOMContentLoaded', function() {
         el: '#alexandrix-website',
         data: {
             isOpen: false,
-            hueAngle: 0
+            hueAngle: 0,
+            saturation: 100
         },
         methods: {
             rotateLeHue: function() {
                 this.hueAngle = Math.round(360 * Math.random());
             }
-        }
+        },
+		mounted: function() {
+            var self = this;
+            var glitchSat = function() {
+                self.saturation = 0
+
+                setTimeout(function() {
+                    self.saturation = 100
+                }, 100);
+            }
+
+			setInterval(function() {
+                if (Math.random() < 0.01) {
+                    glitchSat();
+                }
+            }, 100);
+		}
     });
 
 });
