@@ -725,6 +725,11 @@ button.acidbutton + button.acidbutton {
 #home .home-whatsnew .whatsnew-content {
   padding: 10px 15px 30px;
 }
+@media (max-width: 767px) {
+  #home .home-whatsnew .whatsnew-content {
+    padding: 0;
+  }
+}
 #home .home-whatsnew .whatsnew-content .news-blocks {
   text-align: center;
   display: flex;
@@ -744,6 +749,11 @@ button.acidbutton + button.acidbutton {
 @media (max-width: 991px) {
   #home .home-whatsnew .whatsnew-content .news-blocks .news-block {
     margin: 25px 10px;
+  }
+}
+@media (max-width: 767px) {
+  #home .home-whatsnew .whatsnew-content .news-blocks .news-block {
+    padding: 15px;
   }
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img {
@@ -772,6 +782,7 @@ button.acidbutton + button.acidbutton {
   font-size: 0.85em;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-sharing img {
+  max-width: 100%;
   width: 550px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
@@ -1737,6 +1748,7 @@ button.acidbutton + button.acidbutton {
 }
 #about .resume-riddle {
   background: hsl(200, 50%, 5%);
+  padding: 0 20px;
 }
 #about .resume-riddle button {
   font-size: 1.5rem;
@@ -1773,7 +1785,7 @@ button.acidbutton + button.acidbutton {
   margin-top: 10px;
 }
 #contact .page-content {
-  padding: 60px 0 40px;
+  padding: 60px 20px 40px;
 }
 #contact .page-content .feel-free p {
   text-align: center;

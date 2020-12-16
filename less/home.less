@@ -52,6 +52,9 @@
 	.home-whatsnew {
 		.whatsnew-content {
 			padding: 10px 15px 30px;
+			@media (max-width: @xs-sm) {
+				padding: 0;
+			}
 
 			.news-blocks {
 				.center();
@@ -67,6 +70,9 @@
 
 					@media (max-width: @sm-md) {
 						margin: 25px 10px;
+					}
+					@media (max-width: @xs-sm) {
+						padding: 15px;
 					}
 
 					&.news-gdchels {
@@ -103,6 +109,7 @@
 							font-size: .85em;
 						}
 						img {
+							max-width: 100%;
 							width: 550px;
 						}
 					}
