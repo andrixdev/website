@@ -358,15 +358,48 @@
 				<br/>
 				<br/>
 				-->
-					<div class="hide-sm">
-						<br/>
-						<br/>
-					</div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <div class="flexrow flexcenter">
+                        <img class="blob" src="img/misc/blob.jpg" />
+                    </div>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
+
+                    <!-- Disabled 25/11/2020
 
 					<p>1³ + 2³ + 3³ + 4³ = 100</p>
 					<br/>
 					<br/>
+
+					-->
+
 					<!--<p>I paint my world with particles.</p>-->
+
+                    <!-- Disabled 25/11/2020
 					<p>Hi there, my name is Alex.</p>
 					<br/>
 					<br/>
@@ -382,6 +415,8 @@
 					<br/>
 					<br/>
 					<br/>
+					-->
+
 					<!--
                     <div class="hide-sm">
                         <p>Also I<br/><span class="polyam">{{ currentPolyam }}</span>.</p>
@@ -405,6 +440,8 @@
 
                     <p class="feel-free">Thanks for visiting, feel free to share any creative thoughts!</p>
                     -->
+
+                    <!-- Disabled 25/11/2020
 					<p>On this website you can find resources about my work: algorithmic paintings, virtual worlds, creative coding and various projects about science.</p>
 					<br/>
 					<br/>
@@ -414,22 +451,19 @@
 					<div class="hide-sm">
 						<br/>
 					</div>
+					-->
+
 				</div>
 
 				<div class="showmore-toggle-bar load-longer-bio">
 					<hr/>
-					<p class="show-text">Show longer standard bio</p>
+					<p class="show-text">Show nonsensical temporary bio</p>
 					<div class="caretcaret center">
 						<p class="fa fa-angle-down fa-2x"></p>
 					</div>
 				</div>
 
 				<div class="longer-bio">
-					<br/>
-					<div class="flexrow flexcenter">
-						<img class="blob" src="img/misc/blob.jpg" />
-					</div>
-					<br/>
 					<br/>
 					<br/>
 					<br/>
@@ -448,7 +482,7 @@
 					<p>While on a solo backpack trip for a dome creation on Navier-Stokes equation, Alex started working on the artistic interpretation of gravitational wave event <em>GW190814</em>. This work was resumed during COVID-19 lock-down with feedback from the Virgo/EGO and LIGO international collaborations.</p>
 					<div class="flexrow flexend">
 						<button class="acidbutton">
-							<a href="http://alexandrix.com/misc/cvAA2020-fr.pdf" target="_blank">Artistic CV (FR)</a>
+							<a href="http://alexandrix.com/misc/cvAA2020-fr.pdf" target="_blank">Untrue 2020 Artistic CV (FR)</a>
 						</button>
 					</div>
 
@@ -665,7 +699,7 @@
 <div id="alexandrix-website">
 	<div class="header"
 		 v-bind:class="{ 'mobile-menu-open': isOpen }"
-		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
+		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
 				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
@@ -716,11 +750,11 @@
 		</div>
 	</div>
 
-	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
+	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
 		<router-view></router-view>
 	</div>
 
-	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg);'">
+	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
 		<div class="flexrow flexcenter flexchildrenend">
 			<img class="footer-logo" src="img/website/triango.svg" />
 			<p class="click-and-hue" v-on:click="rotateLeHue()">
@@ -733,7 +767,7 @@
 			<span>and</span>
 			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
 		</p>
-		<p class="version">v4.2</p>
+		<p class="version">v4.3</p>
 	</div>
 
 	<!-- Artwork detail container for Gallery (has to be here for CSS reasons) -->
