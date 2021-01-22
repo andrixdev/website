@@ -21,13 +21,13 @@
 	</url>
 	<url>
 		<loc>http://alexandrix.com/creative-coding</loc>
-		<lastmod>2019-10-25T00:00:00+00:00</lastmod>
+		<lastmod>2021-01-22T00:00:00+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>http://alexandrix.com/more</loc>
-		<lastmod>2020-09-03T00:00:00+00:00</lastmod>
-		<priority>0.60</priority>
+		<lastmod>2021-01-22T00:00:00+00:00</lastmod>
+		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>http://alexandrix.com/about</loc>
@@ -36,7 +36,7 @@
 	</url>
 	<url>
 		<loc>http://alexandrix.com/contact</loc>
-		<lastmod>2020-09-03T00:00:00+00:00</lastmod>
+		<lastmod>2021-01-22T00:00:00+00:00</lastmod>
 		<priority>0.30</priority>
 	</url>
 </urlset>
