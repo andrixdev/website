@@ -490,6 +490,9 @@ button.acidbutton + button.acidbutton {
 .geom.is-rotated .shape {
   transform: rotate(45deg);
 }
+img.blob {
+  width: 100px;
+}
 /* Specific */
 .header {
   display: flex;
@@ -1559,22 +1562,31 @@ button.acidbutton + button.acidbutton {
 #illustration .gw190814-video iframe {
   max-width: 90%;
 }
-#blog .blawg {
+#blog .meh,
+#vimeo .meh,
+#guy-teube .meh,
+#codepen .meh {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
   /* Centers child elements */
   justify-content: center;
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
-#blog .blawg img {
-  width: 600px;
+#blog .meh img,
+#vimeo .meh img,
+#guy-teube .meh img,
+#codepen .meh img {
   max-width: 100%;
+  max-height: 280px;
   margin: 20px 30px;
 }
 @media (max-width: 980px) {
-  #blog .blawg {
+  #blog .meh,
+  #vimeo .meh,
+  #guy-teube .meh,
+  #codepen .meh {
     flex-wrap: wrap;
     text-align: center;
   }
@@ -1651,8 +1663,8 @@ button.acidbutton + button.acidbutton {
   margin: 65px 0;
 }
 #vjing .vjimg img {
-  margin: 10px;
-  height: 260px;
+  margin: 5px;
+  height: 220px;
   border-radius: 2px;
   border: solid 1px rgba(100, 100, 100, 0.7);
   min-width: 50px;
@@ -1711,9 +1723,6 @@ button.acidbutton + button.acidbutton {
 }
 #about .statement .statement-core p.feel-free {
   font-size: 1.75rem;
-}
-#about img.blob {
-  width: 100px;
 }
 #about .showmore-toggle-bar p.show-text {
   width: 265px;
@@ -1785,27 +1794,25 @@ button.acidbutton + button.acidbutton {
   margin-top: 10px;
 }
 #contact .page-content {
-  padding: 60px 20px 40px;
+  padding: 100px 20px 40px;
+  background: black;
 }
 #contact .page-content .feel-free p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 #contact .page-content .feel-free p:nth-of-type(1) {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 #contact .page-content .feel-free p:nth-of-type(2) {
-  margin-top: 15px;
+  margin-top: 1em;
+  font-size: 1.2rem;
 }
-#contact .page-content img.contact-st-img {
-  width: 300px;
-  border-radius: 3px;
-  margin: 100px 20px;
+#contact a.mailme {
+  text-decoration: none;
 }
-#contact .logo-links {
-  background: none;
-  padding-top: 0;
-  padding-bottom: 80px;
+#contact a.mailme:hover {
+  text-decoration: underline;
 }
 #cv {
   position: relative;

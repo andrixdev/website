@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 setTimeout(function() {
                     self.newSides = self.newSides == 4 ? 0 : 4;
-                }, 80);
+                }, 40);
             };
 
             // Glitch loop
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     for (var g = 0; g < glitches; g++) {
                         setTimeout(function() {
                             glitch();
-                        }, g * 150);
+                        }, g * 80);
                     }
                 }
             }, 1000);
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 setTimeout(function() {
                     self.saturation = 100
-                }, 100);
+                }, 50);
             }
 
 			setInterval(function() {
