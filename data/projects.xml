@@ -73,7 +73,7 @@
 
 	<project>
 		<title>Hue Hunt</title>
-		<description>A color game for hawk-eyed designers&#10;Started with PHP framework Symfony 2&#10;Now under AngularJS</description>
+		<description>A color game for hawk-eyed designers&#10;Migrated from PHP framework Symfony 2 to AngularJS</description>
 		<image>img/projects/huehunt.jpg</image>
 		<link>../huehunt</link>
 		<themes>dataviz</themes>

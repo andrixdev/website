@@ -5,6 +5,7 @@ var Projects = {};
  * Fills the DOM with projects.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
+/*
 Projects.loadProjects = function(extraCallback) {
 	jQuery
 	.get("data/projects.xml", {})
@@ -42,6 +43,7 @@ Projects.loadProjects = function(extraCallback) {
 		extraCallback();
 	});
 };
+*/
 
 /**
  * Listeners on each project
@@ -101,7 +103,9 @@ Projects.DOMlisteners = function() {
  * Initializer
  */
 Projects.go = function() {
+	Projects.DOMlisteners();
+	/*
     Projects.loadProjects(function() {
         Projects.DOMlisteners();
-	});
+	});*/
 };
