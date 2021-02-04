@@ -1487,12 +1487,22 @@ img.blob {
     height: auto !important;
   }
 }
-@media (max-width: 800px) {
-  #web-dataviz .radios {
-    display: none;
-  }
+#web-dataviz {
+  /*
+	.radios {
+		@media (max-width: 800px) {
+			display: none;
+		}
+	}
+	*/
 }
 #web-dataviz .web-dataviz-projects {
+  padding: 20px 15px;
+}
+#web-dataviz .showmore-toggle-bar p.show-text {
+  width: 265px;
+}
+#web-dataviz .projects-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -1500,14 +1510,6 @@ img.blob {
   flex-wrap: wrap;
   /* Centers child elements */
   justify-content: center;
-  padding: 20px 15px 60px;
-}
-#web-dataviz .web-dataviz-projects .show {
-  text-align: center;
-}
-#web-dataviz .web-dataviz-projects .hidden {
-  display: none;
-  opacity: 0;
 }
 #web-dataviz .project-tile {
   display: flex;
