@@ -38,15 +38,20 @@ var HomeComponent = {
             showMore(shaun);
         });
 
-	    // Show older news
+	    // Show past dates
 	    // I don't give a dayum about JS frameworks anymore, jQuery does the job man
 	    jQuery('.past-dates').hide();
-
 	    jQuery('.load-past-dates').on('click', function() {
 		    jQuery('.past-dates').show();
 		    jQuery('.showmore-toggle-bar.load-past-dates').hide();
 	    });
 
+	    // Unveil 03 feb news
+        jQuery('.news-feb-2021 .more-things').hide();
+        jQuery('.news-feb-2021 .things').on('click', function() {
+            jQuery('.news-feb-2021 .more-things').fadeIn(500);
+            jQuery('.news-feb-2021 .things').removeClass('clickable');
+        });
 
     }
 };

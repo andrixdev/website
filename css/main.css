@@ -759,6 +759,17 @@ img.blob {
     padding: 15px;
   }
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
+  margin: 0.3em 0;
+  width: 80px;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .things p,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .more-things p {
+  padding: 0.2em 0;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .things.clickable p {
+  cursor: pointer;
+}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img {
   width: 350px;
   background: white;
