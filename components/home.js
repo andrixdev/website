@@ -14,9 +14,9 @@ var HomeComponent = {
         self.home = 'Teh';// This line is used to have the whole lot work
 
         // Show older news
-        // I don't give a f*ck about JS frameworks anymore, jQuery does the job man
         jQuery('.news-block').hide();
-        var shaun = 12, maxNews = jQuery('.news-block').length;
+        var maxNews = jQuery('.news-block').length;
+		var shaun = maxNews; //12;
         var showMore = function(shown) {
             // Fade in a certain number of news
 	        for (var s = 1; s <= shown; s++) {
@@ -45,20 +45,6 @@ var HomeComponent = {
 		    jQuery('.past-dates').show();
 		    jQuery('.showmore-toggle-bar.load-past-dates').hide();
 	    });
-
-	    // Unveil 03 feb news (2 click layers)
-        jQuery('.news-feb-2021 .more-things').hide();
-        jQuery('.news-feb-2021 .even-more-things').hide();
-        jQuery('.news-feb-2021 .things').on('click', function() {
-            jQuery('.news-feb-2021 .things').removeClass('clickable');
-            jQuery('.news-feb-2021 .more-things').fadeIn(500);
-
-            jQuery('.news-feb-2021 .more-things').on('click', function() {
-                jQuery('.news-feb-2021 .more-things').removeClass('clickable');
-                jQuery('.news-feb-2021 .even-more-things').fadeIn(500);
-            });
-        });
-
 
     }
 };

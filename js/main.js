@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }, 1000);
+			
         }
     });
     Vue.component('logo-links', {
@@ -191,6 +192,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
 		mounted: function() {
+			// Grey fade glitch
+			/*
             var self = this;
             var glitchSat = function() {
                 self.saturation = 0
@@ -205,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     glitchSat();
                 }
             }, 100);
+			*/
 		}
     });
 

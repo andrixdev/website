@@ -74,7 +74,26 @@
 					@media (max-width: @xs-sm) {
 						padding: 15px;
 					}
-
+					
+					.trailer {
+						iframe {
+							max-width: 100%;
+						}
+						iframe.with-replacement + img.iframe-replacement {
+							display: none;
+							width: 100%;
+						}
+						@media (max-width: 650px) {
+							iframe.with-replacement {
+								display: none;
+							}
+							iframe.with-replacement + img.iframe-replacement {
+								display: inherit;
+							}
+						}
+					}
+					
+					
 					&.news-feb-2021 {
 						img {
 							margin: 0.3em 0;
@@ -97,6 +116,8 @@
 					&.news-gretsi {
 						max-width: 500px;
 					}
+					&.news-sisyphe,
+					&.news-f1a,
 					&.news-gdlkv-attractors,
 					&.news-vp-conflu,
 					&.news-vp2-music,
@@ -107,6 +128,7 @@
 					&.news-m2-gallery {
 						img {
 							width: 350px;
+							max-width: 100%;
 						}
 					}
 					&.news-gamdif1 {
@@ -267,11 +289,6 @@
 				flex-basis: 100%;
 			}
 
-			.trailer {
-				iframe {
-					max-width: 90%;
-				}
-			}
 		}
 	}
 	.home-dates {

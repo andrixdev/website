@@ -759,6 +759,21 @@ img.blob {
     padding: 15px;
   }
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block .trailer iframe {
+  max-width: 100%;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block .trailer iframe.with-replacement + img.iframe-replacement {
+  display: none;
+  width: 100%;
+}
+@media (max-width: 650px) {
+  #home .home-whatsnew .whatsnew-content .news-blocks .news-block .trailer iframe.with-replacement {
+    display: none;
+  }
+  #home .home-whatsnew .whatsnew-content .news-blocks .news-block .trailer iframe.with-replacement + img.iframe-replacement {
+    display: inherit;
+  }
+}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
   margin: 0.3em 0;
   width: 80px;
@@ -780,6 +795,8 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
   max-width: 500px;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-sisyphe img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-f1a img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdlkv-attractors img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-conflu img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-music img,
@@ -789,6 +806,7 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-mea-wip img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
   width: 350px;
+  max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gamdif1 img {
   max-width: 100%;
@@ -934,9 +952,6 @@ img.blob {
 }
 #home .home-whatsnew .whatsnew-content .loadmore-holder {
   flex-basis: 100%;
-}
-#home .home-whatsnew .whatsnew-content .trailer iframe {
-  max-width: 90%;
 }
 #home .home-dates .dates-content .future-dates,
 #home .home-dates .dates-content .past-dates {
