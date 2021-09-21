@@ -79,7 +79,7 @@
 						iframe {
 							max-width: 100%;
 						}
-						iframe.with-replacement + img.iframe-replacement {
+						iframe.with-replacement + a img.iframe-replacement {
 							display: none;
 							width: 100%;
 						}
@@ -87,7 +87,7 @@
 							iframe.with-replacement {
 								display: none;
 							}
-							iframe.with-replacement + img.iframe-replacement {
+							iframe.with-replacement + a img.iframe-replacement {
 								display: inherit;
 							}
 						}
@@ -97,6 +97,7 @@
 					&.news-sisyphe,
 					&.news-f1a,
 					&.news-gdlkv-attractors,
+					&.news-gdchels,
 					&.news-vp-conflu,
 					&.news-vp2-music,
 					&.news-vp2-wip,
@@ -122,7 +123,6 @@
 					}
 					&.news-gdchels {
 						img {
-							width: 350px;
 							background: white;
 						}
 					}
@@ -150,10 +150,7 @@
 						img {
 							width: 180px;
 							margin: 10px;
-
-							&:nth-of-type(1) {
-								height: 270px;
-							}
+							flex-grow: 1;
 						}
 					}
                     &.news-digital-arts-camp {
@@ -255,10 +252,12 @@
 								width: 180px;
 								margin: 10px;
 								border: #222 1px solid;
-							}
+								flex-grow: 1;
+
+							}/*
 							@media (max-width: 500px) {
 								.flexcol();
-							}
+							}*/
 						}
 					}
 
