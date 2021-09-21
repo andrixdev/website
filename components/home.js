@@ -38,12 +38,11 @@ var HomeComponent = {
             showMore(shaun);
         });
 
-	    // Show past dates
-	    // I don't give a dayum about JS frameworks anymore, jQuery does the job man
-	    jQuery('.past-dates').hide();
-	    jQuery('.load-past-dates').on('click', function() {
-		    jQuery('.past-dates').show();
-		    jQuery('.showmore-toggle-bar.load-past-dates').hide();
+	    // Show past events
+	    jQuery('.past-events').hide();
+	    jQuery('.load-past-events').on('click', function() {
+		    jQuery('.past-events').show();
+		    jQuery('.showmore-toggle-bar.load-past-events').hide();
 	    });
 
     }

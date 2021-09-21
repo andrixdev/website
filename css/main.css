@@ -953,8 +953,8 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .loadmore-holder {
   flex-basis: 100%;
 }
-#home .home-dates .dates-content .future-dates,
-#home .home-dates .dates-content .past-dates {
+#home .home-events .events-content .future-events,
+#home .home-events .events-content .past-events {
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
@@ -963,27 +963,27 @@ img.blob {
   /* Centers child elements */
   justify-content: center;
 }
-.ie #home .home-dates .dates-content .future-dates > *,
-.ie #home .home-dates .dates-content .past-dates > * {
+.ie #home .home-events .events-content .future-events > *,
+.ie #home .home-events .events-content .past-events > * {
   width: 100%;
 }
-#home .home-dates .dates-content {
+#home .home-events .events-content {
   padding: 40px 30px;
 }
-#home .home-dates .dates-content .date-block {
+#home .home-events .events-content .event-block {
   margin-bottom: 15px;
 }
-#home .home-dates .dates-content .date-block p span.date {
+#home .home-events .events-content .event-block p span.date {
   font-size: 1.1rem;
   font-weight: 600;
 }
-#home .home-dates .dates-content .date-block p span.what {
+#home .home-events .events-content .event-block p span.what {
   font-style: italic;
 }
-#home .home-dates .dates-content .date-block p span.where {
+#home .home-events .events-content .event-block p span.where {
   font-size: 0.85rem;
 }
-#home .home-dates .dates-content p.past-dates-title {
+#home .home-events .events-content p.past-events-title {
   font-size: 1.4rem;
   text-transform: uppercase;
   margin-bottom: 20px;
