@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         mounted: function() { Projects.go(); }
     };
-    var VRComponent = {
-        template: jQuery('#vr-template').html(),
+    var FilmsComponent = {
+        template: jQuery('#films-template').html(),
         data: function() {
             return { }
         },
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { path: '/gallery', component: GalleryComponent },
         { path: '/projects', redirect: '/web-dataviz' },
         { path: '/web-dataviz', component: ProjectsComponent },
-        { path: '/vr', component: VRComponent },
+        { path: '/films', component: FilmsComponent },
         { path: '/creative-coding', component: CreativeCodingComponent },
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },

@@ -494,15 +494,15 @@ img.blob {
   width: 100px;
 }
 .format-icons {
-  height: 1.5rem;
+  height: 1rem;
   padding-bottom: 1.5rem;
 }
 .format-icons span {
   margin: 0 0.7rem 0.7rem 0;
   border: solid white 1px;
-  border-radius: 3px;
+  border-radius: 1rem;
   font-size: 0.8rem;
-  padding: 0.2rem;
+  padding: 0.2rem 0.4rem;
   color: hsl(200, 20%, 80%);
   font-family: 'Raleway', sans-serif;
 }
@@ -1554,7 +1554,7 @@ img.blob {
     margin-top: 5px;
   }
 }
-#vr img.mea-img {
+#films img.mea-img {
   width: 600px;
   max-width: 100%;
 }
@@ -2313,11 +2313,11 @@ img.blob {
 #gallery .page-banner {
   background-image: url('../img/misc/annihilation.jpg');
 }
-#vr .page-banner {
+#films .page-banner {
   background-image: url('../img/misc/header/heeader-vp-9.jpg');
 }
 @media (max-width: 500px) {
-  #vr .page-banner {
+  #films .page-banner {
     background-size: auto;
     background-position-x: 50%;
   }
