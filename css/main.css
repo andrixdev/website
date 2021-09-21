@@ -774,27 +774,7 @@ img.blob {
     display: inherit;
   }
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
-  margin: 0.3em 0;
-  width: 80px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .things p,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .more-things p,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .even-more-things p {
-  padding: 0.2em 0;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .things.clickable p,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 .more-things.clickable p {
-  cursor: pointer;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img {
-  width: 350px;
-  background: white;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
-  max-width: 500px;
-}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds21 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-sisyphe img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-f1a img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdlkv-attractors img,
@@ -807,6 +787,18 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
   width: 350px;
   max-width: 100%;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
+  margin: 0.3em 0;
+  width: 80px;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
+  max-width: 500px;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img {
+  width: 350px;
+  background: white;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gamdif1 img {
   max-width: 100%;
