@@ -1728,34 +1728,24 @@ img.blob {
   background: black;
 }
 #about .statement {
-  padding: 60px 0 40px;
-  width: 90%;
-  margin-left: 5%;
+  padding-bottom: 1rem;
+}
+#about .statement .blop {
+  margin-top: 50vh;
 }
 #about .statement .statement-core p {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 300;
+  margin: 100vh 0;
 }
-#about .statement .statement-core p.headline {
-  font-size: 2.5rem;
-}
-@media (max-width: 991px) {
-  #about .statement .statement-core p.headline {
-    text-align: center;
-  }
-}
-#about .statement .statement-core p.the-question {
-  font-size: 1.75rem;
-}
-#about .statement .statement-core p.feel-free {
-  font-size: 1.75rem;
+#about .statement .statement-core p span.annoyed {
+  font-size: 0.8rem;
 }
 #about .showmore-toggle-bar p.show-text {
   width: 265px;
 }
 #about .longer-bio {
-  padding: 0 0 20px;
   width: 90%;
   margin-left: 5%;
   font-weight: 200;
@@ -1782,61 +1772,20 @@ img.blob {
   word-wrap: break-word;
   margin-bottom: 7px;
 }
-#about .resume-riddle {
-  background: hsl(200, 50%, 5%);
-  padding: 0 20px;
-}
-#about .resume-riddle button {
-  font-size: 1.5rem;
-  margin: 20px;
-}
-#about .resume-riddle .riddle {
-  padding-top: 10px;
-}
-#about .resume-riddle .riddle .riddle-text {
-  margin-top: 20px;
-  font-size: 1.3rem;
-}
-#about .resume-riddle .riddle .riddle-text .riddle-intro {
-  margin-bottom: 10px;
-}
-#about .resume-riddle .riddle .riddle-input {
-  margin-top: 15px;
-}
-#about .resume-riddle .riddle .riddle-input input {
-  font-size: 1.2rem;
-  background: hsl(200, 50%, 20%);
-  color: hsl(200, 20%, 80%);
-  border-radius: 1px;
-  padding: 10px;
-  outline: none;
-  border: none;
-}
-#about .resume-riddle .riddle .riddle-input p.error {
-  font-size: 1rem;
-  margin-top: 5px;
-  opacity: 0;
-}
-#about .resume-riddle .riddle button.riddle-submit {
-  margin-top: 10px;
-}
 #contact .page-content {
   padding: 100px 20px 40px;
   background: black;
+}
+#contact .page-content .feel-free .blop {
+  margin: 50vh 0 100vh;
 }
 #contact .page-content .feel-free p {
   text-align: center;
   font-size: 1.4rem;
 }
-#contact .page-content .feel-free p:nth-of-type(1) {
-  font-size: 1.4rem;
-}
-#contact .page-content .feel-free p:nth-of-type(2) {
-  margin-top: 1em;
-  font-size: 1.2rem;
-}
 #contact a.mailme {
   text-decoration: none;
+  font-size: 2.5rem;
 }
 #contact a.mailme:hover {
   text-decoration: underline;
