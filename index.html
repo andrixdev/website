@@ -1134,38 +1134,6 @@
 
         <!--<logo-links></logo-links>-->
 
-		<div class="resume-riddle center">
-			<div class="flexrow flexcenter" v-if="!showRiddle">
-				<button class="acidbutton huge-btn" v-on:click="showRiddle = true">See Resume</button>
-			</div>
-
-			<div class="riddle" v-if="showRiddle">
-				<div class="riddle-text">
-					<p class="riddle-intro">Here is a riddle first...</p>
-					<p>
-						<strong><em>
-							I have a root.
-							<br/>
-							I am irrational.
-							<br/>
-							Artists and scientists have discovered my nature and used my value.
-							<br/>
-							What am I?
-						</em></strong>
-					</p>
-				</div>
-
-				<div class="riddle-input">
-					<!-- Since you read the code... just navigate to /cv ;) -->
-					<!-- Otherwise the answer is the golden number -->
-					<input v-model="riddleAnswer" placeholder="Type answer here..." />
-					<p class="error">Try again</p>
-				</div>
-
-				<button class="riddle-submit acidbutton huge-btn" v-on:click="submitRiddle()">Show resume</button>
-
-			</div>
-		</div>
 	</div>
 </template>
 
@@ -2176,8 +2144,8 @@
 							<div class="alg portrait main-img" id="art-id-2019-3"></div>
 							<div class="alg portrait main-img" id="art-id-2019-7"></div>
 							<div class='side'>
-								<h4>Portraits n°1, n°2</h4>
-								<p><em>Portraits</em> is a format of collaboration where I immerse myself in the world and the work of a scientist to create a piece of art.<br/><br/>Portrait n°1 with L. Bellon. Portrait n°2 with A. Pumir.</p>
+								<h4>Portraits</h4>
+								<p><em>Portraits</em> is a format of collaboration where I immerse myself in the world and the work of a scientist to create a piece of art.<br/><br/>Portrait n°1 with L. Bellon and Portrait n°2 with A. Pumir.</p>
 								<button class="acidbutton">
 									<a href="http://alexandrix.com/blog/portraits/" target="_blank">Read articles</a>
 								</button>
