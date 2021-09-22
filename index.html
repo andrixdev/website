@@ -42,13 +42,15 @@
 </head>
 <body>
 
+<!-- Views -->
+
 <template id="films-template">
 	<div id="films">
 		<vue-title title="Alex Andrix | Films"></vue-title>
 		<div class="page-banner"></div>
 
 		<div class="title-block">
-			<geom base-sides="4" rotate="true"></geom>
+			<geom base-sides="0"></geom>
 			<h1>Films</h1>
 		</div>
 
@@ -1167,113 +1169,6 @@
 	</div>
 </template>
 
-<div id="alexandrix-website">
-	<div class="header"
-		 v-bind:class="{ 'mobile-menu-open': isOpen }"
-		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
-		<div class="logo">
-			<router-link to="/" class="menu-tab home">
-				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
-				<img src='img/website/triangoffset2021.svg' />
-			</router-link>
-		</div>
-		<div class="menu" v-on:click="isOpen = false">
-			<router-link to="/" class="menu-tab home">
-				<geom base-sides="4" header="true"></geom>
-				Home
-			</router-link>
-			<router-link to="/gallery" class="menu-tab two-lines-tab gallery">
-				<geom base-sides="0" header="true"></geom>
-				Algorithmic</br>Paintings
-			</router-link>
-			<router-link to="/films" class="menu-tab films">
-				<geom base-sides="4" header="true" rotate="true"></geom>
-				Films
-			</router-link>
-			<router-link to="/web-dataviz" class="menu-tab two-lines-tab web-dataviz">
-				<geom base-sides="0" header="true"></geom>
-				Web & Data</br>Visualization
-			</router-link>
-			<router-link to="/creative-coding" class="menu-tab two-lines-tab creative-coding">
-				<geom base-sides="4" header="true"></geom>
-				Creative</br>Coding
-			</router-link>
-			<router-link to="/more" class="menu-tab more">
-				<geom base-sides="4" header="true" rotate="true"></geom>
-				More
-			</router-link>
-			<router-link to="/about" class="menu-tab about">
-				<geom base-sides="0" header="true"></geom>
-				About
-			</router-link>
-			<router-link to="/contact" class="menu-tab contact">
-				<geom base-sides="4" header="true" rotate="true"></geom>
-				Contact
-			</router-link>
-			<!--<router-link to="/cv" class="menu-tab cv">
-				<geom base-sides="4" header="true" rotate="true"></geom>
-				CV
-			</router-link>-->
-		</div>
-		<div class="mobile-burger" v-on:click="isOpen = !isOpen">
-			<p class="fa fa-bars" v-if="!isOpen"></p>
-			<p class="fa fa-times" v-if="isOpen"></p>
-		</div>
-	</div>
-
-	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
-		<router-view></router-view>
-	</div>
-
-	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
-		<div class="flexrow flexcenter flexchildrenend">
-			<img class="footer-logo" src="img/website/triango2021.svg" />
-			<p class="click-and-hue" v-on:click="rotateLeHue()">
-				&nbsp;ALEX ANDRIX © 2021
-			</p>
-		</div>
-		<!--<p class="crafted">
-			<span>Handcrafted with</span>
-			<img src='img/website/vue.png' alt="Vue.js" title="Vue JS"/>
-			<span>and</span>
-			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
-		</p>-->
-		<p class="version">v4.6</p>
-	</div>
-
-	<!-- Artwork detail container for Gallery (has to be here for CSS reasons) -->
-	<div id="front">
-		<div class="zoom">
-			<!--<img class='loader' src='img/website/triangorot.svg' />-->
-			<div class="loader">
-				<div class="loader-animation">
-					<img src='img/loader/triango-outer-layer-blue.svg' />
-					<img src='img/loader/triango-outer-layer-black.svg' />
-				</div>
-				<p class="loadingtext">Loading image...</p>
-			</div>
-
-			<img class="fullone" src="/" alt="" />
-			<div class='quit' title="Back to gallery"></div>
-			<div class='details'>
-				<div class='description'>
-					<p class='title'>Title</p>
-					<p class='text'>Lorem</p>
-				</div>
-				<div class='social'>
-					<div class='deviant'>
-
-					</div>
-					<div class='github'>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- View templates -->
 <template id="home-template">
 	<div id="home">
 		<vue-title title="Alex Andrix | Art for Science"></vue-title>
@@ -2216,7 +2111,7 @@
 		<div class="page-banner"></div>
 
 		<div class="title-block">
-			<geom base-sides="0"></geom>
+			<geom base-sides="4" rotate="true"></geom>
 			<h1>Algorithmic Paintings</h1>
 		</div>
 
@@ -3207,7 +3102,116 @@
 	</div>
 </template>
 
+<!-- Main -->
+
+<div id="alexandrix-website">
+	<div class="header"
+		 v-bind:class="{ 'mobile-menu-open': isOpen }"
+		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
+		<div class="logo">
+			<router-link to="/" class="menu-tab home">
+				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
+				<img src='img/website/triangoffset2021.svg' />
+			</router-link>
+		</div>
+		<div class="menu" v-on:click="isOpen = false">
+			<router-link to="/" class="menu-tab home">
+				<geom base-sides="4" header="true"></geom>
+				Home
+			</router-link>
+			<router-link to="/films" class="menu-tab films">
+				<geom base-sides="0" header="true"></geom>
+				Films
+			</router-link>
+			<router-link to="/gallery" class="menu-tab gallery">
+				<geom base-sides="4" header="true" rotate="true"></geom>
+				Paintings
+			</router-link>
+			<router-link to="/web-dataviz" class="menu-tab two-lines-tab web-dataviz">
+				<geom base-sides="0" header="true"></geom>
+				Web & Data</br>Visualization
+			</router-link>
+			<router-link to="/creative-coding" class="menu-tab two-lines-tab creative-coding">
+				<geom base-sides="4" header="true"></geom>
+				Creative</br>Coding
+			</router-link>
+			<router-link to="/more" class="menu-tab more">
+				<geom base-sides="4" header="true" rotate="true"></geom>
+				More
+			</router-link>
+			<router-link to="/about" class="menu-tab about">
+				<geom base-sides="0" header="true"></geom>
+				About
+			</router-link>
+			<router-link to="/contact" class="menu-tab contact">
+				<geom base-sides="4" header="true" rotate="true"></geom>
+				Contact
+			</router-link>
+			<!--<router-link to="/cv" class="menu-tab cv">
+				<geom base-sides="4" header="true" rotate="true"></geom>
+				CV
+			</router-link>-->
+		</div>
+		<div class="mobile-burger" v-on:click="isOpen = !isOpen">
+			<p class="fa fa-bars" v-if="!isOpen"></p>
+			<p class="fa fa-times" v-if="isOpen"></p>
+		</div>
+	</div>
+
+	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
+		<router-view></router-view>
+	</div>
+
+	<div class="footer" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
+		<div class="flexrow flexcenter flexchildrenend">
+			<img class="footer-logo" src="img/website/triango2021.svg" />
+			<p class="click-and-hue" v-on:click="rotateLeHue()">
+				&nbsp;ALEX ANDRIX © 2021
+			</p>
+		</div>
+		<!--<p class="crafted">
+			<span>Handcrafted with</span>
+			<img src='img/website/vue.png' alt="Vue.js" title="Vue JS"/>
+			<span>and</span>
+			<img class="jquery" src='img/website/jquery.png' alt="jQuery" title="jQuery"/>
+		</p>-->
+		<p class="version">v4.6</p>
+	</div>
+
+	<!-- Artwork detail container for Gallery (has to be here for CSS reasons) -->
+	<div id="front">
+		<div class="zoom">
+			<!--<img class='loader' src='img/website/triangorot.svg' />-->
+			<div class="loader">
+				<div class="loader-animation">
+					<img src='img/loader/triango-outer-layer-blue.svg' />
+					<img src='img/loader/triango-outer-layer-black.svg' />
+				</div>
+				<p class="loadingtext">Loading image...</p>
+			</div>
+
+			<img class="fullone" src="/" alt="" />
+			<div class='quit' title="Back to gallery"></div>
+			<div class='details'>
+				<div class='description'>
+					<p class='title'>Title</p>
+					<p class='text'>Lorem</p>
+				</div>
+				<div class='social'>
+					<div class='deviant'>
+
+					</div>
+					<div class='github'>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Components -->
+
 <template id="geom-template">
 	<div class="geom" :class="{'in-header': header, 'is-rotated': rotate}">
 		<div v-if="newSides == 4" class="shape square">
@@ -3261,7 +3265,6 @@
 
 	</svg>
 </template>
-
 
 <!-- IE fallback -->
 <div id="ie-fallback">
