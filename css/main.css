@@ -779,12 +779,16 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdlkv-attractors img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-conflu img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-2 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-music img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-wip img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-website img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-tvgre img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-mea-wip img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-digital-arts-camp img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-end img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-technicarticle img {
   width: 350px;
   max-width: 100%;
 }
@@ -822,9 +826,6 @@ img.blob {
   margin: 10px;
   flex-grow: 1;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-digital-arts-camp img {
-  width: 350px;
-}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-subs img {
   max-width: 100%;
 }
@@ -847,16 +848,7 @@ img.blob {
   width: 350px;
   max-width: 100%;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-technicarticle img.exhib-time {
-  max-height: 220px;
-  max-width: 100%;
-  margin: 20px 10px 10px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-technicarticle p.credits {
-  margin: -7px 0 10px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-start img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-end img {
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-start img {
   max-height: 220px;
   max-width: 100%;
   margin: 10px;
@@ -891,6 +883,9 @@ img.blob {
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ecl-exhib .button-container {
   padding-top: 20px;
+}
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-technicarticle p.credits {
+  font-size: 0.7rem;
 }
 @media (max-width: 650px) {
   #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-trailer .trailer {
@@ -1573,12 +1568,6 @@ img.blob {
     text-align: center;
   }
 }
-#illustration .gw190814-video {
-  padding: 20px 10px;
-}
-#illustration .gw190814-video iframe {
-  max-width: 90%;
-}
 #blog .meh,
 #vimeo .meh,
 #guy-teube .meh,
@@ -1785,7 +1774,7 @@ img.blob {
 }
 #contact a.mailme {
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 #contact a.mailme:hover {
   text-decoration: underline;
