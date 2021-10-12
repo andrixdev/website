@@ -15,18 +15,8 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://alexandrix.com/web-dataviz</loc>
-		<lastmod>2020-06-03T00:00:00+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>http://alexandrix.com/creative-coding</loc>
-		<lastmod>2021-09-22T00:00:00+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
 		<loc>http://alexandrix.com/more</loc>
-		<lastmod>2021-09-22T00:00:00+00:00</lastmod>
+		<lastmod>2021-10-12T00:00:00+00:00</lastmod>
 		<priority>0.90</priority>
 	</url>
 	<url>
@@ -36,7 +26,7 @@
 	</url>
 	<url>
 		<loc>http://alexandrix.com/contact</loc>
-		<lastmod>2021-09-22T00:00:00+00:00</lastmod>
+		<lastmod>2021-10-12T00:00:00+00:00</lastmod>
 		<priority>0.50</priority>
 	</url>
 </urlset>
