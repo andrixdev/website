@@ -1726,10 +1726,6 @@ img.blob {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 100vh 0;
-}
-#about .statement .statement-core p span.annoyed {
-  font-size: 0.8rem;
 }
 #about .showmore-toggle-bar p.show-text {
   width: 265px;
