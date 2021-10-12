@@ -25,13 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         mounted: function() { }
     };
-    var CreativeCodingComponent = {
-        template: jQuery('#cc-template').html(),
-        data: function() {
-            return { }
-        },
-        mounted: function() { }
-    };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
         data: function() {
@@ -92,13 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
         { path: '/films', component: FilmsComponent },
-        { path: '/creative-coding', component: CreativeCodingComponent },
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
         { path: '/cv', component: CVComponent },
         { path: '/projects', redirect: '/web-dataviz' },
         { path: '/web-dataviz', redirect: '/more' },
+        { path: '/creative-coding', redirect: '/more' },
         { path: '*', component: NotFoundComponent }
     ];
 
@@ -110,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Scroll to top on route change
     Global.router.beforeEach(function(to, from, next) {
-
 
         setTimeout(function() {
         	// Scroll back to top unless it's some gallery internal navigation
