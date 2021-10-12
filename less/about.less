@@ -1,8 +1,4 @@
 #about {
-	.statement-page-content,
-	.showmore-toggle-bar p.show-text {
-		background: black;
-	}
 
 	// Intro text on About and Contact pages
 	.statement {
@@ -30,6 +26,43 @@
 		p {
 			text-align: justify;
 			font-size: 1rem;
+		}
+	}
+
+	.about-events {
+		.events-content .future-events,
+		.events-content .past-events {
+			.center();
+			.flexcol();
+			.flexcenter();
+		}
+		.events-content {
+			padding: 50px 30px;
+
+			.event-block {
+				margin-bottom: 15px;
+
+				p {
+					span.date {
+						font-size: 1.1rem;
+						font-weight: 600;
+					}
+					span.what {
+						font-style: italic;
+					}
+					span.where {
+						font-size: .85rem;
+					}
+				}
+			}
+
+			p.past-events-title {
+				font-size: 1.4rem;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				margin-top: 40px;
+				.weight-200();
+			}
 		}
 	}
 

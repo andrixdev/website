@@ -143,9 +143,13 @@ var AboutComponent = {
             jQuery('.showmore-toggle-bar.load-longer-bio').hide();
         });
 
-        // Start polyam animation
-        //this.startPolyam();
-
         this.activateBioQuanticGlitch();
+
+        // Show past events
+        jQuery('.past-events').hide();
+        jQuery('.load-past-events').on('click', function() {
+            jQuery('.past-events').show();
+            jQuery('.showmore-toggle-bar.load-past-events').hide();
+        });
     }
 };

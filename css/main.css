@@ -935,43 +935,6 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .loadmore-holder {
   flex-basis: 100%;
 }
-#home .home-events .events-content .future-events,
-#home .home-events .events-content .past-events {
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Centers child elements */
-  justify-content: center;
-}
-.ie #home .home-events .events-content .future-events > *,
-.ie #home .home-events .events-content .past-events > * {
-  width: 100%;
-}
-#home .home-events .events-content {
-  padding: 40px 30px;
-}
-#home .home-events .events-content .event-block {
-  margin-bottom: 15px;
-}
-#home .home-events .events-content .event-block p span.date {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-#home .home-events .events-content .event-block p span.what {
-  font-style: italic;
-}
-#home .home-events .events-content .event-block p span.where {
-  font-size: 0.85rem;
-}
-#home .home-events .events-content p.past-events-title {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  font-weight: 200;
-}
 #home .showcase {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -1712,10 +1675,6 @@ img.blob {
   font-size: 0.6rem;
   font-style: italic;
 }
-#about .statement-page-content,
-#about .showmore-toggle-bar p.show-text {
-  background: black;
-}
 #about .statement {
   padding-bottom: 1rem;
 }
@@ -1738,6 +1697,43 @@ img.blob {
 #about .longer-bio p {
   text-align: justify;
   font-size: 1rem;
+}
+#about .about-events .events-content .future-events,
+#about .about-events .events-content .past-events {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  /* Centers child elements */
+  justify-content: center;
+}
+.ie #about .about-events .events-content .future-events > *,
+.ie #about .about-events .events-content .past-events > * {
+  width: 100%;
+}
+#about .about-events .events-content {
+  padding: 40px 30px;
+}
+#about .about-events .events-content .event-block {
+  margin-bottom: 15px;
+}
+#about .about-events .events-content .event-block p span.date {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+#about .about-events .events-content .event-block p span.what {
+  font-style: italic;
+}
+#about .about-events .events-content .event-block p span.where {
+  font-size: 0.85rem;
+}
+#about .about-events .events-content p.past-events-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-weight: 200;
 }
 #about .about-links {
   padding: 30px 60px 60px;

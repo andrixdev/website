@@ -38,12 +38,5 @@ var HomeComponent = {
             showMore(shaun);
         });
 
-	    // Show past events
-	    jQuery('.past-events').hide();
-	    jQuery('.load-past-events').on('click', function() {
-		    jQuery('.past-events').show();
-		    jQuery('.showmore-toggle-bar.load-past-events').hide();
-	    });
-
     }
 };
