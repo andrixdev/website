@@ -1693,7 +1693,7 @@ img.blob {
   text-align: justify;
   font-size: 1rem;
 }
-#about .about-events .events-content .future-events,
+#about .about-events .events-content .upcoming-events,
 #about .about-events .events-content .past-events {
   text-align: center;
   display: flex;
@@ -1703,12 +1703,12 @@ img.blob {
   /* Centers child elements */
   justify-content: center;
 }
-.ie #about .about-events .events-content .future-events > *,
+.ie #about .about-events .events-content .upcoming-events > *,
 .ie #about .about-events .events-content .past-events > * {
   width: 100%;
 }
 #about .about-events .events-content {
-  padding: 50px 30px;
+  padding: 20px 30px 50px;
 }
 #about .about-events .events-content .event-block {
   margin-bottom: 15px;
@@ -1723,7 +1723,8 @@ img.blob {
 #about .about-events .events-content .event-block p span.where {
   font-size: 0.85rem;
 }
-#about .about-events .events-content p.past-events-title {
+#about .about-events .events-content p.past-events-title,
+#about .about-events .events-content p.upcoming-events-title {
   font-size: 1.4rem;
   text-transform: uppercase;
   margin-bottom: 20px;
