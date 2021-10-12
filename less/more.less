@@ -110,7 +110,6 @@
 			.img-placeholder();
 		}
 	}
-
 }
 
 #kinexperience {
@@ -149,3 +148,46 @@
 		}
 	}
 }
+
+#web-dataviz {
+	/*
+	.radios {
+		@media (max-width: 800px) {
+			display: none;
+		}
+	}
+	*/
+	.web-dataviz-projects {
+		padding: 20px 15px;
+	}
+
+	.showmore-toggle-bar p.show-text {
+		width: 265px;
+	}
+	.projects-container {
+		.flexrow();
+		.flexwrap();
+		.flexcenter();
+
+	}
+	.project-tile {
+		.flexrow();
+		.flexcenter();
+		align-self: stretch;
+
+		// On mobile, force new project tile display (flexcol)
+		@media (max-width: 850px) {
+			.flexcol();
+
+			.right-side {
+				.center();
+				max-width: 100%;
+
+				h4 {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+}
+

@@ -18,13 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         mounted: function()  { Gallery.go(); }
     };
-    var ProjectsComponent = {
-        template: jQuery('#web-dataviz-template').html(),
-        data: function() {
-            return { }
-        },
-        mounted: function() { Projects.go(); }
-    };
     var FilmsComponent = {
         template: jQuery('#films-template').html(),
         data: function() {
@@ -98,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var routes = [
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
-        { path: '/projects', redirect: '/web-dataviz' },
-        { path: '/web-dataviz', component: ProjectsComponent },
         { path: '/films', component: FilmsComponent },
         { path: '/creative-coding', component: CreativeCodingComponent },
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
         { path: '/cv', component: CVComponent },
+        { path: '/projects', redirect: '/web-dataviz' },
+        { path: '/web-dataviz', redirect: '/more' },
         { path: '*', component: NotFoundComponent }
     ];
 
@@ -114,45 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
         routes: routes,
         mode: 'history'
     });
-
-    /*
-    // New Vueless router
-    Global.router2 = {
-        currentPath: location.pathname
-    };
-
-    Global.router2.init = function() {
-	    location.lasthash = [];
-	    callComponent(location.pathname);
-    };
-
-	function updateHistory(curr) {
-		location.lasthash.push(location.hash);
-		location.hash = curr;
-		if (location.href.indexOf("#") > -1) {
-			location.assign(location.href.replace(/\/?#/, "/"));
-		}
-	}
-	function goBack() {
-		location.hash = location.lasthash[location.lasthash.length-1];
-		location.lasthash.pop();
-	}
-	function callComponent(hash) {
-	    console.log('Component hash is ' + hash);
-    }
-    jQuery('[data-navto]').on('click', function() {
-        console.log('Klik');
-        Global.router2.navigate(jQuery(this).attr('data-navto'));
-    });
-    Global.router2.navigate = function(newHash) {
-        if (location.hash == newHash) return false;
-
-	    updateHistory(newHash);
-	    callComponent(newHash);
-    };
-	Global.router2.init();
-
-    */
 
     // Scroll to top on route change
     Global.router.beforeEach(function(to, from, next) {
@@ -192,23 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
 		mounted: function() {
-			// Grey fade glitch
-			/*
-            var self = this;
-            var glitchSat = function() {
-                self.saturation = 0
 
-                setTimeout(function() {
-                    self.saturation = 100
-                }, 50);
-            }
-
-			setInterval(function() {
-                if (Math.random() < 0.01) {
-                    glitchSat();
-                }
-            }, 100);
-			*/
 		}
     });
 

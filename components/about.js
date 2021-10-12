@@ -117,10 +117,10 @@ var AboutComponent = {
                     // Build word outta array and print out
                     var newText = "";
                     for (var j = 0; j < len; j++) {
-                        var rand = Math.random() < 0.1
-                        if (rand) newText += "<em>"
+                        var rand = Math.random() < 0.1;
+                        if (rand) newText += "<em>";
                         newText += newArray[j] + " ";
-                        if (rand) newText += "</em>"
+                        if (rand) newText += "</em>";
                     }
                     jQuery(this).html(newText);
                 }).on('mouseout', function() {
