@@ -156,15 +156,6 @@ h3.categname,
     text-align: center;
   }
 }
-.fullwidth-project iframe {
-  margin: 15px 30px;
-  flex-shrink: 0;
-}
-@media (max-width: 1150px) {
-  .fullwidth-project iframe {
-    flex-shrink: 1;
-  }
-}
 .fullwidth-project h4 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
@@ -291,6 +282,9 @@ h3.categname,
 .responsive-iframe-container iframe.with-replacement + a img.iframe-replacement {
   display: none;
   width: 100%;
+}
+.responsive-iframe-container.youtube-iframe-container {
+  margin: 0;
 }
 /* Dark template */
 /* White template WIP */
