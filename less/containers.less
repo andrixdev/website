@@ -194,3 +194,61 @@ h3.categname,
 	}
 
 }
+
+.responsive-iframe-container {
+
+	// Made for <p> and <br> right above
+	@media (max-width: 660px) {
+		margin: -15px 0;
+	}
+	@media (max-width: 630px) {
+		margin: -23px 0;
+	}
+	@media (max-width: 600px) {
+		margin: -31px 0;
+	}
+	@media (max-width: 570px) {
+		margin: -39px 0;
+	}
+	@media (max-width: 540px) {
+		margin: -47px 0;
+	}
+	@media (max-width: 510px) {
+		margin: -55px 0;
+	}
+	@media (max-width: 480px) {
+		margin: -63px 0;
+	}
+	@media (max-width: 450px) {
+		margin: -71px 0;
+	}
+	@media (max-width: 420px) {
+		margin: -79px 0;
+	}
+	@media (max-width: 390px) {
+		margin: -87px 0;
+	}
+	@media (max-width: 360px) {
+		margin: -95px 0;
+	}
+	@media (max-width: 330px) {
+		margin: -103px 0;
+	}
+
+	iframe {
+		max-width: 100%;
+	}
+
+	iframe.with-replacement + a img.iframe-replacement {
+		display: none;
+		width: 100%;
+	}/*
+	@media (max-width: 650px) {
+		iframe.with-replacement {
+			display: none;
+		}
+		iframe.with-replacement + a img.iframe-replacement {
+			display: inherit;
+		}
+	}*/
+}

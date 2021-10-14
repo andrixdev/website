@@ -74,24 +74,6 @@
 					@media (max-width: @xs-sm) {
 						padding: 15px;
 					}
-					
-					.trailer {
-						iframe {
-							max-width: 100%;
-						}
-						iframe.with-replacement + a img.iframe-replacement {
-							display: none;
-							width: 100%;
-						}
-						@media (max-width: 650px) {
-							iframe.with-replacement {
-								display: none;
-							}
-							iframe.with-replacement + a img.iframe-replacement {
-								display: inherit;
-							}
-						}
-					}
 
 					&.news-fds21,
 					&.news-sisyphe,
@@ -228,22 +210,6 @@
 							font-size: 0.7rem;
 						}
 					}
-					&.news-varphy-trailer {
-						.trailer {
-							@media (max-width: 650px) {
-								margin: -30px 0;
-							}
-							@media (max-width: 530px) {
-								margin: -60px 0;
-							}
-							@media (max-width: 450px) {
-								margin: -80px 0;
-							}
-							@media (max-width: 380px) {
-								margin: -100px 0;
-							}
-						}
-					}
 					&.news-varphy-exhib {
 						.varphy-spoiler {
 							margin-bottom: 10px;
@@ -274,13 +240,11 @@
 						margin-bottom: 0;
 					}
 				}
-
 			}
 
 			.loadmore-holder {
 				flex-basis: 100%;
 			}
-
 		}
 	}
 
@@ -303,50 +267,4 @@
 
 	}
 
-	/* Rules for width based on screen size */
-	/* Adjust each time there's a new artwork... */
-	.home-gallery .showcase-wrapper {
-		width: 5450px;
-	}
-	.home-web-dataviz .showcase-wrapper {
-		width: 4650px;
-	}
-
-	.home-gallery, .home-web-dataviz {
-		position: relative;
-	}
-	p.scroll-left,
-	p.scroll-right {
-		position: absolute;
-		background: rgba(0, 0, 0, 0.85);
-		width: 70px;
-		height: 70px;
-		border-radius: 50%;
-		color: rgba(255, 255, 255, 0.9);
-		opacity: 0.8;
-		font-size: 30px;
-		.center();
-		top: 265px;
-
-		&:hover {
-			opacity: 1
-		}
-		span.fa {
-			.marjinoto();
-			height: 30px;
-			width: 30px;
-		}
-	}
-	p.scroll-left {
-		left: 50px;
-		span.fa {
-			left: -2px;
-		}
-	}
-	p.scroll-right {
-		right: 50px;
-		span.fa {
-			left: 5px;
-		}
-	}
 }
