@@ -1642,6 +1642,9 @@ img.blob {
     margin-top: 5px;
   }
 }
+#about .page-content {
+  background: black;
+}
 #about .statement {
   padding-bottom: 1rem;
 }
