@@ -11,16 +11,16 @@ var Gallery = {
  * Fills the DOM with algories-2.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-Gallery.loadAlgories2 = function(extraCallback) {
+Gallery.loadAlgories2 = function (extraCallback) {
 	jQuery
 		.get("data/algories-2.xml", {})
-		.done(function(data) {
+		.done(function (data) {
 
 			var DOMgallery = jQuery('.gallery-content-2');
 			var jAlgories = jQuery(data).find('algories');
 
 			// Data retrieval and DOM fill
-			jAlgories.find('alg').each(function() {
+			jAlgories.find('alg').each(function () {
 				var title = jQuery(this).find('title').text();
 				var src = "img/" + jQuery(this).find('src').text();
 				var small = "img/" + jQuery(this).find('small').text();
@@ -55,7 +55,7 @@ Gallery.loadAlgories2 = function(extraCallback) {
  * @param {Number} id ID of algory
  * @returns {Object} Algory object
  */
-Gallery.getAlg = function(id) {
+Gallery.getAlg = function (id) {
 	for (key in Gallery.algData) {
 		if ('art-id-' + Gallery.algData[key].id == id) {
 			return Gallery.algData[key];
@@ -68,16 +68,16 @@ Gallery.getAlg = function(id) {
 /**
  * Listeners on each algory
  */
-Gallery.DOMlisteners = function() {
+Gallery.DOMlisteners = function () {
 	// Algories blocks
 	jQuery('.alg').off().on({
-		mouseenter: function() {
+		mouseenter: function () {
 			jQuery(this).find('h4.title').css('opacity','1');
 			jQuery(this).css('box-shadow','rgba(255,255,255,0.5) 0 0 10px');
-		}, mouseleave: function() {
+		}, mouseleave: function () {
 			jQuery(this).find('h4.title').css('opacity','0');
 			jQuery(this).css('box-shadow','none');
-		}, mouseup: function() {
+		}, mouseup: function () {
 			//Gallery.fillFront(jQuery(this).attr('id'));
 			//Gallery.showFront();
 			// Update route history
@@ -93,18 +93,18 @@ Gallery.DOMlisteners = function() {
 /**
  * Listeners for front view
  */
-Gallery.frontListeners = function() {
+Gallery.frontListeners = function () {
 	jQuery('#front .zoom').off().on({
-		mouseenter: function() {
+		mouseenter: function () {
             Gallery.mouseIsOverFront = true;
 			Gallery.showFrontDetails();
-		}, mouseleave: function() {
+		}, mouseleave: function () {
             Gallery.mouseIsOverFront = false;
             Gallery.hideFrontDetails();
 		}
 	});
 	jQuery('#front').off().on({
-		mouseup: function() {
+		mouseup: function () {
 			if (Gallery.isFrontShown && !Gallery.mouseIsOverFront) {
 				Global.router.push({
 					path: 'gallery', query: { artwork: 0 }
@@ -113,16 +113,16 @@ Gallery.frontListeners = function() {
 		}
 	});
 	jQuery('#front .zoom .quit').off().on({
-		mouseup: function() {
+		mouseup: function () {
 			Global.router.push({
 				path: 'gallery', query: { artwork: 0 }
 			});
 		}
 	});
 	var resizingEventCount = 0;
-	jQuery(window).off().on('resize', function() {
+	jQuery(window).off().on('resize', function () {
 		resizingEventCount++;
-		setTimeout(function() {
+		setTimeout(function () {
 			resizingEventCount--;
 			if (resizingEventCount == 0) {
 				// Actual resize action
@@ -136,7 +136,7 @@ Gallery.frontListeners = function() {
 /**
  * DOM filler called on demand (click on an algory)
  */
-Gallery.fillFront = function(id) {
+Gallery.fillFront = function (id) {
 
 	var alg = Gallery.getAlg(id);
 	if (!alg) return false;
@@ -152,7 +152,7 @@ Gallery.fillFront = function(id) {
 	// Image
 	var newImg = new Image();
 	Gallery.currentImageObject = newImg;// Store globally for .on('resize') action without reloading image
-	newImg.onload = function() {
+	newImg.onload = function () {
 		jQuery('#front .zoom img.fullone').attr('src', '');
 
 		Gallery.adjustFrontImageSize();
@@ -160,7 +160,7 @@ Gallery.fillFront = function(id) {
 		// Fake timeout
 		clearTimeout(Gallery.timeout);
 		var self = this;
-		Gallery.timeout = setTimeout(function() {
+		Gallery.timeout = setTimeout(function () {
             Gallery.loadingOff();
 			jQuery('#front .zoom img.fullone').attr('src', self.src);
 		}, 300);
@@ -181,7 +181,7 @@ Gallery.fillFront = function(id) {
  *
  * @returns Object {w, h}
  */
-Gallery.adjustFrontImageSize = function() {
+Gallery.adjustFrontImageSize = function () {
 	var h = Gallery.currentImageObject.height;
 	var w = Gallery.currentImageObject.width;
 
@@ -203,7 +203,7 @@ Gallery.adjustFrontImageSize = function() {
 /**
  * Shows front view
  */
-Gallery.showFront = function() {
+Gallery.showFront = function () {
 	Gallery.isFrontShown = true;
 
 	jQuery('#front').css('display', 'inherit');
@@ -212,7 +212,7 @@ Gallery.showFront = function() {
 /**
  * Hides front view
  */
-Gallery.hideFront = function() {
+Gallery.hideFront = function () {
 	Gallery.isFrontShown = false;
 
 	jQuery('#front').css('display', 'none');
@@ -221,36 +221,36 @@ Gallery.hideFront = function() {
 /**
  * Shows details in front view
  */
-Gallery.showFrontDetails = function() {
+Gallery.showFrontDetails = function () {
 	jQuery('#front .zoom .details').css('opacity', 1);
 };
 
 /**
  * Hides details in front view
  */
-Gallery.hideFrontDetails = function() {
+Gallery.hideFrontDetails = function () {
 	jQuery('#front .zoom .details').css('opacity', 0);
 };
 
 /**
  * Loading icon within front view - Turn on
  */
-Gallery.loadingOn = function() {
+Gallery.loadingOn = function () {
 	jQuery('.zoom .loader').show();
 };
 
 /**
  * Loading icon within front view - Turn off
  */
-Gallery.loadingOff = function() {
+Gallery.loadingOff = function () {
 	jQuery('.zoom .loader').hide();
 };
 
 /**
  * Initializer
  */
-Gallery.go = function() {
-    Gallery.loadAlgories2(function() {
+Gallery.go = function () {
+    Gallery.loadAlgories2(function () {
         Gallery.DOMlisteners();
         Gallery.frontListeners();
 
@@ -264,7 +264,7 @@ Gallery.go = function() {
 	    }
     });
 };
-Gallery.applyState = function() {
+Gallery.applyState = function () {
 	if (!Gallery.algData.length) Gallery.go();
 	else {
 		if (Gallery.shouldShowFront) {

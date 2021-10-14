@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // If IE, display fallback view and return false
     if (isIE()) {
@@ -13,24 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // App components (short ones, the others are in separate files)
     var GalleryComponent = {
         template: jQuery('#gallery-template').html(),
-        data: function() {
+        data: function () {
             return { }
         },
-        mounted: function()  { Gallery.go(); }
+        mounted: function ()  { Gallery.go(); }
     };
     var FilmsComponent = {
         template: jQuery('#films-template').html(),
-        data: function() {
+        data: function () {
             return { }
         },
-        mounted: function() { }
+        mounted: function () { }
     };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
-        data: function() {
+        data: function () {
             return { }
         },
-        mounted: function() { CV.go(); }
+        mounted: function () { CV.go(); }
     };
 
     // Custom components
@@ -38,30 +38,30 @@ document.addEventListener('DOMContentLoaded', function() {
     Vue.component('geom', {
         template: jQuery('#geom-template').html(),
         props: ['baseSides', 'header', 'rotate'],
-        data: function() {
+        data: function () {
             return {
                 newSides: undefined
             }
         },
-        mounted: function() {
+        mounted: function () {
             this.newSides = this.baseSides;
             var self = this;
-            var glitch = function() {
+            var glitch = function () {
                 self.newSides = self.newSides == 4 ? 0 : 4;
 
-                setTimeout(function() {
+                setTimeout(function () {
                     self.newSides = self.newSides == 4 ? 0 : 4;
                 }, 40);
             };
 
             // Glitch loop
-            setInterval(function() {
+            setInterval(function () {
                 // 10% chance of glitch
                 if (Math.random() < 0.1) {
                     // Glitch up to 3 times
                     var glitches = Math.ceil(3 * Math.random());
                     for (var g = 0; g < glitches; g++) {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             glitch();
                         }, g * 80);
                     }
@@ -102,9 +102,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Scroll to top on route change
-    Global.router.beforeEach(function(to, from, next) {
+    Global.router.beforeEach(function (to, from, next) {
 
-        setTimeout(function() {
+        setTimeout(function () {
         	// Scroll back to top unless it's some gallery internal navigation
 	        if (!(to.fullPath.indexOf('gallery') > -1 && from.fullPath.indexOf('gallery') > -1)) {
 		        window.scrollTo(0, 0);
@@ -133,11 +133,11 @@ document.addEventListener('DOMContentLoaded', function() {
             saturation: 100
         },
         methods: {
-            rotateLeHue: function() {
+            rotateLeHue: function () {
                 this.hueAngle = Math.round(360 * Math.random());
             }
         },
-		mounted: function() {
+		mounted: function () {
 
 		}
     });

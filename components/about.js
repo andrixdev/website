@@ -1,85 +1,10 @@
 var AboutComponent = {
     template: jQuery('#about-template').html(),
-    data: function() {
-        return {
-            currentPolyam: "work with scientists"
-        }
+    data: function () {
+        return { }
     },
     methods: {
-        startPolyam: function() {
-            var options = [
-                "work with scientists",
-                "run",
-                //"am nomad",
-                "created my own task management tool in CSS format",
-                "only read news on Wikipedia",
-                "advocate for data privacy",
-                "use Firefox",
-                "overuse Notepad++ which is great",
-                "give talks on creative coding",
-                "code",
-                "don't care about the newest shit",
-                "keep away from social media",
-                "like CodePen",
-                "practice a massage technique between acupressure and shiatsu",
-                "would probably love to get in touch with you",
-                "have a minimalistic lifestyle",
-                "try to workout",
-                "write stuff",
-                "made a short animated film with only particles in it",
-                "lived in Australia and Sweden",
-                "was raised in France",
-                "enjoy maaany kinds of music",
-                "git push",
-                "have a zero inbox approach to email management",
-                "advocate for long lunch breaks",
-                "always carry an icosahedron with me in case of fire",
-                "like a good whisky",
-                "spent a few years in Lyon",
-                "am shy deep inside",
-                "rely much on karma for projects",
-                "will teach some day soon",
-                "make art exhibitions with JavaScript",
-                "once was an army officer in mountain troops",
-                "hiked the Great Ocean Walk but saw no koala",
-                "just can't draw real stuff",
-                "dance hunggar kung-fu",
-                "have a dream",
-                "live projected my face at night on a huge tree then freaked out",
-                "spin pens",
-                "carry an APC MINI in case of accidental VJ session",
-                "compressed my entire digital self to 58Go in 2017",
-                //"don't have a long-term goal in mind, just directional gut feelings",
-                "read self-optimization, tech and management articles for 5 years then stopped",
-                "was initially inspired by Joshua Davis W3C talk on creative coding",
-                "shake hands",
-                "write in 1st person to you on my website because it's cooler",
-                "coded an e-learning game on the HSL color model",// for fun (and for my thesis)",
-                "can instantly guess the Hue of things (HSL color space)",
-                "like JavaScript but got tired of frameworks",
-                "am concerned about CSS specificity management in web projects",
-                "sometimes use CSS for art tricks on top of JS canvas lol",
-                "should take a nap and so do you",
-                "hope the timing of this animation is just right",
-                "like it when you scroll",
-                "made this website open-source",
-                // "like it when you read my open-source code on Github and see the comments ;)"
-            ], indexx = 0, self = this;
-
-            // (global function in utils.js)
-            var indexes = randomIndexes(options.length);
-	        var newFrame = function() {
-		        indexx++;
-		        indexx = indexx % options.length;
-		        var polyam = options[indexes[indexx]];
-		        var durationMS = Math.max(1000, polyam.length * 40);
-		        self.currentPolyam = polyam;
-		        setTimeout(newFrame, durationMS);
-	        };
-
-            newFrame();
-        },
-        activateBioQuanticGlitch: function() {
+        activateBioQuanticGlitch: function () {
             // Prepare empty arrays with texts
             var paragraphs = jQuery('.longer-bio > p').length;
             var htmlContents = []; // Raw initial text including <em>s
@@ -103,7 +28,7 @@ var AboutComponent = {
             // Listeners
             jQuery('.longer-bio > p').each(function (i, e) {
 
-                jQuery(this).off().on('mousemove', function() {
+                jQuery(this).off().on('mousemove', function () {
                     var newArray = newArrays[i];
 
                     // Shuffle 2 words in new array
@@ -123,7 +48,7 @@ var AboutComponent = {
                         if (rand) newText += "</em>";
                     }
                     jQuery(this).html(newText);
-                }).on('mouseout', function() {
+                }).on('mouseout', function () {
                     // Reset text
                     jQuery(this).html(htmlContents[i]);
 
@@ -134,11 +59,11 @@ var AboutComponent = {
             });
         }
     },
-    mounted: function() {
+    mounted: function () {
 
         jQuery('.longer-bio').hide();
 
-        jQuery('.load-longer-bio').on('click', function() {
+        jQuery('.load-longer-bio').on('click', function () {
             jQuery('.longer-bio').show();
             jQuery('.showmore-toggle-bar.load-longer-bio').hide();
         });
@@ -147,7 +72,7 @@ var AboutComponent = {
 
         // Show past events
         jQuery('.past-events').hide();
-        jQuery('.load-past-events').on('click', function() {
+        jQuery('.load-past-events').on('click', function () {
             jQuery('.past-events').show();
             jQuery('.showmore-toggle-bar.load-past-events').hide();
         });

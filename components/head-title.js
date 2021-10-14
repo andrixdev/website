@@ -2,16 +2,16 @@
 var HeadTitleComponent = {
     name: 'vue-title',
     props: ['title'],
-    created: function() {
+    created: function () {
         document.title = this.title;
     },
     watch: {
-        title: function() {
+        title: function () {
             // only used when the title changes after page load
             document.title = this.title;
         }
     },
-    render: function() {
+    render: function () {
 
     }
 };

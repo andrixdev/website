@@ -1,11 +1,11 @@
 var NotFoundComponent = {
     template: jQuery('#not-found-template').html(),
-    data: function() {
+    data: function () {
         return {
             requestedRoute: undefined
         }
     },
-    mounted: function() {
+    mounted: function () {
         this.requestedRoute = this.$route.path;
 
         // Glass icosahedron
@@ -45,7 +45,7 @@ var NotFoundComponent = {
 
         }
 
-        var rotateIco = function() {
+        var rotateIco = function () {
             // Rotate icosahedron
             var rX = 360 * Math.sin(t / 160);
             var rY = 360 * Math.sin(t / 240);
@@ -63,7 +63,7 @@ var NotFoundComponent = {
         };
 
         // Power!
-		var frame = function() {
+		var frame = function () {
         	rotateIco();
         	requestAnimationFrame(frame);
 		};

@@ -1,5 +1,5 @@
 // Returns [4, 0, 1, 3, 2] for maxNumber = 5, for instance
-function randomIndexes(maxNumber) {
+function randomIndexes (maxNumber) {
     var arr = [];
 
     while (arr.length < maxNumber) {
@@ -20,7 +20,7 @@ function randomIndexes(maxNumber) {
  * @param {Number} maxNumber
  * @returns Only *maxNumber* randomly chosen paths
  */
-function randomizePaths(paths, maxNumber) {
+function randomizePaths (paths, maxNumber) {
     var output = [];
     var total = paths.length;
 
@@ -35,14 +35,14 @@ function randomizePaths(paths, maxNumber) {
     return output;
 }
 
-function isIE() {
+function isIE () {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
 
     return (msie > 0 || !!ua.match(/Trident.*rv\:11\./));
 }
 
-function isIEorEdge() {
+function isIEorEdge () {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
     var edge = ua.indexOf('Edge/');
@@ -54,7 +54,7 @@ function isIEorEdge() {
  * Shuffles array in place.
  * @param {Array} a items An array containing the items.
  */
-function shuffle(a) {
+function shuffle (a) {
 	var j, x, i;
 	for (i = a.length - 1; i > 0; i--) {
 		j = Math.floor(Math.random() * (i + 1));

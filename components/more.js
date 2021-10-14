@@ -1,7 +1,7 @@
 // This components gathers several previous or new components
 var MoreComponent = {
     template: jQuery('#more-template').html(),
-    data: function() {
+    data: function () {
         return {
             animationPaths: [],
             displayedPaths: [],
@@ -10,21 +10,21 @@ var MoreComponent = {
         }
     },
     methods: {
-        updateAnimationPaths: function(el) {
+        updateAnimationPaths: function (el) {
             this.animationPaths = el;
         },
-        updateDisplayedPaths: function(el) {
+        updateDisplayedPaths: function (el) {
             this.displayedPaths = el;
         },
-        randomizeDisplayedPaths: function() {
+        randomizeDisplayedPaths: function () {
             this.updateDisplayedPaths(randomizePaths(this.animationPaths, this.maxAnim));
             this.updateSeenAnimsWithNewDisplayedAnimations();
         },
-        updateSeenAnimsWithNewDisplayedAnimations: function() {
+        updateSeenAnimsWithNewDisplayedAnimations: function () {
             // Compare with existing stored paths, add only if new
             // Don't mind about pushing on the very array being looped on
             var self = this;
-            this.displayedPaths.forEach(function(el) {
+            this.displayedPaths.forEach(function (el) {
                 var isInSeenAnims = false;
                 for (var a = 0; a < self.seenAnims.length; a++) {
                     if (el === self.seenAnims[a]) isInSeenAnims = true;
@@ -33,18 +33,18 @@ var MoreComponent = {
             });
         },
     },
-    mounted: function() {
+    mounted: function () {
         var self = this;
 
         // Store all animation paths
         jQuery
             .get("data/animations.xml", {})
-            .done(function(data) {
+            .done(function (data) {
 
                 var paths = [];
 
                 var jAnimations = jQuery(data).find('animations');
-                jAnimations.find('image').each(function(el) {
+                jAnimations.find('image').each(function (el) {
                     paths.push(jQuery(this).text());
                 });
                 self.updateAnimationPaths(paths);
@@ -55,11 +55,11 @@ var MoreComponent = {
 
         // Web-Dataviz project links
         jQuery('.web-dataviz-projects .project-tile').on({
-            mouseenter: function() {
+            mouseenter: function () {
 
-            }, mouseleave: function() {
+            }, mouseleave: function () {
 
-            }, mouseup: function() {
+            }, mouseup: function () {
                 var goToLink = jQuery(this).find('a').attr('href');
                 if (!!goToLink) window.open(goToLink, '_blank');
             }

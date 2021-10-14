@@ -5,11 +5,11 @@ var CV = {};
  * Fills the DOM with cv.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-CV.loadCV = function(extraCallback) {
+CV.loadCV = function (extraCallback) {
 
 	jQuery
 	.get("data/cv.xml", {})
-	.done(function(data) {
+	.done(function (data) {
 		
 		var tempo = 0;
 		var enable = 0;
@@ -17,11 +17,11 @@ CV.loadCV = function(extraCallback) {
 		// 1 - Intro
 		//// Intro lines, one after the other
 		tempo += 2000;// fadeOut time + 500ms
-		jQuery('.cvcore .intro p').each(function() {
+		jQuery('.cvcore .intro p').each(function () {
 			////// Fade in
 			tempo += 300;
 			var self = this;
-			setTimeout(function() {
+			setTimeout(function () {
 				jQuery(self).css('display', 'inherit').animate({
 					opacity: 1
 				}, 2000);
@@ -30,7 +30,7 @@ CV.loadCV = function(extraCallback) {
 		
 		// 2 - Enjoy
 		tempo += 2500;
-		setTimeout(function() {
+		setTimeout(function () {
 			jQuery('.cvcore .enjoy').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
@@ -38,7 +38,7 @@ CV.loadCV = function(extraCallback) {
 		
 		// 3 - Abroad
 		tempo += 2000;
-		setTimeout(function() {
+		setTimeout(function () {
 			jQuery('.cvcore .abroad').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
@@ -46,7 +46,7 @@ CV.loadCV = function(extraCallback) {
 		
 		// 4 - Schools
 		tempo += 4000;
-		setTimeout(function() {
+		setTimeout(function () {
 			jQuery('.cvcore .schools').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
@@ -54,7 +54,7 @@ CV.loadCV = function(extraCallback) {
 		
 		// 5 - Webskills
 		tempo += 1500;
-		setTimeout(function() {
+		setTimeout(function () {
 			jQuery('.cvcore .webskills').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
@@ -62,7 +62,7 @@ CV.loadCV = function(extraCallback) {
 		
 		// 6 - CV title
 		tempo += 5000;
-		setTimeout(function() {
+		setTimeout(function () {
 			jQuery('.cvcore .cake').css('display', 'flex').animate({
 				opacity: 1
 			}, 1000);
@@ -70,7 +70,7 @@ CV.loadCV = function(extraCallback) {
 		
 		// 7 - CV slices (from XHR) one after the other
 		tempo += 0;
-		jQuery(data).find('slice').each(function() {
+		jQuery(data).find('slice').each(function () {
 		
 			tempo += 700;
 			
@@ -97,7 +97,7 @@ CV.loadCV = function(extraCallback) {
 			sliceHTML +=   "</div>";
 			sliceHTML += "</div>";
 			
-			setTimeout(function() {
+			setTimeout(function () {
 				// DOM fill
 				jQuery('.cvcore .cake').append(sliceHTML);
 				// Fade in
@@ -110,7 +110,7 @@ CV.loadCV = function(extraCallback) {
 		
 		// 8 - Recommendations
 		tempo += 4000;
-		setTimeout(function() {
+		setTimeout(function () {
 			jQuery('.cvcore .recom').css('display', 'inherit').animate({
 				opacity: 1
 			}, 1000);
@@ -121,59 +121,10 @@ CV.loadCV = function(extraCallback) {
 };
 
 /**
- * Submit handler to the form showing CV
- */
-CV.keyCheckForCV = function() {
-	jQuery("form.showcv").submit(function(event) {
-
-		// Stop form from submitting normally
-		event.preventDefault();
-		// Now we're talking.
-		
-		// Define regex for key validation. Yeah that's where you can hack into my code to see my CV, derp.
-		// Actually no, regex suck.
-		var input = jQuery('#cv .password input').val();
-		var shallPass = (input.charAt(input.length - 1) == 3);
-		
-		// Loading icon start
-		var randomTimeout = 500 + 500 * Math.random();
-		var jShow = jQuery('#cv .show');
-		var button = "<input type='submit' value='Show CV'>";
-		var loadDiv = "<div class='load'></div>";
-		
-		// Loading icon will start to whirl in both cases
-		jShow.html(loadDiv);
-		
-		if (shallPass) {
-			// Loading
-			// Artificially boost timeout
-			randomTimeout += 1000;
-			setTimeout(function() {
-				// Empty DOM nodes for password entering
-				jQuery('form.showcv, p#invalid').fadeOut(500, function() {
-					// Fill DOM with CV
-					loadCV();
-				});
-				
-			}, randomTimeout);
-		} else {
-			setTimeout(function() {
-				// Restore form button
-				jShow.html(button);
-				
-				// Feedback message of invalid key
-				invalidKeyAnimation();
-				
-			}, randomTimeout);
-		}
-	});
-};
-
-/**
  * Submit handler to the form showing CV, without any password
  */
-CV.showCVwithoutKey = function() {
-	jQuery("form.showcv").submit(function(event) {
+CV.showCVwithoutKey = function () {
+	jQuery("form.showcv").submit(function (event) {
 
 		// Stop form from submitting normally
 		event.preventDefault();
@@ -189,9 +140,9 @@ CV.showCVwithoutKey = function() {
 		jShow.html(loadDiv);
 		
 		// Loading
-		setTimeout(function() {
+		setTimeout(function () {
 			// Empty DOM nodes for CV show (here, button only)
-			jQuery('form.showcv').fadeOut(500, function() {
+			jQuery('form.showcv').fadeOut(500, function () {
 				// Fill DOM with CV
 				loadCV();
 			});
@@ -200,27 +151,10 @@ CV.showCVwithoutKey = function() {
 };
 
 /**
- * User feedback that the entered key is wrong
- */
-CV.invalidKeyAnimation = function() {
-	// Insert feedback
-	jQuery('form.showcv').after("<p id='invalid'>Invalid key, please try again.</p>");
-	
-	// Remove feedback after a while
-	setTimeout(function() {
-		// Fade out
-		jQuery('p#invalid').fadeOut(3000, function() {
-			// Then take out
-			jQuery(this).remove();
-		});
-	}, 1500);
-};
-
-/**
  * Initializer
  */
-CV.go = function() {
-    CV.loadCV(function() {
+CV.go = function () {
+    CV.loadCV(function () {
 		CV.showCVwithoutKey();
 	});
 };
