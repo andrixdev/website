@@ -2,12 +2,12 @@
 <algories>
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 	<alg>
-		<title>Vacherie Ternaire (Portraits n°2)</title>
+		<title>Vacherie Ternaire (Portraits no. 2)</title>
 		<artid>2019-7</artid>
 		<date>Jul. 2019</date>
 		<src>2019/vacherie-ternaire.jpg</src>
 		<small>2019/vacherie-ternaire.jpg</small>
-		<description>Scientific collaboration with A. Pumir at Laboratoire de Physique ENS de Lyon&lt;/br&gt;Turbulence and collisional aggregation, project Portraits, n°2</description>
+		<description>Scientific collaboration with A. Pumir at Laboratoire de Physique ENS de Lyon&lt;/br&gt;Turbulence and collisional aggregation, project Portraits, no. 2</description>
 	</alg>
 
 	<alg>
@@ -47,12 +47,12 @@
 	</alg>
 
 	<alg>
-		<title>Nanonoise (Portraits n°1)</title>
+		<title>Nanonoise (Portraits nï¿½1)</title>
 		<artid>2019-3</artid>
 		<date>Feb. 2019</date>
 		<src>2019/nanonoise.jpg</src>
 		<small>2019/nanonoise-mini.jpg</small>
-		<description>Scientific collaboration with L. Bellon at Laboratoire de Physique ENS de Lyon&lt;/br&gt;Nanomechanics and thermal noise, project Portraits, n°1</description>
+		<description>Scientific collaboration with L. Bellon at Laboratoire de Physique ENS de Lyon&lt;/br&gt;Nanomechanics and thermal noise, project Portraits, nï¿½1</description>
 	</alg>
 
 	<alg>
@@ -115,7 +115,7 @@
 		<description>Sunrise over a world of particles driven by magnetic field force.</description>
 	</alg>
 	<alg>
-		<title>L'Oeil de Dérive</title>
+		<title>L'Oeil de Dï¿½rive</title>
 		<artid>2018-13</artid>
 		<date>Sep. 2018</date>
 		<src>varphy/artworks/l-oeil-de-derive.jpg</src>

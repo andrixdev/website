@@ -148,7 +148,7 @@ Gallery.fillFront = function (id) {
 	var src = alg.src;
 	var title = alg.title;
 	var description = alg.description;
-	
+
 	// Image
 	var newImg = new Image();
 	Gallery.currentImageObject = newImg;// Store globally for .on('resize') action without reloading image
@@ -167,7 +167,7 @@ Gallery.fillFront = function (id) {
 	};
 	newImg.src = src;
 	newImg.alt = title;
-	
+
 	// Description
 	jQuery('#front .zoom .details .description p.title').html(title);
 	jQuery('#front .zoom .details .description p.text').html(description);

@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         mounted: function () { }
     };
+    var AndrixBrandComponent = {
+        template: jQuery('#andrix-brand-template').html(),
+        data: function () {
+            return { }
+        },
+        mounted: function () { }
+    };
     var CVComponent = {
         template: jQuery('#cv-template').html(),
         data: function () {
@@ -88,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
+        { path: '/andrix', component: AndrixBrandComponent },
         { path: '/cv', component: CVComponent },
         { path: '/projects', redirect: '/web-dataviz' },
         { path: '/web-dataviz', redirect: '/more' },

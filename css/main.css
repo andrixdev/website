@@ -2100,6 +2100,12 @@ img.blob {
   background: red;
   display: none;
 }
+#andrix-brand {
+  padding: 30px;
+}
+#andrix-brand img {
+  max-width: 100%;
+}
 /*.header,
 .title-block {
 	animation: huerot 200s infinite;
