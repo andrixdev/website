@@ -112,11 +112,7 @@ h3.categname,
 .project-tile.hidden {
   display: none;
 }
-.project-tile:not(.no-link),
-.project-tile:not(.no-link) > * {
-  cursor: pointer;
-}
-.project-tile:not(.no-link):hover {
+.project-tile:hover {
   background: hsl(200, 50%, 15%);
 }
 .project-tile .left-side img {

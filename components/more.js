@@ -53,18 +53,6 @@ var MoreComponent = {
                 self.randomizeDisplayedPaths();
             });
 
-        // Web-Dataviz project links
-        jQuery('.web-dataviz-projects .project-tile').on({
-            mouseenter: function () {
-
-            }, mouseleave: function () {
-
-            }, mouseup: function () {
-                var goToLink = jQuery(this).find('a').attr('href');
-                if (!!goToLink) window.open(goToLink, '_blank');
-            }
-        });
-
         // Web-Dataviz Show mores
         jQuery('.web-dataviz-projects .student-misc-projects').hide();
         jQuery('.web-dataviz-projects .showmore-toggle-bar.load-hum-projects').hide();
