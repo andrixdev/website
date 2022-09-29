@@ -677,6 +677,7 @@ img.blob {
     /* Pull to left or top */
     justify-content: flex-start;
     padding-left: 20px;
+    padding-right: 20px;
   }
   .header.mobile-menu-open .menu .menu-tab.two-lines-tab {
     padding: 15px 20px;
