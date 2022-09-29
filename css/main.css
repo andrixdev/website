@@ -647,7 +647,7 @@ img.blob {
   }
   .header .mobile-burger p.fa {
     font-size: 40px;
-    margin-right: 25px;
+    margin-right: 20px;
     cursor: pointer;
   }
   .header .mobile-burger p.fa:hover {
@@ -825,6 +825,8 @@ img.blob {
     padding: 15px;
   }
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds-ens-2022 img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-nan-skylab img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds21 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-sisyphe img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-f1a img,
@@ -844,7 +846,7 @@ img.blob {
   width: 350px;
   max-width: 100%;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-virgo-visit img {
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gw190814-article img {
   width: 450px;
   max-width: 100%;
 }
