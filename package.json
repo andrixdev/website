@@ -14,7 +14,7 @@
     "vue-router": "^2.7.0"
   },
   "devDependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "less": "^3.13.1"
   }
 }
