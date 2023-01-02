@@ -825,11 +825,11 @@ img.blob {
     padding: 15px;
   }
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ynov-gendes img,
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-nan-artworks img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds-ens-2022 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-nan-skylab img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds21 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-sisyphe img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-f1a img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdlkv-attractors img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-conflu img,
@@ -850,9 +850,11 @@ img.blob {
   width: 450px;
   max-width: 100%;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fopti img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds21 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-f1a img {
   width: 550px;
+  max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
   margin: 0.3em 0;
