@@ -570,16 +570,19 @@ img.blob {
   justify-content: flex-start;
   border-bottom: solid 5px hsl(200, 50%, 10%);
   width: 100%;
+  height: 60px;
   background: hsl(200, 50%, 15%);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  /* Mobile menu */
+}
+.header.mobile-menu-open {
+  height: auto;
 }
 .header .logo {
   width: 70px;
-  height: 55px;
+  height: 60px;
   position: relative;
 }
 .header .logo img {
@@ -594,70 +597,99 @@ img.blob {
   bottom: 0;
   top: 0;
 }
-.header .menu {
+#menu {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
 }
-.header .menu .menu-tab {
-  padding: 18px 12px;
-  transition: background 500ms;
+#menu .menu-tab {
   cursor: pointer;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
-  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 200;
+  padding: 0 12px;
+  transition: background 500ms;
+  height: 60px;
+  font-size: 1rem;
 }
-.header .menu .menu-tab:hover,
-.header .menu .menu-tab.router-link-exact-active,
-.header .menu .menu-tab:hover .geom .inner,
-.header .menu .menu-tab.router-link-exact-active .geom .inner {
+#menu .menu-tab:hover,
+#menu .menu-tab.router-link-exact-active,
+#menu .menu-tab:hover .geom .inner,
+#menu .menu-tab.router-link-exact-active .geom .inner {
   background: hsl(200, 50%, 5%);
 }
-.header .menu .menu-tab.two-lines-tab {
+#menu .menu-tab.two-lines-tab {
   padding: 11px 14px 11px 11px;
   font-size: 0.9rem;
 }
-.header .menu .menu-tab,
-.header .menu .menu-tab:visited,
-.header .menu .menu-tab:focus {
+#menu .menu-tab,
+#menu .menu-tab:visited,
+#menu .menu-tab:focus {
   color: hsl(200, 20%, 80%);
   text-decoration: none;
 }
-.header .menu .menu-tab .geom {
+#menu .menu-tab .geom {
   margin-right: 10px;
 }
-.header .mobile-burger {
+#mobile-burger {
   display: none;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: hsl(200, 50%, 15%);
 }
+#mobile-burger .bar {
+  background: white;
+  border-radius: 1px;
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  left: 15px;
+  transition: transform 200ms, height 200ms, left 150ms;
+}
+#mobile-burger .bar-1 {
+  top: 18px;
+  transform-origin: 0 0;
+}
+#mobile-burger .bar-2 {
+  top: 28px;
+  transition: height 200ms;
+}
+#mobile-burger .bar-3 {
+  top: 38px;
+  transform-origin: 0 4px;
+}
+#mobile-burger.open .bar {
+  left: 21px;
+}
+#mobile-burger.open .bar-1 {
+  transform: rotate(45deg);
+}
+#mobile-burger.open .bar-2 {
+  height: 0;
+  transition: height 0ms;
+}
+#mobile-burger.open .bar-3 {
+  transform: rotate(-45deg);
+}
+/* Mobile menu */
 @media (max-width: 1100px) {
   .header {
     /* Max space between child elements */
     justify-content: space-between;
   }
-  .header .menu {
-    display: none;
-  }
-  .header .mobile-burger {
-    display: inherit;
-  }
-  .header .mobile-burger p.fa {
-    font-size: 40px;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-  .header .mobile-burger p.fa:hover {
-    color: white;
-    text-shadow: rgba(255, 255, 255, 0.5) 0 0 15px;
-  }
   .header.mobile-menu-open .logo {
     display: none;
   }
-  .header.mobile-menu-open .menu {
+  .header.mobile-menu-open #menu {
     display: inherit;
     padding-left: 20px;
     display: flex;
@@ -669,22 +701,24 @@ img.blob {
     width: 100%;
     margin-right: 20px;
   }
-  .ie .header.mobile-menu-open .menu > * {
+  .ie .header.mobile-menu-open #menu > * {
     width: 100%;
   }
-  .header.mobile-menu-open .menu .menu-tab {
+  .header.mobile-menu-open #menu .menu-tab {
     width: 100%;
     /* Pull to left or top */
     justify-content: flex-start;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .header.mobile-menu-open .menu .menu-tab.two-lines-tab {
+  .header.mobile-menu-open #menu .menu-tab.two-lines-tab {
     padding: 15px 20px;
   }
-  .header.mobile-menu-open .mobile-burger {
-    padding: 10px 0 20px 20px;
-    align-self: flex-start;
+  #menu {
+    display: none;
+  }
+  #mobile-burger {
+    display: inherit;
   }
 }
 .footer {

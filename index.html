@@ -3151,11 +3151,10 @@
 		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
-				<!--<img src='img/website/icosacidron-svg-blue.svg' />-->
 				<img src='img/website/triangoffset2021.svg' />
 			</router-link>
 		</div>
-		<div class="menu" v-on:click="isOpen = false">
+		<div id="menu" v-on:click="isOpen = false">
 			<router-link to="/" class="menu-tab home">
 				<geom base-sides="4" header="true"></geom>
 				Home
@@ -3181,10 +3180,11 @@
 				Contact
 			</router-link>
 		</div>
-		<div class="mobile-burger" v-on:click="isOpen = !isOpen">
-			<p class="fa fa-bars" v-if="!isOpen"></p>
-			<p class="fa fa-times" v-if="isOpen"></p>
-		</div>
+		<nav id="mobile-burger" :class="{ 'closed': !isOpen, 'open': isOpen }" v-on:click="isOpen = !isOpen">
+			<div class="bar bar-1"></div>
+			<div class="bar bar-2"></div>
+			<div class="bar bar-3"></div>
+		</nav>
 	</div>
 
 	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
