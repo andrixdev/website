@@ -13,10 +13,10 @@ var Gallery = {
  */
 Gallery.loadAlgories2 = function (extraCallback) {
 	jQuery
-		.get("data/algories-2.xml", {})
+		.get("data/artworks.xml", {})
 		.done(function (data) {
 
-			var DOMgallery = jQuery('.gallery-content-2');
+			var DOMgallery = jQuery('#artworks');
 			var jAlgories = jQuery(data).find('algories');
 
 			// Data retrieval and DOM fill

@@ -726,6 +726,7 @@ img.blob {
   text-align: center;
   color: #555;
   background: hsl(200, 50%, 10%);
+  user-select: none;
 }
 .footer img.footer-logo {
   width: 25px;
