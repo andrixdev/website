@@ -1,46 +1,95 @@
-var Gallery = {
-	algData: [],
+let Gallery = {
+	artworksData: [],
 	mouseIsOverFront: false,
 	isFrontShown: false,
 	shouldShowFront: false,
 	timeout: undefined,
 	currentImageObject: undefined
-};
+}
 
 /**
- * Fills the DOM with algories-2.xml
+ * Fills the DOM with artworks.xml
  * @param {Function} extraCallback Function called after the DOM is filled
  */
-Gallery.loadAlgories2 = function (extraCallback) {
+Gallery.loadArtworks = (extraCallback) => {
+
+	let handleXML = (xml) => {
+		Gallery.artworksData = []
+		xml.querySelectorAll("artwork").forEach((el) => {
+			// Store data in global variable
+			let aw = {
+				title: el.querySelector("title").innerHTML,
+				id: el.querySelector("id").innerHTML,
+				date: el.querySelector("date").innerHTML,
+				src: "img/" + el.querySelector("src").innerHTML,
+				small: "img/" + el.querySelector("small").innerHTML,
+				description: el.querySelector("description").innerHTML
+			}
+		
+			Gallery.artworksData.push(aw)
+
+			// Inject artwork data DOM node
+			if (document.querySelector("#art-id-" + aw.id)) {
+				let img = document.createElement("img")
+				img.src = aw.small
+				img.alt = aw.title
+				img.title = aw.title
+				//img.width = 200
+				//img.height = 200
+				document.querySelector("#art-id-" + aw.id).appendChild(img)
+			}
+		})
+		
+	}
+
+	const xhr = new XMLHttpRequest()
+
+	xhr.open("GET", "data/artworks.xml", true)
+	xhr.onload = (e) => {
+		if (xhr.readyState === 4) {
+			if (xhr.status === 200) {
+				handleXML(xhr.responseXML)
+			} else {
+				console.error("Failed retrieving artworks data.")
+				console.error(xhr.statusText)
+			}
+		}
+	}
+	xhr.onerror = (e) => {
+		console.error(xhr.statusText)
+	}
+	xhr.send(null)
+
+	/*
 	jQuery
 		.get("data/artworks.xml", {})
 		.done(function (data) {
 
-			var DOMgallery = jQuery('#artworks');
-			var jAlgories = jQuery(data).find('algories');
+			let DOMgallery = document.querySelector('#artworks')
+			let jAlgories = jQuery(data).find('algories')
 
 			// Data retrieval and DOM fill
-			jAlgories.find('alg').each(function () {
-				var title = jQuery(this).find('title').text();
-				var src = "img/" + jQuery(this).find('src').text();
-				var small = "img/" + jQuery(this).find('small').text();
-				var description = jQuery(this).find('description').text();
-				var id = jQuery(this).find('artid').text();
+			jAlgories.find('alg').each(() => {
+				let title = jQuery(this).find('title').text()
+				let src = "img/" + jQuery(this).find('src').text()
+				let small = "img/" + jQuery(this).find('small').text()
+				let description = jQuery(this).find('description').text()
+				let id = jQuery(this).find('artid').text()
 
 				// Fill the DOM
-				var markup = "";
-				markup += "<img src='" + small + "' alt ='" + title + "'/>";
+				let markup = "";
+				markup += "<img src='" + small + "' alt ='" + title + "' title='" + title + "'/>";
 				markup += "<h4 class='title'>" + title + "</h4>";
 
 				// Fill the gallery data object
-				Gallery.algData.push({
+				Gallery.artworksData.push({
 					id: id,
 					title: title,
 					src: src,
 					small: small,
 					description: description,
 					markup: markup
-				});
+				})
 
 				// Come on, fill the DOhomM
 				DOMgallery.find('.alg#' + 'art-id-' + id).html(markup);
@@ -48,47 +97,37 @@ Gallery.loadAlgories2 = function (extraCallback) {
 
 			extraCallback();
 		});
-};
+	*/
+}
 
 /**
- * Assuming the global array algData is filled
- * @param {Number} id ID of algory
- * @returns {Object} Algory object
+ * Assuming the global array artworksData is filled
+ * @param {Number} id ID of artwork
+ * @returns {Object} Artwork object
  */
-Gallery.getAlg = function (id) {
-	for (key in Gallery.algData) {
-		if ('art-id-' + Gallery.algData[key].id == id) {
-			return Gallery.algData[key];
-		}
-	}
-	console.log('Nothing found with ID ' + id);
-	return false;
-};
+Gallery.getArtwork = (id) => {
+	return Gallery.artworksData.filter((artwork) => {
+		"art-id-" + artwork.id == id 
+	})
+	console.log('Nothing found with ID ' + id)
+	return false
+}
 
 /**
- * Listeners on each algory
+ * Listeners on each artwork
  */
-Gallery.DOMlisteners = function () {
-	// Algories blocks
-	jQuery('.alg').off().on({
-		mouseenter: function () {
-			jQuery(this).find('h4.title').css('opacity','1');
-			jQuery(this).css('box-shadow','rgba(255,255,255,0.5) 0 0 10px');
-		}, mouseleave: function () {
-			jQuery(this).find('h4.title').css('opacity','0');
-			jQuery(this).css('box-shadow','none');
-		}, mouseup: function () {
-			//Gallery.fillFront(jQuery(this).attr('id'));
-			//Gallery.showFront();
+Gallery.initListeners = () => {
+	// Artworks blocks
+	document.querySelectorAll("artwork").forEach((el) => {
+		el.removeEventListener('click')
+		el.addEventListener('click', () => {
 			// Update route history
 			Global.router.push({
 				path: 'gallery', query: { artwork: jQuery(this).attr('id') }
-			});
-			//Gallery.fillFront(jQuery(this).attr('id'));
-			//Gallery.showFront();
-		}
-	});
-};
+			})
+		})
+	})
+}
 
 /**
  * Listeners for front view
@@ -119,7 +158,7 @@ Gallery.frontListeners = function () {
 			});
 		}
 	});
-	var resizingEventCount = 0;
+	let resizingEventCount = 0;
 	jQuery(window).off().on('resize', function () {
 		resizingEventCount++;
 		setTimeout(function () {
@@ -134,46 +173,46 @@ Gallery.frontListeners = function () {
 };
 
 /**
- * DOM filler called on demand (click on an algory)
+ * DOM filler called on demand (click on an artwork)
  */
-Gallery.fillFront = function (id) {
+Gallery.fillFront = (id) => {
 
-	var alg = Gallery.getAlg(id);
-	if (!alg) return false;
+	let alg = Gallery.getArtwork(id)
+	if (!alg) return false
 
-	Gallery.loadingOn();
+	Gallery.loadingOn()
 	// Clear previous img
-    jQuery('#front .zoom img.fullone').attr('src', '');
+    jQuery('#front .zoom img.fullone').attr('src', '')
 
-	var src = alg.src;
-	var title = alg.title;
-	var description = alg.description;
+	let src = alg.src
+	let title = alg.title
+	let description = alg.description
 
 	// Image
-	var newImg = new Image();
-	Gallery.currentImageObject = newImg;// Store globally for .on('resize') action without reloading image
+	let newImg = new Image()
+	Gallery.currentImageObject = newImg// Store globally for .on('resize') action without reloading image
 	newImg.onload = function () {
-		jQuery('#front .zoom img.fullone').attr('src', '');
+		jQuery('#front .zoom img.fullone').attr('src', '')
 
-		Gallery.adjustFrontImageSize();
+		Gallery.adjustFrontImageSize()
 
 		// Fake timeout
-		clearTimeout(Gallery.timeout);
-		var self = this;
+		clearTimeout(Gallery.timeout)
+		let self = this
 		Gallery.timeout = setTimeout(function () {
-            Gallery.loadingOff();
-			jQuery('#front .zoom img.fullone').attr('src', self.src);
-		}, 300);
+            Gallery.loadingOff()
+			jQuery('#front .zoom img.fullone').attr('src', self.src)
+		}, 300)
 	};
-	newImg.src = src;
-	newImg.alt = title;
+	newImg.src = src
+	newImg.alt = title
 
 	// Description
-	jQuery('#front .zoom .details .description p.title').html(title);
-	jQuery('#front .zoom .details .description p.text').html(description);
+	jQuery('#front .zoom .details .description p.title').html(title)
+	jQuery('#front .zoom .details .description p.text').html(description)
 
-	return true;
-};
+	return true
+}
 
 /**
  * Computes preview width and height based on current window size
@@ -182,13 +221,13 @@ Gallery.fillFront = function (id) {
  * @returns Object {w, h}
  */
 Gallery.adjustFrontImageSize = function () {
-	var h = Gallery.currentImageObject.height;
-	var w = Gallery.currentImageObject.width;
+	let h = Gallery.currentImageObject.height;
+	let w = Gallery.currentImageObject.width;
 
 	// If image is bigger than 0.9*window, rescale
-	var ratioW = w / (0.9 * jQuery(window).width());
-	var ratioH = h / (0.9 * jQuery(window).height());
-	var ratio = Math.max(ratioH, ratioW);
+	let ratioW = w / (0.9 * jQuery(window).width());
+	let ratioH = h / (0.9 * jQuery(window).height());
+	let ratio = Math.max(ratioH, ratioW);
 	if (ratio > 1 && ratioW > ratioH) {
 		h /= ratioW;
 		w /= ratioW;
@@ -204,76 +243,76 @@ Gallery.adjustFrontImageSize = function () {
  * Shows front view
  */
 Gallery.showFront = function () {
-	Gallery.isFrontShown = true;
+	Gallery.isFrontShown = true
 
-	jQuery('#front').css('display', 'inherit');
-};
+	jQuery('#front').css('display', 'inherit')
+}
 
 /**
  * Hides front view
  */
 Gallery.hideFront = function () {
-	Gallery.isFrontShown = false;
+	Gallery.isFrontShown = false
 
-	jQuery('#front').css('display', 'none');
-};
+	jQuery('#front').css('display', 'none')
+}
 
 /**
  * Shows details in front view
  */
 Gallery.showFrontDetails = function () {
-	jQuery('#front .zoom .details').css('opacity', 1);
-};
+	jQuery('#front .zoom .details').css('opacity', 1)
+}
 
 /**
  * Hides details in front view
  */
 Gallery.hideFrontDetails = function () {
-	jQuery('#front .zoom .details').css('opacity', 0);
+	jQuery('#front .zoom .details').css('opacity', 0)
 };
 
 /**
  * Loading icon within front view - Turn on
  */
 Gallery.loadingOn = function () {
-	jQuery('.zoom .loader').show();
-};
+	jQuery('.zoom .loader').show()
+}
 
 /**
  * Loading icon within front view - Turn off
  */
 Gallery.loadingOff = function () {
-	jQuery('.zoom .loader').hide();
-};
+	jQuery('.zoom .loader').hide()
+}
 
 /**
  * Initializer
  */
-Gallery.go = function () {
-    Gallery.loadAlgories2(function () {
-        Gallery.DOMlisteners();
-        Gallery.frontListeners();
+Gallery.go = () => {
+    Gallery.loadArtworks(() => {
+        Gallery.initListeners()
+        Gallery.frontListeners()
 
 	    if (Gallery.shouldShowFront) {
 		    // Get ID
-		    var artworkID = location.search.split('artwork=')[1];
-		    if (Gallery.fillFront(artworkID)) Gallery.showFront();
+		    let artworkID = location.search.split('artwork=')[1]
+		    if (Gallery.fillFront(artworkID)) Gallery.showFront()
 	    } else {
 		    // Close potentially open front mode
-		    Gallery.hideFront();
+		    Gallery.hideFront()
 	    }
-    });
-};
-Gallery.applyState = function () {
-	if (!Gallery.algData.length) Gallery.go();
+    })
+}
+Gallery.applyState = () => {
+	if (!Gallery.artworksData.length) Gallery.go()
 	else {
 		if (Gallery.shouldShowFront) {
 			// Get ID
-			var artworkID = location.search.split('artwork=')[1];
-			if (Gallery.fillFront(artworkID)) Gallery.showFront();
+			let artworkID = location.search.split('artwork=')[1]
+			if (Gallery.fillFront(artworkID)) Gallery.showFront()
 		} else {
 			// Close potentially open front mode
-			Gallery.hideFront();
+			Gallery.hideFront()
 		}
 	}
-};
+}

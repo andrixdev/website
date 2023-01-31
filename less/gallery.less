@@ -36,7 +36,7 @@
 			.flexcenter();
 			.flexwrap();
 
-			.alg {
+			.artwork {
 				width: 450px;
 				margin: 5px;
 				border-radius: 2px;
@@ -68,8 +68,8 @@
 			}
 		}
 		/* Special treats */
-		&.latest .categ-content .alg, /* 2019 A0 section */
-		&.varphy .categ-content .alg { /* Varphy A0 section */
+		&.latest .categ-content .artwork, /* 2019 A0 section */
+		&.varphy .categ-content .artwork { /* Varphy A0 section */
 			// Force fixed height and width to prevent Safari mysterious bug
 			&, & img {
 				width: 212px;
@@ -213,82 +213,82 @@
 
 @media (min-width: 500px) {
 
-	.gallery-content .alg img {
+	.gallery-content .artwork img {
 		height: 300px;
 	}
 
 	/* Radial */
-	.gallery-content .alg#art-id-2015-4 img {
+	.gallery-content .artwork#art-id-2015-4 img {
 		/* White Time */
 		width: 600px;
 		margin-left: -75px;
 	}
-	.gallery-content .alg#art-id-2015-5 img {
+	.gallery-content .artwork#art-id-2015-5 img {
 		/* Harsh */
 		width: 600px;
 		margin-left: -75px;
 	}
-	.gallery-content .alg#art-id-2015-8 img {
+	.gallery-content .artwork#art-id-2015-8 img {
 		/* Kuzco 5 */
 		width: 550px;
 		margin-left: -50px;
 	}
-	.gallery-content .alg#art-id-2015-10 img {
+	.gallery-content .artwork#art-id-2015-10 img {
 		/* Rhodo */
 		width: 600px;
 		margin-left: -75px;
 	}
-	.gallery-content .alg#art-id-2015-11 img {
+	.gallery-content .artwork#art-id-2015-11 img {
 		/* Shiver */
 		height: 450px;
 		margin-top: -75px;
 		margin-bottom: -75px;
 	}
 	/* Gravitational */
-	.gallery-content .alg#art-id-2016-1 img {
+	.gallery-content .artwork#art-id-2016-1 img {
 		/* Gravitational Blackhole */
 		width: 550px;
 		margin-left: -50px;
 	}
-	.gallery-content .alg#art-id-2015-9 img {
+	.gallery-content .artwork#art-id-2015-9 img {
 		/* Gandalf Thinking */
 		width: 500px;
 		margin-left: -25px;
 	}
 	/* Experiments */
-	.gallery-content .alg#art-id-2015-2 img {
+	.gallery-content .artwork#art-id-2015-2 img {
 		/* PlayChaos 1 */
 		width: 550px;
 		margin-left: -50px;
 	}
-	.gallery-content .alg#art-id-2015-3 img {
+	.gallery-content .artwork#art-id-2015-3 img {
 		/* Zeus Bolt */
 		width: 600px;
 		margin-left: -75px;
 	}
-	.gallery-content .alg#art-id-2015-12 img {
+	.gallery-content .artwork#art-id-2015-12 img {
 		/* Summer 2015 */
 		width: 600px;
 		margin-left: -65px;
 	}
-	.gallery-content .alg#art-id-2015-6 img {
+	.gallery-content .artwork#art-id-2015-6 img {
 		/* Duel */
 		width: 550px;
 		margin-left: 0;
 	}
-	.gallery-content .alg#art-id-2017-3 img {
+	.gallery-content .artwork#art-id-2017-3 img {
 		/* Lightbeams Eye */
 		width: 570px;
 		margin-left: -55px;
 	}
-	.gallery-content .alg#art-id-2017-1 img {
+	.gallery-content .artwork#art-id-2017-1 img {
 		/* Hexocet Explode */
 		width: 570px;
 		margin-left: -55px;
 	}
 }
 
-.alg {
+.artwork {
 	margin: 5px;
 	border-radius: 2px;
 	border: solid 1px rgba(100, 100, 100, 0.7);
@@ -318,7 +318,7 @@
 	}
 }
 
-.alg.landscape {
+.artwork.landscape {
 	& {
 		width: 330px;
 	}
@@ -326,7 +326,7 @@
 
 	}
 }
-.alg.portrait {
+.artwork.portrait {
 	// Force fixed height and width to prevent Safari mysterious bug
 	&, & img {
 		width: 140px;
@@ -338,16 +338,16 @@
 		}
 	}
 }
-.alg.main-img {
+.artwork.main-img {
 	flex-shrink: 0;
 }
-.alg.main-img.portrait {
+.artwork.main-img.portrait {
 	&, & img {
 		width: 224px;
 		height: 320px;
 	}
 }
-.alg.main-img.landscape {
+.artwork.main-img.landscape {
 	&, & img {
 		width: 390px;
 		height: 260px;
@@ -361,7 +361,7 @@
 
 // New gallery exceptions, only for landscape images because they all have erratic formats
 @media (min-width: 450px) {
-	.gallery-content-2 .alg.landscape {
+	.gallery-content-2 .artwork.landscape {
 		// Base treat
 		img {
 			height: 220px;
@@ -407,11 +407,11 @@
 	}
 }
 @media (max-width: 450px) {
-	.alg {
+	.artwork {
 		width: 100% !important;
 		height: auto !important;
 	}
-	.alg img {
+	.artwork img {
 		width: 100% !important;
 		height: auto !important;
 	}
