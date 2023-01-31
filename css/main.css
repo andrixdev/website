@@ -520,11 +520,11 @@ button.acidbutton + button.acidbutton {
 }
 .geom .shape {
   background: hsl(200, 50%, 50%);
-  padding: 5px;
+  padding: 4px;
 }
 .geom .shape .inner {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   background: hsl(200, 50%, 20%);
 }
 .geom .shape.round,
@@ -533,11 +533,11 @@ button.acidbutton + button.acidbutton {
 }
 .geom.in-header .shape {
   background: hsl(200, 50%, 50%);
-  padding: 3px;
+  padding: 2px;
 }
 .geom.in-header .shape .inner {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: hsl(200, 50%, 15%);
   transition: background 500ms;
 }
