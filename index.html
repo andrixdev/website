@@ -3020,7 +3020,7 @@
 				Contact
 			</router-link>
 		</div>
-		<nav id="mobile-burger" :class="{ 'closed': !isOpen, 'open': isOpen }" v-on:click="isOpen = !isOpen">
+		<nav id="menu-mobile-burger" class="mobile-burger" :class="{ 'closed': !isOpen, 'open': isOpen }" v-on:click="isOpen = !isOpen">
 			<div class="bar bar-1"></div>
 			<div class="bar bar-2"></div>
 			<div class="bar bar-3"></div>
@@ -3042,31 +3042,25 @@
 	</div>
 
 	<!-- Artwork detail container for Gallery (has to be here for CSS reasons) -->
-	<div id="front">
+	<div id="front" class="hidden">
 		<div class="zoom">
-			<!--<img class="loader" src="img/website/triangorot.svg" />-->
 			<div class="loader">
 				<div class="loader-animation">
 					<img src="img/loader/triango-outer-layer-blue.svg" />
 					<img src="img/loader/triango-outer-layer-black.svg" />
 				</div>
-				<p class="loadingtext">Loading image...</p>
 			</div>
 
 			<img class="fullone" src="/" alt="" />
-			<div class="quit" title="Back to gallery"></div>
+			<div class="quit mobile-burger open" title="Back to gallery">
+				<div class="bar bar-1"></div>
+				<div class="bar bar-2"></div>
+				<div class="bar bar-3"></div>
+			</div>
 			<div class="details">
 				<div class="description">
 					<p class="title">Title</p>
 					<p class="text">Lorem</p>
-				</div>
-				<div class="social">
-					<div class="deviant">
-
-					</div>
-					<div class="github">
-
-					</div>
 				</div>
 			</div>
 		</div>

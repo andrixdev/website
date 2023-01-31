@@ -1,37 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // App components (short ones, the others are in separate files)
-    var GalleryComponent = {
+    let GalleryComponent = {
         template: jQuery('#gallery-template').html(),
         data: function () {
             return { }
         },
-        mounted: function ()  { Gallery.go(); }
-    };
-    var FilmsComponent = {
+        mounted: function ()  {
+            // This effing method is called every time, same for other Vue hooks, I'm going full vanillaJS very soon.
+            Gallery.update()
+        }
+    }
+    let FilmsComponent = {
         template: jQuery('#films-template').html(),
-        data: function () {
+        data: () => {
             return { }
         },
-        mounted: function () { }
-    };
-    var AndrixBrandComponent = {
+        mounted: () => { }
+    }
+    let AndrixBrandComponent = {
         template: jQuery('#andrix-brand-template').html(),
-        data: function () {
+        data: () => {
             return { }
         },
-        mounted: function () { }
-    };
-    var CVComponent = {
+        mounted: () => { }
+    }
+    let CVComponent = {
         template: jQuery('#cv-template').html(),
-        data: function () {
+        data: () => {
             return { }
         },
-        mounted: function () { CV.go(); }
-    };
+        mounted: () => { CV.go() }
+    }
 
     // Custom components
-    Vue.component('vue-title', HeadTitleComponent);
+    Vue.component('vue-title', HeadTitleComponent)
     Vue.component('geom', {
         template: jQuery('#geom-template').html(),
         props: ['baseSides', 'header', 'rotate'],
@@ -41,44 +44,44 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },
         mounted: function () {
-            this.newSides = this.baseSides;
-            var self = this;
-            var glitch = function () {
-                self.newSides = self.newSides == 4 ? 0 : 4;
+            this.newSides = this.baseSides
+            let self = this
+            let glitch = () => {
+                self.newSides = self.newSides == 4 ? 0 : 4
 
-                setTimeout(function () {
-                    self.newSides = self.newSides == 4 ? 0 : 4;
-                }, 40);
-            };
+                setTimeout(() => {
+                    self.newSides = self.newSides == 4 ? 0 : 4
+                }, 40)
+            }
 
             // Glitch loop
-            setInterval(function () {
+            setInterval(() => {
                 // 10% chance of glitch
                 if (Math.random() < 0.1) {
                     // Glitch up to 3 times
-                    var glitches = Math.ceil(3 * Math.random());
-                    for (var g = 0; g < glitches; g++) {
-                        setTimeout(function () {
-                            glitch();
-                        }, g * 80);
+                    let glitches = Math.ceil(3 * Math.random())
+                    for (let g = 0; g < glitches; g++) {
+                        setTimeout(() => {
+                            glitch()
+                        }, g * 80)
                     }
                 }
-            }, 1000);
+            }, 1000)
 			
         }
-    });
+    })
     Vue.component('logo-links', {
         template: jQuery('#logo-links-template').html()
-    });
+    })
     Vue.component('coming-soon', {
         template: jQuery('#coming-soon-template').html()
-    });
+    })
     Vue.component('inline-svg-logo', {
         template: jQuery('#inline-svg-logo-template').html()
-    });
+    })
 
     // App routes
-    var routes = [
+    let routes = [
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
         { path: '/films', component: FilmsComponent },
@@ -87,42 +90,40 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: '/contact', component: ContactComponent },
         { path: '/andrix', component: AndrixBrandComponent },
         { path: '/cv', component: CVComponent },
-        { path: '/projects', redirect: '/web-dataviz' },
-        { path: '/web-dataviz', redirect: '/more' },
+        { path: '/projects', redirect: '/web-dataviz' }, { path: '/web-dataviz', redirect: '/more' },
         { path: '/creative-coding', redirect: '/more' },
         { path: '*', component: NotFoundComponent }
-    ];
+    ]
 
     // Build router
     Global.router = new VueRouter({
         routes: routes,
         mode: 'history'
-    });
+    })
 
     // Scroll to top on route change
-    Global.router.beforeEach(function (to, from, next) {
+    Global.router.beforeEach((to, from, next) => {
 
-        setTimeout(function () {
+        setTimeout(() => {
         	// Scroll back to top unless it's some gallery internal navigation
 	        if (!(to.fullPath.indexOf('gallery') > -1 && from.fullPath.indexOf('gallery') > -1)) {
-		        window.scrollTo(0, 0);
+		        window.scrollTo(0, 0)
 	        }
-        }, 100);
-        next();
+        }, 100)
+        next()
 
 	    // If back button from front Gallery mode, close it
-	    console.log(to.fullPath, from.fullPath);
+	    console.log("Navigating from " + from.fullPath + " to " + to.fullPath)
 	    if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) {
-		    console.log(to.fullPath, from.fullPath);
 		    // Going to Gallery or coming from it
-		    if (to.fullPath.indexOf('art-id') === -1) Gallery.shouldShowFront = false;
-		    else Gallery.shouldShowFront = true;
-		    Gallery.applyState();
+		    if (to.fullPath.indexOf('art-id') === -1) Gallery.shouldShowFront = false
+		    else Gallery.shouldShowFront = true
+		    Gallery.update()
 	    }
 
-    });
+    })
 
-    var app = new Vue({
+    let app = new Vue({
         router: Global.router,
         el: '#alexandrix-website',
         data: {
@@ -131,13 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
             saturation: 100
         },
         methods: {
-            rotateLeHue: function () {
-                this.hueAngle = Math.round(360 * Math.random());
+            rotateLeHue: () => {
+                this.hueAngle = Math.round(360 * Math.random())
             }
         },
-		mounted: function () {
+		mounted: () => {
 
 		}
-    });
+    })
 
-});
+})

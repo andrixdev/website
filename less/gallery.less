@@ -1,93 +1,4 @@
-.gallery-content {
-	.categ {
-		margin-bottom: 50px;
-		position: relative;
-
-		.moron {
-			position: absolute;
-			right: 30px;
-			top: 7px;
-			opacity: 0.8;
-			&:hover {
-				opacity: 1;
-			}
-
-			p, a {
-				display: inline-block;
-				vertical-align: middle;
-			}
-			p {
-				font-size: 23px;
-			}
-			a {
-				text-decoration: none;
-				margin: 10px;
-				font-size: 35px;
-
-				&:hover::before {
-					color: white;
-					.white-shadow();
-				}
-			}
-		}
-		.categ-content {
-			padding: 15px 15px 30px;
-			.flexrow();
-			.flexcenter();
-			.flexwrap();
-
-			.artwork {
-				width: 450px;
-				margin: 5px;
-				border-radius: 2px;
-				border: solid 1px rgba(100, 100, 100, 0.7);
-				position: relative;
-				overflow: hidden;
-
-				* {
-					.pointer();
-				}
-				h4.title {
-					color: white;
-					width: 100%;
-					.center();
-					font-size: 1.5rem;
-					padding: .7em 0;
-					background: rgba(0,0,0,0.75);
-					position: absolute;
-					top: 0;
-					left: 0;
-					opacity: 0;
-					transition: opacity 1s;
-				}
-				img {
-					width: 100%;
-					display: block;
-					.img-placeholder();
-				}
-			}
-		}
-		/* Special treats */
-		&.latest .categ-content .artwork, /* 2019 A0 section */
-		&.varphy .categ-content .artwork { /* Varphy A0 section */
-			// Force fixed height and width to prevent Safari mysterious bug
-			&, & img {
-				width: 212px;
-				height: 300px;
-			}
-		}
-	}
-
-	@media (max-width: 800px) {
-		.moron {
-			display: none;
-		}
-	}
-}
-
-/** Zoom layer **/
 #front {
-	display: none;
 	opacity: 1;
 	position: fixed;
 	width: 100%;
@@ -97,29 +8,30 @@
 	background: rgba(255, 255, 255, 0.9);
 	z-index: 1;
 
+	&.hidden {
+		display: none;
+	}
+
 	.zoom {
 		position: absolute;
-		top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
 		box-shadow: rgba(0, 0, 0, 0.75) 0 0 35px;
 		// width and height handled in gallery.js
 
 		img.fullone {} // width and height handled in gallery.js
+
 		.quit {
-			width: 40px;
-			height: 40px;
 			position: absolute;
 			top: 0;
 			right: 0;
-			background: url('../img/website/cross3.png');
 			opacity: 0.3;
-			background-size: 80% 80%;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
-			.pointer();
+			background: black;
 
 			&:hover {
-				background-position: 50% 50%;
-				background-size: 90% 90%;
 				opacity: 0.85;
 			}
 		}
@@ -132,6 +44,9 @@
 			min-height: 10%;
 			opacity: 0;
 			transition: opacity 500ms;
+			&.visible {
+				opacity: 1;
+			}
 
 			.description {
 				background: rgba(255, 255, 255, 0.85);
@@ -158,18 +73,13 @@
 		}
 	}
 
-	/*.loader {
-		-webkit-animation: spin 2s linear infinite;
-		-moz-animation: spin 2s linear infinite;
-		animation: spin 2s linear infinite;
-		.marjinoto();
-		width: 120px;
-		height: 120px;
-	}*/
 	.loader {
 		width: 120px;
 		height: 170px;
 		.marjinoto();
+		&.hidden {
+			display: none;
+		}
 
 		.loader-animation {
 			position: relative;
@@ -197,9 +107,6 @@
 					opacity: 0;
 				}
 			}
-		}
-		p.loadingtext {
-			color: @blue-10;
 		}
 	}
 }
@@ -296,7 +203,7 @@
 	overflow: hidden;
 
 	* {
-		.pointer();
+		cursor: pointer;
 	}
 	h4.title {
 		color: white;
@@ -351,11 +258,6 @@
 	&, & img {
 		width: 390px;
 		height: 260px;
-	}
-}
-.gallery-content-2 {
-	.categ {
-
 	}
 }
 
