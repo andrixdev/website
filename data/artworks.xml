@@ -5,8 +5,8 @@
 		<title>Vacherie Ternaire (Portraits no. 2)</title>
 		<artid>2019-7</artid>
 		<date>Jul. 2019</date>
-		<src>2019/vacherie-ternaire.jpg</src>
-		<small>2019/vacherie-ternaire.jpg</small>
+		<src>artworks/vacherie-ternaire.jpg</src>
+		<small>artworks/vacherie-ternaire.jpg</small>
 		<description>Scientific collaboration with A. Pumir at Laboratoire de Physique ENS de Lyon&lt;/br&gt;Turbulence and collisional aggregation, project Portraits, no. 2</description>
 	</alg>
 
@@ -14,8 +14,8 @@
 		<title>Prix Jeune Chercheur 2019</title>
 		<artid>2019-8</artid>
 		<date>Apr. 2019</date>
-		<src>dame-recherche/dame-affiche.png</src>
-		<small>dame-recherche/dame-affiche-mini.jpg</small>
+		<src>artworks/dame-recherche/dame-affiche.png</src>
+		<small>artworks/dame-recherche/dame-affiche-mini.jpg</small>
 		<description>Commission for Grand Lyon, Prix Jeune Chercheur 2019&lt;/br&gt;NB: I did not create this final poster. @credits GrandLyon</description>
 	</alg>
 
@@ -23,8 +23,8 @@
 		<title>Dame Recherche</title>
 		<artid>2019-6</artid>
 		<date>Mar. 2019</date>
-		<src>2019/dame-recherche.jpg</src>
-		<small>2019/dame-recherche-mini.jpg</small>
+		<src>artworks/dame-recherche/dame-recherche.jpg</src>
+		<small>artworks/dame-recherche/dame-recherche-mini.jpg</small>
 		<description>Commission for Grand Lyon, Prix Jeune Chercheur 2019&lt;/br&gt;Inspired by 6 research topics. Face drawing from Alex B.</description>
 	</alg>
 
@@ -32,8 +32,8 @@
 		<title>Fun in Djerba</title>
 		<artid>2019-5</artid>
 		<date>Mar. 2019</date>
-		<src>2019/fun-in-djerba.jpg</src>
-		<small>2019/fun-in-djerba-mini.jpg</small>
+		<src>artworks/fun-in-djerba.jpg</src>
+		<small>artworks/fun-in-djerba-mini.jpg</small>
 		<description>-</description>
 	</alg>
 
@@ -41,8 +41,8 @@
 		<title>Djerba Sunset Phoenix</title>
 		<artid>2019-4</artid>
 		<date>Mar. 2019</date>
-		<src>2019/djerba-sunset-phoenix.jpg</src>
-		<small>2019/djerba-sunset-phoenix-mini.jpg</small>
+		<src>artworks/djerba-sunset-phoenix.jpg</src>
+		<small>artworks/djerba-sunset-phoenix-mini.jpg</small>
 		<description>-</description>
 	</alg>
 
@@ -50,8 +50,8 @@
 		<title>Nanonoise (Portraits n�1)</title>
 		<artid>2019-3</artid>
 		<date>Feb. 2019</date>
-		<src>2019/nanonoise.jpg</src>
-		<small>2019/nanonoise-mini.jpg</small>
+		<src>artworks/nanonoise.jpg</src>
+		<small>artworks/nanonoise-mini.jpg</small>
 		<description>Scientific collaboration with L. Bellon at Laboratoire de Physique ENS de Lyon&lt;/br&gt;Nanomechanics and thermal noise, project Portraits, n�1</description>
 	</alg>
 
@@ -59,8 +59,8 @@
 		<title>Tunnel Of Love</title>
 		<artid>2019-2</artid>
 		<date>Jan. 2019</date>
-		<src>2019/tol.jpg</src>
-		<small>2019/tol-mini.jpg</small>
+		<src>artworks/tol.jpg</src>
+		<small>artworks/tol-mini.jpg</small>
 		<description>-</description>
 	</alg>
 
@@ -68,8 +68,8 @@
 		<title>Unexpected Sunset</title>
 		<artid>2019-1</artid>
 		<date>Jan. 2019</date>
-		<src>2019/unex.jpg</src>
-		<small>2019/unex-mini.jpg</small>
+		<src>artworks/unex.jpg</src>
+		<small>artworks/unex-mini.jpg</small>
 		<description>-</description>
 	</alg>
 
@@ -77,8 +77,8 @@
 		<title>Rayonnement</title>
 		<artid>2018-17</artid>
 		<date>Nov. 2018</date>
-		<src>misc/rayonnement.jpg</src>
-		<small>misc/rayonnement_small.jpg</small>
+		<src>artworks/rayonnement.jpg</src>
+		<small>artworks/rayonnement_small.jpg</small>
 		<description>Commission for Ecole Centrale de Lyon, France</description>
 	</alg>
 
@@ -86,64 +86,64 @@
 		<title>Offset</title>
 		<artid>2018-9</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/offset.jpg</src>
-		<small>varphy/artworks/offset_small.jpg</small>
+		<src>artworks/varphy/offset.jpg</src>
+		<small>artworks/varphy/offset_small.jpg</small>
 		<description>Life of a particle cloud under the attraction of a massive body with an impossible linear oscillation.</description>
 	</alg>
 	<alg>
 		<title>The Momentum Parade</title>
 		<artid>2018-10</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/the-momentum-parade.png</src>
-		<small>varphy/artworks/the-momentum-parade_small.jpg</small>
+		<src>artworks/varphy/the-momentum-parade.png</src>
+		<small>artworks/varphy/the-momentum-parade_small.jpg</small>
 		<description>A rotating galaxy emits stardust particles. Under the gravitational force of an invisible attractor, their trails depict a gigantic orb of possibilities.</description>
 	</alg>
 	<alg>
 		<title>Watlz of the Binary Star</title>
 		<artid>2018-11</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/la-course-de-l-etoile-double.png</src>
-		<small>varphy/artworks/la-course-de-l-etoile-double_small.jpg</small>
+		<src>artworks/varphy/la-course-de-l-etoile-double.png</src>
+		<small>artworks/varphy/la-course-de-l-etoile-double_small.jpg</small>
 		<description>Both souls of the binary star in an endless fall. A smaller body, maybe a planet, seems to witness their dance with much interest.</description>
 	</alg>
 	<alg>
 		<title>Laplacian Sunrise</title>
 		<artid>2018-12</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/laplacian-sunrise.png</src>
-		<small>varphy/artworks/laplacian-sunrise_small.jpg</small>
+		<src>artworks/varphy/laplacian-sunrise.png</src>
+		<small>artworks/varphy/laplacian-sunrise_small.jpg</small>
 		<description>Sunrise over a world of particles driven by magnetic field force.</description>
 	</alg>
 	<alg>
 		<title>L'Oeil de D�rive</title>
 		<artid>2018-13</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/l-oeil-de-derive.jpg</src>
-		<small>varphy/artworks/l-oeil-de-derive_small.jpg</small>
+		<src>artworks/varphy/l-oeil-de-derive.jpg</src>
+		<small>artworks/varphy/l-oeil-de-derive_small.jpg</small>
 		<description>The seemingly uniform structure of the plasma beam turns out to reveal spontaneous density-gradient-originated swirls that model the beam into helical shapes.</description>
 	</alg>
 	<alg>
 		<title>The Lagrangian Exploration Module</title>
 		<artid>2018-14</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/the-lagrangian-exploration-module.png</src>
-		<small>varphy/artworks/the-lagrangian-exploration-module_small.jpg</small>
+		<src>artworks/varphy/the-lagrangian-exploration-module.png</src>
+		<small>artworks/varphy/the-lagrangian-exploration-module_small.jpg</small>
 		<description>Irregular icosahedron for particles observation.</description>
 	</alg>
 	<alg>
 		<title>Rupture</title>
 		<artid>2018-15</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/rupture.png</src>
-		<small>varphy/artworks/rupture_small.jpg</small>
+		<src>artworks/varphy/rupture.png</src>
+		<small>artworks/varphy/rupture_small.jpg</small>
 		<description>Free interpretation.</description>
 	</alg>
 	<alg>
 		<title>Magnetosphere 210</title>
 		<artid>2018-16</artid>
 		<date>Sep. 2018</date>
-		<src>varphy/artworks/magnetosphere-210.png</src>
-		<small>varphy/artworks/magnetosphere-210_small.jpg</small>
+		<src>artworks/varphy/magnetosphere-210.png</src>
+		<small>artworks/varphy/magnetosphere-210_small.jpg</small>
 		<description>A cloud of particles explodes in the empty space. Nothing but a dipolar magnetic field. The neon beams represent the travel volume of plasma particles within a lone magnetosphere.</description>
 	</alg>
 
@@ -151,24 +151,24 @@
 		<title>White Time</title>
 		<artid>2015-4</artid>
 		<date>Feb. 2015</date>
-		<src>radial/white-time.bmp</src>
-		<small>radial/white-time_small.jpg</small>
+		<src>artworks/radial/white-time.bmp</src>
+		<small>artworks/radial/white-time_small.jpg</small>
 		<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
 	</alg>
 	<alg>
 		<title>Rhodo</title>
 		<artid>2015-10</artid>
 		<date>May 2015</date>
-		<src>radial/rhodo.png</src>
-		<small>radial/rhodo_small.jpg</small>
+		<src>artworks/radial/rhodo.png</src>
+		<small>artworks/radial/rhodo_small.jpg</small>
 		<description>Inspired by the infinite generosity of a Swiss family and Lake Geneva's flowery shores in early spring.</description>
 	</alg>
 	<alg>
 		<title>Kuzco 5</title>
 		<artid>2015-8</artid>
 		<date>Apr. 2015</date>
-		<src>radial/kuzco5.png</src>
-		<small>radial/kuzco5_small.jpg</small>
+		<src>artworks/radial/kuzco5.png</src>
+		<small>artworks/radial/kuzco5_small.jpg</small>
 		<description>Somehow inspired by Disney's The Emperor's New Groove and Wanderer Awake by Android Jones.</description>
 	</alg>
 	<!--
@@ -176,8 +176,8 @@
         <title>Shiver</title>
         <artid>2015-11</artid>
         <date>Aug. 2015</date>
-        <src>radial/shiver.jpg</src>
-        <small>radial/shiver_small.jpg</small>
+        <src>artworks/radial/shiver.jpg</src>
+        <small>artworks/radial/shiver_small.jpg</small>
         <description>Wave artwork designed for textile printing</description>
     </alg>
     -->
@@ -185,8 +185,8 @@
 		<title>Harsh</title>
 		<artid>2015-5</artid>
 		<date>Feb. 2015</date>
-		<src>radial/harsh.bmp</src>
-		<small>radial/harsh_small.jpg</small>
+		<src>artworks/radial/harsh.bmp</src>
+		<small>artworks/radial/harsh_small.jpg</small>
 		<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
 	</alg>
 	<!--<alg>
@@ -215,48 +215,48 @@
 		<title>Nucleus</title>
 		<artid>2016-2</artid>
 		<date>Sep. 2016</date>
-		<src>gravitational/nucleus.png</src>
-		<small>gravitational/nucleus_small.jpg</small>
+		<src>artworks/gravitational/nucleus.png</src>
+		<small>artworks/gravitational/nucleus_small.jpg</small>
 		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
 	</alg>
 	<alg>
 		<title>Gravitational Dodge</title>
 		<artid>2016-1</artid>
 		<date>Aug. 2016</date>
-		<src>gravitational/gravitational-blackhole.png</src>
-		<small>gravitational/gravitational-blackhole_small.jpg</small>
+		<src>artworks/gravitational/gravitational-blackhole.png</src>
+		<small>artworks/gravitational/gravitational-blackhole_small.jpg</small>
 		<description>Each planet leaves an imperceptible mark. Many planets leave many marks.&lt;/br&gt;All planets rotate around a single central mass.</description>
 	</alg>
 	<alg>
 		<title>Gandalf Thinking</title>
 		<artid>2015-9</artid>
 		<date>Apr. 2015</date>
-		<src>gravitational/gandalf-thinking.png</src>
-		<small>gravitational/gandalf-thinking_small.jpg</small>
+		<src>artworks/gravitational/gandalf-thinking.png</src>
+		<small>artworks/gravitational/gandalf-thinking_small.jpg</small>
 		<description>Two particle beams attracted either to the top or the bottom, with a stronger gravity for the upper beam.</description>
 	</alg>
 	<alg>
 		<title>Flight</title>
 		<artid>2016-3</artid>
 		<date>Sep. 2016</date>
-		<src>gravitational/flight.png</src>
-		<small>gravitational/flight_small.jpg</small>
+		<src>artworks/gravitational/flight.png</src>
+		<small>artworks/gravitational/flight_small.jpg</small>
 		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
 	</alg>
 	<alg>
 		<title>A star of stars</title>
 		<artid>2016-4</artid>
 		<date>Oct. 2016</date>
-		<src>gravitational/star-of-stars.png</src>
-		<small>gravitational/star-of-stars_small.jpg</small>
+		<src>artworks/gravitational/star-of-stars.png</src>
+		<small>artworks/gravitational/star-of-stars_small.jpg</small>
 		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;This time the attraction mass orbits around a central particle launching point.</description>
 	</alg>
 	<alg>
 		<title>Orb</title>
 		<artid>2016-5</artid>
 		<date>Oct. 2016</date>
-		<src>gravitational/orb.png</src>
-		<small>gravitational/orb_small.jpg</small>
+		<src>artworks/gravitational/orb.png</src>
+		<small>artworks/gravitational/orb_small.jpg</small>
 		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets. Rendered with hashed trace opacity.</description>
 	</alg>
 
@@ -264,48 +264,48 @@
 		<title>_Transition sc.6-explosion</title>
 		<artid>2018-1</artid>
 		<date>Apr. 2018</date>
-		<src>transition/tran1.png</src>
-		<small>transition/tran1_small.jpg</small>
+		<src>projects/transition/tran1.png</src>
+		<small>projects/transition/tran1_small.jpg</small>
 		<description>Visual from final scene of _Transition VR project with lejeanf</description>
 	</alg>
 	<alg>
 		<title>_Transition sc.5-hurricane</title>
 		<artid>2018-2</artid>
 		<date>Apr. 2018</date>
-		<src>transition/tran2.png</src>
-		<small>transition/tran2_small.jpg</small>
+		<src>projects/transition/tran2.png</src>
+		<small>projects/transition/tran2_small.jpg</small>
 		<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
 	</alg>
 	<alg>
 		<title>_Transition sc.5-strata</title>
 		<artid>2018-3</artid>
 		<date>Apr. 2018</date>
-		<src>transition/tran3.jpg</src>
-		<small>transition/tran3_small.jpg</small>
+		<src>projects/transition/tran3.jpg</src>
+		<small>projects/transition/tran3_small.jpg</small>
 		<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
 	</alg>
 	<alg>
 		<title>_Transition sc.6-crumbles</title>
 		<artid>2018-4</artid>
 		<date>Apr. 2018</date>
-		<src>transition/tran4.png</src>
-		<small>transition/tran4_small.jpg</small>
+		<src>projects/transition/tran4.png</src>
+		<small>projects/transition/tran4_small.jpg</small>
 		<description>Visual from last scene of _Transition VR project with lejeanf</description>
 	</alg>
 	<alg>
 		<title>_Transition sc.5-melting-fields</title>
 		<artid>2018-5</artid>
 		<date>Apr. 2018</date>
-		<src>transition/tran5.png</src>
-		<small>transition/tran5_small.jpg</small>
+		<src>projects/transition/tran5.png</src>
+		<small>projects/transition/tran5_small.jpg</small>
 		<description>Visual from fifth scene of _Transition VR project with lejeanf</description>
 	</alg>
 	<alg>
 		<title>_Transition sc.6-rebirth</title>
 		<artid>2018-6</artid>
 		<date>Apr. 2018</date>
-		<src>transition/tran6.jpg</src>
-		<small>transition/tran6_small.jpg</small>
+		<src>projects/transition/tran6.jpg</src>
+		<small>projects/transition/tran6_small.jpg</small>
 		<description>Visual from last scene of _Transition VR project with lejeanf</description>
 	</alg>
 
@@ -322,32 +322,32 @@
 		<title>Dipolar Phoenix</title>
 		<artid>2018-8</artid>
 		<date>July 2018</date>
-		<src>experiments/dipolar-phoenix.png</src>
-		<small>experiments/dipolar-phoenix_small.jpg</small>
+		<src>artworks/experiments/dipolar-phoenix.png</src>
+		<small>artworks/experiments/dipolar-phoenix_small.jpg</small>
 		<description>Fire magnetosphere radiating heat through square-shaped particles.</description>
 	</alg>
 	<alg>
 		<title>PlayChaos 1</title>
 		<artid>2015-2</artid>
 		<date>Mar. 2015</date>
-		<src>experiments/playchaos1.jpg</src>
-		<small>experiments/playchaos1_small.jpg</small>
+		<src>artworks/experiments/playchaos1.jpg</src>
+		<small>artworks/experiments/playchaos1_small.jpg</small>
 		<description>Morning triangular inspiration. Designed with spreadSVG.js, an SVG graphic library for random generative art I developed a few weeks earlier.</description>
 	</alg>
 	<alg>
 		<title>Zeus bolt</title>
 		<artid>2015-3</artid>
 		<date>Feb. 2015</date>
-		<src>experiments/bolt.bmp</src>
-		<small>experiments/bolt_small.jpg</small>
+		<src>artworks/experiments/bolt.bmp</src>
+		<small>artworks/experiments/bolt_small.jpg</small>
 		<description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas&lt;/br&gt;Artwork generated by voice</description>
 	</alg>
 	<alg>
 		<title>Le lac</title>
 		<artid>2015-7</artid>
 		<date>Mar. 2015</date>
-		<src>experiments/lamartine-le-lac.bmp</src>
-		<small>experiments/lamartine-le-lac_small.jpg</small>
+		<src>artworks/experiments/lamartine-le-lac.bmp</src>
+		<small>artworks/experiments/lamartine-le-lac_small.jpg</small>
 		<description>Slice of vocal art performed by woman voice reading Le Lac by French poet Alphonse de Lamartine (1820)</description>
 	</alg>
 
@@ -355,8 +355,8 @@
 		<title>Duel</title>
 		<artid>2015-6</artid>
 		<date>Mar. 2015</date>
-		<src>experiments/duel.bmp</src>
-		<small>experiments/duel_small.jpg</small>
+		<src>artworks/experiments/duel.bmp</src>
+		<small>artworks/experiments/duel_small.jpg</small>
 		<description>The attempts of wisdom to temper anger</description>
 	</alg>
 
@@ -364,8 +364,8 @@
 		<title>Lightbeams Eye</title>
 		<artid>2017-3</artid>
 		<date>Feb. 2017</date>
-		<src>experiments/lightbeams-eye.jpg</src>
-		<small>experiments/lightbeams-eye_small.jpg</small>
+		<src>artworks/experiments/lightbeams-eye.jpg</src>
+		<small>artworks/experiments/lightbeams-eye_small.jpg</small>
 		<description>Moving particles with simple geometrical drawing contraints provide surprising results. Part of a collection of 25 living artworks coded on CodePen.</description>
 	</alg>
 
@@ -373,8 +373,8 @@
 		<title>Lightbeams Squares</title>
 		<artid>2017-4</artid>
 		<date>Feb. 2017</date>
-		<src>experiments/lightbeams-squares.jpg</src>
-		<small>experiments/lightbeams-squares_small.jpg</small>
+		<src>artworks/experiments/lightbeams-squares.jpg</src>
+		<small>artworks/experiments/lightbeams-squares_small.jpg</small>
 		<description>Moving particles with simple geometrical drawing contraints provide surprising results. Part of a collection of 25 living artworks coded on CodePen.</description>
 	</alg>
 
@@ -382,8 +382,8 @@
 		<title>Hexocet Explode</title>
 		<artid>2017-1</artid>
 		<date>Jan. 2017</date>
-		<src>experiments/hexocet-explode.jpg</src>
-		<small>experiments/hexocet-explode_small.jpg</small>
+		<src>artworks/experiments/hexocet-explode.jpg</src>
+		<small>artworks/experiments/hexocet-explode_small.jpg</small>
 		<description>Particles randomly evolve on an hexagonal network and their boredom on grid vertices is expressed through faint widening circles.</description>
 	</alg>
 
@@ -391,8 +391,8 @@
 		<title>Hexocet Fire</title>
 		<artid>2017-2</artid>
 		<date>Jan. 2017</date>
-		<src>experiments/hexocet-fire.jpg</src>
-		<small>experiments/hexocet-fire_small.jpg</small>
+		<src>artworks/experiments/hexocet-fire.jpg</src>
+		<small>artworks/experiments/hexocet-fire_small.jpg</small>
 		<description>Particles randomly evolve on an hexagonal network and scar the canvas with fire.</description>
 	</alg>
 
@@ -400,8 +400,8 @@
 		<title>Dipolar Meteors</title>
 		<artid>2018-7</artid>
 		<date>Apr. 2018</date>
-		<src>experiments/meteors.png</src>
-		<small>experiments/meteors_small.jpg</small>
+		<src>artworks/experiments/meteors.png</src>
+		<small>artworks/experiments/meteors_small.jpg</small>
 		<description>Particles under a dipolar magnetic field with CSS filter gooey rendering technique.</description>
 	</alg>
 
@@ -409,22 +409,22 @@
         <title>Summer 2015</title>
         <artid>2015-12</artid>
         <date>Aug. 2015</date>
-        <src>experiments/summer-2015.png</src>
-        <small>experiments/summer-2015_small.jpg</small>
+        <src>artworks/experiments/summer-2015.png</src>
+        <small>artworks/experiments/summer-2015_small.jpg</small>
         <description>Predominant summer sun reflection on water</description>
     </alg>
     <alg>
         <title>Hueflow real data</title>
         <date>Feb. 2015</date>
-        <src>experiments/hueflow-realdata.bmp</src>
-        <small>experiments/hueflow-realdata_small.jpg</small>
+        <src>artworks/experiments/hueflow-realdata.bmp</src>
+        <small>artworks/experiments/hueflow-realdata_small.jpg</small>
         <description>Hueflow is the outcome of a project for KTH course Information Visualization by M. Romero. This ambiant visualization reacts to the electricity and water consumption of a household. The parameters are derived from real data over 1 month.</description>
     </alg>
     <alg>
         <title>Zeus splitted bolts</title>
         <date>Feb. 2015</date>
-        <src>vocal/boltsplit.bmp</src>
-        <small>vocal/boltsplit_small.jpg</small>
+        <src>artworks/experiments/boltsplit.bmp</src>
+        <small>artworks/experiments/boltsplit_small.jpg</small>
         <description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas</description>
     </alg>-->
 

@@ -3,7 +3,7 @@
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 	<!-- HTML entity for line feed: &#10; -->
 
-	<!-- Possible themes are: Ø (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
+	<!-- Possible themes are: ï¿½ (empty), 'artistic', 'web' and 'dataviz', separated by whitespace if several -->
 
 	<!--
 	<project>
@@ -23,7 +23,7 @@
 	</project>
 
 	<project>
-		<title>Portraits, n°1</title>
+		<title>Portraits, nï¿½1</title>
 		<description>Scientific collaboration and creation&#10;With L. Bellon at Laboratoire de Physique ENS Lyon</description>
 		<image>img/projects/portraits1.jpg</image>
 		<link>https://alexandrix.com/blog/portraits/</link>
@@ -49,7 +49,7 @@
 	<project>
 		<title>_Transition</title>
 		<description>Virtual reality project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
-		<image>img/projects/transitionwebsmall.jpg</image>
+		<image>img/projects/transition/transitionwebsmall.jpg</image>
 		<link>../transition</link>
 		<themes>artistic</themes>
 	</project>

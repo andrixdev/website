@@ -2244,14 +2244,14 @@ img.blob {
   }
 }
 #home .page-banner {
-  background-image: url('../img/misc/header/heeader-vp-5.jpg');
+  background-image: url('../img/misc/header/header-vp-5.jpg');
   background-position-y: 25%;
 }
 #gallery .page-banner {
-  background-image: url('../img/misc/annihilation.jpg');
+  background-image: url('../img/misc/header/annihilation.jpg');
 }
 #films .page-banner {
-  background-image: url('../img/misc/header/heeader-vp-9.jpg');
+  background-image: url('../img/misc/header/header-vp-9.jpg');
 }
 @media (max-width: 500px) {
   #films .page-banner {
@@ -2267,7 +2267,7 @@ img.blob {
   background-image: url('../img/misc/header/header-orb-colors.jpg');
 }
 #more .page-banner {
-  background-image: url('../img/misc/header/heeader-vp-1.jpg');
+  background-image: url('../img/misc/header/header-vp-1.jpg');
   background-position-y: 32%;
 }
 #about .page-banner {
