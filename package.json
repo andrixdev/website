@@ -1,12 +1,12 @@
 {
   "name": "alexandrix-website",
   "version": "1.0.0",
-  "description": "Alexandrix website with Vue.js",
+  "description": "Alex Andrix website",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Alexandre Andrieux",
+  "author": "Alex Andrix",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.6.0",

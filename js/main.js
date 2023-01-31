@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 
     // If IE, display fallback view and return false
     if (isIE()) {

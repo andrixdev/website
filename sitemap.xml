@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://alexandrix.com/</loc>
+		<loc>https://alexandrix.com/</loc>
 		<lastmod>2023-01-02T00:00:00+00:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://alexandrix.com/films</loc>
+		<loc>https://alexandrix.com/films</loc>
 		<lastmod>2021-09-22T00:00:00+00:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://alexandrix.com/gallery</loc>
+		<loc>https://alexandrix.com/gallery</loc>
 		<lastmod>2021-09-22T00:00:00+00:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://alexandrix.com/more</loc>
+		<loc>https://alexandrix.com/more</loc>
 		<lastmod>2022-09-29T00:00:00+00:00</lastmod>
 		<priority>0.90</priority>
 	</url>
 	<url>
-		<loc>http://alexandrix.com/about</loc>
+		<loc>https://alexandrix.com/about</loc>
 		<lastmod>2022-09-29T00:00:00+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>http://alexandrix.com/contact</loc>
+		<loc>https://alexandrix.com/contact</loc>
 		<lastmod>2021-10-12T00:00:00+00:00</lastmod>
 		<priority>0.50</priority>
 	</url>

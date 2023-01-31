@@ -60,44 +60,6 @@ Gallery.loadArtworks = (extraCallback) => {
 	}
 	xhr.send(null)
 
-	/*
-	jQuery
-		.get("data/artworks.xml", {})
-		.done(function (data) {
-
-			let DOMgallery = document.querySelector('#artworks')
-			let jAlgories = jQuery(data).find('algories')
-
-			// Data retrieval and DOM fill
-			jAlgories.find('alg').each(() => {
-				let title = jQuery(this).find('title').text()
-				let src = "img/" + jQuery(this).find('src').text()
-				let small = "img/" + jQuery(this).find('small').text()
-				let description = jQuery(this).find('description').text()
-				let id = jQuery(this).find('artid').text()
-
-				// Fill the DOM
-				let markup = "";
-				markup += "<img src='" + small + "' alt ='" + title + "' title='" + title + "'/>";
-				markup += "<h4 class='title'>" + title + "</h4>";
-
-				// Fill the gallery data object
-				Gallery.artworksData.push({
-					id: id,
-					title: title,
-					src: src,
-					small: small,
-					description: description,
-					markup: markup
-				})
-
-				// Come on, fill the DOhomM
-				DOMgallery.find('.alg#' + 'art-id-' + id).html(markup);
-			});
-
-			extraCallback();
-		});
-	*/
 }
 
 /**
@@ -118,7 +80,7 @@ Gallery.getArtwork = (id) => {
  */
 Gallery.initListeners = () => {
 	// Artworks blocks
-	document.querySelectorAll("artwork").forEach((el) => {
+	document.querySelectorAll(".artwork").forEach((el) => {
 		el.removeEventListener('click')
 		el.addEventListener('click', () => {
 			// Update route history

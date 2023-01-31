@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-SITEMAP: http://alexandrix.com/sitemap.txt
+SITEMAP: https://alexandrix.com/sitemap.xml
