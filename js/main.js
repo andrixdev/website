@@ -1,15 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // If IE, display fallback view and return false
-    if (isIE()) {
-        var ieBlock = document.getElementById('ie-fallback');
-        var body = document.getElementsByTagName('body')[0]
-        body.innerHTML = ieBlock.outerHTML;
-        ieBlock.style.display = 'inherit';
-        body.className += ' ie';
-        return false;
-    }
-
     // App components (short ones, the others are in separate files)
     var GalleryComponent = {
         template: jQuery('#gallery-template').html(),

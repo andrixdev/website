@@ -70,9 +70,7 @@ Gallery.loadArtworks = (extraCallback) => {
 Gallery.getArtwork = (id) => {
 	return Gallery.artworksData.filter((artwork) => {
 		"art-id-" + artwork.id == id 
-	})
-	console.log('Nothing found with ID ' + id)
-	return false
+	})[0]
 }
 
 /**
