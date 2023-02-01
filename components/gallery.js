@@ -10,9 +10,10 @@ let Gallery = {
 Gallery.loadArtworks = (extraCallback) => {
 	let handleXML = (xml) => {
 		Gallery.artworksData = []
-		xml.querySelectorAll("artwork").forEach((el) => {
+		xml.querySelectorAll("artwork").forEach((el, i) => {
 			// Store data in global variable
 			let aw = {
+				index: i,
 				title: el.querySelector("title").innerHTML,
 				id: el.querySelector("id").innerHTML,
 				date: el.querySelector("date").innerHTML,
@@ -60,6 +61,12 @@ Gallery.getArtwork = (id) => {
 		return "art-id-" + artwork.id == id
 	})[0]
 }
+Gallery.getArtworkAtIndex = (index) => {
+	console.log("Getting artwork with index " + index)
+	return Gallery.artworksData.filter((artwork) => {
+		return artwork.index == index
+	})[0]
+}
 Gallery.initListeners = () => {
 	// Artworks blocks
 	document.querySelectorAll(".artwork").forEach((el) => {
@@ -72,35 +79,25 @@ Gallery.initListeners = () => {
 		el.removeEventListener('click', onclick) // Justin Case
 		el.addEventListener('click', onclick)
 	})
-}
-Gallery.frontListeners = () => {
-	jQuery('#front .zoom').off().on({
-		mouseenter: function () {
-            Gallery.mouseIsOverFront = true;
-			Gallery.showFrontDetails();
-		}, mouseleave: function () {
-            Gallery.mouseIsOverFront = false;
-            Gallery.hideFrontDetails();
-		}
-	})
-	jQuery('#front').off().on({
+
+	// #front elements
+	
+	jQuery('#front').on({
 		mouseup: function () {
 			if (Gallery.isFrontShown && !Gallery.mouseIsOverFront) {
 				Global.router.push({
 					path: 'gallery'
-				});
+				})
 			}
 		}
 	})
-	jQuery('#front .zoom .quit').off().on({
-		mouseup: function () {
-			Global.router.push({
-				path: 'gallery'
-			})
-		}
+	document.querySelector("#front .quit").addEventListener('click', () => {
+		Global.router.push({
+			path: 'gallery'
+		})
 	})
 	let resizingEventCount = 0
-	jQuery(window).off().on('resize', function () {
+	jQuery(window).on('resize', function () {
 		resizingEventCount++
 		setTimeout(function () {
 			resizingEventCount--
@@ -110,6 +107,10 @@ Gallery.frontListeners = () => {
 			}
 		}, 500)
 		// Ca marche du feu de Dieu, comme disait l'autre
+	})
+
+	document.querySelector("#gallery-prev").addEventListener('click', () => {
+		console.log('click')
 	})
 }
 Gallery.fillFront = (id) => {
@@ -197,7 +198,6 @@ Gallery.loadingOff = function () {
 Gallery.init = () => {
     Gallery.loadArtworks(() => {
         Gallery.initListeners()
-        Gallery.frontListeners()
 
 	    if (Gallery.shouldShowFront) {
 		    // Get ID
