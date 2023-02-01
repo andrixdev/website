@@ -1,8 +1,9 @@
 let Gallery = {
 	isInit: false,
 	artworksData: [],
+	currentArtworkShown: undefined,
+	currentImageObject: undefined,
 	timeout: undefined,
-	currentImageObject: undefined
 }
 Gallery.loadArtworks = (extraCallback) => {
 	let handleXML = (xml) => {
@@ -94,20 +95,24 @@ Gallery.initListeners = () => {
 			}
 		}, 500)
 	})
+	let len = Gallery.artworksData.length
 	document.querySelector("#gallery-prev").addEventListener('click', () => {
-		Global.router.push({ path: 'gallery', query: { artwork: "art-id-2018-9" } })
+		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
+		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
 	})
 	document.querySelector("#gallery-next").addEventListener('click', () => {
-		console.log('click')
+		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
+		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
 	})
 }
 Gallery.fillFront = (id) => {
 	let artwork = Gallery.getArtwork(id)
 	if (!artwork) return false
 
+	Gallery.currentArtworkShown = artwork
 	Gallery.loadingOn()
-	// Clear previous img
-	document.querySelector('#front .zoom img.fullone').setAttribute('src', "")
 
 	let src = artwork.src
 	let title = artwork.title
@@ -115,7 +120,9 @@ Gallery.fillFront = (id) => {
 
 	// Image
 	let newImg = new Image()
-	Gallery.currentImageObject = newImg// Store globally for .on('resize') action without reloading image
+	Gallery.currentImageObject = newImg // Store globally for .on('resize') action without reloading image
+
+	document.querySelector('#front .zoom img.fullone').setAttribute('src', "")
 	newImg.onload = () => {
 		document.querySelector('#front .zoom img.fullone').setAttribute('src', "")
 
@@ -127,7 +134,7 @@ Gallery.fillFront = (id) => {
             Gallery.loadingOff()
 			document.querySelector('#front .zoom img.fullone').setAttribute('src', src)
 		}, 300)
-	};
+	}
 	newImg.src = src
 	newImg.alt = title
 
@@ -186,11 +193,12 @@ Gallery.update = () => {
 	}
 	// Get ID, might be undefined
 	let artworkID = location.search.split('artwork=')[1]
-	if (artworkID) {
+	if (artworkID != undefined) {
 		Gallery.fillFront(artworkID)
 		Gallery.showFront()
 	} else {
 		Gallery.hideFront()
+		Gallery.currentArtworkShown = undefined
 	}
 
 }
