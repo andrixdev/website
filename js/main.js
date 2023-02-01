@@ -114,10 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	    // If back button from front Gallery mode, close it
 	    console.log("Navigating from " + from.fullPath + " to " + to.fullPath)
+
+        // Going to Gallery or coming from it
 	    if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) {
-		    // Going to Gallery or coming from it
-		    if (to.fullPath.indexOf('art-id') === -1) Gallery.shouldShowFront = false
-		    else Gallery.shouldShowFront = true
 		    Gallery.update()
 	    }
 

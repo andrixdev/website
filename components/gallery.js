@@ -1,9 +1,6 @@
 let Gallery = {
 	isInit: false,
 	artworksData: [],
-	mouseIsOverFront: false,
-	isFrontShown: false,
-	shouldShowFront: false,
 	timeout: undefined,
 	currentImageObject: undefined
 }
@@ -81,35 +78,26 @@ Gallery.initListeners = () => {
 	})
 
 	// #front elements
-	
-	jQuery('#front').on({
-		mouseup: function () {
-			if (Gallery.isFrontShown && !Gallery.mouseIsOverFront) {
-				Global.router.push({
-					path: 'gallery'
-				})
-			}
-		}
-	})
 	document.querySelector("#front .quit").addEventListener('click', () => {
 		Global.router.push({
 			path: 'gallery'
 		})
 	})
 	let resizingEventCount = 0
-	jQuery(window).on('resize', function () {
+	window.addEventListener('resize', () => {
 		resizingEventCount++
-		setTimeout(function () {
+		setTimeout(() => {
 			resizingEventCount--
 			if (resizingEventCount == 0) {
 				// Actual resize action
 				Gallery.adjustFrontImageSize()
 			}
 		}, 500)
-		// Ca marche du feu de Dieu, comme disait l'autre
 	})
-
 	document.querySelector("#gallery-prev").addEventListener('click', () => {
+		Global.router.push({ path: 'gallery', query: { artwork: "art-id-2018-9" } })
+	})
+	document.querySelector("#gallery-next").addEventListener('click', () => {
 		console.log('click')
 	})
 }
@@ -172,22 +160,12 @@ Gallery.adjustFrontImageSize = () => {
 	jQuery('#front .zoom, #front .zoom img.fullone').css('height', h).css('width', w)
 }
 Gallery.showFront = () => {
-	Gallery.isFrontShown = true
-
 	document.getElementById('front').classList.remove('hidden')
 	document.querySelector("body").classList.add('frozen')
 }
 Gallery.hideFront = function () {
-	Gallery.isFrontShown = false
-
 	document.getElementById('front').classList.add('hidden')
 	document.querySelector("body").classList.remove('frozen')
-}
-Gallery.showFrontDetails = () => {
-	document.querySelector('#front .zoom .details').classList.add('visible')
-}
-Gallery.hideFrontDetails = () => {
-	document.querySelector('#front .zoom .details').classList.remove('visible')
 }
 Gallery.loadingOn = function () {
 	document.querySelector('.zoom .loader').classList.remove('hidden')
@@ -198,15 +176,6 @@ Gallery.loadingOff = function () {
 Gallery.init = () => {
     Gallery.loadArtworks(() => {
         Gallery.initListeners()
-
-	    if (Gallery.shouldShowFront) {
-		    // Get ID
-		    let artworkID = location.search.split('artwork=')[1]
-		    if (Gallery.fillFront(artworkID)) Gallery.showFront()
-	    } else {
-		    // Close potentially open front mode
-		    Gallery.hideFront()
-	    }
     })
 }
 Gallery.update = () => {
@@ -215,14 +184,13 @@ Gallery.update = () => {
 		Gallery.init()
 		Gallery.isInit = true
 	}
-	// Gallery.shouldShowFront might have been modified by router
-	if (Gallery.shouldShowFront && !Gallery.isFrontShown) {
-		// Get ID
-		let artworkID = location.search.split('artwork=')[1]
+	// Get ID, might be undefined
+	let artworkID = location.search.split('artwork=')[1]
+	if (artworkID) {
 		Gallery.fillFront(artworkID)
 		Gallery.showFront()
 	} else {
-		// Close potentially open front mode
 		Gallery.hideFront()
 	}
+
 }
