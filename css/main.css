@@ -23,6 +23,7 @@ body.frozen {
 }
 #alexandrix-website {
   padding-top: 60px;
+  overflow-x: hidden;
 }
 .title-block {
   background: hsl(200, 50%, 20%);
@@ -974,10 +975,11 @@ img.blob {
   width: 100vw;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: black;
   z-index: 1;
   overflow-y: scroll;
   transition: opacity 500ms;
+  user-select: none;
 }
 #front.hidden {
   display: none;
@@ -1046,31 +1048,30 @@ img.blob {
   transform: rotate(-45deg);
   top: 44px;
 }
-#front .zoom {
-  outline: solid 1px rgba(125, 125, 125, 0.5);
+#front #front-artwork {
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 30px;
+  padding: 20px 0 40px;
 }
-#front .zoom img.fullone {
+#front #front-artwork img.fullone {
+  border: solid 1px rgba(125, 125, 125, 0.5);
   touch-action: manipulation;
 }
-#front .zoom .details .description p {
-  color: hsl(200, 50%, 10%);
-}
-#front .zoom .details .description p.title {
+#front #front-artwork .details {
   text-align: center;
+  padding: 0 40px;
+}
+#front #front-artwork .details .description p,
+#front #front-artwork .details .description h3 {
+  color: hsl(200, 50%, 90%);
+}
+#front #front-artwork .details .description h3.title {
   font-size: 1.5em;
-  padding: 10px 0;
+  padding: 25px 0 1rem;
 }
-#front .zoom .details .description p.text {
-  padding-bottom: 20px;
+#front #front-artwork .details .description p.text {
   font-size: 1em;
-  width: 80%;
-  margin-left: 10%;
-  text-align: center;
 }
 #front .loader {
-  width: 120px;
-  height: 170px;
   /* DON'T FORGET position: relative ON THE PARENT */
   /* AND TO GIMME A HEIGHT AND WIDTH */
   margin: auto;
@@ -1079,6 +1080,8 @@ img.blob {
   right: 0;
   bottom: 0;
   top: 0;
+  width: 120px;
+  height: 170px;
 }
 #front .loader.hidden {
   display: none;

@@ -122,9 +122,9 @@ Gallery.fillFront = (id) => {
 	let newImg = new Image()
 	Gallery.currentImageObject = newImg // Store globally for .on('resize') action without reloading image
 
-	document.querySelector('#front .zoom img.fullone').setAttribute('src', "")
+	document.querySelector('#front-artwork img.fullone').setAttribute('src', "")
 	newImg.onload = () => {
-		document.querySelector('#front .zoom img.fullone').setAttribute('src', "")
+		document.querySelector('#front-artwork img.fullone').setAttribute('src', "")
 
 		Gallery.adjustFrontImageSize()
 
@@ -132,39 +132,33 @@ Gallery.fillFront = (id) => {
 		clearTimeout(Gallery.timeout)
 		Gallery.timeout = setTimeout(() => {
             Gallery.loadingOff()
-			document.querySelector('#front .zoom img.fullone').setAttribute('src', src)
+			document.querySelector('#front-artwork img.fullone').setAttribute('src', src)
 		}, 300)
 	}
 	newImg.src = src
 	newImg.alt = title
 
 	// Description
-	document.querySelector('#front .zoom .details .description p.title').innerHTML = title
-	document.querySelector('#front .zoom .details .description p.text').innerHTML = description
+	document.querySelector('#front-artwork .details .description h3.title').innerHTML = title
+	document.querySelector('#front-artwork .details .description p.text').innerHTML = description
 }
-/**
- * Computes preview width and height based on current window size
- * And applies CSS rules to both .zoom container and image
- *
- * @returns Object {w, h}
- */
 Gallery.adjustFrontImageSize = () => {
-	let h = Gallery.currentImageObject.height;
-	let w = Gallery.currentImageObject.width;
+	let h = Gallery.currentImageObject.height
+	let w = Gallery.currentImageObject.width
 
 	// If image is bigger than 0.9*window, rescale
 	let ratioW = w / (0.9 * jQuery(window).width())
 	let ratioH = h / (0.9 * jQuery(window).height())
 	let ratio = Math.max(ratioH, ratioW)
 	if (ratio > 1 && ratioW > ratioH) {
-		h /= ratioW;
-		w /= ratioW;
+		h /= ratioW
+		w /= ratioW
 	} else if (ratio > 1 && ratioH > ratioW) {
 		h /= ratioH
 		w /= ratioH
 	}
 
-	jQuery('#front .zoom, #front .zoom img.fullone').css('height', h).css('width', w)
+	jQuery('#front-artwork img.fullone').css('height', h).css('width', w)
 }
 Gallery.showFront = () => {
 	document.getElementById('front').classList.remove('hidden')
@@ -175,10 +169,10 @@ Gallery.hideFront = function () {
 	document.querySelector("body").classList.remove('frozen')
 }
 Gallery.loadingOn = function () {
-	document.querySelector('.zoom .loader').classList.remove('hidden')
+	document.querySelector('#front-artwork .loader').classList.remove('hidden')
 }
 Gallery.loadingOff = function () {
-	document.querySelector('.zoom .loader').classList.add('hidden')
+	document.querySelector('#front-artwork .loader').classList.add('hidden')
 }
 Gallery.init = () => {
     Gallery.loadArtworks(() => {
