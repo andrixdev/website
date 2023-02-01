@@ -174,11 +174,13 @@ Gallery.showFront = () => {
 	Gallery.isFrontShown = true
 
 	document.getElementById('front').classList.remove('hidden')
+	document.querySelector("body").classList.add('frozen')
 }
 Gallery.hideFront = function () {
 	Gallery.isFrontShown = false
 
 	document.getElementById('front').classList.add('hidden')
+	document.querySelector("body").classList.remove('frozen')
 }
 Gallery.showFrontDetails = () => {
 	document.querySelector('#front .zoom .details').classList.add('visible')

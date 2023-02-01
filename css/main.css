@@ -5,27 +5,21 @@
  * @since 2015-03
  */
 /* Generic */
-/* Reset */
-*,
-body,
-html {
+* {
   margin: 0;
   padding: 0;
 }
-/* Background */
 html,
 body {
   height: 100%;
   width: 100%;
-  /* Starry Night CSS3 pattern by Lea Verou */
   background-color: hsl(200, 50%, 5%);
-  /*background-image:
-					radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-					radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-					radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-					radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-	background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;*/
+}
+body {
+  overflow-x: hidden;
+}
+body.frozen {
+  overflow-y: hidden;
 }
 #alexandrix-website {
   padding-top: 60px;
@@ -975,60 +969,39 @@ img.blob {
   background: rgba(255, 255, 255, 0.05);
 }
 #front {
-  opacity: 1;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   z-index: 1;
+  overflow-y: scroll;
+  transition: opacity 500ms;
 }
 #front.hidden {
   display: none;
 }
-#front .zoom {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.75) 0 0 35px;
-}
-#front .zoom .quit {
+#front .quit {
   position: absolute;
   top: 0;
   right: 0;
   opacity: 0.3;
   background: black;
 }
-#front .zoom .quit:hover {
+#front .quit:hover {
   opacity: 0.85;
 }
-#front .zoom .details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  min-height: 10%;
-  opacity: 0;
-  transition: opacity 500ms;
+#front .zoom {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 35px;
 }
-#front .zoom .details.visible {
-  opacity: 1;
-}
-#front .zoom .details .description {
-  background: rgba(255, 255, 255, 0.85);
-  width: 100%;
-  height: 100%;
+#front .zoom img.fullone {
+  touch-action: manipulation;
 }
 #front .zoom .details .description p {
   color: hsl(200, 50%, 10%);
 }
 #front .zoom .details .description p.title {
-  width: 100%;
   text-align: center;
   font-size: 1.5em;
   padding: 10px 0;
