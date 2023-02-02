@@ -710,65 +710,6 @@ img.blob {
 .click-and-hue * {
   cursor: help;
 }
-#home a.home-category-link {
-  text-decoration: none;
-}
-#home .home-hot h5 {
-  font-size: 2rem;
-  margin: 30px auto 20px 20px;
-}
-#home .home-hot .hot-items {
-  margin-left: 30px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Children are self-aligned to upper line / leftmost line */
-  align-items: flex-start;
-  /* Pull to left or top */
-  justify-content: flex-start;
-}
-#home .home-hot .hot-items .hot-item {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Centers child elements */
-  justify-content: center;
-}
-#home .home-hot .hot-items .hot-item > * {
-  margin: 20px;
-}
-#home .home-hot .hot-items .hot-item img {
-  width: 180px;
-  min-width: 180px;
-}
-#home .home-hot .hot-items .hot-item p {
-  font-size: 1.2rem;
-  text-align: center;
-}
-#home .home-hot .hot-items .hot-item p.fat {
-  font-size: 2rem;
-}
-#home .home-hot .hot-items .hot-item a {
-  text-decoration: underline;
-}
-@media (max-width: 800px) {
-  #home .home-hot .hot-items {
-    /* Centers child elements */
-    justify-content: center;
-  }
-  #home .home-hot .hot-items .hot-item {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px auto;
-  }
-  #home .home-hot .hot-items .hot-item > * {
-    margin: 5px;
-  }
-}
 #home .home-whatsnew .whatsnew-content {
   padding: 10px 15px 30px;
 }
@@ -950,24 +891,6 @@ img.blob {
 }
 #home .home-whatsnew .whatsnew-content .loadmore-holder {
   flex-basis: 100%;
-}
-#home .showcase {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  position: relative;
-}
-#home .showcase .showcase-wrapper {
-  width: 400%;
-  height: 464px;
-}
-#home .showcase img {
-  height: 220px;
-  margin: 3px;
-  border: solid 1px rgba(255, 255, 255, 0.2);
-  display: inline-block;
-  min-width: 50px;
-  min-height: 50px;
-  background: rgba(255, 255, 255, 0.05);
 }
 #front {
   position: fixed;
@@ -1207,11 +1130,24 @@ img.blob {
   }
 }
 .artwork {
-  margin: 5px;
-  border-radius: 2px;
-  border: solid 1px rgba(100, 100, 100, 0.7);
-  position: relative;
-  overflow: hidden;
+  outline: solid 1px rgba(100, 100, 100, 0.7);
+  width: calc(25% - 2 * 5px - 2px);
+}
+@media (max-width: 1150px) {
+  .artwork {
+    width: calc(33% - 2 * 5px - 2px);
+  }
+}
+@media (max-width: 850px) {
+  .artwork {
+    width: calc(50% - 2 * 5px - 2px);
+  }
+}
+@media (max-width: 450px) {
+  .artwork {
+    width: 100%;
+    max-width: 450px;
+  }
 }
 .artwork * {
   cursor: pointer;
@@ -1219,7 +1155,6 @@ img.blob {
 .artwork h4.title {
   color: white;
   width: 100%;
-  text-align: center;
   font-size: 1.2rem;
   padding: 0.7em 0;
   background: rgba(0, 0, 0, 0.75);
@@ -1228,124 +1163,14 @@ img.blob {
   left: 0;
   opacity: 0;
   transition: opacity 1s;
+  text-align: center;
 }
 .artwork img {
-  display: block;
+  width: 100%;
+  border-radius: 2px;
   min-width: 50px;
   min-height: 50px;
   background: rgba(255, 255, 255, 0.05);
-}
-.artwork.landscape {
-  width: 330px;
-}
-.artwork.portrait,
-.artwork.portrait img {
-  width: 140px;
-  height: 200px;
-}
-.uncateg .artwork.portrait,
-.uncateg .artwork.portrait img {
-  width: 156px;
-  height: 220px;
-}
-.artwork.main-img {
-  flex-shrink: 0;
-}
-.artwork.main-img.portrait,
-.artwork.main-img.portrait img {
-  width: 224px;
-  height: 320px;
-}
-.artwork.main-img.landscape,
-.artwork.main-img.landscape img {
-  width: 390px;
-  height: 260px;
-}
-@media (min-width: 450px) {
-  .gallery-content-2 .artwork.landscape {
-    /* White Time */
-    /* Harsh */
-    /* Kuzco 5 */
-    /* Le Lac */
-    /* Rhodo */
-    /* Gravitational Blackhole */
-    /* Nucleus */
-    /* Flight */
-    /* Orb */
-    /* Gandalf Thinking */
-    /* PlayChaos 1 */
-    /* Zeus Bolt */
-    /* Lightbeams Eye */
-    /* Hexocet Explode */
-    /* Diploar Phoenix */
-  }
-  .gallery-content-2 .artwork.landscape img {
-    height: 220px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-4 img {
-    margin-left: -50px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-5 img {
-    margin-left: -53px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-8 img {
-    margin-left: -35px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-7 img {
-    width: 330px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-10 img {
-    margin-left: -37px;
-  }
-  .gallery-content-2 .artwork.landscape.main-img#art-id-2015-10 img {
-    margin-left: -47px;
-    height: 260px;
-    width: 485px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2016-1 img {
-    margin-left: -50px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2016-2 img {
-    width: 330px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2016-3 img {
-    width: 330px;
-  }
-  .gallery-content-2 .artwork.landscape.main-img#art-id-2016-3 img {
-    width: 390px;
-    height: 260px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2016-5 img {
-    width: 330px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-9 img {
-    margin-left: -35px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-2 img {
-    margin-left: -50px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2015-3 img {
-    margin-left: -75px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2017-3 img {
-    margin-left: -46px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2017-1 img {
-    margin-left: -55px;
-  }
-  .gallery-content-2 .artwork.landscape#art-id-2018-8 img {
-    margin-left: -8px;
-  }
-}
-@media (max-width: 450px) {
-  .artwork {
-    width: 100% !important;
-    height: auto !important;
-  }
-  .artwork img {
-    width: 100% !important;
-    height: auto !important;
-  }
 }
 #films .side + img {
   width: 600px;
@@ -1428,45 +1253,6 @@ img.blob {
 }
 #animations .randomize button {
   margin: 20px;
-}
-.videos {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Centers child elements */
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-}
-.videos video {
-  height: 350px;
-  border-radius: 2px;
-  border: solid 1px rgba(100, 100, 100, 0.7);
-  margin: 5px;
-  min-width: 50px;
-  min-height: 50px;
-  background: rgba(255, 255, 255, 0.05);
-}
-@media (max-width: 800px) {
-  .videos {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .videos video {
-    max-width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 650px) {
-  .videos video {
-    width: 100%;
-  }
-}
-#vjing .coming-soon {
-  margin: 65px 0;
 }
 #vjing .vjimg img {
   margin: 5px;

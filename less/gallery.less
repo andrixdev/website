@@ -241,12 +241,18 @@
 	}
 }
 
+#artworks {
+	
+}
+
 .artwork {
-	margin: 5px;
-	border-radius: 2px;
-	border: solid 1px rgba(100, 100, 100, 0.7);
-	position: relative;
-	overflow: hidden;
+	// Handled by Masonry methods in gallery.js
+	outline: solid 1px rgba(100, 100, 100, 0.7);
+
+	width: calc(25% - 2 * 5px - 2px);
+	@media (max-width: 1150px) { width: calc(33% - 2 * 5px - 2px); }
+	@media (max-width: 850px) { width: calc(50% - 2 * 5px - 2px); }
+	@media (max-width: 450px) { width: 100%; max-width: 450px; }
 
 	* {
 		cursor: pointer;
@@ -254,7 +260,6 @@
 	h4.title {
 		color: white;
 		width: 100%;
-		.center();
 		font-size: 1.2rem;
 		padding: .7em 0;
 		background: rgba(0,0,0,0.75);
@@ -263,105 +268,12 @@
 		left: 0;
 		opacity: 0;
 		transition: opacity 1s;
+		.center();
 	}
 	img {
-		//width: 100%;
-		display: block;
+		width: 100%;
+		border-radius: 2px;
 		.img-placeholder();
 	}
-}
 
-.artwork.landscape {
-	& {
-		width: 330px;
-	}
-	&, & img {
-
-	}
 }
-.artwork.portrait {
-	// Force fixed height and width to prevent Safari mysterious bug
-	&, & img {
-		width: 140px;
-		height: 200px;
-
-		.uncateg & {
-			width: 156px;
-			height: 220px;
-		}
-	}
-}
-.artwork.main-img {
-	flex-shrink: 0;
-}
-.artwork.main-img.portrait {
-	&, & img {
-		width: 224px;
-		height: 320px;
-	}
-}
-.artwork.main-img.landscape {
-	&, & img {
-		width: 390px;
-		height: 260px;
-	}
-}
-
-// New gallery exceptions, only for landscape images because they all have erratic formats
-@media (min-width: 450px) {
-	.gallery-content-2 .artwork.landscape {
-		// Base treat
-		img {
-			height: 220px;
-		}
-
-		// Specific overrides
-		/* White Time */
-		&#art-id-2015-4 img { margin-left: -50px; }
-		/* Harsh */
-		&#art-id-2015-5 img { margin-left: -53px; }
-		/* Kuzco 5 */
-		&#art-id-2015-8 img { margin-left: -35px; }
-		/* Le Lac */
-		&#art-id-2015-7 img { width: 330px; }
-		/* Rhodo */
-		&#art-id-2015-10 img { margin-left: -37px; }
-		&.main-img#art-id-2015-10 img {
-			margin-left: -47px;
-			height: 260px;
-			width: 485px;
-		}
-		/* Gravitational Blackhole */
-		&#art-id-2016-1 img { margin-left: -50px; }
-		/* Nucleus */
-		&#art-id-2016-2 img { width: 330px; }
-		/* Flight */
-		&#art-id-2016-3 img { width: 330px;	}
-		&.main-img#art-id-2016-3 img { width: 390px; height: 260px; }
-		/* Orb */
-		&#art-id-2016-5 img { width: 330px;	}
-		/* Gandalf Thinking */
-		&#art-id-2015-9 img { margin-left: -35px; }
-		/* PlayChaos 1 */
-		&#art-id-2015-2 img { margin-left: -50px; }
-		/* Zeus Bolt */
-		&#art-id-2015-3 img { margin-left: -75px; }
-		/* Lightbeams Eye */
-		&#art-id-2017-3 img { margin-left: -46px; }
-		/* Hexocet Explode */
-		&#art-id-2017-1 img { margin-left: -55px; }
-		/* Diploar Phoenix */
-		&#art-id-2018-8 img { margin-left: -8px; }
-	}
-}
-@media (max-width: 450px) {
-	.artwork {
-		width: 100% !important;
-		height: auto !important;
-	}
-	.artwork img {
-		width: 100% !important;
-		height: auto !important;
-	}
-}
-

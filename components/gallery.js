@@ -1,6 +1,8 @@
 let Gallery = {
 	isInit: false,
 	artworksData: [],
+	artworksOnPage: 0,
+	loadCount: 0,
 	currentArtworkShown: undefined,
 	currentImageObject: undefined,
 	timeout: undefined,
@@ -8,6 +10,10 @@ let Gallery = {
 Gallery.loadArtworks = (extraCallback) => {
 	let handleXML = (xml) => {
 		Gallery.artworksData = []
+		Gallery.loadCount = 0
+		Gallery.artworksOnPage = 0
+
+		// Store data and create image elements
 		xml.querySelectorAll("artwork").forEach((el, i) => {
 			// Store data in global variable
 			let aw = {
@@ -24,7 +30,14 @@ Gallery.loadArtworks = (extraCallback) => {
 
 			// Inject artwork data DOM node
 			if (document.querySelector("#art-id-" + aw.id)) {
+				Gallery.artworksOnPage++
 				let img = document.createElement("img")
+
+				// Set loaded state to true once done
+				img.addEventListener('load', () => {
+					Gallery.updateImageLoadCount()
+				})
+
 				img.src = aw.small
 				img.alt = aw.title
 				img.title = aw.title
@@ -52,6 +65,14 @@ Gallery.loadArtworks = (extraCallback) => {
 		console.error(xhr.statusText)
 	}
 	xhr.send(null)
+}
+Gallery.updateImageLoadCount = () => {
+	Gallery.loadCount++
+
+	// Now check if all are loaded to maybe launch... Masonry!!!! \o/
+	if (Gallery.loadCount == Gallery.artworksOnPage) {
+		Masonry.init()
+	}
 }
 Gallery.getArtwork = (id) => {
 	console.log("Getting artwork with id " + id)
@@ -195,4 +216,36 @@ Gallery.update = () => {
 		Gallery.currentArtworkShown = undefined
 	}
 
+}
+
+let Masonry = {
+	children: [],
+	height: 0,
+	width: 0,
+	breakpoints: {
+		oneCol: 450,
+		twoCols: 850,
+		threeCols: 1150,
+	}
+}
+
+Masonry.init = function (containerNode) {
+
+	let ctn = document.querySelector("#artworks")
+	this.children = ctn.children
+
+	// Setup absolute positioning
+	ctn.setAttribute("position", 'relative')
+	Array.from(this.children).forEach((el) => {
+		// Force absolute positioning of children
+		el.setAttribute("position", 'absolute')
+		el.setAttribute("left", 0 + "px")
+		el.setAttribute("top", 0 + "px")
+		console.log(el.clientWidth, el.clientHeight)
+	})
+
+}
+Masonry.resizeContainer = function () {
+	this.containerNode.setAttribute("width", this.width)
+	this.containerNode.setAttribute("height", this.height)
 }

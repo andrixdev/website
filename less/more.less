@@ -36,9 +36,6 @@
 }
 #vp-extras {
 	.project-tile {
-		//.flexcol();
-		//.flexwrap();
-		//.flexcenter();
 		padding: 20px;
 	}
 	iframe, img.vp-reportage {
@@ -67,40 +64,7 @@
 	}
 }
 
-// Used on homepage and animations page
-.videos {
-	.flexrow();
-	.flexcenter();
-	.flexwrap();
-	margin-bottom: 15px;
-
-	video {
-		height: 350px;
-		border-radius: 2px;
-		border: solid 1px rgba(100, 100, 100, 0.7);
-		margin: 5px;
-		.img-placeholder();
-	}
-
-	@media (max-width: 800px) {
-		.flexcol();
-
-		video {
-			max-width: 100%;
-			height: auto;
-		}
-	}
-	@media (max-width: 650px) {
-		video {
-			width: 100%;
-		}
-	}
-}
-
 #vjing {
-	.coming-soon {
-		margin: 65px 0;
-	}
 	.vjimg {
 		img {
 			margin: 5px;
