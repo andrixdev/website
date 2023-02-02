@@ -113,6 +113,9 @@ Gallery.initListeners = () => {
 			if (resizingEventCount == 0) {
 				// Actual resize action
 				Gallery.adjustFrontImageSize()
+
+				// Well, update masonry
+				Masonry.init()
 			}
 		}, 500)
 	})
@@ -164,6 +167,8 @@ Gallery.fillFront = (id) => {
 	document.querySelector('#front-artwork .details .description p.text').innerHTML = description
 }
 Gallery.adjustFrontImageSize = () => {
+	if (!Gallery.currentImageObject) return false
+
 	let h = Gallery.currentImageObject.height
 	let w = Gallery.currentImageObject.width
 
@@ -219,9 +224,10 @@ Gallery.update = () => {
 }
 
 let Masonry = {
+	containerNode: undefined,
+	containerHeight: 0,
 	children: [],
-	height: 0,
-	width: 0,
+	margins: 20, //px
 	breakpoints: {
 		oneCol: 450,
 		twoCols: 850,
@@ -230,22 +236,55 @@ let Masonry = {
 }
 
 Masonry.init = function (containerNode) {
-
 	let ctn = document.querySelector("#artworks")
+	this.containerNode = ctn
 	this.children = ctn.children
 
 	// Setup absolute positioning
-	ctn.setAttribute("position", 'relative')
+	ctn.style.position = "relative"
+	let colHeights = []
+	let xPercent = 100, cols = 1
+	if (window.innerWidth <= this.breakpoints.oneCol) { colHeights = [0]; }
+	else if (window.innerWidth <= this.breakpoints.twoCols) { colHeights = [0, 0]; cols = 2; }
+	else if (window.innerWidth <= this.breakpoints.threeCols) { colHeights = [0, 0, 0]; cols = 3; }
+	else { colHeights = [0, 0, 0, 0]; cols = 4; }
+	xPercent *= 1 / cols
+
 	Array.from(this.children).forEach((el) => {
-		// Force absolute positioning of children
-		el.setAttribute("position", 'absolute')
-		el.setAttribute("left", 0 + "px")
-		el.setAttribute("top", 0 + "px")
-		console.log(el.clientWidth, el.clientHeight)
+		// Determine which column is the emptiest
+		let minIndex = 0, minColHeight = colHeights[0]
+		colHeights.forEach((ch, index) => {
+			if (ch < minColHeight) {
+				minColHeight = ch
+				minIndex = index
+			}
+		})
+
+		// Position artwork in the layout
+		let w = xPercent + "% - " + this.margins + "px"
+		let wCalc = "calc(" + w + ")"
+		let x = xPercent * minIndex + "% + " + this.margins / 2 + "px" 
+		let xCalc = "calc(" + x + ")"
+		
+		let y = minColHeight
+		el.style.position = "absolute"
+		el.style.width = wCalc
+		el.style.left = xCalc
+		el.style.top = (y + this.margins) + "px"
+
+		// Update chosen column height
+		colHeights[minIndex] += el.clientHeight + this.margins
 	})
 
-}
-Masonry.resizeContainer = function () {
-	this.containerNode.setAttribute("width", this.width)
-	this.containerNode.setAttribute("height", this.height)
+	// Compute max of heights for container
+	let max = 0
+	colHeights.forEach((ch) => {
+		if (ch > max) max = ch
+	})
+	this.containerHeight = max + this.margins
+
+	// Finally resize container
+	this.containerNode.style.width = "100%"
+	this.containerNode.style.height = this.containerHeight + "px"
+
 }
