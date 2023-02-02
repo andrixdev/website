@@ -247,7 +247,6 @@
 
 .artwork {
 	// Handled by Masonry methods in gallery.js
-	outline: solid 1px rgba(100, 100, 100, 0.7);
 
 	width: calc(25% - 2 * 5px - 2px);
 	@media (max-width: 1150px) { width: calc(33% - 2 * 5px - 2px); }
@@ -272,7 +271,7 @@
 	}
 	img {
 		width: 100%;
-		border-radius: 2px;
+		outline: solid 1px rgba(100, 100, 100, 0.7);
 		.img-placeholder();
 	}
 

@@ -1130,7 +1130,6 @@ img.blob {
   }
 }
 .artwork {
-  outline: solid 1px rgba(100, 100, 100, 0.7);
   width: calc(25% - 2 * 5px - 2px);
 }
 @media (max-width: 1150px) {
@@ -1167,7 +1166,7 @@ img.blob {
 }
 .artwork img {
   width: 100%;
-  border-radius: 2px;
+  outline: solid 1px rgba(100, 100, 100, 0.7);
   min-width: 50px;
   min-height: 50px;
   background: rgba(255, 255, 255, 0.05);

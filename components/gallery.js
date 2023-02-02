@@ -108,6 +108,7 @@ Gallery.initListeners = () => {
 	let resizingEventCount = 0
 	window.addEventListener('resize', () => {
 		resizingEventCount++
+		Masonry.hideImages()
 		setTimeout(() => {
 			resizingEventCount--
 			if (resizingEventCount == 0) {
@@ -116,8 +117,11 @@ Gallery.initListeners = () => {
 
 				// Well, update masonry
 				Masonry.init()
+
+				// And show back the images!
+				Masonry.showImages()
 			}
-		}, 500)
+		}, 400)
 	})
 	let len = Gallery.artworksData.length
 	document.querySelector("#gallery-prev").addEventListener('click', () => {
@@ -207,8 +211,9 @@ Gallery.init = () => {
 }
 Gallery.update = () => {
 	// Init if not done yet
+	Gallery.init()
 	if (!Gallery.isInit) {
-		Gallery.init()
+		
 		Gallery.isInit = true
 	}
 	// Get ID, might be undefined
@@ -287,4 +292,10 @@ Masonry.init = function (containerNode) {
 	this.containerNode.style.width = "100%"
 	this.containerNode.style.height = this.containerHeight + "px"
 
+}
+Masonry.hideImages = function () {
+	this.containerNode.style.opacity = 0
+}
+Masonry.showImages = function () {
+	this.containerNode.style.opacity = 1
 }
