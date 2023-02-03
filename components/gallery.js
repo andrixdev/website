@@ -45,7 +45,6 @@ Gallery.loadArtworks = (extraCallback) => {
 	xhr.send(null)
 }
 Gallery.injectArtworks = () => {
-	console.log('injecting')
 	Gallery.artworksOnPage = 0
 	Gallery.loadCount = 0
 	Gallery.artworksData.forEach((aw) => {
