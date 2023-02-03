@@ -25,13 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         mounted: () => { }
     }
-    let CVComponent = {
-        template: jQuery('#cv-template').html(),
-        data: () => {
-            return { }
-        },
-        mounted: () => { CV.go() }
-    }
 
     // Custom components
     Vue.component('vue-title', HeadTitleComponent)
@@ -89,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { path: '/about', component: AboutComponent },
         { path: '/contact', component: ContactComponent },
         { path: '/andrix', component: AndrixBrandComponent },
-        { path: '/cv', component: CVComponent },
+        { path: '/cv', redirect: '/more' },
         { path: '/projects', redirect: '/web-dataviz' }, { path: '/web-dataviz', redirect: '/more' },
         { path: '/creative-coding', redirect: '/more' },
         { path: '*', component: NotFoundComponent }
