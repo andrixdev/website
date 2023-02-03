@@ -1,5 +1,5 @@
 var ContactComponent = {
-    template: jQuery('#contact-template').html(),
+    template: document.querySelector('#contact-template'),
     data: function () {
         return { }
     },

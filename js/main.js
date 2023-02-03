@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // App components (short ones, the others are in separate files)
     let GalleryComponent = {
-        template: jQuery('#gallery-template').html(),
+        template: document.querySelector('#gallery-template'),
         data: function () {
             return { }
         },
@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     let FilmsComponent = {
-        template: jQuery('#films-template').html(),
+        template: document.querySelector('#films-template'),
         data: () => {
             return { }
         },
         mounted: () => { }
     }
     let AndrixBrandComponent = {
-        template: jQuery('#andrix-brand-template').html(),
+        template: document.querySelector('#andrix-brand-template'),
         data: () => {
             return { }
         },
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Custom components
     Vue.component('vue-title', HeadTitleComponent)
     Vue.component('geom', {
-        template: jQuery('#geom-template').html(),
+        template: document.querySelector('#geom-template'),
         props: ['baseSides', 'header', 'rotate'],
         data: function () {
             return {
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
     Vue.component('logo-links', {
-        template: jQuery('#logo-links-template').html()
+        template: document.querySelector('#logo-links-template')
     })
     Vue.component('coming-soon', {
-        template: jQuery('#coming-soon-template').html()
+        template: document.querySelector('#coming-soon-template')
     })
     Vue.component('inline-svg-logo', {
-        template: jQuery('#inline-svg-logo-template').html()
+        template: document.querySelector('#inline-svg-logo-template')
     })
 
     // App routes

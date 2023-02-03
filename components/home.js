@@ -1,5 +1,5 @@
 var HomeComponent = {
-    template: jQuery('#home-template').html(),
+    template: document.querySelector('#home-template'),
     data: function () {
         return {
             stuff: [

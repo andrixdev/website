@@ -1,6 +1,6 @@
 // This components gathers several previous or new components
 var MoreComponent = {
-    template: jQuery('#more-template').html(),
+    template: document.querySelector('#more-template'),
     data: function () {
         return { }
     },

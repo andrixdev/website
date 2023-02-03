@@ -1,5 +1,5 @@
 var AboutComponent = {
-    template: jQuery('#about-template').html(),
+    template: document.querySelector('#about-template'),
     data: function () {
         return { }
     },
