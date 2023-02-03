@@ -103,16 +103,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		        window.scrollTo(0, 0)
 	        }
         }, 100)
-        next()
 
 	    // If back button from front Gallery mode, close it
 	    console.log("Navigating from " + from.fullPath + " to " + to.fullPath)
 
         // Going to Gallery or coming from it
-	    if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) {
-		    Gallery.update()
-	    }
+	    //if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) {
+        // Going to Gallery
+        //if (to.fullPath.indexOf('gallery') > -1) {
+		    //Gallery.update()
+	    //}
 
+        next()
     })
 
     let app = new Vue({

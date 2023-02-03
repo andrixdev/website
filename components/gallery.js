@@ -10,10 +10,8 @@ let Gallery = {
 Gallery.loadArtworks = (extraCallback) => {
 	let handleXML = (xml) => {
 		Gallery.artworksData = []
-		Gallery.loadCount = 0
-		Gallery.artworksOnPage = 0
 
-		// Store data and create image elements
+		// Store data and create data image elements
 		xml.querySelectorAll("artwork").forEach((el, i) => {
 			// Store data in global variable
 			let aw = {
@@ -25,28 +23,8 @@ Gallery.loadArtworks = (extraCallback) => {
 				small: "img/" + el.querySelector("small").innerHTML,
 				description: el.querySelector("description").innerHTML
 			}
-		
 			Gallery.artworksData.push(aw)
-
-			// Inject artwork data DOM node
-			if (document.querySelector("#art-id-" + aw.id)) {
-				Gallery.artworksOnPage++
-				let img = document.createElement("img")
-
-				// Set loaded state to true once done
-				img.addEventListener('load', () => {
-					Gallery.updateImageLoadCount()
-				})
-
-				img.src = aw.small
-				img.alt = aw.title
-				img.title = aw.title
-				//img.width = 200
-				//img.height = 200
-				document.querySelector("#art-id-" + aw.id).appendChild(img)
-			}
-		})
-		
+		})	
 	}
 	const xhr = new XMLHttpRequest()
 	xhr.open("GET", "data/artworks.xml", true)
@@ -65,6 +43,32 @@ Gallery.loadArtworks = (extraCallback) => {
 		console.error(xhr.statusText)
 	}
 	xhr.send(null)
+}
+Gallery.injectArtworks = () => {
+	console.log('injecting')
+	Gallery.artworksOnPage = 0
+	Gallery.loadCount = 0
+	Gallery.artworksData.forEach((aw) => {
+		// Inject artworks if divs are chosen to receive content
+		let node = document.querySelector("#art-id-" + aw.id)
+		if (node) {
+			// Empty node because it might already be filled
+			node.innerHTML = ""
+
+			Gallery.artworksOnPage++
+			let img = document.createElement("img")
+
+			// Set loaded state to true once done
+			img.addEventListener('load', () => {
+				Gallery.updateImageLoadCount()
+			})
+
+			img.src = aw.small
+			img.alt = aw.title
+			img.title = aw.title
+			node.appendChild(img)
+		}
+	})
 }
 Gallery.updateImageLoadCount = () => {
 	Gallery.loadCount++
@@ -89,24 +93,49 @@ Gallery.getArtworkAtIndex = (index) => {
 Gallery.initListeners = () => {
 	// Artworks blocks
 	document.querySelectorAll(".artwork").forEach((el) => {
-		let onclick = () => {
+		let onArtworkClick = () => {
 			// Update route history
 			Global.router.push({
 				path: 'gallery', query: { artwork: el.id }
 			})
+			// Update Gallery
+			Gallery.update()
 		}
-		el.removeEventListener('click', onclick) // Justin Case
-		el.addEventListener('click', onclick)
+		el.removeEventListener('click', onArtworkClick) // Justin Case of several initListeners call (likely due to Vue)
+		el.addEventListener('click', onArtworkClick)
 	})
 
-	// #front elements
-	document.querySelector("#front .quit").addEventListener('click', () => {
+	// #front navigation
+	let onQuitClick = () => {
 		Global.router.push({
 			path: 'gallery'
 		})
-	})
+		Gallery.update()
+	}
+	let len = Gallery.artworksData.length
+	let onPrevClick = () => {
+		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
+		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })// Update Gallery
+		Gallery.update()
+	}
+	let onNextClick = () => {
+		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
+		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })// Update Gallery
+		Gallery.update()
+	}
+
+	document.querySelector("#front .quit").removeEventListener('click', onQuitClick)
+	document.querySelector("#front .quit").addEventListener('click', onQuitClick)
+	document.querySelector("#gallery-prev").removeEventListener('click', onPrevClick)
+	document.querySelector("#gallery-prev").addEventListener('click', onPrevClick)
+	document.querySelector("#gallery-next").removeEventListener('click', onNextClick)
+	document.querySelector("#gallery-next").addEventListener('click', onNextClick)
+
+	// Window resize
 	let resizingEventCount = 0
-	window.addEventListener('resize', () => {
+	let onresize = () => {
 		resizingEventCount++
 		Masonry.hideImages()
 		setTimeout(() => {
@@ -122,18 +151,9 @@ Gallery.initListeners = () => {
 				Masonry.showImages()
 			}
 		}, 400)
-	})
-	let len = Gallery.artworksData.length
-	document.querySelector("#gallery-prev").addEventListener('click', () => {
-		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
-		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
-		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
-	})
-	document.querySelector("#gallery-next").addEventListener('click', () => {
-		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
-		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
-		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
-	})
+	}
+	window.removeEventListener('resize', onresize)
+	window.addEventListener('resize', onresize)
 }
 Gallery.fillFront = (id) => {
 	let artwork = Gallery.getArtwork(id)
@@ -204,18 +224,15 @@ Gallery.loadingOn = function () {
 Gallery.loadingOff = function () {
 	document.querySelector('#front-artwork .loader').classList.add('hidden')
 }
-Gallery.init = () => {
-    Gallery.loadArtworks(() => {
-        Gallery.initListeners()
-    })
-}
 Gallery.update = () => {
-	// Init if not done yet
-	Gallery.init()
 	if (!Gallery.isInit) {
-		
-		Gallery.isInit = true
+		Gallery.loadArtworks(() => {
+			Gallery.injectArtworks()
+			Gallery.initListeners()
+			Gallery.isInit = true
+		})
 	}
+
 	// Get ID, might be undefined
 	let artworkID = location.search.split('artwork=')[1]
 	if (artworkID != undefined) {
@@ -225,7 +242,6 @@ Gallery.update = () => {
 		Gallery.hideFront()
 		Gallery.currentArtworkShown = undefined
 	}
-
 }
 
 let Masonry = {
@@ -239,7 +255,6 @@ let Masonry = {
 		threeCols: 1150,
 	}
 }
-
 Masonry.init = function (containerNode) {
 	let ctn = document.querySelector("#artworks")
 	this.containerNode = ctn
@@ -291,7 +306,6 @@ Masonry.init = function (containerNode) {
 	// Finally resize container
 	this.containerNode.style.width = "100%"
 	this.containerNode.style.height = this.containerHeight + "px"
-
 }
 Masonry.hideImages = function () {
 	this.containerNode.style.opacity = 0
