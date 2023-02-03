@@ -21,7 +21,11 @@ Gallery.loadArtworks = (extraCallback) => {
 				date: el.querySelector("date").innerHTML,
 				src: "img/" + el.querySelector("src").innerHTML,
 				small: "img/" + el.querySelector("small").innerHTML,
-				description: el.querySelector("description").innerHTML
+				description: el.querySelector("description").innerHTML,
+				short: el.querySelector("short").innerHTML,
+				dimensions: el.querySelector("dimensions").innerHTML,
+				extratext: el.querySelector("extratext").innerHTML,
+				price: el.querySelector("price").innerHTML
 			}
 			Gallery.artworksData.push(aw)
 		})	
@@ -155,15 +159,11 @@ Gallery.initListeners = () => {
 	window.addEventListener('resize', onresize)
 }
 Gallery.fillFront = (id) => {
-	let artwork = Gallery.getArtwork(id)
-	if (!artwork) return false
+	let aw = Gallery.getArtwork(id)
+	if (!aw) return false
 
-	Gallery.currentArtworkShown = artwork
+	Gallery.currentArtworkShown = aw
 	Gallery.loadingOn()
-
-	let src = artwork.src
-	let title = artwork.title
-	let description = artwork.description
 
 	// Image
 	let newImg = new Image()
@@ -179,15 +179,15 @@ Gallery.fillFront = (id) => {
 		clearTimeout(Gallery.timeout)
 		Gallery.timeout = setTimeout(() => {
             Gallery.loadingOff()
-			document.querySelector('#front-artwork img.fullone').setAttribute('src', src)
+			document.querySelector('#front-artwork img.fullone').setAttribute('src', aw.src)
 		}, 300)
 	}
-	newImg.src = src
-	newImg.alt = title
+	newImg.src = aw.src
+	newImg.alt = aw.title
 
-	// Description
-	document.querySelector('#front-artwork .details .description h3.title').innerHTML = title
-	document.querySelector('#front-artwork .details .description p.text').innerHTML = description
+	// Descriptions and other info
+	document.querySelector('#front-artwork .details .description h3.title').innerHTML = aw.title
+	document.querySelector('#front-artwork .details .description p.text').innerHTML = (aw.short.length ? aw.short + "<br/><br/>" : "") + aw.dimensions + "<br/><span>" + aw.price + "</span>"
 }
 Gallery.adjustFrontImageSize = () => {
 	if (!Gallery.currentImageObject) return false
@@ -197,7 +197,7 @@ Gallery.adjustFrontImageSize = () => {
 
 	// If image is bigger than 0.9*window, rescale
 	let ratioW = w / (0.9 * jQuery(window).width())
-	let ratioH = h / (0.9 * jQuery(window).height())
+	let ratioH = h / (0.95 * jQuery(window).height())
 	let ratio = Math.max(ratioH, ratioW)
 	if (ratio > 1 && ratioW > ratioH) {
 		h /= ratioW

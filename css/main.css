@@ -990,9 +990,14 @@ img.blob {
 #front #front-artwork .details .description h3.title {
   font-size: 1.5em;
   padding: 25px 0 1rem;
+  font-weight: 400;
 }
 #front #front-artwork .details .description p.text {
   font-size: 1em;
+  font-weight: 200;
+}
+#front #front-artwork .details .description span {
+  font-weight: 400;
 }
 #front .loader {
   /* DON'T FORGET position: relative ON THE PARENT */
