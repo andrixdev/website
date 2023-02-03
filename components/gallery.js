@@ -5,7 +5,9 @@ let Gallery = {
 	loadCount: 0,
 	currentArtworkShown: undefined,
 	currentImageObject: undefined,
+	isFrontVisible: false,
 	timeout: undefined,
+	extraCostsEUR: 50
 }
 Gallery.loadArtworks = (extraCallback) => {
 	let handleXML = (xml) => {
@@ -128,11 +130,18 @@ Gallery.initListeners = () => {
 		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })// Update Gallery
 		Gallery.update()
 	}
+	let onKeyup = (event) => {
+		if (!Gallery.isFrontVisible) return false
+		if (event.keyCode == 37) onPrevClick() // Left arrow
+		else if (event.keyCode == 39) onNextClick() // Right arrow
+	}
 
 	document.querySelector("#front .quit").removeEventListener('click', onQuitClick)
 	document.querySelector("#front .quit").addEventListener('click', onQuitClick)
 	document.querySelector("#gallery-prev").removeEventListener('click', onPrevClick)
 	document.querySelector("#gallery-prev").addEventListener('click', onPrevClick)
+	document.removeEventListener('keyup', onKeyup)
+	document.addEventListener('keyup', onKeyup)
 	document.querySelector("#gallery-next").removeEventListener('click', onNextClick)
 	document.querySelector("#gallery-next").addEventListener('click', onNextClick)
 
@@ -187,7 +196,12 @@ Gallery.fillFront = (id) => {
 
 	// Descriptions and other info
 	document.querySelector('#front-artwork .details .description h3.title').innerHTML = aw.title
-	document.querySelector('#front-artwork .details .description p.text').innerHTML = (aw.short.length ? aw.short + "<br/><br/>" : "") + aw.dimensions + "<br/><span>" + aw.price + "</span>"
+	let txt = ""
+	txt += (aw.short.length ? aw.short + "<br/><br/>" : "")
+	txt += aw.dimensions + "<br/>"
+	txt += (aw.extratext.length ? aw.extratext + "<br/>" : "")
+	txt += "<span>" + (aw.price - (-Gallery.extraCostsEUR)) + " euros</span>"
+	document.querySelector('#front-artwork .details .description p.text').innerHTML = txt
 }
 Gallery.adjustFrontImageSize = () => {
 	if (!Gallery.currentImageObject) return false
@@ -195,9 +209,9 @@ Gallery.adjustFrontImageSize = () => {
 	let h = Gallery.currentImageObject.height
 	let w = Gallery.currentImageObject.width
 
-	// If image is bigger than 0.9*window, rescale
-	let ratioW = w / (0.9 * jQuery(window).width())
-	let ratioH = h / (0.95 * jQuery(window).height())
+	// If image is wider than 0.9*window - (withofnavarrows), rescale
+	let ratioW = w / (0.99 * window.innerWidth - 2*70)
+	let ratioH = h / (0.99 * window.innerHeight - 2*20)
 	let ratio = Math.max(ratioH, ratioW)
 	if (ratio > 1 && ratioW > ratioH) {
 		h /= ratioW
@@ -207,15 +221,19 @@ Gallery.adjustFrontImageSize = () => {
 		w /= ratioH
 	}
 
-	jQuery('#front-artwork img.fullone').css('height', h).css('width', w)
+	document.querySelector("#front-artwork img.fullone").setAttribute('height', h)
+	document.querySelector("#front-artwork img.fullone").setAttribute('width', w)
+	document.querySelector("#front-artwork img.fullone").style.marginTop = "calc(50vh - " + h/2 + "px)"
 }
 Gallery.showFront = () => {
 	document.getElementById('front').classList.remove('hidden')
 	document.querySelector("body").classList.add('frozen')
+	Gallery.isFrontVisible = true
 }
 Gallery.hideFront = function () {
 	document.getElementById('front').classList.add('hidden')
 	document.querySelector("body").classList.remove('frozen')
+	Gallery.isFrontVisible = false
 }
 Gallery.loadingOn = function () {
 	document.querySelector('#front-artwork .loader').classList.remove('hidden')

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <artworks>
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
+
 	<artwork>
 		<title>Vacherie Ternaire</title>
 		<id>2019-7</id>
@@ -10,8 +11,8 @@
 		<description>Scientific collaboration with A. Pumir at Laboratoire de Physique ENS de Lyon&#13;Turbulence and collisional aggregation, project Portraits, no. 2</description>
 		<short>Turbulence and collisional aggregation</short>
 		<dimensions>2500x3500 px² - 84x114 cm² min.</dimensions>
-		<extratext>Limited edition / 7</extratext>
-		<price>400 euros</price>
+		<extratext>Limited edition / 7 copies</extratext>
+		<price>400</price>
 	</artwork>
 
 	<artwork>
@@ -24,7 +25,7 @@
 		<short>6 research topics into a lady. Face drawing based on average Homo sapiens female by Alex Bourgeois.</short>
 		<dimensions>000x000 px² - A3 cm² min.</dimensions>
 		<extratext></extratext>
-		<price>110 euros</price>
+		<price>110</price>
 	</artwork>
 
 	<artwork>
@@ -36,8 +37,8 @@
 		<description></description>
 		<short></short>
 		<dimensions>0x0 px² - A3 cm² min.</dimensions>
-		<extratext>Limited edition / 7</extratext>
-		<price>150 euros</price>
+		<extratext></extratext>
+		<price>150</price>
 	</artwork>
 
 	<artwork>
@@ -50,7 +51,7 @@
 		<short></short>
 		<dimensions>0x0 px² - A2 cm² min.</dimensions>
 		<extratext></extratext>
-		<price>180 euros</price>
+		<price>180</price>
 	</artwork>
 
 	<artwork>
@@ -63,7 +64,7 @@
 		<short>Nanomechanics and thermal noise</short>
 		<dimensions>0x0 px² - A1 cm² min.</dimensions>
 		<extratext></extratext>
-		<price>400 euros</price>
+		<price>400</price>
 	</artwork>
 
 	<artwork>
@@ -76,7 +77,7 @@
 		<short></short>
 		<dimensions>0x0 px² - A4 cm² min.</dimensions>
 		<extratext></extratext>
-		<price>100 euros</price>
+		<price>100</price>
 	</artwork>
 
 	<artwork>
@@ -88,8 +89,8 @@
 		<description>Commission for Ecole Centrale de Lyon, France</description>
 		<short>Ecole Centrale de Lyon</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 11</extratext>
-		<price>400 euros</price>
+		<extratext>Limited edition / 11 copies</extratext>
+		<price>400</price>
 	</artwork>
 
 	<artwork>
@@ -101,8 +102,8 @@
 		<description>Life of a particle cloud under the attraction of a massive body with an impossible linear oscillation.</description>
 		<short>Impossible linear oscillation</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>380 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>380</price>
 	</artwork>
 	<artwork>
 		<title>The Momentum Parade</title>
@@ -113,8 +114,8 @@
 		<description>A rotating galaxy emits stardust particles. Under the gravitational force of an invisible attractor, their trails depict a gigantic orb of possibilities.</description>
 		<short>Stardust particle trails depict a gigantic orb of possibilities</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>380 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>380</price>
 	</artwork>
 	<artwork>
 		<title>Watlz of the Binary Star</title>
@@ -125,8 +126,8 @@
 		<description>Both souls of the binary star in an endless fall. A smaller body, maybe a planet, seems to witness their dance with much interest.</description>
 		<short>Both souls of the binary star in an endless fall</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>520 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>520</price>
 	</artwork>
 	<artwork>
 		<title>Laplacian Sunrise</title>
@@ -137,8 +138,8 @@
 		<description>Sunrise over a world of particles driven by magnetic field force.</description>
 		<short>Sunrise over a world of particles driven by magnetic field force</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>520 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>520</price>
 	</artwork>
 	<artwork>
 		<title>L'Oeil de Dérive</title>
@@ -149,8 +150,8 @@
 		<description>The seemingly uniform structure of the plasma beam turns out to reveal spontaneous density-gradient-originated swirls that model the beam into helical shapes.</description>
 		<short>Sontaneous swirls model the plasma beam into helical shapes</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>380 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>380</price>
 	</artwork>
 	<artwork>
 		<title>The Lagrangian Exploration Module</title>
@@ -161,8 +162,8 @@
 		<description>Irregular icosahedron for particles observation.</description>
 		<short>Irregular icosahedron for particles observation</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>380 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>380</price>
 	</artwork>
 	<artwork>
 		<title>Rupture</title>
@@ -173,8 +174,8 @@
 		<description></description>
 		<short>Gravitational breakup</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>380 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>380</price>
 	</artwork>
 	<artwork>
 		<title>Magnetosphere 210</title>
@@ -185,8 +186,8 @@
 		<description>A cloud of particles explodes in the empty space. Nothing but a dipolar magnetic field. The neon beams represent the travel volume of plasma particles within a lone magnetosphere.</description>
 		<short>Travel volumes of plasma particles within a lone magnetosphere</short>
 		<dimensions>0x0 px² - A0 cm² min.</dimensions>
-		<extratext>Limited edition / 8</extratext>
-		<price>380 euros</price>
+		<extratext>Limited edition / 8 copies</extratext>
+		<price>380</price>
 	</artwork>
 
 	<artwork>
@@ -199,7 +200,7 @@
 		<short></short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>90 euros</price>
+		<price>90</price>
 	</artwork>
 	<artwork>
 		<title>Rhodo</title>
@@ -211,7 +212,7 @@
 		<short>Generosity and flowery shores in early spring</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>140 euros</price>
+		<price>140</price>
 	</artwork>
 
 	<artwork>
@@ -224,7 +225,7 @@
 		<short></short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>90 euros</price>
+		<price>90</price>
 	</artwork>
 
 	<artwork>
@@ -237,7 +238,7 @@
 		<short>One central mass attracts all planets</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>150 euros</price>
+		<price>150</price>
 	</artwork>
 	<artwork>
 		<title>Gravitational Dodge</title>
@@ -249,7 +250,7 @@
 		<short>One central mass attracts all planets</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>150 euros</price>
+		<price>150</price>
 	</artwork>
 	<artwork>
 		<title>Flight</title>
@@ -261,7 +262,7 @@
 		<short>One central mass attracts all planets</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>150 euros</price>
+		<price>150</price>
 	</artwork>
 	
 	<artwork>
@@ -274,7 +275,7 @@
 		<short>One central mass attracts all planets</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>150 euros</price>
+		<price>150</price>
 	</artwork>
 	
 	<artwork>
@@ -287,7 +288,7 @@
 		<short>Primordial generative triangular spread</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>150 euros</price>
+		<price>150</price>
 	</artwork>
 
 	<artwork>
@@ -300,7 +301,7 @@
 		<short>Generative lines drawn by human voice</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>110 euros</price>
+		<price>110</price>
 	</artwork>
 	
 	<artwork>
@@ -313,7 +314,7 @@
 		<short>Under the stairs</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>180 euros</price>
+		<price>180</price>
 	</artwork>
 
 	<artwork>
@@ -326,7 +327,7 @@
 		<short>Wisdom or anger</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>110 euros</price>
+		<price>110</price>
 	</artwork>
 
 	<artwork>
@@ -339,7 +340,7 @@
 		<short>Simple constraints</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>100 euros</price>
+		<price>100</price>
 	</artwork>
 
 	<artwork>
@@ -352,7 +353,7 @@
 		<short>Circular borebom of particles on hexagonal network</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>90 euros</price>
+		<price>90</price>
 	</artwork>
 
 	<artwork>
@@ -365,7 +366,7 @@
 		<short>Random canvas scar</short>
 		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
 		<extratext></extratext>
-		<price>90 euros</price>
+		<price>90</price>
 	</artwork>
 
 	<!--<artwork>
