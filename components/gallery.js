@@ -198,8 +198,8 @@ Gallery.fillFront = (id) => {
 	document.querySelector('#front-artwork .details .description h3.title').innerHTML = aw.title
 	let txt = ""
 	txt += (aw.short.length ? aw.short + "<br/><br/>" : "")
-	txt += aw.dimensions + "<br/>"
 	txt += (aw.extratext.length ? aw.extratext + "<br/>" : "")
+	txt += aw.dimensions + "<br/>"
 	txt += "<span>" + (aw.price - (-Gallery.extraCostsEUR)) + " euros</span>"
 	document.querySelector('#front-artwork .details .description p.text').innerHTML = txt
 }
