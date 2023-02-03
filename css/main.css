@@ -1235,24 +1235,6 @@ img.blob {
 #vp-extras p {
   text-align: center;
 }
-#animations p.seen {
-  margin-bottom: 0;
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-#animations .randomize {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Centers child elements */
-  justify-content: center;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-#animations .randomize button {
-  margin: 20px;
-}
 #vjing .vjimg img {
   margin: 5px;
   height: 220px;
