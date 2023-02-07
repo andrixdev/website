@@ -3,5 +3,10 @@ var ContactComponent = {
     data: function () {
         return { }
     },
-    mounted: function () { }
+    mounted: function () {
+        document.querySelector("#send-email").onclick = function () {
+            linkTo_UnCryptMailto("nbjmup+bmfyAbmfyboesjy/dpn")
+            return false
+        }
+    }
 };
