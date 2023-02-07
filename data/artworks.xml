@@ -8,11 +8,11 @@
 		<date>Jul. 2019</date>
 		<src>artworks/vacherie-ternaire.jpg</src>
 		<small>artworks/vacherie-ternaire.jpg</small>
-		<description>Scientific collaboration with A. Pumir at Laboratoire de Physique ENS de Lyon&#13;Turbulence and collisional aggregation, project Portraits, no. 2</description>
+		<description>Scientific collaboration with Alain Pumir at Laboratoire de Physique ENS de Lyon. Turbulence and collisional aggregation, project Portraits no. 2.</description>
 		<short>Turbulence and collisional aggregation</short>
-		<dimensions>2500x3500 px² - 84x114 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
 		<extratext>Limited edition / 7 copies</extratext>
-		<price>400</price>
+		<rawprice>400</rawprice>
 	</artwork>
 
 	<artwork>
@@ -21,11 +21,11 @@
 		<date>Mar. 2019</date>
 		<src>artworks/dame-recherche/dame-recherche.jpg</src>
 		<small>artworks/dame-recherche/dame-recherche-mini.jpg</small>
-		<description>Commission for Grand Lyon, Prix Jeune Chercheur 2019&lt;/br&gt;Inspired by 6 research topics. Face drawing from Alex B.</description>
-		<short>6 research topics into a lady. Face drawing based on average Homo sapiens female by Alex Bourgeois.</short>
-		<dimensions>000x000 px² - A3 cm² min.</dimensions>
+		<description>Commission for Grand Lyon, Prix Jeune Chercheur 2019. Inspired by 6 research topics (previous year laureates). Face drawing from French artist Alex Bourgeois.</description>
+		<short>6 research topics into a lady. Face drawing based on average Homo sapiens female.</short>
+		<dimensions>6257px x 9031px - A3 297mm x 420mm min. (535ppi)</dimensions>
 		<extratext></extratext>
-		<price>110</price>
+		<rawprice>110</rawprice>
 	</artwork>
 
 	<artwork>
@@ -36,9 +36,9 @@
 		<small>artworks/fun-in-djerba-mini.jpg</small>
 		<description></description>
 		<short></short>
-		<dimensions>0x0 px² - A3 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A3 297mm x 420mm min. (764ppi)</dimensions>
 		<extratext></extratext>
-		<price>150</price>
+		<rawprice>150</rawprice>
 	</artwork>
 
 	<artwork>
@@ -49,9 +49,9 @@
 		<small>artworks/djerba-sunset-phoenix-mini.jpg</small>
 		<description></description>
 		<short></short>
-		<dimensions>0x0 px² - A2 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A2 420mm x 594mm min. (541ppi)</dimensions>
 		<extratext></extratext>
-		<price>180</price>
+		<rawprice>180</rawprice>
 	</artwork>
 
 	<artwork>
@@ -60,11 +60,11 @@
 		<date>Feb. 2019</date>
 		<src>artworks/nanonoise.jpg</src>
 		<small>artworks/nanonoise-mini.jpg</small>
-		<description>Scientific collaboration with L. Bellon at Laboratoire de Physique ENS de Lyon\nNanomechanics and thermal noise, project Portraits, no. 1</description>
+		<description>Scientific collaboration with Ludovic Bellon at Laboratoire de Physique ENS de Lyon. Nanomechanics and thermal noise, project Portraits, no. 1.</description>
 		<short>Nanomechanics and thermal noise</short>
-		<dimensions>0x0 px² - A1 cm² min.</dimensions>
-		<extratext></extratext>
-		<price>400</price>
+		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
+		<extratext>Limited edition / 7 copies</extratext>
+		<rawprice>400</rawprice>
 	</artwork>
 
 	<artwork>
@@ -75,9 +75,9 @@
 		<small>artworks/tol-mini.jpg</small>
 		<description></description>
 		<short></short>
-		<dimensions>0x0 px² - A4 cm² min.</dimensions>
+		<dimensions>1986px x 2808px - A4 210mm x 297mm min. (240ppi)</dimensions>
 		<extratext></extratext>
-		<price>100</price>
+		<rawprice>100</rawprice>
 	</artwork>
 
 	<artwork>
@@ -86,11 +86,11 @@
 		<date>Nov. 2018</date>
 		<src>artworks/rayonnement.jpg</src>
 		<small>artworks/rayonnement_small.jpg</small>
-		<description>Commission for Ecole Centrale de Lyon, France</description>
+		<description>Commission for Ecole Centrale de Lyon, France - 2018</description>
 		<short>Ecole Centrale de Lyon</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
 		<extratext>Limited edition / 11 copies</extratext>
-		<price>400</price>
+		<rawprice>400</rawprice>
 	</artwork>
 
 	<artwork>
@@ -101,9 +101,9 @@
 		<small>artworks/varphy/offset_small.jpg</small>
 		<description>Life of a particle cloud under the attraction of a massive body with an impossible linear oscillation.</description>
 		<short>Impossible linear oscillation</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>380</price>
+		<rawprice>380</rawprice>
 	</artwork>
 	<artwork>
 		<title>The Momentum Parade</title>
@@ -113,21 +113,21 @@
 		<small>artworks/varphy/the-momentum-parade_small.jpg</small>
 		<description>A rotating galaxy emits stardust particles. Under the gravitational force of an invisible attractor, their trails depict a gigantic orb of possibilities.</description>
 		<short>Stardust particle trails depict a gigantic orb of possibilities</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>380</price>
+		<rawprice>380</rawprice>
 	</artwork>
 	<artwork>
-		<title>Watlz of the Binary Star</title>
+		<title>Waltz of the Binary Star</title>
 		<id>2018-11</id>
 		<date>Sep. 2018</date>
 		<src>artworks/varphy/la-course-de-l-etoile-double.png</src>
 		<small>artworks/varphy/la-course-de-l-etoile-double_small.jpg</small>
 		<description>Both souls of the binary star in an endless fall. A smaller body, maybe a planet, seems to witness their dance with much interest.</description>
 		<short>Both souls of the binary star in an endless fall</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>520</price>
+		<rawprice>520</rawprice>
 	</artwork>
 	<artwork>
 		<title>Laplacian Sunrise</title>
@@ -137,21 +137,21 @@
 		<small>artworks/varphy/laplacian-sunrise_small.jpg</small>
 		<description>Sunrise over a world of particles driven by magnetic field force.</description>
 		<short>Sunrise over a world of particles driven by magnetic field force</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>520</price>
+		<rawprice>520</rawprice>
 	</artwork>
 	<artwork>
-		<title>L'Oeil de Dérive</title>
+		<title>Drift Eye</title>
 		<id>2018-13</id>
 		<date>Sep. 2018</date>
 		<src>artworks/varphy/l-oeil-de-derive.jpg</src>
 		<small>artworks/varphy/l-oeil-de-derive_small.jpg</small>
 		<description>The seemingly uniform structure of the plasma beam turns out to reveal spontaneous density-gradient-originated swirls that model the beam into helical shapes.</description>
 		<short>Sontaneous swirls model the plasma beam into helical shapes</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>380</price>
+		<rawprice>380</rawprice>
 	</artwork>
 	<artwork>
 		<title>The Lagrangian Exploration Module</title>
@@ -161,9 +161,9 @@
 		<small>artworks/varphy/the-lagrangian-exploration-module_small.jpg</small>
 		<description>Irregular icosahedron for particles observation.</description>
 		<short>Irregular icosahedron for particles observation</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>380</price>
+		<rawprice>380</rawprice>
 	</artwork>
 	<artwork>
 		<title>Rupture</title>
@@ -173,9 +173,9 @@
 		<small>artworks/varphy/rupture_small.jpg</small>
 		<description></description>
 		<short>Gravitational breakup</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>380</price>
+		<rawprice>380</rawprice>
 	</artwork>
 	<artwork>
 		<title>Magnetosphere 210</title>
@@ -185,9 +185,9 @@
 		<small>artworks/varphy/magnetosphere-210_small.jpg</small>
 		<description>A cloud of particles explodes in the empty space. Nothing but a dipolar magnetic field. The neon beams represent the travel volume of plasma particles within a lone magnetosphere.</description>
 		<short>Travel volumes of plasma particles within a lone magnetosphere</short>
-		<dimensions>0x0 px² - A0 cm² min.</dimensions>
+		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
-		<price>380</price>
+		<rawprice>380</rawprice>
 	</artwork>
 
 	<artwork>
@@ -198,9 +198,9 @@
 		<small>artworks/radial/white-time_small.jpg</small>
 		<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
 		<short></short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1256px x 641px - 443mm x 226mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>90</price>
+		<rawprice>90</rawprice>
 	</artwork>
 	<artwork>
 		<title>Rhodo</title>
@@ -210,9 +210,9 @@
 		<small>artworks/radial/rhodo_small.jpg</small>
 		<description>Inspired by the infinite generosity of a Swiss family and Lake Geneva's flowery shores in early spring.</description>
 		<short>Generosity and flowery shores in early spring</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1788px x 956px - 631mm x 337mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>140</price>
+		<rawprice>140</rawprice>
 	</artwork>
 
 	<artwork>
@@ -221,11 +221,11 @@
 		<date>Feb. 2015</date>
 		<src>artworks/radial/harsh.bmp</src>
 		<small>artworks/radial/harsh_small.jpg</small>
-		<description>Created in the process of designing a vocal art team-project @ KTH for course Information Visualization</description>
+		<description>Voice-generated artwork</description>
 		<short></short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1236px x 623px - 436mm x 220mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>90</price>
+		<rawprice>90</rawprice>
 	</artwork>
 
 	<artwork>
@@ -234,11 +234,11 @@
 		<date>Sep. 2016</date>
 		<src>artworks/gravitational/nucleus.png</src>
 		<small>artworks/gravitational/nucleus_small.jpg</small>
-		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
+		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way. One central mass attracts all planets.</description>
 		<short>One central mass attracts all planets</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1711px x 855px - 604mm x 302mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>150</price>
+		<rawprice>150</rawprice>
 	</artwork>
 	<artwork>
 		<title>Gravitational Dodge</title>
@@ -246,11 +246,11 @@
 		<date>Aug. 2016</date>
 		<src>artworks/gravitational/gravitational-blackhole.png</src>
 		<small>artworks/gravitational/gravitational-blackhole_small.jpg</small>
-		<description>Each planet leaves an imperceptible mark. Many planets leave many marks.&lt;/br&gt;All planets rotate around a single central mass.</description>
+		<description>Each planet leaves an imperceptible mark. Many planets leave many marks. All planets rotate around a single central mass.</description>
 		<short>One central mass attracts all planets</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1773px x 912px - 625mm x 322mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>150</price>
+		<rawprice>150</rawprice>
 	</artwork>
 	<artwork>
 		<title>Flight</title>
@@ -258,11 +258,11 @@
 		<date>Sep. 2016</date>
 		<src>artworks/gravitational/flight.png</src>
 		<small>artworks/gravitational/flight_small.jpg</small>
-		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets.</description>
+		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way. One central mass attracts all planets.</description>
 		<short>One central mass attracts all planets</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1501px x 900px - 530mm x 318mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>150</price>
+		<rawprice>150</rawprice>
 	</artwork>
 	
 	<artwork>
@@ -271,11 +271,11 @@
 		<date>Oct. 2016</date>
 		<src>artworks/gravitational/orb.png</src>
 		<small>artworks/gravitational/orb_small.jpg</small>
-		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way.&lt;/br&gt;One central mass attracts all planets. Rendered with hashed trace opacity.</description>
+		<description>A billon planets launched in all directions from a single point, leaving imperceptible marks on their way. One central mass attracts all planets. Rendered with hashed trace opacity.</description>
 		<short>One central mass attracts all planets</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1901px x 1295px - 671mm x 457mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>150</price>
+		<rawprice>150</rawprice>
 	</artwork>
 	
 	<artwork>
@@ -286,9 +286,9 @@
 		<small>artworks/experiments/playchaos1_small.jpg</small>
 		<description>Morning triangular inspiration. Designed with spreadSVG.js, an SVG graphic library for random generative art I developed a few weeks earlier.</description>
 		<short>Primordial generative triangular spread</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1332px x 940px - 241mm x 171mm max. (140ppi)</dimensions>
 		<extratext></extratext>
-		<price>150</price>
+		<rawprice>150</rawprice>
 	</artwork>
 
 	<artwork>
@@ -297,11 +297,11 @@
 		<date>Feb. 2015</date>
 		<src>artworks/experiments/bolt.bmp</src>
 		<small>artworks/experiments/bolt_small.jpg</small>
-		<description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas&lt;/br&gt;Artwork generated by voice</description>
+		<description>Inspired by Propagaciones 10, generative drawing by Leonardo Solaas. Artwork generated by voice.</description>
 		<short>Generative lines drawn by human voice</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1192px x 555px - 421mm x 196mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>110</price>
+		<rawprice>110</rawprice>
 	</artwork>
 	
 	<artwork>
@@ -312,9 +312,9 @@
 		<small>artworks/experiments/lamartine-le-lac_small.jpg</small>
 		<description>Slice of vocal art performed by woman voice reading Le Lac by French poet Alphonse de Lamartine (1820)</description>
 		<short>Under the stairs</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>927px x 655px - 327mm x 231mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>180</price>
+		<rawprice>180</rawprice>
 	</artwork>
 
 	<artwork>
@@ -324,10 +324,10 @@
 		<src>artworks/experiments/duel.bmp</src>
 		<small>artworks/experiments/duel_small.jpg</small>
 		<description>The attempts of wisdom to temper anger</description>
-		<short>Wisdom or anger</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<short>Wisdom-anger duality</short>
+		<dimensions>1117px x 625px - 394mm x 220mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>110</price>
+		<rawprice>110</rawprice>
 	</artwork>
 
 	<artwork>
@@ -336,11 +336,11 @@
 		<date>Feb. 2017</date>
 		<src>artworks/experiments/lightbeams-squares.jpg</src>
 		<small>artworks/experiments/lightbeams-squares_small.jpg</small>
-		<description>Moving particles with simple geometrical drawing contraints provide surprising results. Part of a collection of 25 living artworks coded on CodePen.</description>
+		<description>Moving particles with simple geometrical drawing contraints. Part of a collection of 25 living artworks created on CodePen.</description>
 		<short>Simple constraints</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>2007px x 1113px - 708mm x 393mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>100</price>
+		<rawprice>100</rawprice>
 	</artwork>
 
 	<artwork>
@@ -351,9 +351,9 @@
 		<small>artworks/experiments/hexocet-explode_small.jpg</small>
 		<description>Particles randomly evolve on an hexagonal network and their boredom on grid vertices is expressed through faint widening circles.</description>
 		<short>Circular borebom of particles on hexagonal network</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>1642px x 832px - 579mm x 294mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>90</price>
+		<rawprice>90</rawprice>
 	</artwork>
 
 	<artwork>
@@ -364,9 +364,9 @@
 		<small>artworks/experiments/hexocet-fire_small.jpg</small>
 		<description>Particles randomly evolve on an hexagonal network and scar the canvas with fire.</description>
 		<short>Random canvas scar</short>
-		<dimensions>0x0 px² - A4 cm² min. - A0 cm² max.</dimensions>
+		<dimensions>2309px x 1404px - 815mm x 495mm max. (72ppi)</dimensions>
 		<extratext></extratext>
-		<price>90</price>
+		<rawprice>90</rawprice>
 	</artwork>
 
 	<!--<artwork>

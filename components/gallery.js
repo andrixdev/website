@@ -27,7 +27,7 @@ Gallery.loadArtworks = (extraCallback) => {
 				short: el.querySelector("short").innerHTML,
 				dimensions: el.querySelector("dimensions").innerHTML,
 				extratext: el.querySelector("extratext").innerHTML,
-				price: el.querySelector("price").innerHTML
+				rawprice: el.querySelector("rawprice").innerHTML
 			}
 			Gallery.artworksData.push(aw)
 		})	
@@ -204,18 +204,18 @@ Gallery.fillFront = (id) => {
 	let txt = ""
 	txt += (aw.short.length ? aw.short + "<br/><br/>" : "")
 	txt += (aw.extratext.length ? aw.extratext + "<br/>" : "")
-	txt += aw.dimensions + "<br/>"
-	txt += "<span>" + (aw.price - (-Gallery.extraCostsEUR)) + " euros</span>"
+	txt += "<span>" + (aw.rawprice - (-Gallery.extraCostsEUR)) + " euros</span>"
 	document.querySelector('#front-artwork .details .description p.text').innerHTML = txt
 
 	// Purchase information
 	document.querySelectorAll(".artwork-name").forEach(el => el.innerHTML = aw.title)
 	document.querySelector(".artwork-dimensions").innerHTML = aw.dimensions
+	document.querySelector("#artwork-description").innerHTML = (aw.description.length ? "Description:<br/><strong>" + aw.description + "<strong><br/><br/>" : "")
 	document.querySelector("#artwork-contact").onclick = function () {
 		let hrefString = ""
 		hrefString += decryptString("nbjmup+bmfyAbmfyboesjy/dpn", -1)
 		hrefString += "?subject=Artwork%20" + aw.title
-		hrefString += "&body=Hi%2C%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20with%20you%20about%20the%20artwork%20" + aw.title + ".%0D%0APlease%20come%20back%20to%20me%20with%20information%20about%20how%20we%20can%20proceed%20for%20a%20purchase.%0D%0A%0D%0AName%3A%20" + aw.title + "%0D%0ADimensions%3A%20" + aw.dimensions + "%0D%0A%0D%0AOther%20information%3A%0D%0A-%0D%0A%0D%0ABest%20regards%2C%0D%0A-"
+		hrefString += "&body=Hi%2C%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20with%20you%20about%20the%20artwork%20" + aw.title + ".%0D%0APlease%20come%20back%20to%20me%20with%20information%20about%20how%20we%20can%20proceed%20for%20a%20purchase.%0D%0A%0D%0AName%3A%20" + aw.title + "%0D%0AStandard%20dimensions%3A%20" + aw.dimensions + "%0D%0A%0D%0AOther%20information%3A%0D%0A-%0D%0A%0D%0ABest%20regards%2C%0D%0A-"
 		location.href = hrefString
 		return false
 	}
