@@ -3,97 +3,6 @@
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 
 	<artwork>
-		<title>Vacherie Ternaire</title>
-		<id>2019-7</id>
-		<date>Jul. 2019</date>
-		<src>artworks/vacherie-ternaire.jpg</src>
-		<small>artworks/vacherie-ternaire.jpg</small>
-		<description>Scientific collaboration with Alain Pumir at Laboratoire de Physique ENS de Lyon. Turbulence and collisional aggregation, project Portraits no. 2.</description>
-		<short>Turbulence and collisional aggregation</short>
-		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
-		<extratext>Limited edition / 7 copies</extratext>
-		<rawprice>400</rawprice>
-	</artwork>
-
-	<artwork>
-		<title>Dame Recherche</title>
-		<id>2019-6</id>
-		<date>Mar. 2019</date>
-		<src>artworks/dame-recherche/dame-recherche.jpg</src>
-		<small>artworks/dame-recherche/dame-recherche-mini.jpg</small>
-		<description>Commission for Grand Lyon, Prix Jeune Chercheur 2019. Inspired by 6 research topics (previous year laureates). Face drawing from French artist Alex Bourgeois.</description>
-		<short>6 research topics into a lady. Face drawing based on average Homo sapiens female.</short>
-		<dimensions>6257px x 9031px - A3 297mm x 420mm min. (535ppi)</dimensions>
-		<extratext></extratext>
-		<rawprice>110</rawprice>
-	</artwork>
-
-	<artwork>
-		<title>Fun in Djerba</title>
-		<id>2019-5</id>
-		<date>Mar. 2019</date>
-		<src>artworks/fun-in-djerba.jpg</src>
-		<small>artworks/fun-in-djerba-mini.jpg</small>
-		<description></description>
-		<short></short>
-		<dimensions>8939px x 12638px - A3 297mm x 420mm min. (764ppi)</dimensions>
-		<extratext></extratext>
-		<rawprice>150</rawprice>
-	</artwork>
-
-	<artwork>
-		<title>Djerba Sunset Phoenix</title>
-		<id>2019-4</id>
-		<date>Mar. 2019</date>
-		<src>artworks/djerba-sunset-phoenix.jpg</src>
-		<small>artworks/djerba-sunset-phoenix-mini.jpg</small>
-		<description></description>
-		<short></short>
-		<dimensions>8939px x 12638px - A2 420mm x 594mm min. (541ppi)</dimensions>
-		<extratext></extratext>
-		<rawprice>180</rawprice>
-	</artwork>
-
-	<artwork>
-		<title>Nanonoise</title>
-		<id>2019-3</id>
-		<date>Feb. 2019</date>
-		<src>artworks/nanonoise.jpg</src>
-		<small>artworks/nanonoise-mini.jpg</small>
-		<description>Scientific collaboration with Ludovic Bellon at Laboratoire de Physique ENS de Lyon. Nanomechanics and thermal noise, project Portraits, no. 1.</description>
-		<short>Nanomechanics and thermal noise</short>
-		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
-		<extratext>Limited edition / 7 copies</extratext>
-		<rawprice>400</rawprice>
-	</artwork>
-
-	<artwork>
-		<title>Tunnel Of Love</title>
-		<id>2019-2</id>
-		<date>Jan. 2019</date>
-		<src>artworks/tol.jpg</src>
-		<small>artworks/tol-mini.jpg</small>
-		<description></description>
-		<short></short>
-		<dimensions>1986px x 2808px - A4 210mm x 297mm min. (240ppi)</dimensions>
-		<extratext></extratext>
-		<rawprice>100</rawprice>
-	</artwork>
-
-	<artwork>
-		<title>Rayonnement</title>
-		<id>2018-17</id>
-		<date>Nov. 2018</date>
-		<src>artworks/rayonnement.jpg</src>
-		<small>artworks/rayonnement_small.jpg</small>
-		<description>Commission for Ecole Centrale de Lyon, France - 2018</description>
-		<short>Ecole Centrale de Lyon</short>
-		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
-		<extratext>Limited edition / 11 copies</extratext>
-		<rawprice>400</rawprice>
-	</artwork>
-
-	<artwork>
 		<title>Offset</title>
 		<id>2018-9</id>
 		<date>Sep. 2018</date>
@@ -188,6 +97,97 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>380</rawprice>
+	</artwork>
+
+	<artwork>
+		<title>Nanonoise</title>
+		<id>2019-3</id>
+		<date>Feb. 2019</date>
+		<src>artworks/nanonoise.jpg</src>
+		<small>artworks/nanonoise-mini.jpg</small>
+		<description>Scientific collaboration with Ludovic Bellon at Laboratoire de Physique ENS de Lyon. Nanomechanics and thermal noise, project Portraits, no. 1.</description>
+		<short>Nanomechanics and thermal noise</short>
+		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
+		<extratext>Limited edition / 7 copies</extratext>
+		<rawprice>400</rawprice>
+	</artwork>
+
+	<artwork>
+		<title>Vacherie Ternaire</title>
+		<id>2019-7</id>
+		<date>Jul. 2019</date>
+		<src>artworks/vacherie-ternaire.jpg</src>
+		<small>artworks/vacherie-ternaire.jpg</small>
+		<description>Scientific collaboration with Alain Pumir at Laboratoire de Physique ENS de Lyon. Turbulence and collisional aggregation, project Portraits no. 2.</description>
+		<short>Turbulence and collisional aggregation</short>
+		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
+		<extratext>Limited edition / 7 copies</extratext>
+		<rawprice>400</rawprice>
+	</artwork>
+
+	<artwork>
+		<title>Dame Recherche</title>
+		<id>2019-6</id>
+		<date>Mar. 2019</date>
+		<src>artworks/dame-recherche/dame-recherche.jpg</src>
+		<small>artworks/dame-recherche/dame-recherche-mini.jpg</small>
+		<description>Commission for Grand Lyon, Prix Jeune Chercheur 2019. Inspired by 6 research topics (previous year laureates). Face drawing from French artist Alex Bourgeois.</description>
+		<short>6 research topics into a lady. Face drawing based on average Homo sapiens female.</short>
+		<dimensions>6257px x 9031px - A3 297mm x 420mm min. (535ppi)</dimensions>
+		<extratext></extratext>
+		<rawprice>110</rawprice>
+	</artwork>
+
+	<artwork>
+		<title>Fun in Djerba</title>
+		<id>2019-5</id>
+		<date>Mar. 2019</date>
+		<src>artworks/fun-in-djerba.jpg</src>
+		<small>artworks/fun-in-djerba-mini.jpg</small>
+		<description></description>
+		<short></short>
+		<dimensions>8939px x 12638px - A3 297mm x 420mm min. (764ppi)</dimensions>
+		<extratext></extratext>
+		<rawprice>150</rawprice>
+	</artwork>
+
+	<artwork>
+		<title>Djerba Sunset Phoenix</title>
+		<id>2019-4</id>
+		<date>Mar. 2019</date>
+		<src>artworks/djerba-sunset-phoenix.jpg</src>
+		<small>artworks/djerba-sunset-phoenix-mini.jpg</small>
+		<description></description>
+		<short></short>
+		<dimensions>8939px x 12638px - A2 420mm x 594mm min. (541ppi)</dimensions>
+		<extratext></extratext>
+		<rawprice>180</rawprice>
+	</artwork>
+
+	<artwork>
+		<title>Tunnel Of Love</title>
+		<id>2019-2</id>
+		<date>Jan. 2019</date>
+		<src>artworks/tol.jpg</src>
+		<small>artworks/tol-mini.jpg</small>
+		<description></description>
+		<short></short>
+		<dimensions>1986px x 2808px - A4 210mm x 297mm min. (240ppi)</dimensions>
+		<extratext></extratext>
+		<rawprice>100</rawprice>
+	</artwork>
+
+	<artwork>
+		<title>Rayonnement</title>
+		<id>2018-17</id>
+		<date>Nov. 2018</date>
+		<src>artworks/rayonnement.jpg</src>
+		<small>artworks/rayonnement_small.jpg</small>
+		<description>Commission for Ecole Centrale de Lyon, France - 2018</description>
+		<short>Ecole Centrale de Lyon</short>
+		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
+		<extratext>Limited edition / 11 copies</extratext>
+		<rawprice>400</rawprice>
 	</artwork>
 
 	<artwork>
