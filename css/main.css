@@ -1365,20 +1365,10 @@ img.blob {
 #contact .page-content {
   padding: 100px 20px 40px;
   background: black;
-}
-#contact .page-content .feel-free .blop {
-  margin: 50vh 0 100vh;
-}
-#contact .page-content .feel-free p {
   text-align: center;
-  font-size: 1.4rem;
 }
-#contact a.mailme {
-  text-decoration: none;
-  font-size: 2rem;
-}
-#contact a.mailme:hover {
-  text-decoration: underline;
+#contact .page-content p {
+  font-size: 1.5rem;
 }
 #not-found {
   display: flex;
@@ -1474,34 +1464,6 @@ img.blob {
 	to { filter: hue-rotate(360deg)}
 }
 */
-.logo-links {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Centers child elements */
-  justify-content: center;
-  padding: 40px 0;
-  background: hsl(200, 50%, 15%);
-}
-@media (max-width: 800px) {
-  .logo-links {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-.logo-links a {
-  color: white;
-  margin: 10px 25px;
-}
-.logo-links a span.fa {
-  font-size: 60px;
-}
-.logo-links a span.fa:hover {
-  text-shadow: rgba(255, 255, 255, 0.85) 0 0 50px;
-}
 .coming-soon {
   position: relative;
   text-align: center;
