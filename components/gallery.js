@@ -199,7 +199,7 @@ Gallery.fillFront = (id) => {
 	newImg.src = aw.src
 	newImg.alt = aw.title
 
-	// Descriptions and other info
+	// Descriptions
 	document.querySelector('#front-artwork .details .description h3.title').innerHTML = aw.title
 	let txt = ""
 	txt += (aw.short.length ? aw.short + "<br/><br/>" : "")
@@ -207,6 +207,10 @@ Gallery.fillFront = (id) => {
 	txt += aw.dimensions + "<br/>"
 	txt += "<span>" + (aw.price - (-Gallery.extraCostsEUR)) + " euros</span>"
 	document.querySelector('#front-artwork .details .description p.text').innerHTML = txt
+
+	// Purchase information
+	document.querySelectorAll(".artwork-name").forEach(el => el.innerHTML = aw.title)
+	document.querySelector(".artwork-dimensions").innerHTML = aw.dimensions
 }
 Gallery.adjustFrontImageSize = () => {
 	if (!Gallery.currentImageObject) return false

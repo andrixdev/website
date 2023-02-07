@@ -1043,7 +1043,6 @@ img.blob {
   border-top: solid 1px rgba(255, 255, 255, 0.5);
   margin-top: 4rem;
   width: 80%;
-  padding-left: 10%;
 }
 @media (max-width: 450px) {
   #purchase-info {

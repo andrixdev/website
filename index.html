@@ -981,8 +981,6 @@
 			</div>
 		</div>
 
-        <!--<logo-links></logo-links>-->
-
 	</div>
 </template>
 
@@ -2825,7 +2823,9 @@
 				<br/>
 				<p>Extra fees can apply if the artwork is shipped outside EU. As artworks were sold exclusively in-person prior to 2023 and the online purchase process is fairly new, you are invited to <strong>send an enquiry</strong> via the Contact form and arrange with the artist for printing and shipping details.</p>
 				<br/>
-				<p><button class="acidbutton">Send a message for <span class="artwork-name">the artwork</span></button></p>
+				<p>
+					<button class="acidbutton"><span class="fa fa-paper-plane"></span> Send a message for<br/><strong><span class="artwork-name">the artwork</span></strong></button>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -2841,27 +2841,6 @@
 		<div v-if="newSides == 0" class="shape round">
 			<div class="inner"></div>
 		</div>
-	</div>
-</template>
-
-<template id="logo-links-template">
-	<div class="logo-links">
-		<a class="mailme" title="Send an e-mail" href="#"
-		   onclick='(function () { linkTo_UnCryptMailto("nbjmup+bmfyAbmfyboesjy/dpn"); return false; })()'>
-			<span class="fa fa-envelope-o"></span>
-		</a>
-		<!--<a class="deviant" title="Check my DeviantArt gallery" href="http://icosacid.deviantart.com/" target="_blank">
-			<span class="fa fa-deviantart"></span>.
-		</a>-->
-		<a class="github" title="Find repositories on GitHub" href="https://github.com/Icosacid" target="_blank">
-			<span class="fa fa-github"></span>
-		</a>
-		<a class="codepen" title="Play live with code on Codepen" href="https://codepen.io/alexandrix" target="_blank">
-			<span class="fa fa-codepen"></span>
-		</a>
-		<a class="vimeo" title="Watch some videos on Vimeo" href="https://vimeo.com/alexandrix" target="_blank">
-			<span class="fa fa-vimeo"></span>
-		</a>
 	</div>
 </template>
 

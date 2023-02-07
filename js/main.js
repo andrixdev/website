@@ -63,9 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			
         }
     })
-    Vue.component('logo-links', {
-        template: document.querySelector('#logo-links-template')
-    })
     Vue.component('coming-soon', {
         template: document.querySelector('#coming-soon-template')
     })
