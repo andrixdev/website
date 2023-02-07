@@ -96,58 +96,15 @@ Gallery.getArtworkAtIndex = (index) => {
 	})[0]
 }
 Gallery.initListeners = () => {
-	// Artworks blocks
-	document.querySelectorAll(".artwork").forEach((el) => {
-		let onArtworkClick = () => {
-			// Update route history
-			Global.router.push({
-				path: 'gallery', query: { artwork: el.id }
-			})
-			// Update Gallery
-			Gallery.update()
-		}
-		el.removeEventListener('click', onArtworkClick) // Justin Case of several initListeners call (likely due to Vue)
-		el.addEventListener('click', onArtworkClick)
-	})
-
-	// #front navigation
-	let onQuitClick = () => {
-		Global.router.push({
-			path: 'gallery'
-		})
-		Gallery.update()
-	}
-	let len = Gallery.artworksData.length
-	let onPrevClick = () => {
-		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
-		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
-		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })// Update Gallery
-		Gallery.update()
-	}
-	let onNextClick = () => {
-		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
-		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
-		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })// Update Gallery
-		Gallery.update()
-	}
-	let onKeyup = (event) => {
-		if (!Gallery.isFrontVisible) return false
-		if (event.keyCode == 37) onPrevClick() // Left arrow
-		else if (event.keyCode == 39) onNextClick() // Right arrow
-	}
-
-	document.querySelector("#front .quit").removeEventListener('click', onQuitClick)
-	document.querySelector("#front .quit").addEventListener('click', onQuitClick)
-	document.querySelector("#gallery-prev").removeEventListener('click', onPrevClick)
-	document.querySelector("#gallery-prev").addEventListener('click', onPrevClick)
-	document.removeEventListener('keyup', onKeyup)
-	document.addEventListener('keyup', onKeyup)
-	document.querySelector("#gallery-next").removeEventListener('click', onNextClick)
-	document.querySelector("#gallery-next").addEventListener('click', onNextClick)
+	Gallery.initArtworksListeners()
+	Gallery.initFrontListeners()
 
 	// Window resize
 	let resizingEventCount = 0
 	let onresize = () => {
+		// Verify that we are well on Gallery
+		if (!document.querySelector("#artworks")) return false
+
 		resizingEventCount++
 		Masonry.hideImages()
 		setTimeout(() => {
@@ -166,6 +123,54 @@ Gallery.initListeners = () => {
 	}
 	window.removeEventListener('resize', onresize)
 	window.addEventListener('resize', onresize)
+}
+Gallery.initArtworksListeners = () => {
+	document.querySelectorAll(".artwork").forEach((el) => {
+		let onArtworkClick = () => {
+			// Update route history
+			Global.router.push({
+				path: 'gallery', query: { artwork: el.id }
+			})
+			Gallery.updateFront()
+		}
+		el.removeEventListener('click', onArtworkClick) // Justin Case of several initListeners call (likely due to Vue)
+		el.addEventListener('click', onArtworkClick)
+	})
+}
+Gallery.initFrontListeners = () => {
+	let onQuitClick = () => {
+		Global.router.push({
+			path: 'gallery'
+		})
+		Gallery.updateFront()
+	}
+	let len = Gallery.artworksData.length
+	let onPrevClick = () => {
+		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
+		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
+		Gallery.updateFront()
+	}
+	let onNextClick = () => {
+		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
+		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
+		Gallery.updateFront()
+	}
+	let onKeyup = (event) => {
+		if (!Gallery.isFrontVisible) return false
+		if (event.keyCode == 37) onPrevClick() // Left arrow
+		else if (event.keyCode == 39) onNextClick() // Right arrow
+	}
+
+	document.querySelector("#front .quit").removeEventListener('click', onQuitClick)
+	document.querySelector("#front .quit").addEventListener('click', onQuitClick)
+	document.querySelector("#gallery-prev").removeEventListener('click', onPrevClick)
+	document.querySelector("#gallery-prev").addEventListener('click', onPrevClick)
+	document.removeEventListener('keyup', onKeyup)
+	document.addEventListener('keyup', onKeyup)
+	document.querySelector("#gallery-next").removeEventListener('click', onNextClick)
+	document.querySelector("#gallery-next").addEventListener('click', onNextClick)
 }
 Gallery.fillFront = (id) => {
 	let aw = Gallery.getArtwork(id)
@@ -248,9 +253,14 @@ Gallery.update = () => {
 			Gallery.initListeners()
 			Gallery.isInit = true
 		})
+	} else {
+		Gallery.injectArtworks()
+		Gallery.initArtworksListeners()
 	}
-
-	// Get ID, might be undefined
+	Gallery.updateFront()
+}
+Gallery.updateFront = () => {
+	// Get ID from route, might be undefined
 	let artworkID = location.search.split('artwork=')[1]
 	if (artworkID != undefined) {
 		Gallery.fillFront(artworkID)
