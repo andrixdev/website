@@ -743,6 +743,9 @@ img.blob {
   padding: 25px;
   position: relative;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.hidden {
+  display: none;
+}
 @media (max-width: 991px) {
   #home .home-whatsnew .whatsnew-content .news-blocks .news-block {
     margin: 25px 10px;
@@ -794,7 +797,8 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
   margin: 0.3em 0;
   width: 80px;
-  background-color: transparent;
+  background: transparent;
+  animation: none;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
@@ -802,6 +806,7 @@ img.blob {
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img {
   background-color: white;
+  animation: none;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gamdif1 img {
   max-width: 100%;
@@ -905,8 +910,8 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block button.acidbutton {
   margin-bottom: 0;
 }
-#home .home-whatsnew .whatsnew-content .loadmore-holder {
-  flex-basis: 100%;
+#home .home-whatsnew .whatsnew-content .load-more-news.hidden {
+  display: none;
 }
 #front {
   position: fixed;

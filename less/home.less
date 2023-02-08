@@ -18,6 +18,9 @@
 					background: rgba(255, 255, 255, 0.04);
 					padding: 25px;
 					position: relative;
+					&.hidden {
+						display: none;
+					}
 
 					@media (max-width: @sm-md) {
 						margin: 25px 10px;
@@ -73,7 +76,8 @@
 						img {
 							margin: 0.3em 0;
 							width: 80px;
-							background-color: transparent;
+							background: transparent;
+							animation: none;
 						}
 					}
 					&.news-turbulence-pop,
@@ -83,6 +87,7 @@
 					&.news-gdchels {
 						img {
 							background-color: white;
+							animation: none;
 						}
 					}
 					&.news-gamdif1 {
@@ -209,8 +214,8 @@
 				}
 			}
 
-			.loadmore-holder {
-				flex-basis: 100%;
+			.load-more-news.hidden {
+				display: none;
 			}
 		}
 	}

@@ -6,37 +6,32 @@ var HomeComponent = {
                 { ew: 'yeah'},
                 { ew: 'yeah'}
             ]
-        };
+        }
     },
     methods: { },
     mounted: function () {
-        var self = this;
-        self.home = 'Teh';// This line is used to have the whole lot work
+        var self = this
+        self.home = 'Teh'// This line is used to have the whole lot work
 
         // Show older news
-        jQuery('.news-block').hide();
-        var maxNews = jQuery('.news-block').length;
-		var shaun = maxNews; //12;
-        var showMore = function (shown) {
+        let news = document.querySelectorAll(".news-block")
+        news.forEach(el => el.classList.add('hidden'))
+        var maxNews = news.length
+		var shaun = maxNews // Show all news right from start for now
+        var showMore = (shown) => {
             // Fade in a certain number of news
 	        for (var s = 1; s <= shown; s++) {
-		        jQuery('.news-block:nth-of-type(' + s + ')').fadeIn(500);
+		        document.querySelector(".news-block:nth-of-type(" + s + ")").classList.remove('hidden')
 	        }
-
 	        // Hide LoadMore button if we reached max
 	        if (shown >= maxNews) {
-		        jQuery('.showmore-toggle-bar.load-more-news').hide();
+		        document.querySelector(".load-more-news").classList.add('hidden')
             }
-        };
-        showMore(shaun);
-        jQuery('.load-more-news').on('click', function () {
-            shaun += 4;
-            showMore(shaun);
-        });
-        jQuery('.load-more-news').on('mouseenter', function () {
-            shaun += 4;
-            showMore(shaun);
-        });
-
+        }
+        showMore(shaun)
+        document.querySelector(".load-more-news").addEventListener('click', () => {
+            shaun += 4
+            showMore(shaun)
+        })
     }
-};
+}
