@@ -107,7 +107,9 @@ Gallery.initListeners = () => {
 		if (!document.querySelector("#artworks")) return false
 
 		resizingEventCount++
-		Masonry.hideImages()
+
+		// Hide masonry
+		Gallery.loadingOn()
 		setTimeout(() => {
 			resizingEventCount--
 			if (resizingEventCount == 0) {
@@ -117,8 +119,8 @@ Gallery.initListeners = () => {
 				// Well, update masonry
 				Masonry.init()
 
-				// And show back the images!
-				Masonry.showImages()
+				// Show masonry anew!
+				Gallery.loadingOff()
 			}
 		}, 400)
 	}
@@ -212,7 +214,7 @@ Gallery.fillFront = (id) => {
 	if (!aw) return false
 
 	Gallery.currentArtworkShown = aw
-	Gallery.loadingOn()
+	Gallery.frontLoadingOn()
 
 	// Image
 	let newImg = new Image()
@@ -224,7 +226,7 @@ Gallery.fillFront = (id) => {
 	newImg.onload = () => {
 		document.querySelector('#front-artwork img.fullone').setAttribute('src', aw.src)
 		imgNode.classList.remove('invisible')
-		Gallery.loadingOff()
+		Gallery.frontLoadingOff()
 
 		Gallery.adjustFrontImageSize()
 	}
@@ -287,13 +289,22 @@ Gallery.hideFront = function () {
 	document.querySelector("body").classList.remove('frozen')
 	Gallery.isFrontVisible = false
 }
-Gallery.loadingOn = function () {
+Gallery.loadingOn = () => {
+	document.querySelector('#artworks-loader.loader').classList.remove('hidden')
+	document.querySelector('#artworks').classList.add('hidden')
+}
+Gallery.loadingOff = () => {
+	document.querySelector('#artworks-loader.loader').classList.add('hidden')
+	document.querySelector('#artworks').classList.remove('hidden')
+}
+Gallery.frontLoadingOn = () => {
 	document.querySelector('#front-artwork .loader').classList.remove('hidden')
 }
-Gallery.loadingOff = function () {
+Gallery.frontLoadingOff = () => {
 	document.querySelector('#front-artwork .loader').classList.add('hidden')
 }
 Gallery.update = () => {
+	Gallery.loadingOn()
 	if (!Gallery.isInit) {
 		Gallery.loadArtworks(() => {
 			Gallery.injectArtworks()
@@ -381,10 +392,7 @@ Masonry.init = function (containerNode) {
 	// Finally resize container
 	this.containerNode.style.width = "100%"
 	this.containerNode.style.height = this.containerHeight + "px"
-}
-Masonry.hideImages = function () {
-	this.containerNode.style.opacity = 0
-}
-Masonry.showImages = function () {
-	this.containerNode.style.opacity = 1
+
+	// AAAnd it's all ready
+	Gallery.loadingOff()
 }
