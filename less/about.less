@@ -1,5 +1,4 @@
 #about {
-
 	.statement-page-content {
 		background: black;
 	}
@@ -18,33 +17,22 @@
 		}
 	}
 
-	.showmore-toggle-bar p.show-text {
-		width: 265px;
-	}
-	.showmore-toggle-bar.load-longer-bio p.show-text {
-		background: black;
-	}
-
-	.longer-bio {
-		width: 90%;
-		margin-left: 5%;
-		.weight-200();
-
-		p {
-			text-align: justify;
-			font-size: 1rem;
-		}
-	}
-
 	.about-events {
-		.events-content .upcoming-events,
-		.events-content .past-events {
-			.center();
-			.flexcol();
-			.flexcenter();
-		}
+		
 		.events-content {
 			padding: 20px 30px 50px;
+
+			.upcoming-events,
+			.past-events {
+				.center();
+				.flexcol();
+				.flexcenter();
+			}
+
+			.load-past-events.hidden,
+			.past-events.hidden {
+				display: none;
+			}
 
 			.event-block {
 				margin-bottom: 15px;

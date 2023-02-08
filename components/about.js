@@ -6,75 +6,66 @@ var AboutComponent = {
     methods: {
         activateBioQuanticGlitch: function () {
             // Prepare empty arrays with texts
-            var paragraphs = jQuery('.longer-bio > p').length;
-            var htmlContents = []; // Raw initial text including <em>s
-            var textContents = []; // Raw initial text
-            var textArrays = []; // Splitted initial text
-            var newArrays = []; // Shuffled text
+            let paragraphs = document.querySelectorAll(".statement-core p")
+            let htmlContents = [] // Initial markup (including <em>s and such)
+            let textContents = [] // Raw initial text
+            let textArrays = [] // Splitted initial text
+            let newArrays = [] // Shuffled text
 
             // Fill with text
-            for (var l = 0; l < paragraphs; l++) {
-                var htmlContent = jQuery('.longer-bio > p:nth-of-type(' + (l - (-1)) + ')').html();
-                var textContent = jQuery('.longer-bio > p:nth-of-type(' + (l - (-1)) + ')').text();
-                var textArray = textContent.split(' ');
-                var newArray = textArray.slice(0);
+            paragraphs.forEach((el) => {
+                let htmlContent = el.innerHTML
+                let textContent = el.innerText
+                let textArray = textContent.split(' ')
+                let newArray = textArray.slice(0) // Just clones
 
-                htmlContents.push(htmlContent);
-                textContents.push(textContent);
-                textArrays.push(textArray);
-                newArrays.push(newArray);
-            }
+                htmlContents.push(htmlContent)
+                textContents.push(textContent)
+                textArrays.push(textArray)
+                newArrays.push(newArray)
+            })
 
             // Listeners
-            jQuery('.longer-bio > p').each(function (i, e) {
-
-                jQuery(this).off().on('mousemove', function () {
-                    var newArray = newArrays[i];
+            paragraphs.forEach((el, i) => {
+                el.addEventListener('mousemove', () => {
+                    let newArray = newArrays[i]
 
                     // Shuffle 2 words in new array
-                    var len = newArray.length;
-                    var randomIndex1 = Math.floor(len * Math.random());
-                    var randomIndex2 = Math.floor(len * Math.random());
-                    var buffer = newArray[randomIndex1];
-                    newArray[randomIndex1] = newArray[randomIndex2];
-                    newArray[randomIndex2] = buffer;
+                    let len = newArray.length
+                    let randomIndex1 = Math.floor(len * Math.random())
+                    let randomIndex2 = Math.floor(len * Math.random())
+                    let buffer = newArray[randomIndex1]
+                    newArray[randomIndex1] = newArray[randomIndex2]
+                    newArray[randomIndex2] = buffer
 
                     // Build word outta array and print out
-                    var newText = "";
-                    for (var j = 0; j < len; j++) {
-                        var rand = Math.random() < 0.1;
-                        if (rand) newText += "<em>";
-                        newText += newArray[j] + " ";
-                        if (rand) newText += "</em>";
+                    let newText = ""
+                    for (let j = 0; j < len; j++) {
+                        let rand = Math.random() < 0.1
+                        if (rand) newText += "<em>"
+                        newText += newArray[j] + " "
+                        if (rand) newText += "</em>"
                     }
-                    jQuery(this).html(newText);
-                }).on('mouseout', function () {
+                    el.innerHTML = newText
+                })
+                el.addEventListener('mouseout', () => {
                     // Reset text
-                    jQuery(this).html(htmlContents[i]);
+                    el.innerHTML = htmlContents[i]
 
                     // Start shuffling anew on each hoverin
-                    newArrays[i] = textArrays[i].slice(0);
-                });
-
-            });
+                    newArrays[i] = textArrays[i].slice(0)
+                })
+            })
         }
     },
     mounted: function () {
 
-        jQuery('.longer-bio').hide();
-
-        jQuery('.load-longer-bio').on('click', function () {
-            jQuery('.longer-bio').show();
-            jQuery('.showmore-toggle-bar.load-longer-bio').hide();
-        });
-
-        this.activateBioQuanticGlitch();
+        this.activateBioQuanticGlitch()
 
         // Show past events
-        jQuery('.past-events').hide();
-        jQuery('.load-past-events').on('click', function () {
-            jQuery('.past-events').show();
-            jQuery('.showmore-toggle-bar.load-past-events').hide();
-        });
+        document.querySelector(".load-past-events").addEventListener('click', () => {
+            document.querySelector(".showmore-toggle-bar.load-past-events").classList.add('hidden')
+            document.querySelector(".past-events").classList.remove('hidden')
+        })
     }
-};
+}

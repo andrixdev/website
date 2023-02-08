@@ -1285,20 +1285,8 @@ img.blob {
   font-size: 1.5rem;
   font-weight: 300;
 }
-#about .showmore-toggle-bar p.show-text {
-  width: 265px;
-}
-#about .showmore-toggle-bar.load-longer-bio p.show-text {
-  background: black;
-}
-#about .longer-bio {
-  width: 90%;
-  margin-left: 5%;
-  font-weight: 200;
-}
-#about .longer-bio p {
-  text-align: justify;
-  font-size: 1rem;
+#about .about-events .events-content {
+  padding: 20px 30px 50px;
 }
 #about .about-events .events-content .upcoming-events,
 #about .about-events .events-content .past-events {
@@ -1310,8 +1298,9 @@ img.blob {
   /* Centers child elements */
   justify-content: center;
 }
-#about .about-events .events-content {
-  padding: 20px 30px 50px;
+#about .about-events .events-content .load-past-events.hidden,
+#about .about-events .events-content .past-events.hidden {
+  display: none;
 }
 #about .about-events .events-content .event-block {
   margin-bottom: 15px;
