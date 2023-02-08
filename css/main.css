@@ -692,27 +692,6 @@ img.blob {
 .footer p.copyright {
   font-size: 16px;
 }
-.footer p.crafted {
-  font-size: 12px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* Centers child elements */
-  justify-content: center;
-}
-.footer p.crafted span {
-  padding-top: 7px;
-}
-.footer p.crafted img {
-  width: 15px;
-  height: 15px;
-  padding-top: 5px;
-  margin: 0 3px;
-}
-.footer p.crafted img.jquery {
-  margin-left: 5px;
-}
 .footer p.version {
   font-size: 0.8rem;
 }
@@ -1275,6 +1254,12 @@ img.blob {
   #web-dataviz .project-tile .right-side h4 {
     margin-top: 5px;
   }
+}
+#web-dataviz .student-misc-projects.hidden,
+#web-dataviz .load-hum-projects.hidden,
+#web-dataviz .hum-projects.hidden,
+#web-dataviz .load-student-misc-projects.hidden {
+  display: none;
 }
 #about .statement-page-content {
   background: black;

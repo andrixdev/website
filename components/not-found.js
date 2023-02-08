@@ -1,5 +1,5 @@
 var NotFoundComponent = {
-    template: jQuery('#not-found-template').html(),
+    template: document.querySelector("#not-found-template").innerHTML,
     data: function () {
         return {
             requestedRoute: undefined

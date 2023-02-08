@@ -1,6 +1,6 @@
 // This components gathers several previous or new components
 var MoreComponent = {
-    template: document.querySelector('#more-template'),
+    template: document.querySelector("#more-template"),
     data: function () {
         return { }
     },
@@ -10,18 +10,18 @@ var MoreComponent = {
     mounted: function () {
 
         // Web-Dataviz Show mores
-        jQuery('.web-dataviz-projects .student-misc-projects').hide()
-        jQuery('.web-dataviz-projects .showmore-toggle-bar.load-hum-projects').hide()
-        jQuery('.web-dataviz-projects .hum-projects').hide()
+        document.querySelector(".student-misc-projects").classList.add('hidden')
+        document.querySelector(".load-hum-projects").classList.add('hidden')
+        document.querySelector(".hum-projects").classList.add('hidden')
 
-        jQuery('.web-dataviz-projects .showmore-toggle-bar.load-student-misc-projects').on('click', function () {
-            jQuery('.web-dataviz-projects .student-misc-projects').fadeIn(500)
-            jQuery(this).remove()
-            jQuery('.web-dataviz-projects .showmore-toggle-bar.load-hum-projects').show()
-        });
-        jQuery('.web-dataviz-projects .showmore-toggle-bar.load-hum-projects').on('click', function () {
-            jQuery('.web-dataviz-projects .hum-projects').fadeIn(500)
-            jQuery(this).remove()
+        document.querySelector(".load-student-misc-projects").addEventListener('click', (ev) => {
+            document.querySelector(".load-student-misc-projects").classList.add('hidden')
+            document.querySelector(".student-misc-projects").classList.remove('hidden')
+            document.querySelector(".load-hum-projects").classList.remove('hidden')
+        })
+        document.querySelector(".load-hum-projects").addEventListener('click', (ev) => {
+            document.querySelector(".load-hum-projects").classList.add('hidden')
+            document.querySelector(".hum-projects").classList.remove('hidden')
         })
     }
 }
