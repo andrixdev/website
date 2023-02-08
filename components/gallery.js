@@ -299,12 +299,13 @@ Gallery.update = () => {
 			Gallery.injectArtworks()
 			Gallery.initListeners()
 			Gallery.isInit = true
+			Gallery.updateFront()
 		})
 	} else {
 		Gallery.injectArtworks()
 		Gallery.initArtworksListeners()
+		Gallery.updateFront()
 	}
-	Gallery.updateFront()
 }
 Gallery.updateFront = () => {
 	// Get ID from route, might be undefined
