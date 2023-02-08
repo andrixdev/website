@@ -9,7 +9,7 @@
 	<meta name="author" content="Alex Andrix" />
 	<meta name="description" content="Art & Science" />
 	<link rel="canonical" href="https://alexandrix.com/" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
 
 	<!-- Icons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/website/icons/apple-icon-57x57.png">
@@ -2775,8 +2775,15 @@
 		</nav>
 	</div>
 
-	<div class="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
-		<router-view></router-view>
+	<div id="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
+		<router-view>
+			<div class="loader">
+				<div class="loader-animation">
+					<img src="img/loader/triango-outer-layer-blue.svg" />
+					<img src="img/loader/triango-outer-layer-black.svg" />
+				</div>
+			</div>
+		</router-view>
 	</div>
 
 	<div class="footer click-and-hue" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'" v-on:click="rotateLeHue()">
@@ -2812,7 +2819,7 @@
 				</div>
 			</div>
 
-			<img class="fullone" src="/" alt="" />
+			<img class="fullone" src="/" alt="" width="300" height="500"/>
 			
 			<div class="details">
 				<div class="description">
@@ -2825,16 +2832,22 @@
 				<h4>Purchase information</h4>
 
 				<p>All limited-edition artworks come with a dedicated hand-made <strong>certificate of authenticity</strong>, which guarantees ownership of the obtained physical copy of <strong><span class="artwork-name">the artwork</span></strong>.</p>
+				
 				<br/>
+
 				<p>Artwork dimensions can be adjusted to your needs before printing.
 					<br/>
 					Standard dimension details for <strong><span class="artwork-name">the artwork</span></strong>:
 					<br/>
 					<strong><span class="artwork-dimensions"></span></strong>
 				</p>
+
 				<br/>
+
 				<p id="artwork-description"></p>
 				<p>Extra fees can apply if the artwork is shipped outside EU. As artworks were sold exclusively in-person prior to 2023 and the online purchase process is fairly new, you are invited to <strong>send an enquiry</strong> via the Contact form and arrange with the artist for printing and shipping details.</p>
+				
+				<br/>
 				<br/>
 				
 				<div class="flexrow flexcenter">

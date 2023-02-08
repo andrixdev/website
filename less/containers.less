@@ -18,6 +18,10 @@ body {
 #alexandrix-website {
 	padding-top: 60px;
 	overflow-x: hidden;
+
+	#core {
+		min-height: calc(100vh - 105px); // 105 ~= header + footer heights
+	}
 }
 .title-block {
 	background: @title-block-color;
@@ -178,7 +182,6 @@ h3.categname,
 	}
 
 }
-
 .responsive-iframe-container {
 
 	// Made for <p> and <br> right above

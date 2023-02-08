@@ -41,6 +41,7 @@
 		position: fixed;
 		cursor: pointer;
 		background: rgba(0, 0, 0, 0.8);
+		@media (max-width: 550px) { visibility: hidden; }
 
 		&:hover {
 			opacity: 0.95;
@@ -91,12 +92,15 @@
 	
 	#front-artwork {
 		box-shadow: rgba(0, 0, 0, 0.5) 0 0 30px;
-		padding-bottom: 40px;
+		padding-bottom: 5rem;
 		
 		img.fullone {
 			// width and height handled in gallery.js
 			border: solid 1px rgba(125, 125, 125, 0.5);
-			touch-action: manipulation;
+
+			&.invisible {
+				visibility: hidden;
+			}
 		}
 
 		.details {
@@ -123,49 +127,12 @@
 		}
 	}
 
-	.loader {
-		.marjinoto();
-		width: 120px;
-		height: 170px;
-
-		&.hidden {
-			display: none;
-		}
-
-		.loader-animation {
-			position: relative;
-			width: 120px;
-			height: 120px;
-			margin-bottom: 10px;
-
-			img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 120px;
-				height: 120px;
-				transform-origin: 50% 70%;
-				animation: sway-revert 3000ms infinite linear;
-				z-index: 1;
-
-				&:nth-of-type(1) {
-					animation-delay: 0ms;
-					z-index: 1;
-				}
-				&:nth-of-type(2) {
-					animation-delay: 1500ms;
-					z-index: 1;
-					opacity: 0;
-				}
-			}
-		}
-	}
 }
 #purchase-info {
 	border-top: solid 1px rgba(255, 255, 255, 0.5);
-	margin-top: 4rem;
+	margin-top: 8rem;
 	width: 80%;
-	@media (max-width: 450px) { width: inherit; padding: 0 2em; }
+	@media (max-width: 550px) { width: inherit; padding: 0 2em; }
 
 	h4, p {
 		text-align: center;
@@ -181,13 +148,6 @@
 	strong {
 		font-weight: 400;
 	}
-}
-@keyframes sway-revert {
-	from { transiform: scale(1); z-index: 3; opacity: 1; }
-	10% { transform: scale(0.15); z-index: 3; }
-	30% { z-index: 1; }
-	60% { z-index: 2; }
-	to { transform: scale(1); opacity: 1; }
 }
 
 #artworks {

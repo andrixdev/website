@@ -7,7 +7,8 @@ let Gallery = {
 	currentImageObject: undefined,
 	isFrontVisible: false,
 	timeout: undefined,
-	extraCostsEUR: 50
+	extraCostsEUR: 50,
+	mobileBreakpointPX: 550
 }
 Gallery.loadArtworks = (extraCallback) => {
 	let handleXML = (xml) => {
@@ -163,6 +164,38 @@ Gallery.initFrontListeners = () => {
 		else if (event.keyCode == 39) onNextClick() // Right arrow
 	}
 
+	let xLastTouch = null
+	let yLastTouch = null
+	let onTouchStart = (evt) => {
+		if (!Gallery.isFrontVisible) return false
+		const firstTouch = evt.touches[0]
+		xLastTouch = firstTouch.clientX
+		yLastTouch = firstTouch.clientY
+	}
+	let onTouchMove = (evt) => {
+		if (!Gallery.isFrontVisible) return false
+		if (!xLastTouch || !yLastTouch) return false
+	
+		let xTouch = evt.touches[0].clientX
+		let yTouch = evt.touches[0].clientY
+
+		var xDiff = xTouch - xLastTouch
+		var yDiff = yTouch - yLastTouch
+
+		if (Math.abs(xDiff) > Math.abs(yDiff)) { // If translation in X-direction is superior to the Y-direction
+			if (xDiff > 0) {
+				// Right swipe
+				onNextClick()
+			} else {
+				// Left swipe
+				onPrevClick()
+			}
+		}
+			
+		xLastTouch = null
+		yLastTouch = null
+	}
+
 	document.querySelector("#front .quit").removeEventListener('click', onQuitClick)
 	document.querySelector("#front .quit").addEventListener('click', onQuitClick)
 	document.querySelector("#gallery-prev").removeEventListener('click', onPrevClick)
@@ -171,6 +204,8 @@ Gallery.initFrontListeners = () => {
 	document.addEventListener('keyup', onKeyup)
 	document.querySelector("#gallery-next").removeEventListener('click', onNextClick)
 	document.querySelector("#gallery-next").addEventListener('click', onNextClick)
+	document.addEventListener('touchstart', onTouchStart)
+	document.addEventListener('touchmove', onTouchMove)
 }
 Gallery.fillFront = (id) => {
 	let aw = Gallery.getArtwork(id)
@@ -183,18 +218,15 @@ Gallery.fillFront = (id) => {
 	let newImg = new Image()
 	Gallery.currentImageObject = newImg // Store globally for .on('resize') action without reloading image
 
-	document.querySelector('#front-artwork img.fullone').setAttribute('src', "")
+	let imgNode = document.querySelector('#front-artwork img.fullone')
+	imgNode.classList.add('invisible')
+	imgNode.setAttribute('src', "")
 	newImg.onload = () => {
-		document.querySelector('#front-artwork img.fullone').setAttribute('src', "")
+		document.querySelector('#front-artwork img.fullone').setAttribute('src', aw.src)
+		imgNode.classList.remove('invisible')
+		Gallery.loadingOff()
 
 		Gallery.adjustFrontImageSize()
-
-		// Fake timeout
-		clearTimeout(Gallery.timeout)
-		Gallery.timeout = setTimeout(() => {
-            Gallery.loadingOff()
-			document.querySelector('#front-artwork img.fullone').setAttribute('src', aw.src)
-		}, 300)
 	}
 	newImg.src = aw.src
 	newImg.alt = aw.title
@@ -227,8 +259,11 @@ Gallery.adjustFrontImageSize = () => {
 	let w = Gallery.currentImageObject.width
 
 	// If image is wider than 0.9*window - (withofnavarrows), rescale
-	let ratioW = w / (0.99 * window.innerWidth - 2*70)
-	let ratioH = h / (0.99 * window.innerHeight - 2*20)
+	let isMobile = window.innerWidth < Gallery.mobileBreakpointPX
+	let marginW = isMobile ? 12 : 70
+	let marginH = isMobile ? 12 : 20
+	let ratioW = w / (0.99 * window.innerWidth - 2 * marginW)
+	let ratioH = h / (0.99 * window.innerHeight - 2 * marginH)
 	let ratio = Math.max(ratioH, ratioW)
 	if (ratio > 1 && ratioW > ratioH) {
 		h /= ratioW
