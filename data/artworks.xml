@@ -350,7 +350,7 @@
 		<src>artworks/experiments/hexocet-explode.jpg</src>
 		<small>artworks/experiments/hexocet-explode_small.jpg</small>
 		<description>Particles randomly evolve on an hexagonal network and their boredom on grid vertices is expressed through faint widening circles.</description>
-		<short>Circular borebom of particles on hexagonal network</short>
+		<short>Circular boredom of particles on hexagonal network</short>
 		<dimensions>1642px x 832px - 579mm x 294mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>90</rawprice>

@@ -1345,10 +1345,10 @@ img.blob {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 50px;
+  padding: 80px;
 }
 #not-found img {
-  width: 250px;
+  width: 200px;
   margin-bottom: 20px;
 }
 #not-found p.msg-404 {
