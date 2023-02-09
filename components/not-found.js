@@ -57,7 +57,7 @@ var NotFoundComponent = {
             document.querySelector(".triangleA" + i).style.transform = transformA
         }
 
-        var rotateIco = function () {
+        let rotateIco = () => {
             // Rotate icosahedron
             var rX = 360 * Math.sin(t / 160)
             var rY = 360 * Math.sin(t / 240)
@@ -66,11 +66,15 @@ var NotFoundComponent = {
             ico.style.transform = 'rotateX(' + rX + 'deg) rotateY(' + rY + 'deg) rotateZ(' + rZ + 'deg)'
 
             // Animate face
-            var face = (Math.random() > 0.5 ? 'A': '') + Math.ceil(10 * Math.random())
-            var lum = 20 + 60 * Math.random()
-            var opacity = (Math.random() > 0.5 ? 1 : 0.2)
-            document.querySelector(".triangle" + face + " .depth2").style.background = 'radial-gradient(hsla(200, 60%, ' + lum + '%, ' + opacity + '), hsla(200, 60%, ' + lum/3 + '%, ' + opacity + ')'
+            let face = (Math.random() > 0.5 ? 'A': '') + Math.ceil(10 * Math.random())
+            let lum = 20 + 60 * Math.random()
+            let opacity = (Math.random() > 0.5 ? 1 : 0.2)
 
+            let randomFace = document.querySelector(".triangle" + face + " .depth2")
+            if (randomFace) {// Maybe user changed page and triangles are gone, randomFace is undefined
+                randomFace.style.background = 'radial-gradient(hsla(200, 60%, ' + lum + '%, ' + opacity + '), hsla(200, 60%, ' + lum/3 + '%, ' + opacity + ')'
+            }
+            
             t++
         }
 
