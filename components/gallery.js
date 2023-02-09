@@ -187,10 +187,10 @@ Gallery.initFrontListeners = () => {
 		if (Math.abs(xDiff) > Math.abs(yDiff)) { // If translation in X-direction is superior to the Y-direction
 			if (xDiff > 0) {
 				// Right swipe
-				onNextClick()
+				onPrevClick()
 			} else {
 				// Left swipe
-				onPrevClick()
+				onNextClick()
 			}
 		}
 			

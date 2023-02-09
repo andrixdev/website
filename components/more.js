@@ -8,7 +8,6 @@ var MoreComponent = {
         
     },
     mounted: function () {
-
         // Web-Dataviz Show mores
         document.querySelector(".student-misc-projects").classList.add('hidden')
         document.querySelector(".load-hum-projects").classList.add('hidden')
