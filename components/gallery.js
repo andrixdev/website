@@ -168,6 +168,7 @@ Gallery.initFrontListeners = () => {
 
 	let xLastTouch = null
 	let yLastTouch = null
+	let isSwipingOnFullImg = false
 	let onTouchStart = (evt) => {
 		if (!Gallery.isFrontVisible) return false
 		const firstTouch = evt.touches[0]
@@ -177,6 +178,7 @@ Gallery.initFrontListeners = () => {
 	let onTouchMove = (evt) => {
 		if (!Gallery.isFrontVisible) return false
 		if (!xLastTouch || !yLastTouch) return false
+		if (isSwipingOnFullImg) return false
 	
 		let xTouch = evt.touches[0].clientX
 		let yTouch = evt.touches[0].clientY
@@ -206,6 +208,12 @@ Gallery.initFrontListeners = () => {
 	document.addEventListener('keyup', onKeyup)
 	document.querySelector("#gallery-next").removeEventListener('click', onNextClick)
 	document.querySelector("#gallery-next").addEventListener('click', onNextClick)
+	document.querySelector("#front img.fullone").addEventListener('touchstart', () => {
+		isSwipingOnFullImg = true
+	})
+	document.querySelector("#front img.fullone").addEventListener('touchend', () => {
+		isSwipingOnFullImg = false
+	})
 	document.addEventListener('touchstart', onTouchStart)
 	document.addEventListener('touchmove', onTouchMove)
 }
