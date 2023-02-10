@@ -22,8 +22,8 @@ Gallery.loadArtworks = (extraCallback) => {
 				title: el.querySelector("title").innerHTML,
 				id: el.querySelector("id").innerHTML,
 				date: el.querySelector("date").innerHTML,
-				src: "img/" + el.querySelector("src").innerHTML,
-				small: "img/" + el.querySelector("small").innerHTML,
+				src: "/img/" + el.querySelector("src").innerHTML,
+				small: "/img/" + el.querySelector("small").innerHTML,
 				description: el.querySelector("description").innerHTML,
 				short: el.querySelector("short").innerHTML,
 				dimensions: el.querySelector("dimensions").innerHTML,
@@ -34,7 +34,7 @@ Gallery.loadArtworks = (extraCallback) => {
 		})	
 	}
 	const xhr = new XMLHttpRequest()
-	xhr.open("GET", "data/artworks.xml", true)
+	xhr.open("GET", "/data/artworks.xml", true)
 	xhr.onload = (e) => {
 		if (xhr.readyState === 4) {
 			if (xhr.status === 200) {

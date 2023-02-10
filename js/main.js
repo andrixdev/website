@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // App routes
     let routes = [
         { path: '/', component: HomeComponent },
-        { path: '/gallery', component: GalleryComponent },
+        { path: '/gallery', component: GalleryComponent, pathToRegexpOptions: { strict: true } }, // prevents route bugs with /gallery/
         { path: '/films', component: FilmsComponent },
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },

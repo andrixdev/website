@@ -9,7 +9,7 @@
 	<project>
 		<title>Variations Physiques vol. 2</title>
 		<description>Film and VR experience, stellar formation, blackholes, gravitational waves and emergence&#10;A new story inspired by French physicists</description>
-		<image>img/projects/vp2-wip.jpg</image>
+		<image>/img/projects/vp2-wip.jpg</image>
 		<link>http://variationsphysiques.fr/</link>
 		<themes>artistic</themes>
 	</project>
@@ -17,7 +17,7 @@
 	<project>
 		<title>GRETSI VR 2019</title>
 		<description>Live virtual world creation at GRETSI 2019 symposium on signal processing</description>
-		<image>img/projects/gretsivr2019.jpg</image>
+		<image>/img/projects/gretsivr2019.jpg</image>
 		<link>http://alexandrix.com/blog/a-live-virtual-world-creation/</link>
 		<themes>artistic</themes>
 	</project>
@@ -25,7 +25,7 @@
 	<project>
 		<title>Portraits, n�1</title>
 		<description>Scientific collaboration and creation&#10;With L. Bellon at Laboratoire de Physique ENS Lyon</description>
-		<image>img/projects/portraits1.jpg</image>
+		<image>/img/projects/portraits1.jpg</image>
 		<link>https://alexandrix.com/blog/portraits/</link>
 		<themes>artistic</themes>
 	</project>
@@ -33,7 +33,7 @@
 	<project>
 		<title>Variations Physiques vol. 1</title>
 		<description>Film and VR experience within turbulence, magnetic fields and space&#10;A story of scientific research led by French physicists</description>
-		<image>img/projects/varphylm-sc2-small.jpg</image>
+		<image>/img/projects/varphylm-sc2-small.jpg</image>
 		<link>http://variationsphysiques.fr/</link>
 		<themes>artistic</themes>
 	</project>
@@ -41,7 +41,7 @@
 	<project>
 		<title>Kinexperience</title>
 		<description>Interactive icosahedron, with dance researcher Ariane Cassimiro and tech-art Yves Brozat&#10;Exploring a dance framework theory with Kinect and virtual reality</description>
-		<image>img/projects/kinexp2.jpg</image>
+		<image>/img/projects/kinexp2.jpg</image>
 		<link>../kinexperience</link>
 		<themes>artistic</themes>
 	</project>
@@ -49,7 +49,7 @@
 	<project>
 		<title>_Transition</title>
 		<description>Virtual reality project _Transition with art director lejeanf&#10;Presented at Mirage Festival 2018&#10;Research Reality Lab</description>
-		<image>img/projects/transition/transitionwebsmall.jpg</image>
+		<image>/img/projects/transition/transitionwebsmall.jpg</image>
 		<link>../transition</link>
 		<themes>artistic</themes>
 	</project>
@@ -58,7 +58,7 @@
 	<project>
 		<title>Astrophysion</title>
 		<description>Prototype for visualization of position-intensity datasets with Unity VFX Graph.&#10;Applicable to multi-dimensional scalar and vector fields.&#10;Using stars &amp; dark matter simulation data from CRAL.</description>
-		<image>img/projects/astrophysion-preview-small.jpg</image>
+		<image>/img/projects/astrophysion-preview-small.jpg</image>
 		<link>https://vimeo.com/424084195</link>
 		<themes>dataviz</themes>
 	</project>
@@ -66,7 +66,7 @@
 	<project>
 		<title>Hue Flow</title>
 		<description>Casual information visualization of energy and water consumption for smart houses</description>
-		<image>img/projects/hueflow.jpg</image>
+		<image>/img/projects/hueflow.jpg</image>
 		<link>../infoviz/hueflow</link>
 		<themes>artistic dataviz</themes>
 	</project>
@@ -74,7 +74,7 @@
 	<project>
 		<title>Hue Hunt</title>
 		<description>A color game for hawk-eyed designers&#10;Migrated from PHP framework Symfony 2 to AngularJS</description>
-		<image>img/projects/huehunt.jpg</image>
+		<image>/img/projects/huehunt.jpg</image>
 		<link>../huehunt</link>
 		<themes>dataviz</themes>
 	</project>
@@ -82,7 +82,7 @@
 	<project>
 		<title>SimplX</title>
 		<description>Front-end web development and agile project management&#10;Worked on 17 projects of various scales and nature&#10;Creative coding research 20% of time</description>
-		<image>img/projects/simplx-mini-2.jpg</image>
+		<image>/img/projects/simplx-mini-2.jpg</image>
 		<link>https://website.simplx.fr</link>
 		<themes>web</themes>
 	</project>
@@ -90,7 +90,7 @@
 	<project>
 		<title>Hue Hunt Results</title>
 		<description>Data analysis interface for Hue Hunt.&#10;Revealed trends in learning HSL with regard to hue and experience.</description>
-		<image>img/projects/huehuntresults.jpg</image>
+		<image>/img/projects/huehuntresults.jpg</image>
 		<link>../huehunt/results</link>
 		<themes>dataviz</themes>
 	</project>
@@ -98,7 +98,7 @@
 	<project>
 		<title>Speakasso</title>
 		<description>Web app to draw on canvas based on voice input&#10;Award-winning KTH project, 7 students</description>
-		<image>img/projects/speakasso.jpg</image>
+		<image>/img/projects/speakasso.jpg</image>
 		<link>http://www.csc.kth.se/~acvds/info_vis/speakasso/</link>
 		<themes>artistic dataviz</themes>
 	</project>
@@ -106,7 +106,7 @@
 	<project>
 		<title>Variations Physiques Gallery</title>
 		<description>Online digital version of fabric artworks gallery</description>
-		<image>img/projects/varphygallery.jpg</image>
+		<image>/img/projects/varphygallery.jpg</image>
 		<link>../varphygallery</link>
 		<themes>artistic web</themes>
 	</project>
@@ -114,7 +114,7 @@
 	<project>
 		<title>HappyFactor</title>
 		<description>Using d3.js parallel coordinates library for analyses of multidimensional datasets</description>
-		<image>img/projects/happyfactor.jpg</image>
+		<image>/img/projects/happyfactor.jpg</image>
 		<link>../infoviz/happyfactor</link>
 		<themes>dataviz</themes>
 	</project>
@@ -122,7 +122,7 @@
 	<project>
 		<title>Augmented Reality Web prototypes</title>
 		<description>Human-Computer Interaction, KTH introductory course</description>
-		<image>img/projects/DH2620.jpg</image>
+		<image>/img/projects/DH2620.jpg</image>
 		<link>../DH2620</link>
 		<themes>web</themes>
 	</project>
@@ -130,7 +130,7 @@
 	<project>
 		<title>Melting Space Blog</title>
 		<description>A simple blog in VueJS for the Melting Space label</description>
-		<image>img/projects/meltingspacesmall.jpg</image>
+		<image>/img/projects/meltingspacesmall.jpg</image>
 		<link>https://melting.space/#/blog</link>
 		<themes>web</themes>
 	</project>
@@ -139,7 +139,7 @@
 	<project>
 		<title>Ever</title>
 		<description>A game for personal knowledge management&#10;Applied to linguistics</description>
-		<image>img/projects/ever.jpg</image>
+		<image>/img/projects/ever.jpg</image>
 		<link>../ever</link>
 		<themes>web</themes>
 	</project>
@@ -148,7 +148,7 @@
 	<project>
 		<title>Fromemo</title>
 		<description>Emotion feedback through digital drawing</description>
-		<image>img/projects/fromemo.jpg</image>
+		<image>/img/projects/fromemo.jpg</image>
 		<link>../fromemo</link>
 		<themes>web dataviz</themes>
 	</project>
@@ -156,7 +156,7 @@
 	<project>
 		<title>GroupMerge</title>
 		<description>A GUI for Information Visualization (for Firefox)&#10;1 day project - KTH course DH2321</description>
-		<image>img/projects/groupmerge.jpg</image>
+		<image>/img/projects/groupmerge.jpg</image>
 		<link>../infoviz/groupmerge</link>
 		<themes>web dataviz</themes>
 	</project>
@@ -164,7 +164,7 @@
 	<project>
 		<title>Course in HCI - KTH</title>
 		<description>Introduction to Visualization and Computer Graphics</description>
-		<image>img/projects/DH2320.jpg</image>
+		<image>/img/projects/DH2320.jpg</image>
 		<link>../DH2320</link>
 		<themes></themes>
 	</project>
@@ -172,7 +172,7 @@
 	<project>
 		<title>PlayChaos</title>
 		<description>A user interface for spreadSVG.js&#10;Play the piano and generate shapes with vector graphics</description>
-		<image>img/projects/playchaos.jpg</image>
+		<image>/img/projects/playchaos.jpg</image>
 		<link>../playchaos</link>
 		<themes>artistic web</themes>
 	</project>
@@ -180,7 +180,7 @@
 	<project>
 		<title>Infinite</title>
 		<description>Prototyping within 24 hours&#10;Scaffolding a proof-of-concept web page for a company</description>
-		<image>img/projects/infinitesmall.jpg</image>
+		<image>/img/projects/infinitesmall.jpg</image>
 		<link>../infinitedevelopers</link>
 		<themes>web</themes>
 	</project>
@@ -188,7 +188,7 @@
 	<project>
 		<title>Own website v4</title>
 		<description>This very website&#10;Kind of a perpetual work in progress&#10;Open-source code available on GitHub</description>
-		<image>img/projects/websitev3small.jpg</image>
+		<image>/img/projects/websitev3small.jpg</image>
 		<link>https://github.com/Icosacid/website/tree/dev</link>
 		<themes>web</themes>
 	</project>
@@ -198,7 +198,7 @@
 	<project>
 		<title>Exhibition at Ecole Centrale de Lyon</title>
 		<description>1m90x2m69 artworks displayed at Ecole Centrale de Lyon from Nov. 2018 to Feb. 2019&#10;Opening talk on particle art</description>
-		<image>img/projects/exhibeclbw.jpg</image>
+		<image>/img/projects/exhibeclbw.jpg</image>
 		<link>https://bibli.ec-lyon.fr/actualites/2018/exposition-alex-andrix-deambulatoire</link>
 		<themes>artistic</themes>
 	</project>
@@ -206,7 +206,7 @@
 	<project>
 		<title>Labomobile #1</title>
 		<description>3-day workshop with a mixed team of comedians, dancers and digital artists&#10;Exploring the concept of identity on stage&#10;Directed by Arnaud Chevalier</description>
-		<image>img/projects/labomobile.jpg</image>
+		<image>/img/projects/labomobile.jpg</image>
 		<link>https://vimeo.com/307727440</link>
 		<themes>artistic</themes>
 	</project>
@@ -214,7 +214,7 @@
 	<project>
 		<title>Rayville</title>
 		<description>Some bits of a Joomla! website for a small tourism business in Melbourne surburbs</description>
-		<image>img/projects/rayville.jpg</image>
+		<image>/img/projects/rayville.jpg</image>
 		<link>../rayville/rayville-villas</link>
 		<themes>web</themes>
 	</project>
@@ -222,7 +222,7 @@
 	<project>
 		<title>Course in HCI - KTH</title>
 		<description>Web apps for mobiles&#10;Google Maps API, RSS reader, PubNub, Geohashing</description>
-		<image>img/projects/mobwebdev.png</image>
+		<image>/img/projects/mobwebdev.png</image>
 		<link>../mobwebdev</link>
 		<themes></themes>
 	</project>
@@ -230,7 +230,7 @@
 	<project>
 		<title>Brainuke</title>
 		<description>Rehearse your ukulele chords before performing!&#10;Angular app for KTH course Interaction Programming&#10;4 students</description>
-		<image>img/projects/brainuke.jpg</image>
+		<image>/img/projects/brainuke.jpg</image>
 		<link>../brainuke</link>
 		<themes>web</themes>
 	</project>
@@ -238,7 +238,7 @@
 	<project>
 		<title>Brainuke old</title>
 		<description>Aaaand the simplistic version that inspired the Angular project</description>
-		<image>img/projects/brainukeold.jpg</image>
+		<image>/img/projects/brainukeold.jpg</image>
 		<link>../brainuke/old</link>
 		<themes>web</themes>
 	</project>
@@ -246,7 +246,7 @@
 	<project>
 		<title>Chef</title>
 		<description>Cooking like a boss (for Firefox)</description>
-		<image>img/projects/chef.jpg</image>
+		<image>/img/projects/chef.jpg</image>
 		<link>../chef</link>
 		<themes>web</themes>
 	</project>
@@ -254,7 +254,7 @@
 	<project>
 		<title>Userainbow</title>
 		<description>Drupal module for designs based on site visitors count</description>
-		<image>img/projects/drup.jpg</image>
+		<image>/img/projects/drup.jpg</image>
 		<link>../drup</link>
 		<themes></themes>
 	</project>
@@ -270,7 +270,7 @@
 	<project>
 		<title>UScontrol</title>
 		<description>My first JavaScript game at school :')&#10;Broken back-end though</description>
-		<image>img/projects/uscontrol.jpg</image>
+		<image>/img/projects/uscontrol.jpg</image>
 		<link>../uscontrol</link>
 		<themes></themes>
 	</project>
@@ -278,7 +278,7 @@
 	<project>
 		<title>Breathe</title>
 		<description>Calm down and keep pace</description>
-		<image>img/projects/breathe.jpg</image>
+		<image>/img/projects/breathe.jpg</image>
 		<link>../breathe</link>
 		<themes></themes>
 	</project>
@@ -286,7 +286,7 @@
 	<project>
 		<title>Cat</title>
 		<description>Cats and gravity O_O</description>
-		<image>img/projects/cat.jpg</image>
+		<image>/img/projects/cat.jpg</image>
 		<link>../cat</link>
 		<themes></themes>
 	</project>
@@ -302,7 +302,7 @@
 	<project>
 		<title>wtfCSS</title>
 		<description>Some happy translucid divs</description>
-		<image>img/projects/wtfCSS.jpg</image>
+		<image>/img/projects/wtfCSS.jpg</image>
 		<link>../wtfCSS/amonistar</link>
 		<themes></themes>
 	</project>
@@ -310,7 +310,7 @@
 	<project>
 		<title>Army</title>
 		<description>6-months internship in the French Army as an officer&#10;UI for the photos</description>
-		<image>img/projects/army.jpg</image>
+		<image>/img/projects/army.jpg</image>
 		<link>../army</link>
 		<themes></themes>
 	</project>
