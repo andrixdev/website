@@ -288,12 +288,12 @@ Gallery.adjustFrontImageSize = () => {
 	document.querySelector("#front-artwork img.fullone").style.marginTop = "calc(50vh - " + h/2 + "px)"
 }
 Gallery.showFront = () => {
-	document.getElementById('front').classList.remove('hidden')
+	document.getElementById("front").classList.remove('hidden')
 	document.querySelector("body").classList.add('frozen')
 	Gallery.isFrontVisible = true
 }
-Gallery.hideFront = function () {
-	document.getElementById('front').classList.add('hidden')
+Gallery.hideFront = () => {
+	document.getElementById("front").classList.add('hidden')
 	document.querySelector("body").classList.remove('frozen')
 	Gallery.isFrontVisible = false
 }
