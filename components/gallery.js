@@ -7,7 +7,7 @@ let Gallery = {
 	currentImageObject: undefined,
 	isFrontVisible: false,
 	timeout: undefined,
-	extraCostsEUR: 50,
+	extraCostsEUR: 150,
 	mobileBreakpointPX: 550
 }
 Gallery.loadArtworks = (extraCallback) => {
@@ -243,16 +243,19 @@ Gallery.fillFront = (id) => {
 
 	// Descriptions
 	document.querySelector('#front-artwork .details .description h3.title').innerHTML = aw.title
+	let fullPrice = aw.rawprice - (-Gallery.extraCostsEUR)
 	let txt = ""
 	txt += (aw.short.length ? aw.short + "<br/><br/>" : "")
 	txt += (aw.extratext.length ? aw.extratext + "<br/>" : "")
-	txt += "<span>" + (aw.rawprice - (-Gallery.extraCostsEUR)) + " euros</span>"
+	txt += "<span>" + fullPrice + " euros</span>"
 	document.querySelector('#front-artwork .details .description p.text').innerHTML = txt
 
 	// Purchase information
 	document.querySelectorAll(".artwork-name").forEach(el => el.innerHTML = aw.title)
 	document.querySelector(".artwork-dimensions").innerHTML = aw.dimensions
 	document.querySelector("#artwork-description").innerHTML = (aw.description.length ? "Description:<br/><strong>" + aw.description + "<strong><br/><br/>" : "")
+	document.querySelector("#artwork-full-price").innerHTML = fullPrice
+	document.querySelector("#artwork-extra-price").innerHTML = Gallery.extraCostsEUR
 	document.querySelector("#artwork-contact").onclick = function () {
 		let hrefString = ""
 		hrefString += decryptString("nbjmup+bmfyAbmfyboesjy/dpn", -1)
