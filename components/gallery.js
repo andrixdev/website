@@ -7,7 +7,6 @@ let Gallery = {
 	currentImageObject: undefined,
 	isFrontVisible: false,
 	timeout: undefined,
-	extraCostsEUR: 150,
 	mobileBreakpointPX: 550
 }
 Gallery.loadArtworks = (extraCallback) => {
@@ -28,7 +27,8 @@ Gallery.loadArtworks = (extraCallback) => {
 				short: el.querySelector("short").innerHTML,
 				dimensions: el.querySelector("dimensions").innerHTML,
 				extratext: el.querySelector("extratext").innerHTML,
-				rawprice: el.querySelector("rawprice").innerHTML
+				rawprice: el.querySelector("rawprice").innerHTML,
+				extraprice: el.querySelector("extraprice").innerHTML
 			}
 			Gallery.artworksData.push(aw)
 		})	
@@ -243,7 +243,7 @@ Gallery.fillFront = (id) => {
 
 	// Descriptions
 	document.querySelector('#front-artwork .details .description h3.title').innerHTML = aw.title
-	let fullPrice = aw.rawprice - (-Gallery.extraCostsEUR)
+	let fullPrice = aw.rawprice - (-aw.extraprice)
 	let txt = ""
 	txt += (aw.short.length ? aw.short + "<br/><br/>" : "")
 	txt += (aw.extratext.length ? aw.extratext + "<br/>" : "")
@@ -255,7 +255,7 @@ Gallery.fillFront = (id) => {
 	document.querySelector(".artwork-dimensions").innerHTML = aw.dimensions
 	document.querySelector("#artwork-description").innerHTML = (aw.description.length ? "Description:<br/><strong>" + aw.description + "<strong><br/><br/>" : "")
 	document.querySelector("#artwork-full-price").innerHTML = fullPrice
-	document.querySelector("#artwork-extra-price").innerHTML = Gallery.extraCostsEUR
+	document.querySelector("#artwork-extra-price").innerHTML = aw.extraprice
 	document.querySelector("#artwork-contact").onclick = function () {
 		let hrefString = ""
 		hrefString += decryptString("nbjmup+bmfyAbmfyboesjy/dpn", -1)

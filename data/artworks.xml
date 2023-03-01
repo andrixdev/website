@@ -2,6 +2,7 @@
 <artworks>
 	<!-- Personal note: be very careful with the characters &, ", ' and others that might crash the XML parsing -->
 
+	<!-- Current extraprice policy based on min print dimensions: A0->250€ A1->200€ A2->150€ A3->100€ A4->50€ -->
 	<artwork>
 		<title>Offset</title>
 		<id>2018-9</id>
@@ -13,6 +14,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>380</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 	<artwork>
 		<title>The Momentum Parade</title>
@@ -25,6 +27,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>380</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 	<artwork>
 		<title>Waltz of the Binary Star</title>
@@ -37,6 +40,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>520</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 	<artwork>
 		<title>Laplacian Sunrise</title>
@@ -49,6 +53,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>520</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 	<artwork>
 		<title>Drift Eye</title>
@@ -61,6 +66,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>380</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 	<artwork>
 		<title>The Lagrangian Exploration Module</title>
@@ -73,6 +79,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>380</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 	<artwork>
 		<title>Rupture</title>
@@ -85,6 +92,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>380</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 	<artwork>
 		<title>Magnetosphere 210</title>
@@ -97,6 +105,7 @@
 		<dimensions>8939px x 12638px - A0 841mm x 1189mm min. (270ppi)</dimensions>
 		<extratext>Limited edition / 8 copies</extratext>
 		<rawprice>380</rawprice>
+		<extraprice>250</extraprice>
 	</artwork>
 
 	<artwork>
@@ -110,6 +119,7 @@
 		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
 		<extratext>Limited edition / 7 copies</extratext>
 		<rawprice>400</rawprice>
+		<extraprice>200</extraprice>
 	</artwork>
 
 	<artwork>
@@ -123,6 +133,7 @@
 		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
 		<extratext>Limited edition / 7 copies</extratext>
 		<rawprice>400</rawprice>
+		<extraprice>200</extraprice>
 	</artwork>
 
 	<artwork>
@@ -136,6 +147,7 @@
 		<dimensions>6257px x 9031px - A3 297mm x 420mm min. (535ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>110</rawprice>
+		<extraprice>100</extraprice>
 	</artwork>
 
 	<artwork>
@@ -149,6 +161,7 @@
 		<dimensions>8939px x 12638px - A3 297mm x 420mm min. (764ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>150</rawprice>
+		<extraprice>100</extraprice>
 	</artwork>
 
 	<artwork>
@@ -162,6 +175,7 @@
 		<dimensions>8939px x 12638px - A2 420mm x 594mm min. (541ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>180</rawprice>
+		<extraprice>150</extraprice>
 	</artwork>
 
 	<artwork>
@@ -175,6 +189,7 @@
 		<dimensions>1986px x 2808px - A4 210mm x 297mm min. (240ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>100</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -188,6 +203,7 @@
 		<dimensions>8939px x 12638px - A1 594mm x 841mm min. (382ppi)</dimensions>
 		<extratext>Limited edition / 11 copies</extratext>
 		<rawprice>400</rawprice>
+		<extraprice>200</extraprice>
 	</artwork>
 
 	<artwork>
@@ -201,6 +217,7 @@
 		<dimensions>1256px x 641px - 443mm x 226mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>90</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 	<artwork>
 		<title>Rhodo</title>
@@ -213,6 +230,7 @@
 		<dimensions>1788px x 956px - 631mm x 337mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>140</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -226,6 +244,7 @@
 		<dimensions>1236px x 623px - 436mm x 220mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>90</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -239,6 +258,7 @@
 		<dimensions>1711px x 855px - 604mm x 302mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>150</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 	<artwork>
 		<title>Gravitational Dodge</title>
@@ -251,6 +271,7 @@
 		<dimensions>1773px x 912px - 625mm x 322mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>150</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 	<artwork>
 		<title>Flight</title>
@@ -263,6 +284,7 @@
 		<dimensions>1501px x 900px - 530mm x 318mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>150</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 	
 	<artwork>
@@ -276,6 +298,7 @@
 		<dimensions>1901px x 1295px - 671mm x 457mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>150</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 	
 	<artwork>
@@ -289,6 +312,7 @@
 		<dimensions>1332px x 940px - 241mm x 171mm max. (140ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>150</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -302,6 +326,7 @@
 		<dimensions>1192px x 555px - 421mm x 196mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>110</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 	
 	<artwork>
@@ -315,6 +340,7 @@
 		<dimensions>927px x 655px - 327mm x 231mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>180</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -328,6 +354,7 @@
 		<dimensions>1117px x 625px - 394mm x 220mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>110</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -341,6 +368,7 @@
 		<dimensions>2007px x 1113px - 708mm x 393mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>100</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -354,6 +382,7 @@
 		<dimensions>1642px x 832px - 579mm x 294mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>90</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<artwork>
@@ -367,6 +396,7 @@
 		<dimensions>2309px x 1404px - 815mm x 495mm max. (72ppi)</dimensions>
 		<extratext></extratext>
 		<rawprice>90</rawprice>
+		<extraprice>50</extraprice>
 	</artwork>
 
 	<!--<artwork>
