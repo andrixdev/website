@@ -105,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	    console.log("Navigating from " + from.fullPath + " to " + to.fullPath)
 
         // Going to Gallery or coming from it
-	    //if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) {
+	    //if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) { }
         // Going to Gallery
-        //if (to.fullPath.indexOf('gallery') > -1) {
-		    //Gallery.update()
-	    //}
+        if (to.fullPath.indexOf('gallery') > -1) {
+		    Gallery.updateFront()
+	    }
 
         next()
     })
