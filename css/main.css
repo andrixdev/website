@@ -741,6 +741,7 @@ img.blob {
   background: hsl(200, 50%, 25%);
   animation: color-loading 700ms infinite alternate;
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-dna23 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ynov-gendes img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-nan-artworks img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds-ens-2022 img,
