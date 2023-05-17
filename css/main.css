@@ -1262,6 +1262,13 @@ img.blob {
 #web-dataviz .load-student-misc-projects.hidden {
   display: none;
 }
+#web-dataviz .showmore-toggle-bar {
+  display: none;
+}
+#vp-extras,
+#kinexperience {
+  display: none;
+}
 #about .statement-page-content {
   background: black;
 }
