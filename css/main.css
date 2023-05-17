@@ -1213,7 +1213,8 @@ img.blob {
   font-style: italic;
 }
 #cc .cc-main-img {
-  max-width: 100%;
+  width: 380px;
+  min-width: 380px;
   max-height: 280px;
   margin: 10px 30px;
 }
