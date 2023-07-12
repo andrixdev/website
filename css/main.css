@@ -1214,7 +1214,8 @@ img.blob {
   font-size: 0.6rem;
   font-style: italic;
 }
-#cc .cc-main-img {
+#cc .main-img,
+#games .main-img {
   width: 380px;
   min-width: 380px;
   max-height: 280px;
