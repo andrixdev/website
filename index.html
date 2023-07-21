@@ -2817,8 +2817,7 @@
 
 <div id="alexandrix-website">
 	<div class="header"
-		 v-bind:class="{ 'mobile-menu-open': isOpen }"
-		 v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
+		 v-bind:class="{ 'mobile-menu-open': isOpen }">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
 				<img src="/img/website/triangoffset2021.svg" />
@@ -2857,7 +2856,7 @@
 		</nav>
 	</div>
 
-	<div id="core" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'">
+	<div id="core">
 		<router-view>
 			<div class="loader">
 				<div class="loader-animation">
@@ -2868,7 +2867,7 @@
 		</router-view>
 	</div>
 
-	<div class="footer click-and-hue" v-bind:style="'filter: hue-rotate(' +  hueAngle + 'deg) saturate(' + saturation + '%);'" v-on:click="rotateLeHue()">
+	<div class="footer click-and-hue" v-on:click="rotateLeHue()">
 		<div class="flexrow flexcenter flexchildrenend" >
 			<img class="footer-logo" src="/img/website/triango2021.svg" />
 			<p class="copyright">

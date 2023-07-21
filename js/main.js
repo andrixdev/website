@@ -117,14 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let app = new Vue({
         router: Global.router,
         el: '#alexandrix-website',
-        data: {
-            isOpen: false,
-            hueAngle: 0,
-            saturation: 100
+        data: function () {
+            return {
+                isOpen: false
+            }
         },
         methods: {
             rotateLeHue: () => {
-                this.hueAngle = Math.round(360 * Math.random())
+                let hue = Math.round(360 * Math.random())
+                document.getElementsByTagName('body')[0].style.filter = 'hue-rotate(' + hue + 'deg)'
+                
             }
         },
 		mounted: () => {
