@@ -9,9 +9,14 @@
 	top: 0;
 	left: 0;
 	z-index: 1;
+	transition: top 150ms;
 
 	&.mobile-menu-open {
 		height: auto;
+	}
+
+	&.docked {
+		top: -60px;
 	}
 
 	.logo {

@@ -609,9 +609,13 @@ img.blob {
   top: 0;
   left: 0;
   z-index: 1;
+  transition: top 150ms;
 }
 .header.mobile-menu-open {
   height: auto;
+}
+.header.docked {
+  top: -60px;
 }
 .header .logo {
   width: 70px;

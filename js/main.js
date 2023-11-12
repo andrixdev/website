@@ -134,4 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
     })
 
+    // Dock-up menu on scroll down
+    let lastScrollY = window.scrollY
+    let header = document.getElementsByClassName('header')[0]
+    document.addEventListener('scroll', (ev) => {
+        header.classList.toggle('docked', window.scrollY > 60 && window.scrollY > lastScrollY)
+        lastScrollY = window.scrollY
+    })
+
 })
