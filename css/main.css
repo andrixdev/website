@@ -748,7 +748,7 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks {
   text-align: center;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
@@ -766,7 +766,7 @@ img.blob {
 }
 @media (max-width: 991px) {
   #home .home-whatsnew .whatsnew-content .news-blocks .news-block {
-    margin: 25px 10px;
+    margin: 25px 15px;
   }
 }
 @media (max-width: 767px) {
@@ -774,47 +774,39 @@ img.blob {
     padding: 15px;
   }
 }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block p.article-date {
+  position: absolute;
+  left: -50px;
+  bottom: 31px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.2);
+  transform: rotate(-90deg);
+}
+@media (max-width: 767px) {
+  #home .home-whatsnew .whatsnew-content .news-blocks .news-block p.article-date {
+    transform: none;
+    left: 0;
+    right: 0;
+    bottom: -18px;
+  }
+}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block img {
   min-width: 50px;
   min-height: 50px;
   background: hsl(200, 50%, 25%);
   animation: color-loading 700ms infinite alternate;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-confim-1-wip img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ls2n-seminar img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-dna23 img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ynov-gendes img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-nan-artworks img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds-ens-2022 img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-nan-skylab img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-sisyphe img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdlkv-attractors img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-conflu img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-2 img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-music img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-wip img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp-website img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-tvgre img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-mea-wip img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-digital-arts-camp img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-end img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-technicarticle img {
-  width: 350px;
   max-width: 100%;
+  width: 350px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds-23 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gw190814-article img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-share-my-space-calm-mtos img {
   width: 450px;
-  max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fopti img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds21 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-f1a img {
   width: 550px;
-  max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
   margin: 0.3em 0;
@@ -831,26 +823,18 @@ img.blob {
   animation: none;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gamdif1 img {
-  max-width: 100%;
   width: 750px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-sharing p.vp2-sharing-list {
   font-size: 0.85em;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-sharing img {
-  max-width: 100%;
   width: 550px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-m2-gallery img {
-  max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-dame-recherche img {
   width: 180px;
   margin: 10px;
   flex-grow: 1;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-subs img {
-  max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-subs img.img-1 {
   max-height: 200px;
@@ -866,23 +850,18 @@ img.blob {
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-subs .friend-logos img {
   max-height: 100px;
   margin: 20px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-djerba-article-1 img {
-  width: 350px;
-  max-width: 100%;
+  width: auto;
+  background: transparent !important;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-start img {
   max-height: 220px;
-  max-width: 100%;
   margin: 10px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-kinexp img {
   max-height: 220px;
-  max-width: 100%;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ecl-vr img {
   height: 200px;
-  max-width: 100%;
   margin: 10px;
 }
 @media (max-width: 767px) {
@@ -897,10 +876,6 @@ img.blob {
     height: auto;
   }
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ecl-exhib img {
-  width: 400px;
-  max-width: 100%;
-}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ecl-exhib .button-container {
   padding-top: 20px;
 }
@@ -909,25 +884,12 @@ img.blob {
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-exhib .varphy-spoiler {
   margin-bottom: 10px;
-  /*
-							@media (max-width: 500px) {
-								.flexcol();
-							}*/
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-exhib .varphy-spoiler img {
   width: 180px;
   margin: 10px;
   border: #222 1px solid;
   flex-grow: 1;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block p.article-date {
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
-  bottom: -20px;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.3);
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block button.acidbutton {
   margin-bottom: 0;

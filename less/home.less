@@ -9,7 +9,7 @@
 
 			.news-blocks {
 				.center();
-				.flexrow();
+				.flexcol();
 				.flexwrap();
 				.flexcenter();
 
@@ -23,41 +23,33 @@
 					}
 
 					@media (max-width: @sm-md) {
-						margin: 25px 10px;
+						margin: 25px 15px;
 					}
 					@media (max-width: @xs-sm) {
 						padding: 15px;
 					}
 
+					p.article-date {
+						position: absolute;
+						left: -50px;
+						bottom: 31px;
+						font-size: 0.7rem;
+						color: rgba(255, 255, 255, 0.2);
+						transform: rotate(-90deg);
+
+						@media (max-width: @xs-sm) {
+							transform: none;
+							left: 0;
+							right: 0;
+							bottom: -18px;
+						}
+					}
+					
+
 					img {
 						.img-placeholder();
-					}
-
-					&.news-confim-1-wip,
-					&.news-ls2n-seminar,
-					&.news-dna23,
-					&.news-ynov-gendes,
-					&.news-nan-artworks,
-					&.news-fds-ens-2022,
-					&.news-nan-skylab,
-					&.news-sisyphe,
-					&.news-gdlkv-attractors,
-					&.news-gdchels,
-					&.news-vp-conflu,
-					&.news-portraits-2,
-					&.news-vp2-music,
-					&.news-vp2-wip,
-					&.news-vp-website,
-					&.news-varphy-tvgre,
-					&.news-mea-wip,
-					&.news-m2-gallery,
-					&.news-digital-arts-camp,
-					&.news-portraits-1-end,
-					&.news-technicarticle {
-						img {
-							width: 350px;
-							max-width: 100%;
-						}
+						max-width: 100%;
+						width: 350px;
 					}
 
 					&.news-fds-23,
@@ -65,7 +57,6 @@
 					&.news-share-my-space-calm-mtos {
 						img {
 							width: 450px;
-							max-width: 100%;
 						}
 					}
 					&.news-fopti,
@@ -73,7 +64,6 @@
 					&.news-f1a {
 						img {
 							width: 550px;
-							max-width: 100%;
 						}
 					}
 					&.news-feb-2021 {
@@ -96,7 +86,6 @@
 					}
 					&.news-gamdif1 {
 						img {
-							max-width: 100%;
 							width: 750px;
 						}
 					}
@@ -105,13 +94,7 @@
 							font-size: .85em;
 						}
 						img {
-							max-width: 100%;
 							width: 550px;
-						}
-					}
-					&.news-m2-gallery {
-						img {
-							max-width: 100%;
 						}
 					}
 					&.news-dame-recherche {
@@ -122,9 +105,6 @@
 						}
 					}
 					&.news-varphy-subs {
-						img {
-							max-width: 100%;
-						}
 						img.img-1 {
 							max-height: 200px;
 						}
@@ -136,32 +116,25 @@
 							img {
 								max-height: 100px;
 								margin: 20px;
+								width: auto;
+								background: transparent !important;
 							}
-						}
-					}
-					&.news-djerba-article-1 {
-						img {
-							width: 350px;
-							max-width: 100%;
 						}
 					}
 					&.news-portraits-1-start {
 						img {
 							max-height: 220px;
-							max-width: 100%;
 							margin: 10px;
 						}
 					}
 					&.news-kinexp {
 						img {
 							max-height: 220px;
-							max-width: 100%;
 						}
 					}
 					&.news-ecl-vr {
 						img {
 							height: 200px;
-							max-width: 100%;
 							margin: 10px;
 						}
 						@media (max-width: @xs-sm) {
@@ -173,10 +146,6 @@
 						}
 					}
 					&.news-ecl-exhib {
-						img {
-							width: 400px;
-							max-width: 100%;
-						}
 						.button-container {
 							padding-top: 20px;
 						}
@@ -195,21 +164,8 @@
 								border: #222 1px solid;
 								flex-grow: 1;
 
-							}/*
-							@media (max-width: 500px) {
-								.flexcol();
-							}*/
+							}
 						}
-					}
-
-					p.article-date {
-						position: absolute;
-						left: 0;
-						right: 0;
-						.center();
-						bottom: -20px;
-						font-size: .7rem;
-						color: rgba(255, 255, 255, 0.3);
 					}
 
 					button.acidbutton {
