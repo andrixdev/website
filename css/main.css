@@ -798,7 +798,6 @@ img.blob {
   max-width: 100%;
   width: 350px;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds-23 img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gw190814-article img,
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-share-my-space-calm-mtos img {
   width: 450px;
@@ -851,17 +850,16 @@ img.blob {
   max-height: 100px;
   margin: 20px;
   width: auto;
-  background: transparent !important;
+  background: transparent;
+  animation: none;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-start img {
-  max-height: 220px;
   margin: 10px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-kinexp img {
   max-height: 220px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ecl-vr img {
-  height: 200px;
   margin: 10px;
 }
 @media (max-width: 767px) {
