@@ -1351,6 +1351,20 @@ img.blob {
 #contact .page-content p {
   font-size: 1.4rem;
 }
+#contact .page-content #nope,
+#contact .page-content #yes,
+#contact .page-content #consumption {
+  font-size: 1rem;
+}
+#contact .page-content #nope {
+  color: hsl(5, 50%, 50%);
+}
+#contact .page-content #yes {
+  color: hsl(160, 50%, 50%);
+}
+#contact .page-content #consumption {
+  color: hsl(55, 50%, 50%);
+}
 #not-found {
   display: flex;
   flex-flow: column nowrap;

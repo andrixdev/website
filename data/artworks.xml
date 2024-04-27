@@ -412,6 +412,20 @@
 		<rawprice>90</rawprice>
 		<extraprice>50</extraprice>
 	</artwork>
+	
+	<artwork>
+		<title>Digital Embrace</title>
+		<id>2024-1</id>
+		<date>Feb. 2024</date>
+		<src>artworks/digital-embrace.png</src>
+		<small>artworks/digital-embrace-small.jpg</small>
+		<description>Animal testing for digital entertainment and beauty of science</description>
+		<short>Animal testing for digital entertainment and beauty of science</short>
+		<dimensions>967px x 967px - 341mm x 341mm max. (72ppi) / higher dimensions upon request</dimensions>
+		<extratext></extratext>
+		<rawprice>850</rawprice>
+		<extraprice>100</extraprice>
+	</artwork>
 
 	<!--<artwork>
 		<title>Prix Jeune Chercheur 2019</title>
