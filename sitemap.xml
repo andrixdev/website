@@ -12,22 +12,22 @@
 	</url>
 	<url>
 		<loc>https://alexandrix.com/gallery</loc>
-		<lastmod>2023-07-23T00:00:00+00:00</lastmod>
+		<lastmod>2024-04-27T00:00:00+00:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://alexandrix.com/more</loc>
-		<lastmod>2024-02-20T00:00:00+00:00</lastmod>
+		<lastmod>2024-04-27T00:00:00+00:00</lastmod>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>https://alexandrix.com/about</loc>
-		<lastmod>2023-02-08T00:00:00+00:00</lastmod>
+		<lastmod>2024-01-01T00:00:00+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://alexandrix.com/contact</loc>
-		<lastmod>2023-02-08T00:00:00+00:00</lastmod>
-		<priority>0.50</priority>
+		<lastmod>2024-04-27T00:00:00+00:00</lastmod>
+		<priority>0.60</priority>
 	</url>
 </urlset>
