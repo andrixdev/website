@@ -1,5 +1,25 @@
 #home {
 
+	.home-upcoming-events {
+		background: @blue-05;
+		padding: 10px;
+
+		p {
+			margin: .3em 0;
+		}
+		span.dot {
+			content: ' ';
+			display: inline-block;
+			background: @mid-grey;
+			height: 10px;
+			width: 10px;
+			border-radius: 50%;
+			margin-right: .3em;
+		}
+		span.reddot {
+			animation: reddot 1.5s alternate infinite linear;
+		}
+	}
 	.home-whatsnew {
 		.whatsnew-content {
 			padding: 10px 15px 30px;
@@ -179,4 +199,12 @@
 		}
 	}
 
+}
+@keyframes reddot {
+	from {
+		background: red;
+	}
+	to {
+		background: transparent;
+	}
 }
