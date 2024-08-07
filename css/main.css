@@ -1287,6 +1287,13 @@ img.blob {
     margin-top: 5px;
   }
 }
+#web-dataviz .project-tile p.legal {
+  font-size: 0.6rem;
+  margin: 1rem 0;
+  font-style: italic;
+  opacity: 0.5;
+  text-align: justify;
+}
 #web-dataviz .student-misc-projects.hidden,
 #web-dataviz .load-hum-projects.hidden,
 #web-dataviz .hum-projects.hidden,
