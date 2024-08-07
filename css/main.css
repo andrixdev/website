@@ -1171,14 +1171,6 @@ img.blob {
   justify-content: center;
   padding: 10px 10px;
 }
-#blog .meh img,
-#vimeo .meh img,
-#guy-teube .meh img,
-#talks .meh img {
-  max-width: 100%;
-  max-height: 280px;
-  margin: 20px 30px;
-}
 @media (max-width: 980px) {
   #blog .meh,
   #vimeo .meh,
@@ -1187,6 +1179,14 @@ img.blob {
     flex-wrap: wrap;
     text-align: center;
   }
+}
+#blog .meh img,
+#vimeo .meh img,
+#guy-teube .meh img,
+#talks .meh img {
+  max-width: 100%;
+  max-height: 280px;
+  margin: 20px 30px;
 }
 #vp-extras .project-tile {
   padding: 20px;
@@ -1201,15 +1201,19 @@ img.blob {
 }
 #vjing .vjimg > * {
   margin: 10px;
+  max-width: 100%;
 }
 #vjing .vjimg img {
-  height: 220px;
+  max-width: 100%;
   border-radius: 2px;
   border: solid 1px rgba(100, 100, 100, 0.7);
   min-width: 50px;
   min-height: 50px;
   background: hsl(200, 50%, 25%);
   animation: color-loading 700ms infinite alternate;
+}
+#vjing .vjimg img.w-420 {
+  width: 420px;
 }
 #kinexperience .kinexp-snapshots img {
   height: 150px;
@@ -1219,14 +1223,14 @@ img.blob {
   max-width: 90%;
 }
 #ownership .ownership-block {
-  margin: 10px;
-  max-width: 250px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
   /* Centers child elements */
   justify-content: center;
+  margin: 10px;
+  max-width: 250px;
 }
 #ownership .ownership-block img {
   max-height: 80px;
@@ -1287,6 +1291,9 @@ img.blob {
   }
   #web-dataviz .project-tile .right-side h4 {
     margin-top: 5px;
+  }
+  #web-dataviz .project-tile .right-side p.legal {
+    text-align: center;
   }
 }
 #web-dataviz .project-tile p.legal {
