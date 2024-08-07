@@ -1199,8 +1199,10 @@ img.blob {
 #vp-extras p {
   text-align: center;
 }
+#vjing .vjimg > * {
+  margin: 10px;
+}
 #vjing .vjimg img {
-  margin: 5px;
   height: 220px;
   border-radius: 2px;
   border: solid 1px rgba(100, 100, 100, 0.7);
