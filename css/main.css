@@ -1322,13 +1322,14 @@ img.blob {
 #about .statement {
   padding-bottom: 1rem;
 }
-#about .statement .blop {
-  margin-top: 50vh;
-}
 #about .statement .statement-core p {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 300;
+}
+#about .statement img#tilted-square-frame {
+  width: 400px;
+  max-width: 88%;
 }
 #about .about-events .events-content {
   padding: 20px 30px 50px;
