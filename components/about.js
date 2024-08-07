@@ -56,11 +56,17 @@ var AboutComponent = {
                     newArrays[i] = textArrays[i].slice(0)
                 })
             })
+        },
+        randomizeFrameOrientation: function () {
+            if (Math.random() < 0.5) {
+                document.querySelector("img#tilted-square-frame").classList += "tilt-even-more"
+            }
         }
     },
     mounted: function () {
 
         this.activateBioQuanticGlitch()
+        this.randomizeFrameOrientation()
 
         // Show past events
         document.querySelector(".load-past-events").addEventListener('click', () => {

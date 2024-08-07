@@ -1331,6 +1331,9 @@ img.blob {
   width: 400px;
   max-width: 88%;
 }
+#about .statement img#tilted-square-frame.tilt-even-more {
+  transform: rotate(45deg);
+}
 #about .about-events .events-content {
   padding: 20px 30px 50px;
 }
