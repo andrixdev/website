@@ -776,23 +776,16 @@ img.blob {
   justify-content: center;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block {
-  margin: 30px;
+  margin: 30px 0;
   background: rgba(255, 255, 255, 0.04);
-  padding: 25px;
+  padding: 25px 0;
   position: relative;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.hidden {
   display: none;
 }
-@media (max-width: 991px) {
-  #home .home-whatsnew .whatsnew-content .news-blocks .news-block {
-    margin: 25px 15px;
-  }
-}
-@media (max-width: 767px) {
-  #home .home-whatsnew .whatsnew-content .news-blocks .news-block {
-    padding: 15px;
-  }
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block p {
+  padding: 0 1em;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block p.article-date {
   position: absolute;
@@ -801,6 +794,7 @@ img.blob {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.2);
   transform: rotate(-90deg);
+  padding: 0;
 }
 @media (max-width: 767px) {
   #home .home-whatsnew .whatsnew-content .news-blocks .news-block p.article-date {
@@ -816,16 +810,10 @@ img.blob {
   background: hsl(200, 50%, 25%);
   animation: color-loading 700ms infinite alternate;
   max-width: 100%;
-  width: 350px;
+  width: 650px;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gw190814-article img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-share-my-space-calm-mtos img {
-  width: 450px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fopti img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-fds21 img,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-f1a img {
-  width: 550px;
+#home .home-whatsnew .whatsnew-content .news-blocks .news-block.ends-with-image img {
+  margin-bottom: -30px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-feb-2021 img {
   margin: 0.3em 0;
@@ -833,30 +821,17 @@ img.blob {
   background: transparent;
   animation: none;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-turbulence-pop,
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gretsi {
-  max-width: 500px;
-}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gdchels img {
   background-color: white;
   animation: none;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-gamdif1 img {
-  width: 750px;
-}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-sharing p.vp2-sharing-list {
   font-size: 0.85em;
 }
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-vp2-sharing img {
-  width: 550px;
-}
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-dame-recherche img {
-  width: 180px;
+  width: 250px;
   margin: 10px;
   flex-grow: 1;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-subs img.img-1 {
-  max-height: 200px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-subs .friend-logos {
   padding-top: 10px;
@@ -875,9 +850,6 @@ img.blob {
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-portraits-1-start img {
   margin: 10px;
-}
-#home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-kinexp img {
-  max-height: 220px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-ecl-vr img {
   margin: 10px;
@@ -904,7 +876,7 @@ img.blob {
   margin-bottom: 10px;
 }
 #home .home-whatsnew .whatsnew-content .news-blocks .news-block.news-varphy-exhib .varphy-spoiler img {
-  width: 180px;
+  width: 200px;
   margin: 10px;
   border: #222 1px solid;
   flex-grow: 1;

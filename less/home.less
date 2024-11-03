@@ -34,19 +34,17 @@
 				.flexcenter();
 
 				.news-block {
-					margin: 30px;
+					margin: 30px 0;
 					background: rgba(255, 255, 255, 0.04);
-					padding: 25px;
+					padding: 25px 0;
 					position: relative;
+
 					&.hidden {
 						display: none;
 					}
 
-					@media (max-width: @sm-md) {
-						margin: 25px 15px;
-					}
-					@media (max-width: @xs-sm) {
-						padding: 15px;
+					p {
+						padding: 0 1em;
 					}
 
 					p.article-date {
@@ -56,6 +54,7 @@
 						font-size: 0.7rem;
 						color: rgba(255, 255, 255, 0.2);
 						transform: rotate(-90deg);
+						padding: 0;
 
 						@media (max-width: @xs-sm) {
 							transform: none;
@@ -65,26 +64,16 @@
 						}
 					}
 					
-
 					img {
 						.img-placeholder();
 						max-width: 100%;
-						width: 350px;
+						width: 650px;
 					}
 
-					&.news-gw190814-article,
-					&.news-share-my-space-calm-mtos {
-						img {
-							width: 450px;
-						}
+					&.ends-with-image img {
+						margin-bottom: -30px;
 					}
-					&.news-fopti,
-					&.news-fds21,
-					&.news-f1a {
-						img {
-							width: 550px;
-						}
-					}
+
 					&.news-feb-2021 {
 						img {
 							margin: 0.3em 0;
@@ -93,40 +82,25 @@
 							animation: none;
 						}
 					}
-					&.news-turbulence-pop,
-					&.news-gretsi {
-						max-width: 500px;
-					}
 					&.news-gdchels {
 						img {
 							background-color: white;
 							animation: none;
 						}
 					}
-					&.news-gamdif1 {
-						img {
-							width: 750px;
-						}
-					}
 					&.news-vp2-sharing {
 						p.vp2-sharing-list {
 							font-size: .85em;
 						}
-						img {
-							width: 550px;
-						}
 					}
 					&.news-dame-recherche {
 						img {
-							width: 180px;
+							width: 250px;
 							margin: 10px;
 							flex-grow: 1;
 						}
 					}
 					&.news-varphy-subs {
-						img.img-1 {
-							max-height: 200px;
-						}
 						.friend-logos {
 							padding-top: 10px;
 							.flexrow();
@@ -144,11 +118,6 @@
 					&.news-portraits-1-start {
 						img {
 							margin: 10px;
-						}
-					}
-					&.news-kinexp {
-						img {
-							max-height: 220px;
 						}
 					}
 					&.news-ecl-vr {
@@ -178,7 +147,7 @@
 							margin-bottom: 10px;
 							
 							img {
-								width: 180px;
+								width: 200px;
 								margin: 10px;
 								border: #222 1px solid;
 								flex-grow: 1;
