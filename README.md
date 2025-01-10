@@ -10,7 +10,11 @@ Website for alexandrix.com, initially icosacid.com
 * Open your favorite browser and navigate to **127.0.0.1:8080** or **localhost:8080**
 * Enjoy
 
-# Compiling LESS into CSS
+# Compiling LESS into CSS with Visual Studio Code
+* Install the Easy LESS extension (by mrcrowl)
+* All .less files are automatically compiled to CSS on file save
+
+# Compiling LESS into CSS without Visual Studio Code
 * Install the LESS preprocessor (http://lesscss.org/usage/)
 * Run **lessc less/main.less css/main.css**
 * Now your can see your updated CSS
