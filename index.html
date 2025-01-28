@@ -1145,10 +1145,22 @@
 			-->
 
 			<div class="home-whatsnew">
-				<h3 class="categname">News</h3>
+				<!--<h3 class="categname">News</h3>-->
 				<div class="whatsnew-content">
 
 					<div class="news-blocks">
+
+						<!-- WECAM 2025 -->
+						<div class="news-block news-wecam">
+                            <p class="article-date">Jan 28<sup>th</sup> 2025</p>
+							<p>Team work on Euclidean rythms didactics</p>
+							<br/>
+							<img src="/img/news/news-euclidean.png" alt="WECAM euclidean rythms" />
+							<br/>
+							<br/>
+							<p><em>WECAM 2025</em></p>
+							<p>Maison des Mathématiques et de l'Informatique</p>
+						</div>
 
 						<!-- Homo Algorithmus @mathologie -->
 						<div class="news-block news-homo-algorithmus">
@@ -2025,7 +2037,7 @@
 
 		<div class="page-content no-padding">
 			<div class="categ">
-				<h3 class="categname">Algorithmic paintings</h3>
+				<!--<h3 class="categname">Algorithmic paintings</h3>-->
 
 				<div id="artworks-container">
 					<div id="artworks-loader" class="loader">
@@ -3379,13 +3391,9 @@
 <!-- Components -->
 
 <template id="geom-template">
-	<div class="geom" :class="{'in-header': header, 'is-rotated': rotate}">
-		<div v-if="newSides == 4" class="shape square">
-			<div class="inner"></div>
-		</div>
-		<div v-if="newSides == 0" class="shape round">
-			<div class="inner"></div>
-		</div>
+	<div class="geom" :class="{'in-header': header}">
+		<div v-if="newSides == 4" class="shape square" :class="{'tilted': rotate}"></div>
+		<div v-if="newSides == 0" class="shape circle"></div>
 	</div>
 </template>
 

@@ -1,37 +1,28 @@
 // main: "./main.less"
 
 .geom {
-	.shape {
-		background: @blue-50;
-		padding: 4px;
+	--size: 40px;
 
-		.inner {
-			width: 19px;
-			height: 19px;
-			background: @blue-20;
-		}
+	.shape {
+		border: solid hsla(210, 90%, 55%, .8) 0.5px;
+		box-shadow: hsla(210, 90%, 50%, 1) 0 0 5px inset, hsla(210, 90%, 50%, 1) 0 0 3.5px;
+		width: var(--size);
+  		height: var(--size);
 
 		&.square {
 
 		}
-		&.round {
-			&, .inner {
-				border-radius: 50%;
-			}
+		&.tilted {
+			transform: rotate(45deg) scale(0.87);
+		}
+		&.circle {
+			border-radius: 50%;
 		}
 	}
 
 	&.in-header {
 		.shape {
-			background: @blue-50;
-			padding: 2px;
-
-			.inner {
-				width: 14px;
-				height: 14px;
-				background: @blue-15;
-				transition: background 500ms;
-			}
+			--size: 20px;
 		}
 	}
 
