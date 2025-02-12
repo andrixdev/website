@@ -28,6 +28,9 @@ body {
 .title-block {
 	background: @title-block-color;
 	padding: 15px 30px;
+	@media (max-width: @xxs-xs) {
+		padding: 15px;
+	}
 	.flexrow();
 	.flexstart();
 	border-top: solid 5px @title-block-border-color;
