@@ -91,6 +91,21 @@ document.addEventListener("DOMContentLoaded", () => {
         mode: 'history'
     })
 
+    let app = new Vue({
+        router: Global.router,
+        el: '#alexandrix-website',
+        methods: {
+            rotateLeHue: () => {
+                let hue = Math.round(360 * Math.random())
+                document.getElementsByTagName('body')[0].style.filter = 'hue-rotate(' + hue + 'deg)'
+            }
+
+        },
+		mounted: () => {
+
+		}
+    })
+
     // Scroll to top on route change
     Global.router.beforeEach((to, from, next) => {
 
@@ -114,21 +129,39 @@ document.addEventListener("DOMContentLoaded", () => {
         next()
     })
 
-    let app = new Vue({
-        router: Global.router,
-        el: '#alexandrix-website',
-        methods: {
-            rotateLeHue: () => {
-                let hue = Math.round(360 * Math.random())
-                document.getElementsByTagName('body')[0].style.filter = 'hue-rotate(' + hue + 'deg)'
+    let fadeInTitles = () => {
+        setTimeout(() => {
+            // Smooth titles slide-fade-in on page
+            Array.from(document.querySelectorAll(".title-block")).forEach((el, index) => {
+                let h1 = el.querySelector("h1")
+                let geom = el.querySelector(".geom")
                 
-            }
+                h1.style.transition = "none"
+                geom.style.transition = "none"
+    
+                h1.style.opacity = 0
+                geom.style.opacity = 0
+                geom.style.marginLeft = "30vw"
 
-        },
-		mounted: () => {
+                // Effed-up setTimeout
+                setTimeout(() => {
+                    h1.style.transition = "opacity 600ms ease-in"
+                    h1.style.transitionDelay = (100 + index * 200) + "ms"
+                    geom.style.transition = "opacity 600ms ease-in, margin-left 400ms cubic-bezier(.17,.84,.44,1)"
+                    geom.style.transitionDelay = (100 + index * 200) + "ms, " + index * 200 + "ms"
 
-		}
+                    h1.style.opacity = 1
+                    geom.style.opacity = 1
+                    geom.style.marginLeft = "0vw"
+                }, 1)
+                
+            })
+        }, 1)
+    }
+    Global.router.afterEach((to, from) => {
+        fadeInTitles()
     })
+    fadeInTitles()
 
     const headerNode = document.getElementsByClassName("header")[0]
     const mobileBurgerNode = document.getElementById("menu-mobile-burger")
@@ -171,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.style.transition = "background 300ms ease-in, opacity 300ms ease-in"
             setTimeout(() => {
                 e.style.opacity = 1
-            }, 100 * (i - 1))
+            }, 70 * (i - 1))
         })
     }
     
