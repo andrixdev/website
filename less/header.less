@@ -48,7 +48,8 @@
 		.weight-200();
 		cursor: pointer;
 		padding: 0 12px;
-		transition: background 500ms;
+		transition: background 500ms, opacity 1000ms;
+		transition-delay: 0ms, 500ms;
 		height: 60px;
 		font-size: 1rem;
 
@@ -57,10 +58,6 @@
 			&, & .geom .inner {
 				background: @blue-10;
 			}
-		}
-		&.two-lines-tab {
-			padding: 11px 14px 11px 11px;
-			font-size: .9rem;
 		}
 		&, &:visited, &:focus {
 			color: @text-color;
@@ -103,10 +100,6 @@
 				.flexstart();
 				padding-left: 20px;
 				padding-right: 20px;
-
-				&.two-lines-tab {
-					padding: 15px 20px;
-				}
 			}
 		}
 	}

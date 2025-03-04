@@ -3260,8 +3260,7 @@
 
 <!-- Main -->
 <div id="alexandrix-website">
-	<div class="header"
-		 v-bind:class="{ 'mobile-menu-open': isOpen }">
+	<div class="header">
 		<div class="logo">
 			<router-link to="/" class="menu-tab home">
 				<!--<img src="/img/website/triangoffset2021.svg" />-->
@@ -3271,7 +3270,7 @@
 				<img src="/img/website/logos/three-lined-white-2.svg">
 			</router-link>
 		</div>
-		<div id="menu" v-on:click="isOpen = false">
+		<div id="menu">
 			<router-link to="/" class="menu-tab home">
 				<geom base-sides="4" header="true"></geom>
 				Home
@@ -3297,7 +3296,7 @@
 				Contact
 			</router-link>
 		</div>
-		<nav id="menu-mobile-burger" class="mobile-burger" :class="{ 'closed': !isOpen, 'open': isOpen }" v-on:click="isOpen = !isOpen">
+		<nav id="menu-mobile-burger" class="mobile-burger">
 			<div class="bar bar-1"></div>
 			<div class="bar bar-2"></div>
 			<div class="bar bar-3"></div>

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     // App components (short ones, the others are in separate files)
     let GalleryComponent = {
@@ -117,22 +117,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let app = new Vue({
         router: Global.router,
         el: '#alexandrix-website',
-        data: function () {
-            return {
-                isOpen: false
-            }
-        },
         methods: {
             rotateLeHue: () => {
                 let hue = Math.round(360 * Math.random())
                 document.getElementsByTagName('body')[0].style.filter = 'hue-rotate(' + hue + 'deg)'
                 
             }
+
         },
 		mounted: () => {
 
 		}
     })
+
+    const menuTabNodes = document.getElementsByClassName("menu-tab")
+    const headerNode = document.getElementsByClassName("header")[0]
+    const mobileBurgerNode = document.getElementById("menu-mobile-burger")
+    const menuNode = document.getElementById("menu")
 
     // Dock-up menu on scroll down
     let lastScrollY = window.scrollY
@@ -140,6 +141,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('scroll', (ev) => {
         header.classList.toggle('docked', window.scrollY > 60 && window.scrollY > lastScrollY)
         lastScrollY = window.scrollY
+    })
+
+    // Mobile burger menu
+    let isMenuOpen = false
+    let updateMenu = () => {
+        mobileBurgerNode.classList.toggle("closed", !isMenuOpen)
+        mobileBurgerNode.classList.toggle("open", isMenuOpen)
+        headerNode.classList.toggle("mobile-menu-open", isMenuOpen)
+    }
+    mobileBurgerNode.addEventListener("click", () => {
+        isMenuOpen = !isMenuOpen
+        updateMenu()
+    })
+    menuNode.addEventListener("click", () => {
+        isMenuOpen = false
+        updateMenu()
+    })
+
+    // Smooth fade in of menu tabs
+    Array.from(menuTabNodes).forEach((e, i) => {
+        e.style.opacity = 0
+        setTimeout(() => { e.style.opacity = 1 }, 150 * (i - 1))
     })
 
 })
