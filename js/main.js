@@ -130,16 +130,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
     })
 
-    const menuTabNodes = document.getElementsByClassName("menu-tab")
     const headerNode = document.getElementsByClassName("header")[0]
     const mobileBurgerNode = document.getElementById("menu-mobile-burger")
     const menuNode = document.getElementById("menu")
+    const menuTabNodes = document.getElementsByClassName("menu-tab")
 
     // Dock-up menu on scroll down
     let lastScrollY = window.scrollY
-    let header = document.getElementsByClassName('header')[0]
     document.addEventListener('scroll', (ev) => {
-        header.classList.toggle('docked', window.scrollY > 60 && window.scrollY > lastScrollY)
+        headerNode.classList.toggle('docked', window.scrollY > 60 && window.scrollY > lastScrollY)
         lastScrollY = window.scrollY
     })
 
@@ -149,6 +148,11 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileBurgerNode.classList.toggle("closed", !isMenuOpen)
         mobileBurgerNode.classList.toggle("open", isMenuOpen)
         headerNode.classList.toggle("mobile-menu-open", isMenuOpen)
+
+        // Menu smooth fade-in animation
+        if (isMenuOpen) {
+            fadeInMenuTabs()
+        }
     }
     mobileBurgerNode.addEventListener("click", () => {
         isMenuOpen = !isMenuOpen
@@ -160,9 +164,17 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // Smooth fade in of menu tabs
-    Array.from(menuTabNodes).forEach((e, i) => {
-        e.style.opacity = 0
-        setTimeout(() => { e.style.opacity = 1 }, 150 * (i - 1))
-    })
+    let fadeInMenuTabs = () => {
+        Array.from(menuTabNodes).forEach((e, i) => {
+            e.style.transition = "background 300ms ease-in"
+            e.style.opacity = 0
+            e.style.transition = "background 300ms ease-in, opacity 300ms ease-in"
+            setTimeout(() => {
+                e.style.opacity = 1
+            }, 100 * (i - 1))
+        })
+    }
+    
+    fadeInMenuTabs()
 
 })
