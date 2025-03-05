@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.style.transition = "background 300ms ease-in, opacity 300ms ease-in"
             setTimeout(() => {
                 e.style.opacity = 1
-            }, 70 * (i - 1))
+            }, 100 * (i - 1))
         })
     }
     
