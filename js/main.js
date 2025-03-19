@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
     })
 
-    // Scroll to top on route change
+    // Scroll to top & other hooks on route change
     Global.router.beforeEach((to, from, next) => {
 
         setTimeout(() => {
@@ -126,9 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		    Gallery.updateFront()
 	    }
 
-        next()
+        fadeOutBanner()
+        setTimeout(next, 200)
+        
     })
-
+    
     let fadeInTitles = () => {
         setTimeout(() => {
             // Smooth titles slide-fade-in on page
@@ -158,11 +160,36 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }, 1)
     }
+    let fadeOutBanner = () => {
+        let banner = document.querySelector(".page-banner")
+        banner.style.transition = "opacity 200ms"
+        banner.style.transitionDelay = "0s, 0s"
+        banner.style.opacity = 0
+    }
+    let fadeInBanner = () => {
+        let banner = document.querySelector(".page-banner")
+        let yPos = Number(banner.getAttribute("data-y-pos"))
+        banner.style.transition = "none"
+        banner.style.backgroundPositionY = yPos - 15 + "%"
+
+        setTimeout(() => {
+            banner.style.transition = "opacity 400ms, background-position-y 300ms"
+            banner.style.transitionDelay = "100ms, 0ms"
+            banner.style.opacity = 1
+            banner.style.backgroundPositionY = yPos + "%"
+        }, 1)
+
+    }
+
     Global.router.afterEach((to, from) => {
         fadeInTitles()
+        setTimeout(fadeInBanner, 1)
     })
-    fadeInTitles()
 
+    fadeInTitles()
+    fadeInBanner()
+
+    
     const headerNode = document.getElementsByClassName("header")[0]
     const mobileBurgerNode = document.getElementById("menu-mobile-burger")
     const menuNode = document.getElementById("menu")

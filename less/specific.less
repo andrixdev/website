@@ -36,47 +36,42 @@
 	width: 100%;
 	background-position-y: 50%;
 	.small-mobile-height();
+	opacity: 0;
 
 	#home & {
-		//background-size: 1500px 985px;
-		//background-position-x: 50%;
 		background-image: url('../img/misc/header/header-vp-5.jpg');
-		background-position-y: 25%;
+		background-size: auto;
+  		background-position-x: 50%;
+
+		@media (max-width: 1200px) { background-size: 100% auto; }
 	}
 	#gallery & {
-		background-image: url('../img/misc/header/annihilation.jpg');
-		opacity: 0.75;
-		//@media (max-width: 500px) { .autoimage(); }
+		background-image: url('../img/misc/header/annihilation-trans.jpg');
 	}
 	#films & {
 		background-image: url('../img/misc/header/header-vp-9.jpg');
-		@media (max-width: 500px) { .autoimage(); }
 	}
 	#web-dataviz & {
 		background-image: url('../img/projects/huehuntresults-full.png');
-		background-position-y: 40%;
-		//@media (max-width: 500px) { .autoimage(); }
 	}
 	#cc & {
 		background-image: url('../img/misc/header/header-orb-colors.jpg');
-		//@media (max-width: 500px) { .autoimage(); }
 	}
 	#more & {
 		background-image: url('../img/misc/header/header-vp-1.jpg');
-		background-position-y: 32%;
+		background-size: auto;
+  		background-position-x: 50%;
 	}
 	#about & {
 		background-image: url('../img/misc/header/header-rhodo.jpg');
-		//@media (max-width: 500px) { .autoimage(); }
+		background-size: auto;
+		background-position-x: 50%;
+
+		@media (max-width: 1200px) { background-size: 100% auto; }
 	}
 	#contact & {
 		background-image: url('../img/misc/hex-bubbles.jpg');
-		//@media (max-width: 500px) { .autoimage(); }
 	}
-}
-.autoimage {
-	background-size: auto;
-	background-position-x: 50%;
 }
 .small-mobile-height {
 	@media (max-width: 400px) {
