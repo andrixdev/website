@@ -2,27 +2,12 @@
 
 #more img {
 	.img-placeholder();
+	max-width: 650px;
+	margin: 10px;
 }
-
-#illustration {
-	.gw190814-image {
-		.flexrow();
-		.flexcenter();
-		padding: 20px 10px;
-
-		img {
-			width: 600px;
-			max-width: 100%;
-			margin: 20px 30px;
-		}
-		@media (max-width: 980px) {
-			.flexwrap();
-			.center();
-		}
-	}
-
+#illustration img {
+	flex-shrink: 0;
 }
-
 #blog, #vimeo, #guy-teube, #talks {
 	.meh {
 		.flexrow();
@@ -108,10 +93,9 @@
 #cc,
 #games {
 	.main-img {
-		width: 380px;
-		min-width: 380px;
-		max-height: 280px;
-		margin: 10px 30px;
+		width: 450px;
+		min-width: 450px;
+		max-height: 300px;
 	}
 }
 #web-dataviz {
