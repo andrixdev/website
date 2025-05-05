@@ -317,6 +317,7 @@ Gallery.update = () => {
 			Gallery.injectArtworks()
 			Gallery.initListeners()
 			Gallery.isInit = true
+			Gallery.updateFront()
 		})
 	} else {
 		Gallery.injectArtworks()

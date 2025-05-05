@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         data: function () {
             return { }
         },
-        mounted: function ()  { }
+        mounted: function ()  { Gallery.update() }
     }
     let FilmsComponent = {
         template: document.querySelector('#films-template'),
@@ -172,6 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Going to gallery overview
         if (isGoingToGallery && !isComingFromArtwork) {
+            setTimeout(Gallery.update, 1)
+        }
+        // Coming from external path
+        if (isGoingToArtwork && !isComingFromArtwork && !isComingFromGallery) {
             setTimeout(Gallery.update, 1)
         }
         // Going into artwork view
