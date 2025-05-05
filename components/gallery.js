@@ -41,7 +41,7 @@ Gallery.loadArtworks = (extraCallback) => {
 				handleXML(xhr.responseXML)
 				extraCallback()
 			} else {
-				console.error("Failed retrieving artworks data.")
+				console.error("Failed to retrieve artworks data.")
 				console.error(xhr.statusText)
 			}
 		}
@@ -134,7 +134,6 @@ Gallery.initArtworksListeners = () => {
 			Global.router.push({
 				path: 'gallery', query: { artwork: el.id }
 			})
-			Gallery.updateFront()
 		}
 		el.removeEventListener('click', onArtworkClick) // Justin Case of several initListeners call (likely due to Vue)
 		el.addEventListener('click', onArtworkClick)
@@ -145,20 +144,17 @@ Gallery.initFrontListeners = () => {
 		Global.router.push({
 			path: 'gallery'
 		})
-		Gallery.updateFront()
 	}
 	let len = Gallery.artworksData.length
 	let onPrevClick = () => {
 		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
 		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
 		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
-		Gallery.updateFront()
 	}
 	let onNextClick = () => {
 		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
 		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
 		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
-		Gallery.updateFront()
 	}
 	let onKeyup = (event) => {
 		if (!Gallery.isFrontVisible) return false
@@ -321,7 +317,6 @@ Gallery.update = () => {
 			Gallery.injectArtworks()
 			Gallery.initListeners()
 			Gallery.isInit = true
-			Gallery.updateFront()
 		})
 	} else {
 		Gallery.injectArtworks()

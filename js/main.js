@@ -6,10 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         data: function () {
             return { }
         },
-        mounted: function ()  {
-            // This effing method is called every time, same for other Vue hooks, I'm going full vanillaJS very soon.
-            Gallery.update()
-        }
+        mounted: function ()  { }
     }
     let FilmsComponent = {
         template: document.querySelector('#films-template'),
@@ -101,34 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         },
-		mounted: () => {
-
-		}
-    })
-
-    // Scroll to top & other hooks on route change
-    Global.router.beforeEach((to, from, next) => {
-
-        setTimeout(() => {
-        	// Scroll back to top unless it's some gallery internal navigation
-	        if (!(to.fullPath.indexOf('gallery') > -1 && from.fullPath.indexOf('gallery') > -1)) {
-		        window.scrollTo(0, 0)
-	        }
-        }, 100)
-
-	    // If back button from front Gallery mode, close it
-	    console.log("Navigating from " + from.fullPath + " to " + to.fullPath)
-
-        // Going to Gallery or coming from it
-	    //if (to.fullPath.indexOf('gallery') > -1 || from.fullPath.indexOf('gallery') > -1) { }
-        // Going to Gallery
-        if (to.fullPath.indexOf('gallery') > -1) {
-		    Gallery.updateFront()
-	    }
-
-        fadeOutBanner()
-        setTimeout(next, 200)
-        
+		mounted: () => { }
     })
     
     let fadeInTitles = () => {
@@ -181,14 +151,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    // Hooks on route change
+    Global.router.beforeEach((to, from, next) => {
+        // If back button from front Gallery mode, close it
+        console.log("Navigating from " + from.fullPath + " to " + to.fullPath)
+
+        fadeOutBanner()
+        setTimeout(() => { window.scrollTo(0, 0) }, 150)
+        setTimeout(next, 150)
+    })
     Global.router.afterEach((to, from) => {
         fadeInTitles()
         setTimeout(fadeInBanner, 1)
+
+        // Going to Gallery
+        let isComingFromArtwork = from.fullPath.indexOf('artwork') > -1
+        let isGoingToArtwork = to.fullPath.indexOf('artwork') > -1
+        let isComingFromGallery = from.fullPath.indexOf('gallery') > -1 && !isComingFromArtwork
+        let isGoingToGallery = to.fullPath.indexOf('gallery') > -1 && !isGoingToArtwork
+
+        // Going to gallery overview
+        if (isGoingToGallery && !isComingFromArtwork) {
+            setTimeout(Gallery.update, 1)
+        }
+        // Going into artwork view
+        if (isGoingToArtwork) {
+            setTimeout(Gallery.updateFront, 1)
+        }
+        // Leaving artwork view
+        if (isComingFromArtwork && !isGoingToArtwork) {
+            setTimeout(Gallery.updateFront, 1)
+        }
+        
     })
 
     fadeInTitles()
     fadeInBanner()
-
     
     const headerNode = document.getElementsByClassName("header")[0]
     const mobileBurgerNode = document.getElementById("menu-mobile-burger")
