@@ -7,7 +7,8 @@ let Gallery = {
 	currentImageObject: undefined,
 	isFrontVisible: false,
 	timeout: undefined,
-	mobileBreakpointPX: 550
+	mobileBreakpointPX: 550,
+	screenWidth: undefined // buffer to check the nature of resize events
 }
 Gallery.loadArtworks = (extraCallback) => {
 	let handleXML = (xml) => {
@@ -81,7 +82,9 @@ Gallery.updateImageLoadCount = () => {
 
 	// Now check if all are loaded to maybe launch... Masonry!!!! \o/
 	if (Gallery.loadCount == Gallery.artworksOnPage) {
-		Masonry.init()
+		// Give some time for DOM to calculate img client heights <--- current masonry 1st load bug is here, some images haven't actually been loaded in DOM with the right clientHeight
+		setTimeout(() => { Masonry.init() }, 350)
+		//Masonry.init()
 	}
 }
 Gallery.getArtwork = (id) => {
@@ -99,12 +102,17 @@ Gallery.getArtworkAtIndex = (index) => {
 Gallery.initListeners = () => {
 	Gallery.initArtworksListeners()
 	Gallery.initFrontListeners()
+	Gallery.screenWidth = window.innerWidth
 
 	// Window resize
 	let resizingEventCount = 0
 	let onresize = () => {
 		// Verify that we are well on Gallery
 		if (!document.querySelector("#artworks")) return false
+
+		// Avoid resizes triggered by native mobile header hiding
+		if (window.innerWidth == Gallery.screenWidth) return false
+		else Gallery.screenWidth = window.innerWidth
 
 		resizingEventCount++
 
@@ -349,6 +357,7 @@ let Masonry = {
 	}
 }
 Masonry.init = function (containerNode) {
+	
 	let ctn = document.querySelector("#artworks")
 	this.containerNode = ctn
 	this.children = ctn.children
