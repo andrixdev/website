@@ -21,6 +21,10 @@
 		span.reddot {
 			animation: reddot 1.5s alternate infinite linear;
 		}
+
+		@media (max-width: 740px) {
+			font-size: .8rem;
+		}
 	}
 	.home-whatsnew {
 		.whatsnew-content {
@@ -71,6 +75,15 @@
 						.img-placeholder();
 						max-width: 100%;
 						width: 700px;
+
+						&.transparent-bg {
+							background: transparent;
+							animation: none;
+						}
+						&.white-bg {
+							background-color: white;
+							animation: none;
+						}
 					}
 
 					&.ends-with-image img {
@@ -81,14 +94,6 @@
 						img {
 							margin: 0.3em 0;
 							width: 80px;
-							background: transparent;
-							animation: none;
-						}
-					}
-					&.news-gdchels {
-						img {
-							background-color: white;
-							animation: none;
 						}
 					}
 					&.news-vp2-sharing {
@@ -113,8 +118,6 @@
 								max-height: 100px;
 								margin: 20px;
 								width: auto;
-								background: transparent;
-								animation: none;
 							}
 						}
 					}
