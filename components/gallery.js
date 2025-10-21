@@ -66,9 +66,7 @@ Gallery.injectArtworks = () => {
 			let img = document.createElement("img")
 
 			// Set loaded state to true once done
-			img.addEventListener('load', () => {
-				Gallery.updateImageLoadCount()
-			})
+			img.addEventListener('load', Gallery.updateImageLoadCount)
 
 			img.src = aw.small
 			img.alt = aw.title
@@ -83,6 +81,7 @@ Gallery.updateImageLoadCount = () => {
 	// Now check if all are loaded to maybe launch... Masonry!!!! \o/
 	if (Gallery.loadCount == Gallery.artworksOnPage) {
 		// Give some time for DOM to calculate img client heights <--- current masonry 1st load bug is here, some images haven't actually been loaded in DOM with the right clientHeight
+		console.log("all images loaded, triggering masonry in 350ms")
 		setTimeout(() => { Masonry.init() }, 350)
 		//Masonry.init()
 	}
@@ -351,12 +350,12 @@ let Masonry = {
 	children: [],
 	margins: 20, //px
 	breakpoints: {
-		oneCol: 450,
-		twoCols: 850,
-		threeCols: 1150,
+		oneCol: 550,
+		twoCols: 950,
+		threeCols: 1250,
 	}
 }
-Masonry.init = function (containerNode) {
+Masonry.init = function () {
 	
 	let ctn = document.querySelector("#artworks")
 	this.containerNode = ctn
