@@ -76,6 +76,15 @@
 						max-width: 100%;
 						width: 700px;
 
+						transition: transform .175s ease, box-shadow .25s .175s ease;
+						cursor: pointer;
+						border-color: transparent;
+						&.clicked {
+							transform: scale(1.5);
+							box-shadow: #FFFA 0 0 15px;
+							border-radius: 2px;
+						}
+
 						&.transparent-bg {
 							background: transparent;
 							animation: none;

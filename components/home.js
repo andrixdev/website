@@ -33,5 +33,12 @@ var HomeComponent = {
             shaun += 4
             showMore(shaun)
         })
+
+        // Zoomable news images
+        document.querySelectorAll("#home .news-block img").forEach(el => {
+            el.addEventListener("click", (ev) => {
+                ev.target.classList.toggle("clicked")
+            })
+        })
     }
 }
