@@ -1,10 +1,7 @@
 // main: "./main.less"
 
-@font-face {
-  font-family: "Raleway";
-  src: local("Raleway Thin"), url("../fonts/Raleway-Thin.ttf");
-  font-weight: 100;
-}
+/* Raleway */
+/*
 @font-face {
   font-family: "Raleway";
   src: local("Raleway ExtraLight"), url("../fonts/Raleway-ExtraLight.ttf");
@@ -27,25 +24,35 @@
 }
 @font-face {
   font-family: "Raleway";
-  src: local("Raleway Bold"), url("../fonts/Raleway-Bold.ttf");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Raleway";
   src: local("Raleway Italic"), url("../fonts/Raleway-Italic.ttf");
   font-style: italic;
 }
-h1, h2, h3, h4, h5, h6, p, a, button, input {
-  font-family: 'Raleway', sans-serif;
-  color: @text-color;
-}
-.weight-200 {
+*/
+
+/* Outfit */
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit ExtraLight"), url("../fonts/Outfit-ExtraLight.ttf");
   font-weight: 200;
 }
-.weight-300 {
-  font-weight: 300;
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit Thin"), url("../fonts/Outfit-Thin.ttf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit SemiBold"), url("../fonts/Outfit-SemiBold.ttf");
+  font-weight: 600;
+}
+
+/* Global */
+h1, h2, h3, h4, h5, h6, p, a, button, input {
+  /*font-family: "Raleway", sans-serif;*/
+  font-family: "Outfit", sans-serif;
+  color: @text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  .weight-300();
+  font-weight: 300;
 }

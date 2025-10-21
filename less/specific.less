@@ -22,7 +22,7 @@
 		.marjinoto();
 		font-size: 2rem;
 		margin-left: 10px;
-		.weight-200();
+		font-weight: 200;
 		.center();
 		padding: 100px 20px;
 	}
@@ -39,9 +39,8 @@
 	opacity: 0;
 
 	#home & {
-		background-image: url('../img/misc/header/header-vp-5.jpg');
-		background-size: auto;
-  		background-position-x: 50%;
+		background-image: url('../img/projects/lorenzo-1.jpg');
+		/*background-image: url('../img/projects/lorenzo-2.jpg'); Set data-y-pos attribute to 25 in index.html */
 
 		@media (max-width: 1200px) { background-size: 100% auto; }
 	}
@@ -58,9 +57,7 @@
 		background-image: url('../img/misc/header/header-orb-colors.jpg');
 	}
 	#more & {
-		background-image: url('../img/misc/header/header-vp-1.jpg');
-		background-size: auto;
-  		background-position-x: 50%;
+		background-image: url('../img/misc/header/header-vp-5.jpg');
 	}
 	#about & {
 		background-image: url('../img/misc/header/header-rhodo.jpg');
@@ -70,7 +67,23 @@
 		@media (max-width: 1200px) { background-size: 100% auto; }
 	}
 	#contact & {
-		background-image: url('../img/misc/hex-bubbles.jpg');
+		/*background-image: url('../img/misc/hex-bubbles.jpg');
+		filter: contrast(1.25) brightness(1.5);*/
+		background-image: url('../img/misc/header/header-vp-1.jpg');
+	}
+
+	h5, h6 {
+		padding-left: 18px;
+		color: #FFFD;
+	}
+	h5 {
+		text-transform: uppercase;
+		font-size: min(32px, max(20px, 4vw));
+		padding-top: 18px;
+		font-weight: 200;
+	}
+	h6 {
+		font-size: min(24px, max(15px, 3vw));
 	}
 }
 .small-mobile-height {
