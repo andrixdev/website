@@ -155,11 +155,13 @@ Gallery.initFrontListeners = () => {
 	let onPrevClick = () => {
 		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
 		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		document.querySelector("#front img.fullone").classList.toggle("clicked", false)
 		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
 	}
 	let onNextClick = () => {
 		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
 		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		document.querySelector("#front img.fullone").classList.toggle("clicked", false)
 		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
 	}
 	let onKeyup = (event) => {
