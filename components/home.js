@@ -35,9 +35,11 @@ var HomeComponent = {
         })
 
         // Zoomable news images
-        document.querySelectorAll("#home .news-block img").forEach(el => {
+        document.querySelectorAll("#home .news-block img:not(.non-zoomable)").forEach(el => {
             el.addEventListener("click", (ev) => {
-                ev.target.classList.toggle("clicked")
+                let elt = ev.target
+                elt.classList.toggle("clicked")
+                if (elt.classList.contains("clicked")) updateImageZoomOrigin(elt)
             })
         })
     }

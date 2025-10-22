@@ -22,5 +22,15 @@ var MoreComponent = {
             document.querySelector(".load-hum-projects").classList.add('hidden')
             document.querySelector(".hum-projects").classList.remove('hidden')
         })
+
+        // Zoomable images
+        document.querySelectorAll("#more img:not(.non-zoomable)").forEach(el => {
+            el.addEventListener("click", (ev) => {
+                let elt = ev.target
+                elt.classList.toggle("clicked")
+                
+                if (elt.classList.contains("clicked")) updateImageZoomOrigin(elt)
+            })
+        })
     }
 }

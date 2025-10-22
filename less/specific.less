@@ -194,3 +194,36 @@
 	60% { z-index: 2; }
 	to { transform: scale(1); opacity: 1; }
 }
+/* Zoomable images */
+#home .news-block,
+#films .films-projects,
+#more {
+	img {
+		user-select: none;
+		transition: transform .175s ease, box-shadow .25s .175s ease;
+		border-color: transparent;
+
+		&:not(.non-zoomable) {
+			cursor: pointer;
+		}
+		&.clicked {
+			transform: scale(1.5);
+			box-shadow: #FFFA 0 0 15px;
+			border-radius: 2px;
+			position: relative;
+			z-index: 69;
+		}
+	}
+}
+#films .films-projects img.clicked {
+	transform: scale(2.5);
+}
+#front img.fullone {
+	transition: transform 0.3s ease;
+	transform-origin: 50% 0;
+	cursor: pointer;
+
+	&.clicked {
+		transform: scale(2.25);
+	}
+}
