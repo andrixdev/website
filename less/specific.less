@@ -22,7 +22,7 @@
 		.marjinoto();
 		font-size: 2rem;
 		margin-left: 10px;
-		.weight-200();
+		font-weight: 200;
 		.center();
 		padding: 100px 20px;
 	}
@@ -32,6 +32,7 @@
 	filter: contrast(110%);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
+	background-color: black;
 	height: 180px;
 	width: 100%;
 	background-position-y: 50%;
@@ -39,9 +40,8 @@
 	opacity: 0;
 
 	#home & {
-		background-image: url('../img/misc/header/header-vp-5.jpg');
-		background-size: auto;
-  		background-position-x: 50%;
+		background-image: url('../img/projects/lorenzo-1.jpg');
+		/*background-image: url('../img/projects/lorenzo-2.jpg'); Set data-y-pos attribute to 25 in index.html */
 
 		@media (max-width: 1200px) { background-size: 100% auto; }
 	}
@@ -58,9 +58,7 @@
 		background-image: url('../img/misc/header/header-orb-colors.jpg');
 	}
 	#more & {
-		background-image: url('../img/misc/header/header-vp-1.jpg');
-		background-size: auto;
-  		background-position-x: 50%;
+		background-image: url('../img/misc/header/header-vp-5.jpg');
 	}
 	#about & {
 		background-image: url('../img/misc/header/header-rhodo.jpg');
@@ -70,7 +68,23 @@
 		@media (max-width: 1200px) { background-size: 100% auto; }
 	}
 	#contact & {
-		background-image: url('../img/misc/hex-bubbles.jpg');
+		/*background-image: url('../img/misc/hex-bubbles.jpg');
+		filter: contrast(1.25) brightness(1.5);*/
+		background-image: url('../img/misc/header/header-vp-1.jpg');
+	}
+
+	h5, h6 {
+		padding-left: 18px;
+		color: #FFFD;
+	}
+	h5 {
+		text-transform: uppercase;
+		font-size: min(32px, max(20px, 4vw));
+		padding-top: 18px;
+		font-weight: 200;
+	}
+	h6 {
+		font-size: min(24px, max(15px, 3vw));
 	}
 }
 .small-mobile-height {
@@ -179,4 +193,37 @@
 	30% { z-index: 1; }
 	60% { z-index: 2; }
 	to { transform: scale(1); opacity: 1; }
+}
+/* Zoomable images */
+#home .news-block,
+#films .films-projects,
+#more {
+	img {
+		user-select: none;
+		transition: transform .175s ease, box-shadow .25s .175s ease;
+		border-color: transparent;
+
+		&:not(.non-zoomable) {
+			cursor: pointer;
+		}
+		&.clicked {
+			transform: scale(1.5);
+			box-shadow: #FFFA 0 0 15px;
+			border-radius: 2px;
+			position: relative;
+			z-index: 15;
+		}
+	}
+}
+#films .films-projects img.clicked {
+	transform: scale(2);
+}
+#front img.fullone {
+	transition: transform 0.3s ease;
+	transform-origin: 50% 0;
+	cursor: pointer;
+
+	&.clicked {
+		transform: scale(2.25);
+	}
 }

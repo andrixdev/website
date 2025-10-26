@@ -1,3 +1,14 @@
+let updateImageZoomOrigin = (imgNode) => {
+    // Compute X zoom offset on-the-fly to zoom into images
+    const rect = imgNode.getBoundingClientRect()
+    let w = window.innerWidth
+    let xCenterRatio = ((rect.right + rect.left) / 2) / w
+    let spanRatio = (rect.right - rect.left) / w
+    let strength = 1.5 // Strength of 2 doubles the natural offset
+    strength += 2.7 * spanRatio // This adds more even offset to wider images
+    let percentOffsetX = Math.max(0, Math.min(100, 50 + strength * (Math.round(100 * xCenterRatio) - 50))) // Clamp [0, 100]
+    imgNode.style.transformOrigin = percentOffsetX + "% 50%"
+}
 document.addEventListener("DOMContentLoaded", () => {
 
     // App components (short ones, the others are in separate files)
@@ -6,14 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
         data: function () {
             return { }
         },
-        mounted: function ()  { Gallery.update() }
+        mounted: function () { Gallery.update() }
     }
     let FilmsComponent = {
         template: document.querySelector('#films-template'),
         data: () => {
             return { }
         },
-        mounted: () => { }
+        mounted: () => {
+            // Zoomable images
+            document.querySelectorAll(".films-projects img:not(.non-zoomable)").forEach(el => {
+                el.addEventListener("click", (ev) => {
+                    let elt = ev.target
+                    elt.classList.toggle("clicked")
+                    if (elt.classList.contains("clicked")) updateImageZoomOrigin(elt)
+                })
+            })
+        }
     }
     let AndrixBrandComponent = {
         template: document.querySelector('#andrix-brand-template'),

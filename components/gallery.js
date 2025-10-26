@@ -66,9 +66,7 @@ Gallery.injectArtworks = () => {
 			let img = document.createElement("img")
 
 			// Set loaded state to true once done
-			img.addEventListener('load', () => {
-				Gallery.updateImageLoadCount()
-			})
+			img.addEventListener('load', Gallery.updateImageLoadCount)
 
 			img.src = aw.small
 			img.alt = aw.title
@@ -157,11 +155,13 @@ Gallery.initFrontListeners = () => {
 	let onPrevClick = () => {
 		let newIndex = (len + Gallery.currentArtworkShown.index - 1) % len // adding len because modulo allows negatives
 		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		document.querySelector("#front img.fullone").classList.toggle("clicked", false)
 		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
 	}
 	let onNextClick = () => {
 		let newIndex = (len + Gallery.currentArtworkShown.index + 1) % len // adding len because modulo allows negatives
 		let newArtwork = Gallery.getArtworkAtIndex(newIndex)
+		document.querySelector("#front img.fullone").classList.toggle("clicked", false)
 		Global.router.push({ path: 'gallery', query: { artwork: 'art-id-' + newArtwork.id } })
 	}
 	let onKeyup = (event) => {
@@ -217,6 +217,10 @@ Gallery.initFrontListeners = () => {
 	})
 	document.querySelector("#front img.fullone").addEventListener('touchend', () => {
 		isSwipingOnFullImg = false
+	})
+	document.querySelector("#front img.fullone").addEventListener('click', () => {
+		// Trigger transform: scale() CSS zoom
+		document.querySelector("#front img.fullone").classList.toggle("clicked")
 	})
 	document.addEventListener('touchstart', onTouchStart)
 	document.addEventListener('touchmove', onTouchMove)
@@ -321,10 +325,10 @@ Gallery.frontLoadingOff = () => {
 Gallery.update = () => {
 	Gallery.loadingOn()
 	if (!Gallery.isInit) {
+		Gallery.isInit = true
 		Gallery.loadArtworks(() => {
 			Gallery.injectArtworks()
 			Gallery.initListeners()
-			Gallery.isInit = true
 			Gallery.updateFront()
 		})
 	} else {
@@ -351,12 +355,12 @@ let Masonry = {
 	children: [],
 	margins: 20, //px
 	breakpoints: {
-		oneCol: 450,
-		twoCols: 850,
-		threeCols: 1150,
+		oneCol: 550,
+		twoCols: 950,
+		threeCols: 1250,
 	}
 }
-Masonry.init = function (containerNode) {
+Masonry.init = function () {
 	
 	let ctn = document.querySelector("#artworks")
 	this.containerNode = ctn

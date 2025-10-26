@@ -5,11 +5,18 @@
 
 	<!-- Meta stuff -->
 	<meta charset="utf-8" />
-	<meta name="keywords" content="Alex Andrix, Alexandrix, Andrix, art, science, arts & science, art for science, creative coding, algorithmic art, virtual reality, particles, equations, prime numbers" />
+	<meta name="keywords" content="Alex Andrix, Alexandrix, Andrix, art, science, arts & science, art for science, artist for science, creative coding, algorithmic art, virtual reality, particles, equations, prime numbers" />
 	<meta name="author" content="Alex Andrix" />
-	<meta name="description" content="Arts & Science" />
+	<meta name="description" content="Alex Andrix is an artist for Science, involved in Arts & Science topics, visualization of scientific data and more" />
 	<link rel="canonical" href="https://alexandrix.com/" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+
+	<!-- Meta OG stuff -->
+	<meta property="og:title" content="Alex Andrix" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://alexandrix.com/" />
+	<meta property="og:image" content="https://alexandrix.com/img/projects/lorenzo-1.jpg" />
+	<meta property="og:image" content="https://alexandrix.com/img/projects/lorenzo-2.jpg" />
 
 	<!-- Icons -->
 	<link rel="manifest" href="/img/website/icons/manifest.json">
@@ -1300,7 +1307,10 @@
 <template id="home-template">
 	<div id="home">
 		<vue-title title="Alex Andrix, Arts & Science"></vue-title>
-		<div class="page-banner" data-y-pos="30"></div>
+		<div class="page-banner" data-y-pos="40">
+			<h5>Alex Andrix</h5>
+			<h6>Arts & Science</h6>
+		</div>
 
 		<div class="title-block">
 			<geom base-sides="4"></geom>
@@ -1337,13 +1347,17 @@
 							</button>
 						</div>
 
-						<!-- Fig1A jury fav prize -->
+						<!-- Fig1A jury fav x public fav prize -->
 						<div class="news-block news-fig1a-2025">
                             <p class="article-date">Oct 11<sup>th</sup> 2025</p>
-							<p>Jury Favorite prize for <em>Throughout the Eras</em></p>
+							<p>
+								<strong>Jury Favorite</strong> prize for <em>Throughout the Eras</em>
+								<br/>
+								<strong>Public Favorite</strong> prize for <em>Throughout the Eras</em>
+							</p>
 							<p>[Figure 1.A.] scientific art exhibition 2025: <em>Extreme Environments</em></p>
 							
-							<img class="transparent-bg" src="/img/projects/fig1A-logo-borders.png" alt="Figure 1A art-science exhibition" loading="lazy" />
+							<img class="transparent-bg non-zoomable" src="/img/projects/fig1A-logo-borders.png" alt="Figure 1A art-science exhibition" loading="lazy" />
 							
 							<br/>
 							<button class="acidbutton">
@@ -1777,7 +1791,7 @@
 							<p class="article-date">Feb 03<sup>rd</sup> 2021</p>
 							<p>Late 2020 & early 2021</p>
 							<div class="flexrow flexcenter">
-								<img class="transparent-bg" src="/img/website/triangoffset2021.svg" alt="Andrix logo" loading="lazy" />
+								<img class="transparent-bg non-zoomable" src="/img/website/triangoffset2021.svg" alt="Andrix logo" loading="lazy" />
 							</div>
 
 							<div class="things">
@@ -2111,8 +2125,8 @@
 							<img class="img-1 transparent-bg" src="/img/news/varphy-subs-main.jpg" alt="Variations Physiques vol. 1 scene 1" loading="lazy" />
 							<br/>
 							<div class="friend-logos">
-								<img class="img-2 transparent-bg" src="/img/news/varphy-subs-cnrs-logo.png" alt="CNRS logo" loading="lazy" />
-								<img class="img-3 transparent-bg" src="/img/news/varphy-subs-udl-logo.png" alt="UDL logo" loading="lazy" />
+								<img class="img-2 transparent-bg non-zoomable" src="/img/news/varphy-subs-cnrs-logo.png" alt="CNRS logo" loading="lazy" />
+								<img class="img-3 transparent-bg non-zoomable" src="/img/news/varphy-subs-udl-logo.png" alt="UDL logo" loading="lazy" />
 							</div>
 							<br/>
 							<p>Many thanks to CNRS and Université de Lyon,<br/>who now support <em>Variations Physiques</em> for 2019!</p>
@@ -2370,7 +2384,7 @@
 <template id="more-template">
 	<div id="more">
 		<vue-title title="Alex Andrix | More"></vue-title>
-		<div class="page-banner" data-y-pos="20"></div>
+		<div class="page-banner" data-y-pos="30"></div>
 
 		<div id="illustration">
 			<div class="title-block">
@@ -3509,7 +3523,7 @@
 <template id="contact-template">
 	<div id="contact">
 		<vue-title title="Alex Andrix | Contact"></vue-title>
-		<div class="page-banner" data-y-pos="50"></div>
+		<div class="page-banner" data-y-pos="20"></div>
 
 		<div class="title-block">
 			<geom base-sides="0"></geom>
