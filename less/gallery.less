@@ -200,6 +200,13 @@
 
 }
 
+#gallery h3.categname {
+	margin-bottom: 20px;
+
+	&:not(:first-of-type) {
+		margin-top: 60px;
+	}
+}
 .art-container {
 	padding: 20px;
 	text-align: center;
@@ -207,9 +214,23 @@
 	flex-direction: column;
 	align-items: center;
 
+	@media (max-width: 1000px) {
+		padding: 20px 10px;
+	}
+	@media (max-width: 500px) {
+		padding: 20px 5px;
+	}
+
 	img {
-		max-width: 100%;
-		width: 1200px;
+		max-width: 950px;
+		width: 75%;
 		margin-bottom: 20px;
+
+		@media (max-width: 1000px) {
+			width: 90%;
+		}
+		@media (max-width: 500px) {
+			width: 100%;
+		}
 	}
 }

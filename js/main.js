@@ -1,4 +1,5 @@
 let updateImageZoomOrigin = (imgNode) => {
+    console.log(imgNode)
     // Compute X zoom offset on-the-fly to zoom into images
     const rect = imgNode.getBoundingClientRect()
     let w = window.innerWidth
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         data: function () {
             return { }
         },
-        mounted: function () { Gallery.update() }
+        mounted: function () { Gal.hey();/*Gallery.update()*/ }
     }
     let FilmsComponent = {
         template: document.querySelector('#films-template'),
@@ -184,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fadeInTitles()
         setTimeout(fadeInBanner, 1)
 
+        /*
         // Going to Gallery
         let isComingFromArtwork = from.fullPath.indexOf('artwork') > -1
         let isGoingToArtwork = to.fullPath.indexOf('artwork') > -1
@@ -206,6 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isComingFromArtwork && !isGoingToArtwork) {
             setTimeout(Gallery.updateFront, 1)
         }
+
+        */
         
     })
 

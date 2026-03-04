@@ -194,10 +194,12 @@
 	60% { z-index: 2; }
 	to { transform: scale(1); opacity: 1; }
 }
+
 /* Zoomable images */
 #home .news-block,
 #films .films-projects,
-#more {
+#more,
+#gallery {
 	img {
 		user-select: none;
 		transition: transform .175s ease, box-shadow .25s .175s ease;
@@ -225,5 +227,30 @@
 
 	&.clicked {
 		transform: scale(2.25);
+	}
+}
+
+#gallery {
+	img {
+		&.clicked {
+			transform: scale(1.75);
+		}
+
+		@media (max-width: 1300px) {
+			&.clicked {
+				transform: scale(1.5);
+			}
+		}
+		@media (max-width: 1000px) {
+			&.clicked {
+				transform: scale(1.25);
+			}
+		}
+		@media (max-width: 500px) {
+			&.clicked {
+				transform: scale(1.125);
+			}
+		}
+
 	}
 }
