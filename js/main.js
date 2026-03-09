@@ -1,5 +1,4 @@
 let updateImageZoomOrigin = (imgNode) => {
-    console.log(imgNode)
     // Compute X zoom offset on-the-fly to zoom into images
     const rect = imgNode.getBoundingClientRect()
     let w = window.innerWidth

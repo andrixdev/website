@@ -426,7 +426,6 @@ let Gal = {}
 Gal.hey = () => {
 	document.querySelectorAll("#gallery img:not(.non-zoomable)").forEach(el => {
 		el.addEventListener("click", (ev) => {
-			console.log("clicki")
 			let elt = ev.target
 			elt.classList.toggle("clicked")
 			if (elt.classList.contains("clicked")) updateImageZoomOrigin(elt)
