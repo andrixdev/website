@@ -520,16 +520,6 @@
 
 					<div class="event-block">
 						<p>
-							<span class="date">Mar. 14, 2026</span>
-							<br/>
-							<span class="what">Immersive Conference w/ F. Chaveau & J. Gobé</span>
-							<br/>
-							<span class="where">Planétarium de la Cité des sciences, Paris, France</span>
-						</p>
-					</div>
-
-					<div class="event-block">
-						<p>
 							<span class="date">June 13, 2026</span>
 							<br/>
 							<span class="what">Immersive Conference w/ Marie Monniaux</span>
@@ -552,6 +542,16 @@
 				<div class="past-events">
 
 					<p class="past-events-title">Past events</p>
+
+					<div class="event-block">
+						<p>
+							<span class="date">Mar. 14, 2026</span>
+							<br/>
+							<span class="what">Immersive Conference w/ F. Chaveau & J. Gobé</span>
+							<br/>
+							<span class="where">Planétarium de la Cité des sciences, Paris, France</span>
+						</p>
+					</div>
 
 					<!--<div class="event-block">
                         <p>
@@ -4056,7 +4056,7 @@
 		<p class="msg-404">
 			Not found
 		</p>
-		<p>The requested page at <strong>{{ requestedRoute }}</strong> doesn't exist!</p>
+		<p>The requested page at <strong id="not-found-route"></strong> doesn't exist!</p>
 
 		<p class="pre-trouble">Here's a glass icosahedron made of HTML &lt;div&gt;s instead.</p>
 		<div class="trouble">
@@ -4085,39 +4085,36 @@
 <div id="alexandrix-website">
 	<div class="header">
 		<div class="logo">
-			<router-link to="/" class="menu-tab home">
-				<!--<img src="/img/website/triangoffset2021.svg" />-->
-				<!--<img src="/img/website/icons/andrix-lines-test-150x150.png" />-->
-				
+			<a href="/" class="menu-tab home" data-route>
 				<img id="logo-shadow" src="/img/website/logos/three-lined-white-2.svg">
 				<img src="/img/website/logos/three-lined-white-2.svg">
-			</router-link>
+			</a>
 		</div>
 		<div id="menu">
-			<router-link to="/" class="menu-tab home">
+			<a href="/" class="menu-tab home" data-route>
 				<geom base-sides="4" header="true"></geom>
 				Home
-			</router-link>
-			<router-link to="/films" class="menu-tab films">
+			</a>
+			<a href="/films" class="menu-tab films" data-route>
 				<geom base-sides="0" header="true"></geom>
 				Films
-			</router-link>
-			<router-link to="/gallery" class="menu-tab gallery">
+			</a>
+			<a href="/gallery" class="menu-tab gallery" data-route>
 				<geom base-sides="4" header="true" rotate="true"></geom>
 				Gallery
-			</router-link>
-			<router-link to="/more" class="menu-tab more">
+			</a>
+			<a href="/more" class="menu-tab more" data-route>
 				<geom base-sides="0" header="true"></geom>
 				More
-			</router-link>
-			<router-link to="/about" class="menu-tab about">
+			</a>
+			<a href="/about" class="menu-tab about" data-route>
 				<geom base-sides="4" header="true"></geom>
 				About
-			</router-link>
-			<router-link to="/contact" class="menu-tab contact">
+			</a>
+			<a href="/contact" class="menu-tab contact" data-route>
 				<geom base-sides="0" header="true"></geom>
 				Contact
-			</router-link>
+			</a>
 		</div>
 		<nav id="menu-mobile-burger" class="mobile-burger">
 			<div class="bar bar-1"></div>
@@ -4127,17 +4124,17 @@
 	</div>
 
 	<div id="core">
-		<router-view>
+		<div id="view">
 			<div class="loader">
 				<div class="loader-animation">
 					<img src="/img/loader/triango-outer-layer-blue.svg" />
 					<img src="/img/loader/triango-outer-layer-black.svg" />
 				</div>
 			</div>
-		</router-view>
+		</div>
 	</div>
 
-	<div class="footer click-and-hue" v-on:click="rotateLeHue()">
+	<div class="footer click-and-hue" id="footer-rotate">
 		<div class="flexrow flexcenter flexchildrenend" >
 			<img class="footer-logo" src="/img/website/logos/two-strokes.svg" />
 			<p class="copyright">
@@ -4239,10 +4236,6 @@
 		<path d=" M 500 212 L 250.58 644 L 749.42 644 L 500 212 M 500 20 L 84.31 734 L 915.70 740 L 500 20" stroke-width="1" stroke="black" fill="hsl(200, 83%, 42%)" fill-rule="evenodd" stroke-linecap="round"></path>
 	</svg>
 </template>
-
-<!-- Libs -->
-<script type="text/javascript" src="/node_modules/vue/dist/vue.min.js"></script>
-<script type="text/javascript" src="/node_modules/vue-router/dist/vue-router.min.js"></script>
 
 <!-- Ours -->
 <script type="text/javascript" src="/js/declarations.js"></script>

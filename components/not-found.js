@@ -5,8 +5,10 @@ var NotFoundComponent = {
             requestedRoute: undefined
         }
     },
-    mounted: function () {
-        this.requestedRoute = this.$route.path
+    mounted: function (route) {
+        let requestedRoute = (route && route.path) || window.location.pathname
+        let routeNode = document.getElementById('not-found-route')
+        if (routeNode) routeNode.textContent = requestedRoute
 
         // Glass icosahedron
         let diedral = Math.PI - Math.asin(2/3)

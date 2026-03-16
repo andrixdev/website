@@ -66,6 +66,10 @@ Gallery.injectArtworks = () => {
 			Gallery.artworksOnPage++
 			let img = document.createElement("img")
 
+			// Lazy-load if possible
+			img.loading = "lazy"
+			img.decoding = "async"
+
 			// Set loaded state to true once done
 			img.addEventListener('load', Gallery.updateImageLoadCount)
 
@@ -73,6 +77,9 @@ Gallery.injectArtworks = () => {
 			img.alt = aw.title
 			img.title = aw.title
 			node.appendChild(img)
+
+			// Make sure lazy-loading is activated for newly inserted images
+			if (typeof initLazyImages === 'function') initLazyImages(node)
 		}
 	})
 }
