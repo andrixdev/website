@@ -47,17 +47,29 @@
 			}
 
 			.event-block {
-				margin-bottom: 15px;
+				margin: 25px 0;
 
 				p {
-					span.date {
+					margin: 0;
+
+					&.type {
+						transform: scale(0.9);
+						margin: 0.5em 0;
+
+						.format-icon {
+							padding: 0.05rem .35rem;
+							text-transform: uppercase;
+							opacity: 0.75;
+						}
+					}
+					&.date {
 						font-size: 1.1rem;
 						font-weight: 600;
 					}
-					span.what {
+					&.what {
 						font-style: italic;
 					}
-					span.where {
+					&.where {
 						font-size: .85rem;
 					}
 				}
