@@ -8,7 +8,7 @@ html,
 body {
 	height: 100%;
 	width: 100%;
-	background-color: @background-color;
+		background-color: var(--background-color);
 }
 body {
 	overflow-x: hidden;
@@ -29,15 +29,15 @@ h4, p {
 	}
 }
 .title-block {
-	background: @title-block-color;
+	background: var(--title-block-color);
 	padding: 15px 30px;
-	@media (max-width: @xxs-xs) {
+	@media (max-width: 400px) {
 		padding: 15px;
 	}
 	.flexrow();
 	.flexstart();
-	border-top: solid 5px @title-block-border-color;
-	border-bottom: solid 5px @title-block-border-color;
+	border-top: solid 5px var(--title-block-border-color);
+	border-bottom: solid 5px var(--title-block-border-color);
 
 	.geom {
 		margin-right: 20px;
@@ -60,9 +60,9 @@ h3.categname,
 	/* Yeah stupid selector but reminds me it's mainly for h3's */
 	.center();
 	padding: 10px 5px;
-	background: @category-title-color;
-	border-bottom: solid 5px @category-title-border-color;
-	border-top: solid 5px @category-title-border-color;
+	background: var(--category-title-color);
+	border-bottom: solid 5px var(--category-title-border-color);
+	border-top: solid 5px var(--category-title-border-color);
 	font-size: 2.1rem;
 }
 .showmore-toggle-bar {
@@ -70,7 +70,7 @@ h3.categname,
 	cursor: pointer;
 
 	p.show-text {
-		background: @background-color;
+		background: var(--background-color);
 		color: rgba(255, 255, 255, 0.45);
 		.marjinoto();
 		height: 20px;
@@ -100,16 +100,16 @@ h3.categname,
 .project-tile {
 	margin: 10px;
 	padding: 15px;
-	border: solid @blue-15 2px;
-	border-radius: @border-radius;
-	background: @blue-10;
+	border: solid var(--blue-15) 2px;
+	border-radius: var(--border-radius);
+	background: var(--blue-10);
 	max-width: 90%;
 
 	&.hidden {
 		display: none;
 	}
 	&:hover {
-		background: @blue-15;
+		background: var(--blue-15);
 	}
 	.left-side {
 		img {
@@ -139,7 +139,7 @@ h3.categname,
 .fullwidth-project {
 	padding: 20px;
 	&:nth-of-type(2n) {
-		background: @blue-08;
+			background: var(--blue-08);
 	}
 
 	& > .flexrow {

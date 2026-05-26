@@ -1,19 +1,19 @@
 // main: "./main.less"
 
 .acidbutton {
-	background: @blue-20;
+	background: var(--blue-20);
 	border-radius: 2px;
 	font-weight: 200;
 	border: none;
 	box-shadow: #000 0 0 3px;
-	color: @white;
+	color: var(--white);
 	text-decoration: none;
 	cursor: pointer;
 	padding: .2em .7em;
 	font-size: 1rem;
 
 	&:hover {
-		background: @blue-40;
+		background: var(--blue-40);
 		text-shadow: white 0 0 3px;
 	}
 
@@ -42,7 +42,7 @@
 		padding: 0.3em 0.7em;
 		border-radius: 5000px;
 		margin: auto 12px;
-		border: solid 0.5px @blue-80;
+		border: solid 0.5px var(--blue-80);
 		cursor: pointer;
 		opacity: 0.8;
 
@@ -55,11 +55,11 @@
 			}
 		}
 		&:hover {
-			background: @blue-15;
+			background: var(--blue-15);
 			opacity: 0.95;
 		}
 		&.active {
-			background: @blue-10;
+			background: var(--blue-10);
 			opacity: 0.95;
 
 			span.fa::before {

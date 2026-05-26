@@ -1,5 +1,9 @@
 // main: "./main.less"
 
+// NOTE: LESS variables below are migrated to CSS custom properties in /css/variables.css
+// This file is deprecated but kept for LESS compilation support (media queries, calculations)
+// Prefer using var(--variable-name) in CSS properties
+
 @margin-small: 15px;
 @margin: 30px;
 @margin-large: 60px;
@@ -28,8 +32,8 @@
 
 /* Quick layouting */
 .margin-v-large {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
 }
 .margin-v {
     margin-top: 20px;
@@ -42,7 +46,7 @@
 
 /* Responsive toggling */
 .hide-sm {
-    @media (max-width: @sm-md) {
+    @media (max-width: 991px) {
         display: none;
     }
 }
@@ -138,12 +142,12 @@ hr {
 .img-placeholder {
     min-width: 50px;
     min-height: 50px;
-    background: @blue-25;
+    background: var(--blue-25);
     animation: color-loading 700ms infinite alternate;
 }
 @keyframes color-loading {
-    from { background-color: @blue-08; }
-    to { background-color: @blue-25; }
+    from { background-color: var(--blue-08); }
+    to { background-color: var(--blue-25); }
 }
 
 p.credits {
