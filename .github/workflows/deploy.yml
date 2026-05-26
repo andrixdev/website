@@ -1,0 +1,50 @@
+name: Deploy (master)
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (if present)
+        run: |
+          npm ci || true
+
+      - name: Build (if present)
+        run: |
+          npm run build || true
+
+      - name: Deploy via FTP (OVH)
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftp
+          local-dir: "./"
+          server-dir: ${{ secrets.FTP_PATH }}
+          passive: true
+          git-ftp-args: --delete
+
+# Required GitHub Secrets (add these in repository Settings → Secrets → Actions):
+# - FTP_HOST: FTP server hostname (e.g. ftp.example.com)
+# - FTP_USER: FTP username
+# - FTP_PASSWORD: FTP password (keep secret)
+# - FTP_PATH: target path on remote server (e.g. /www/your-site)
+# - FTP_PORT: optional FTP port (defaults to 21 if empty)
+
+# Notes:
+# - This workflow runs on pushes to branch `master`.
+# - Adjust `source` to deploy only the build output (e.g. ./dist or ./public) if your project builds to a separate folder.
+# - If you prefer GitHub Pages or another provider, I can provide an alternative workflow.
