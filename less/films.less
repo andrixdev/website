@@ -8,4 +8,36 @@
 		width: 600px;
 		max-width: 100%;
 	}
+	a.vimeo-logo-container {
+		padding: 15px;
+		text-decoration: none;
+
+		&:hover {
+			p.mega-vimeo {
+				text-shadow: 0 0 10px @vimeo-blue;
+			}
+			p.mega-vimeo + p {
+				text-shadow: 0 0 10px white;
+			}
+		}
+
+		p {
+			transition: text-shadow 200ms ease;
+		}
+
+		p.mega-vimeo {
+			font-size: 100px;
+			line-height: 1em;
+			margin: 0 auto 0;
+			color: @vimeo-blue;
+			cursor: pointer;
+
+			& + p {
+				line-height: 1em;
+				margin: 0 auto 0;
+			}
+		}
+	}
+	
 }
+
