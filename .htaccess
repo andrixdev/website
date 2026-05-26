@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /website/
+
+# If the request is a real file or directory inside /website/, serve it
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Otherwise, rewrite everything to your SPA's index.html
+RewriteRule ^ index.html [L]
