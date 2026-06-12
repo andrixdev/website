@@ -9,7 +9,23 @@
 	flex-shrink: 0;
 	width: 650px;
 }
-#blog, #vimeo, #guy-teube, #talks {
+#talks {
+	.page-content img {
+		width: 500px;
+	}
+	.talks-video {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding-top: 20px;
+		.center();
+
+		.responsive-iframe-container {
+			margin: 0 auto;
+			max-width: 100%;
+		}
+	}
+}
+#blog, #vimeo, #guy-teube {
 	.meh {
 		.flexrow();
 		.flexcenter();
