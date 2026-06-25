@@ -48,7 +48,6 @@
 <body>
 
 <!-- Views -->
-
 <template id="films-template">
 	<div id="films">
 		<vue-title title="Alex Andrix | Films"></vue-title>
@@ -3289,30 +3288,37 @@
 				<h1>Human Algorithm</h1>
 			</div>
 			<div class="page-content center">
-				<p>A <strong>contemporary art</strong> form questioning the ever-growing use of numbers by humans.</p>
-				<p>Alex Andrix trains himself into becoming a <strong>human algorithm</strong>.</p>
+				<p>A <strong>contemporary art</strong> form questioning the ever-growing use of numbers to evaluate humans.</p>
+				<p>Alex Andrix trains himself into becoming a non-intelligent <strong>human algorithm</strong>.</p>
 				<p>Decomposing integers into <strong>prime factors</strong>.</p>
 
-				<div id="prime-decomposition">
-					<div class="prime-row">
-						<p>Last entry</p>
-						<p class="decomp-number">2909</p>
-						<p><span class="decomp-status">success</span> in <span class="decomp-time">2'35"</span></p>
-						<p class="decomp-date">May 4th, 2026</p>
+				<div class="flexrow flexwrap flexcenter">
+					<div class="prime-block">
+						<p class="head">Last entry</p>
+						<p class="number" id="decomp-number">2909</p>
+						<p><span id="decomp-status">success</span> in <span id="decomp-time">02' 35"</span></p>
+						<p><em><span id="decomp-date">May 4th, 2026</span></em></p>
 					</div>
-					<div class="prime-row">
-						<p>Longest success</p>
-						<p class="longest-decomp-number">310978</p>
-						<p><span class="longest-decomp-status">success</span> in <span class="longest-decomp-time">3h02'35"</span></p>
-						<p class="longest-decomp-date">Apr 4th, 2026</p>
+					<div class="prime-block">
+						<p class="head">Longest success</p>
+						<p class="number" id="longest-decomp-number">310978</p>
+						<p>success in <span id="longest-decomp-time">3h 02' 35"</span></p>
+						<p><em><span class="longest-decomp-date">Apr 4th, 2026</span></em></p>
 					</div>
-					<div class="prime-row">
-						<p>Success ratio: <span class="decomp-ratio">98.6%</span></p>
+					<div class="prime-block">
+						<p class="head">Success ratio</p>
+						<p class="number"><span id="decomp-ratio">98.6%</span></p>
 					</div>
-					<div class="prime-row">
-						<p>Total data processed by human: <span class="decomp-total">798Ko</span></p>
+					<div class="prime-block">
+						<p>Total data processed by human</p>
+						<p class="number"><span id="decomp-total">798 Ko</span></p>
+					</div>
+					<div class="prime-block">
+						<p>Total recorded computation time</p>
+						<p class="number"><span id="computime-total">45h 03' 04"</span></p>
 					</div>
 				</div>
+
 			</div>
 		</div>
 

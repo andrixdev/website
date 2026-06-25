@@ -1,0 +1,18 @@
+{
+    "last_entry": {
+        "number": 5984,
+        "execution_time_seconds": 83,
+        "success": true,
+        "date": "2026-06-14"
+    },
+    "longest_success": {
+        "number": 9991,
+        "execution_time_seconds": 517,
+        "date": "2026-04-10"
+    },
+    "aggregates": {
+        "success_ratio": 0.9318181818,
+        "total_data_processed": 192536,
+        "total_computation_time_seconds": 4302
+    }
+}
