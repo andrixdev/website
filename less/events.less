@@ -1,0 +1,62 @@
+// main: "./main.less"
+
+#events {
+
+	.events-page {
+
+		.events-content {
+			padding: 20px 30px 50px;
+
+			.upcoming-events,
+			.past-events {
+				.center();
+				.flexcol();
+				.flexcenter();
+			}
+
+			.load-past-events.hidden,
+			.past-events.hidden {
+				display: none;
+			}
+
+			.event-block {
+				margin: 15px 0;
+
+				p {
+					margin: 0;
+
+					&.type {
+						transform: scale(0.9);
+						margin: 0.5em 0;
+
+						.format-icon {
+							padding: 0.05rem .4rem;
+							text-transform: uppercase;
+							opacity: 0.55;
+						}
+					}
+					&.date {
+						font-size: 1.1rem;
+						font-weight: 600;
+					}
+					&.what {
+						font-style: italic;
+					}
+					&.where {
+						font-size: .85rem;
+					}
+				}
+			}
+
+			p.past-events-title,
+			p.upcoming-events-title {
+				font-size: 1.4rem;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				margin-top: 40px;
+				font-weight: 200;
+			}
+		}
+	}
+
+}

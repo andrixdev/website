@@ -362,6 +362,7 @@ function initApp() {
     const routes = [
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
+        { path: '/events', component: EventsComponent },
         { path: '/films', component: FilmsComponent },
         { path: '/more', component: MoreComponent },
         { path: '/about', component: AboutComponent },

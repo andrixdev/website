@@ -8,6 +8,7 @@ app.get('/', (req, res) => {
 })
 app.get('/films', (req, res) => res.redirect('/'))
 app.get('/gallery', (req, res) => res.redirect('/'))
+app.get('/events', (req, res) => res.redirect('/'))
 app.get('/more', (req, res) => res.redirect('/'))
 app.get('/about', (req, res) => res.redirect('/'))
 app.get('/contact', (req, res) => res.redirect('/'))
