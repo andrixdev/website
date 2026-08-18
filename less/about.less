@@ -45,4 +45,51 @@
 		}
 	}
 
+	.about-partners {
+		padding: 30px 25px 90px;
+
+		.partner-category {
+			margin-bottom: 90px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			h2 {
+				font-size: 1.4rem;
+				font-weight: 300;
+				margin: 50px 0 40px;
+				text-align: center;
+			}
+		}
+
+		.partner-logos {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 35px 55px;
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				transition: transform 300ms ease-in-out;
+
+				&:hover,
+				&:focus {
+					transform: scale(1.1);
+				}
+			}
+
+			img {
+				height: 80px;
+				width: auto;
+				max-width: 220px;
+				object-fit: contain;
+			}
+		}
+	}
+
 }
