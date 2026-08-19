@@ -35,6 +35,7 @@ jobs:
           local-dir: "./"
           server-dir: ${{ secrets.FTP_PATH }}
           passive: true
+          dangerous-clean-slate: true
           # git-ftp-args: --delete
 
 # Required GitHub Secrets (add these in repository Settings → Secrets → Actions):
