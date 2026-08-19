@@ -71,6 +71,23 @@
 							bottom: -2.5em;
 						}
 					}
+
+					p.pinned-article {
+						position: absolute;
+						right: -35px;
+						bottom: 19px;
+						font-size: 0.7rem;
+						color: rgba(255, 255, 255, 0.2);
+						transform: rotate(90deg);
+						padding: 0;
+
+						@media (max-width: 767px) {
+							transform: none;
+							left: 0;
+							right: 0;
+							bottom: -3.75em;
+						}
+					}
 					
 					img {
 						.img-placeholder();
