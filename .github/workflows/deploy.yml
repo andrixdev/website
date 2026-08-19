@@ -35,7 +35,7 @@ jobs:
           local-dir: "./"
           server-dir: ${{ secrets.FTP_PATH }}
           passive: true
-          git-ftp-args: --delete
+          # git-ftp-args: --delete
 
 # Required GitHub Secrets (add these in repository Settings → Secrets → Actions):
 # - FTP_HOST: FTP server hostname (e.g. ftp.example.com)
