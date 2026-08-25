@@ -91,4 +91,129 @@
 		}
 	}
 
+	.about-sobriety-auto {
+		padding: 30px 25px 60px;
+		font-family: Outfit, serif;
+
+		p {
+			text-align: center;
+		}
+
+		.page-content {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.carbon-total-footprint {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 25px;
+			margin: 20px 0 60px;
+		}
+
+		.carbon-total-icon {
+			font-size: 3.5rem;
+			color: var(--green-50);
+		}
+
+		.carbon-total-value-group {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.carbon-total-value {
+			font-size: 3rem;
+			font-weight: 300;
+			line-height: 1;
+			color: var(--green-50);
+		}
+
+		.carbon-total-unit {
+			font-size: .9rem;
+			color: var(--mid-grey);
+			margin-top: .3em;
+		}
+
+		.carbon-metrics-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 20px 30px;
+		}
+
+		.carbon-metric-item {
+			position: relative;
+			text-align: center;
+			padding: 15px 10px;
+			cursor: help;
+
+			.carbon-metric-icon {
+				display: block;
+				font-size: 1.6rem;
+				margin-bottom: 8px;
+			}
+
+			.carbon-metric-name {
+				display: block;
+				font-size: .95rem;
+				text-transform: capitalize;
+			}
+
+			.carbon-metric-value {
+				display: block;
+				font-size: 1.1rem;
+				font-weight: 300;
+				margin-top: 4px;
+			}
+
+			&.category-data { color: var(--blue-50); }
+			&.category-consumption { color: var(--yellow-50); }
+			&.category-liquid { color: var(--purple-50); }
+			&.category-ai { color: var(--red-50); }
+
+			// Hover reveal, no JS needed
+			.carbon-metric-tooltip {
+				position: absolute;
+				left: 50%;
+				bottom: 100%;
+				transform: translate(-50%, -10px);
+				width: 220px;
+				background: var(--blue-08);
+				border: 1px solid var(--blue-20);
+				border-radius: var(--border-radius);
+				padding: 10px 12px;
+				font-size: .8rem;
+				text-align: left;
+				color: var(--text-color);
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 200ms ease-in-out;
+				pointer-events: none;
+				z-index: 10;
+
+				p {
+					margin: 0 0 6px;
+					text-align: left;
+					font-size: .8rem;
+					font-weight: 300;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			&:hover .carbon-metric-tooltip {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			transition: transform 300ms ease-in-out;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+
 }

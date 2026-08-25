@@ -5,35 +5,6 @@ var MoreComponent = {
         return { }
     },
     methods: {
-        formatVerboseDate: function (dateString) {
-            if (!dateString) return ""
-            
-            // Split the YYYY-MM-DD string to avoid timezone/DST shifting issues
-            var parts = dateString.split('-')
-            if (parts.length !== 3) return dateString // Fallback if format is unexpected
-            
-            var year = parts[0]
-            // JavaScript months are 0-indexed (January is 0, December is 11)
-            var monthIndex = parseInt(parts[1], 10) - 1
-            var day = parseInt(parts[2], 10)
-
-            // Define short month array names
-            var shortMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-            var monthName = shortMonths[monthIndex] || ""
-
-            // Determine the mathematical ordinal suffix (st, nd, rd, th)
-            var suffix = "th"
-            if (day < 11 || day > 13) {
-                switch (day % 10) {
-                    case 1: suffix = "st"; break
-                    case 2: suffix = "nd"; break
-                    case 3: suffix = "rd"; break
-                }
-            }
-
-            // Reconstruct into the desired typographical layout
-            return monthName + " " + day + suffix + ", " + year
-        },
         formatDuration: function (totalSeconds) {
             if (totalSeconds === undefined || totalSeconds === null || isNaN(totalSeconds)) {
                 return "--"
@@ -77,28 +48,28 @@ var MoreComponent = {
                 .then(data => {
                     // 1. Map Last Entry Data Group
                     if (data.last_entry) {
-                        this.safelySetText("#decomp-number", data.last_entry.number)
-                        this.safelySetText("#decomp-time", this.formatDuration(data.last_entry.execution_time_seconds))
-                        this.safelySetText("#decomp-status", data.last_entry.success ? "success" : "failed")
-                        this.safelySetText("#decomp-date", this.formatVerboseDate(data.last_entry.date))
+                        safelySetText("#decomp-number", data.last_entry.number)
+                        safelySetText("#decomp-time", this.formatDuration(data.last_entry.execution_time_seconds))
+                        safelySetText("#decomp-status", data.last_entry.success ? "success" : "failed")
+                        safelySetText("#decomp-date", formatVerboseDate(data.last_entry.date))
                     }
 
                     // 2. Map Longest Success Data Group
                     if (data.longest_success) {
-                        this.safelySetText("#longest-decomp-number", data.longest_success.number)
-                        this.safelySetText("#longest-decomp-time", this.formatDuration(data.longest_success.execution_time_seconds))
-                        this.safelySetText("#longest-decomp-date", this.formatVerboseDate(data.longest_success.date))
+                        safelySetText("#longest-decomp-number", data.longest_success.number)
+                        safelySetText("#longest-decomp-time", this.formatDuration(data.longest_success.execution_time_seconds))
+                        safelySetText("#longest-decomp-date", formatVerboseDate(data.longest_success.date))
                     }
 
                     // 3. Map Aggregates Data Group
                     if (data.aggregates) {
                         // Formats decimal ratio (e.g., 0.9318) cleanly to a localized percentage (e.g., 93.18%)
                         const formattedRatio = (data.aggregates.success_ratio * 100).toFixed(2) + " %"
-                        this.safelySetText("#decomp-ratio", formattedRatio)
+                        safelySetText("#decomp-ratio", formattedRatio)
                         
                         // Formats plain numbers to use localized thousands separators (e.g., 192536 to 192 536)
-                        this.safelySetText("#decomp-total", data.aggregates.total_data_processed.toLocaleString('en-US').replace(/,/g, ' '));
-                        this.safelySetText("#computime-total", this.formatDuration(data.aggregates.total_computation_time_seconds))
+                        safelySetText("#decomp-total", data.aggregates.total_data_processed.toLocaleString('en-US').replace(/,/g, ' '));
+                        safelySetText("#computime-total", this.formatDuration(data.aggregates.total_computation_time_seconds))
                     }
                 })
                 .catch(error => {
@@ -110,15 +81,8 @@ var MoreComponent = {
                         "#longest-decomp-number", "#longest-decomp-time", "#longest-decomp-date",
                         "#decomp-ratio", "#decomp-total", "#computime-total"
                     ];
-                    targets.forEach(selector => this.safelySetText(selector, "--"))
+                    targets.forEach(selector => safelySetText(selector, "--"))
                 });
-        },
-        // Defensive helper function to ensure no error is thrown if a DOM element is missing
-        safelySetText: function (selector, value) {
-            var element = document.querySelector(selector)
-            if (element) {
-                element.textContent = value
-            }
         }
     },
     mounted: function () {

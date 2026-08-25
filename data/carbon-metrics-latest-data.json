@@ -1,0 +1,21 @@
+{
+    "total_weekly_carbon_kg": 109.1206693,
+    "last_updated": "2026-08-25",
+    "metrics": [
+        { "id": "energy", "name": "Energy", "unit": "Wh", "weekly_average": 2418.911765, "factor_to_kg_co2": 0.000055, "factor_info": "International Energy Agency", "weekly_carbon_kg": 0.1330401471 },
+        { "id": "wifi", "name": "WiFi", "unit": "GB", "weekly_average": 11.27617647, "factor_to_kg_co2": 0.015, "factor_info": "Data Transmission", "weekly_carbon_kg": 0.1691426471 },
+        { "id": "5g", "name": "5G", "unit": "GB", "weekly_average": 3.514516129, "factor_to_kg_co2": 0.05, "factor_info": "Mobile Communication Union", "weekly_carbon_kg": 0.1757258065 },
+        { "id": "cold-water", "name": "Cold water", "unit": "L", "weekly_average": 210.4056604, "factor_to_kg_co2": 0.00042, "factor_info": "ADEME", "weekly_carbon_kg": 0.08837037736 },
+        { "id": "hot-water", "name": "Hot water", "unit": "L", "weekly_average": 69.73584906, "factor_to_kg_co2": 0.0124, "factor_info": "ADEME", "weekly_carbon_kg": 0.8647245283 },
+        { "id": "gasoline", "name": "Gasoline", "unit": "L", "weekly_average": 12.60735294, "factor_to_kg_co2": 2.75, "factor_info": "Well-to-wheel", "weekly_carbon_kg": 34.67022059 },
+        { "id": "kerosene", "name": "Kerosene", "unit": "L", "weekly_average": 15.83641509, "factor_to_kg_co2": 4.5, "factor_info": "Atmospheric Science Ratio / Non-CO2 factored", "weekly_carbon_kg": 71.26386792 },
+        { "id": "train-travels", "name": "Train travels", "unit": "kg eqCO2", "weekly_average": 1.651764706, "factor_to_kg_co2": 1, "factor_info": "SNCF", "weekly_carbon_kg": 1.651764706 },
+        { "id": "ai-engine-prompts", "name": "AI engine prompts", "unit": "units", "weekly_average": 2.647058824, "factor_to_kg_co2": 0.0005, "factor_info": "Jegham et al. 2025", "weekly_carbon_kg": 0.001323529412 },
+        { "id": "ai-copilot-prompts", "name": "AI Copilot prompts", "unit": "units", "weekly_average": 5.660377358, "factor_to_kg_co2": 0.001, "factor_info": "Estimating the Carbon Footprint", "weekly_carbon_kg": 0.005660377358 },
+        { "id": "ai-copilot-credits", "name": "AI Copilot credits", "unit": "units", "weekly_average": 35.02941176, "factor_to_kg_co2": 0.0005, "factor_info": "kgCO2eq for AI usage", "weekly_carbon_kg": 0.01751470588 },
+        { "id": "ai-gemini-prompts", "name": "AI Gemini prompts", "unit": "units", "weekly_average": 41.02941176, "factor_to_kg_co2": 0.0005, "factor_info": "Jegham et al. 2025", "weekly_carbon_kg": 0.02051470588 },
+        { "id": "produced-software", "name": "Produced software", "unit": "GB", "weekly_average": 4.75, "factor_to_kg_co2": 0.0001923076923, "factor_info": "GitHub (GSF)", "weekly_carbon_kg": 0.0009134615385 },
+        { "id": "cloud-data", "name": "Cloud data", "unit": "GB", "weekly_average": 303.3823529, "factor_to_kg_co2": 0.0001730769231, "factor_info": "Cloud - Green Cloud Advisory / ADEME", "weekly_carbon_kg": 0.05250848416 },
+        { "id": "local-data", "name": "Local data", "unit": "GB", "weekly_average": 1398.088235, "factor_to_kg_co2": 0.0000384615384, "factor_info": "ADEME", "weekly_carbon_kg": 0.005377262443 }
+    ]
+}
