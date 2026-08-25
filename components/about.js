@@ -9,11 +9,11 @@ var AboutComponent = {
             'energy':               { icon: 'fa-bolt',   category: 'consumption' },
             'wifi':                 { icon: 'fa-wifi',   category: 'data' },
             '5g':                   { icon: 'fa-signal', category: 'data' },
-            'cold-water':           { icon: 'fa-glass',  category: 'liquid' },
-            'hot-water':            { icon: 'fa-glass',  category: 'liquid' },
-            'gasoline':             { icon: 'fa-car',    category: 'liquid' },
-            'kerosene':             { icon: 'fa-plane',  category: 'liquid' },
-            'train-travels':        { icon: 'fa-train',  category: 'liquid' },
+            'cold-water':           { icon: 'fa-glass',  category: 'water' },
+            'hot-water':            { icon: 'fa-glass',  category: 'water' },
+            'gasoline':             { icon: 'fa-car',    category: 'transport-gasoline' },
+            'kerosene':             { icon: 'fa-plane',  category: 'transport-kerosene' },
+            'train-travels':        { icon: 'fa-train',  category: 'transport-train' },
             'ai-engine-prompts':    { icon: 'fa-cube',   category: 'ai' },
             'ai-copilot-prompts':   { icon: 'fa-cube',   category: 'ai' },
             'ai-copilot-credits':   { icon: 'fa-cube',   category: 'ai' },
@@ -63,6 +63,7 @@ var AboutComponent = {
                     }
                     if (Array.isArray(data.metrics)) {
                         this.renderCarbonMetrics(data.metrics)
+                        this.renderCarbonPieChart(data.metrics, data.total_weekly_carbon_kg)
                     }
                 })
                 .catch(error => {
@@ -70,7 +71,79 @@ var AboutComponent = {
 
                     safelySetText("#carbon-total-value", "--")
                     safelySetText("#carbon-last-update", "Last update: --")
+                    this.renderCarbonPieChart([], 0)
                 })
+        },
+        // Classic SVG donut-chart trick: circumference is 100, so dasharray/dashoffset are plain percentages
+        renderCarbonPieChart: function (metrics, totalWeeklyCarbonKg) {
+            let svg = document.querySelector("#carbon-piechart")
+            if (!svg) return
+
+            svg.innerHTML = ""
+            this.resetCarbonPieDetails()
+
+            if (!totalWeeklyCarbonKg) return
+
+            const svgNs = "http://www.w3.org/2000/svg"
+            // Floor visual share so tiny slices stay hoverable, real percent is kept for the details panel
+            const minVisualPercent = 0.5
+            let cumulativePercent = 0
+
+            let totalWithMinVisual = metrics.reduce((sum, metric) => {
+                let percent = metric.weekly_carbon_kg / totalWeeklyCarbonKg * 100
+                if (percent > 0 && percent < minVisualPercent) {
+                    return sum + minVisualPercent
+                }
+                return sum + percent
+            }, 0)
+
+            //console.log("Total with min visual percent:", totalWithMinVisual)
+
+            metrics.forEach(metric => {
+                let percent = metric.weekly_carbon_kg / totalWeeklyCarbonKg * 100
+                if (!(percent > 0)) return
+
+                let visualPercent = percent
+                if (visualPercent < minVisualPercent) {
+                    visualPercent = minVisualPercent
+                }
+                visualPercent *= 100 / totalWithMinVisual
+
+                let meta = this.carbonMetricMeta[metric.id] || { category: 'data' }
+
+                console.log(visualPercent, "% for", metric.name, "(", percent, "% real )")
+
+                let circle = document.createElementNS(svgNs, "circle")
+                circle.setAttribute("cx", "21")
+                circle.setAttribute("cy", "21")
+                circle.setAttribute("r", "15.91549430918954")
+                circle.setAttribute("class", "carbon-pie-slice category-" + meta.category)
+                circle.setAttribute("stroke-dasharray", `${visualPercent} ${100 - visualPercent}`)
+                circle.setAttribute("stroke-dashoffset", 25 - cumulativePercent)
+
+                circle.addEventListener("mouseenter", () => this.showCarbonPieDetails(metric, percent))
+                circle.addEventListener("mouseleave", () => this.resetCarbonPieDetails())
+
+                svg.appendChild(circle)
+
+                cumulativePercent += visualPercent
+            })
+        },
+        showCarbonPieDetails: function (metric, percent) {
+            let details = document.querySelector("#carbon-piechart-details")
+            if (!details) return
+
+            details.innerHTML = `
+                <p class="metric-name">${metric.name}</p>
+                <p class="metric-percent">${percent.toFixed(1)}% of weekly carbon</p>
+                <p class="metric-carbon">${this.formatCarbonMetricValue(metric)} &middot; ${this.toSignificantFigures(metric.weekly_carbon_kg)} kg eqCO2</p>
+            `
+        },
+        resetCarbonPieDetails: function () {
+            let details = document.querySelector("#carbon-piechart-details")
+            if (!details) return
+
+            details.innerHTML = "<p class=\"placeholder\">Hover a slice to see details</p>"
         },
         renderCarbonMetrics: function (metrics) {
             let grid = document.querySelector("#carbon-metrics-grid")

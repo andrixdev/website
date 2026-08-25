@@ -136,6 +136,60 @@
 			margin-top: .3em;
 		}
 
+		.carbon-piechart-section {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 30px;
+			margin: 0 0 50px;
+		}
+
+		.carbon-piechart {
+			width: 170px;
+			height: 170px;
+			flex-shrink: 0;
+		}
+
+		.carbon-pie-slice {
+			fill: none;
+			stroke-width: 4;
+			cursor: pointer;
+			transition: stroke-width 200ms ease-in-out;
+
+			&:hover { stroke-width: 6; }
+
+			&.category-data { stroke: var(--blue-50); }
+			&.category-consumption { stroke: var(--yellow-50); }
+			&.category-water { stroke: var(--indigo-50); }
+			&.category-transport-gasoline { stroke: var(--purple-50); }
+			&.category-transport-kerosene { stroke: var(--purpler-50); }
+			&.category-transport-train { stroke: var(--purplest-50); }
+			&.category-ai { stroke: var(--red-50); }
+		}
+
+		.carbon-piechart-details {
+			min-width: 200px;
+			max-width: 260px;
+			text-align: left;
+
+			@media (max-width: 550px) {
+				display: none;
+			}
+
+			p {
+				text-align: left;
+				margin: 0 0 6px;
+				font-size: .9rem;
+
+				&:last-child { margin-bottom: 0; }
+			}
+
+			.placeholder { color: var(--mid-grey); font-style: italic; }
+			.metric-name { font-size: 1.05rem; font-weight: 400; text-transform: capitalize; }
+			.metric-percent, .metric-carbon { color: var(--mid-grey); }
+		}
+
 		.carbon-metrics-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -169,7 +223,10 @@
 
 			&.category-data { color: var(--blue-50); }
 			&.category-consumption { color: var(--yellow-50); }
-			&.category-liquid { color: var(--purple-50); }
+			&.category-water { color: var(--indigo-50); }
+			&.category-transport-gasoline { color: var(--purple-50); }
+			&.category-transport-kerosene { color: var(--purpler-50); }
+			&.category-transport-train { color: var(--purplest-50); }
 			&.category-ai { color: var(--red-50); }
 
 			// Hover reveal, no JS needed

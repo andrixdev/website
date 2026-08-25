@@ -36,9 +36,12 @@
 
   /* Colors - Accent */
   --red-50: hsl(5, 50%, 50%);
+  --indigo-50: hsl(230, 50%, 50%);
   --green-50: hsl(160, 50%, 50%);
   --yellow-50: hsl(55, 50%, 50%);
-  --purple-50: hsl(280, 50%, 50%);
+  --purple-50: hsl(250, 50%, 50%);
+  --purpler-50: hsl(270, 50%, 50%);
+  --purplest-50: hsl(290, 50%, 50%);
 
   /* Colors - Text */
   --mid-grey: hsl(200, 10%, 60%);
