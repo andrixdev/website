@@ -122,6 +122,7 @@ var AboutComponent = {
                 circle.setAttribute("stroke-dashoffset", 25 - cumulativePercent)
 
                 circle.addEventListener("mouseenter", () => this.showCarbonPieDetails(metric, percent))
+                circle.addEventListener("click", () => this.showCarbonPieDetails(metric, percent))
                 circle.addEventListener("mouseleave", () => this.resetCarbonPieDetails())
 
                 svg.appendChild(circle)
