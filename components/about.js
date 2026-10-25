@@ -18,6 +18,8 @@ var AboutComponent = {
             'ai-copilot-prompts':   { icon: 'fa-cube',   category: 'ai' },
             'ai-copilot-credits':   { icon: 'fa-cube',   category: 'ai' },
             'ai-gemini-prompts':    { icon: 'fa-cube',   category: 'ai' },
+            'ai-claude-input-tokens':  { icon: 'fa-cube', category: 'ai' },
+            'ai-claude-output-tokens': { icon: 'fa-cube', category: 'ai' },
             'produced-software':    { icon: 'fa-github', category: 'data' },
             'cloud-data':           { icon: 'fa-cloud',  category: 'data' },
             'local-data':           { icon: 'fa-database', category: 'data' }
@@ -25,7 +27,9 @@ var AboutComponent = {
         // Some metrics are stored in a smaller unit than what makes sense to display
         carbonMetricUnitOverride: {
             'energy':      { divideBy: 1000, unit: 'kWh' },
-            'local-data':  { divideBy: 1000, unit: 'TB' }
+            'local-data':  { divideBy: 1000, unit: 'TB' },
+            'ai-claude-input-tokens':  { divideBy: 1000000, unit: 'M tokens' },
+            'ai-claude-output-tokens': { divideBy: 1000, unit: 'k tokens' }
         },
         formatCarbonMetricValue: function (metric) {
             let value = metric.weekly_average

@@ -5,7 +5,7 @@ set_time_limit(60);
 // Configuration
 $spreadsheetId   = '1wikg9wLBdXCMxZZBC3adIluOarrSpZiG8xg_EUP-eqY';
 // Metrics block (name/unit/average/factor/info/carbon) + total block, queried in a single batch request
-$metricsRange    = 'Carbon!A2:P7';
+$metricsRange    = 'Carbon!A2:R7';
 $totalRange      = 'Carbon!A12:B12';
 $jsonKeyFilePath = __DIR__ . '/human-algorithm-cron-d2896ed90701.json';
 
@@ -103,7 +103,7 @@ if (count($metricsRows) < 6) {
 }
 
 /**
- * Spatial mapping of the metrics block (columns B to P, one column per metric):
+ * Spatial mapping of the metrics block (columns B to R, one column per metric):
  * row 0 -> Metrics (names)
  * row 1 -> Unit
  * row 2 -> Weekly average
@@ -111,12 +111,14 @@ if (count($metricsRows) < 6) {
  * row 4 -> Factor information
  * row 5 -> Weekly carbon
  *
- * Column B..P maps to these stable metric ids/names, in spreadsheet order.
+ * Column B..R maps to these stable metric ids/names, in spreadsheet order.
+ * Columns N and O (Claude input/output tokens) are pasted weekly from tools/claude_footprint.py.
  */
 $metricIds = [
     'energy', 'wifi', '5g', 'cold-water', 'hot-water', 'gasoline', 'kerosene',
     'train-travels', 'ai-engine-prompts', 'ai-copilot-prompts', 'ai-copilot-credits',
-    'ai-gemini-prompts', 'produced-software', 'cloud-data', 'local-data'
+    'ai-gemini-prompts', 'ai-claude-input-tokens', 'ai-claude-output-tokens',
+    'produced-software', 'cloud-data', 'local-data'
 ];
 
 $names      = array_slice($metricsRows[0], 1);

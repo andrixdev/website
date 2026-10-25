@@ -1,3 +1,8 @@
 node_modules
 .idea
 Thumbs.db
+
+# Raw claude.ai exports (full chat history), read locally by tools/claude_footprint.py
+claude-conversations/
+conversations*.json
+conversations*.zip
