@@ -1,13 +1,11 @@
 /**
  * CSS Variables for alexandrix.com
- * Generated from LESS variables
+ * Site-wide design tokens
  */
 
 :root {
   /* Colors - Base */
   --white: #FFFFFF;
-  --super-light-grey: #EEE;
-  --sat: 50%;
 
   /* Colors - Blue Scale */
   --blue-02: hsl(200, 50%, 2%);
@@ -18,17 +16,9 @@
   --blue-20: hsl(200, 50%, 20%);
   --blue-25: hsl(200, 50%, 25%);
   --blue-40: hsl(200, 50%, 40%);
-  --blue-45: hsl(200, 50%, 45%);
   --blue-50: hsl(200, 50%, 50%);
-  --blue-55: hsl(200, 50%, 55%);
-  --blue-60: hsl(200, 50%, 60%);
-  --blue-65: hsl(200, 50%, 65%);
-  --blue-70: hsl(200, 50%, 70%);
-  --blue-75: hsl(200, 50%, 75%);
   --blue-80: hsl(200, 50%, 80%);
-  --blue-85: hsl(200, 50%, 85%);
   --blue-90: hsl(200, 50%, 90%);
-  --blue-95: hsl(200, 50%, 95%);
 
   /* Colors - Special */
   --blue-40-transparent: hsla(200, 50%, 40%, 0.15);
@@ -46,11 +36,9 @@
   /* Colors - Text */
   --mid-grey: hsl(200, 10%, 60%);
   --blue-light-text: hsl(200, 20%, 80%);
-  --blue-dark-text: hsl(200, 20%, 20%);
 
   /* Colors - Theme (Dark) */
   --background-color: var(--blue-02);
-  --header-color: var(--blue-15);
   --header-border-color: var(--blue-10);
   --title-block-color: var(--blue-05);
   --title-block-border-color: var(--blue-08);
@@ -59,17 +47,6 @@
   --text-color: var(--blue-light-text);
 
   /* Spacing */
-  --margin-small: 15px;
   --margin: 30px;
-  --margin-large: 60px;
   --border-radius: 1px;
-  --padding: 15px;
-  --padding-large: 30px;
-
-  /* Breakpoints */
-  --xxs-xs: 400px;
-  --xs-sm: 767px;
-  --sm-md: 991px;
-  --md-lg: 1199px;
-  --lg-xl: 1600px;
 }
