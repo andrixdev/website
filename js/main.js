@@ -132,11 +132,12 @@ class Router {
 
     navigate(location, { replace = false, skipHistory = false } = {}) {
         const raw = typeof location === 'string' ? { path: location } : (location || {})
-        const path = this.normalizePath(raw.path || window.location.pathname)
+        // The language prefix (/fr) is not part of the route: it only shows in the URL
+        const path = I18n.stripLocale(this.normalizePath(raw.path || window.location.pathname))
         const query = raw.query || this.parseQuery(window.location.search)
 
         const to = { path, query, fullPath: this.buildFullPath(path, query) }
-        const from = this.currentRoute || { path: window.location.pathname, query: this.parseQuery(window.location.search), fullPath: window.location.href }
+        const from = this.currentRoute || { path: I18n.stripLocale(this.normalizePath(window.location.pathname)), query: this.parseQuery(window.location.search), fullPath: window.location.href }
 
         const proceed = () => {
             const route = this.matchRoute(path)
@@ -150,7 +151,7 @@ class Router {
             // Update history
             if (!skipHistory) {
                 const state = { path: to.path, query: to.query }
-                const url = to.fullPath
+                const url = I18n.localizePath(to.fullPath)
                 if (replace) history.replaceState(state, '', url)
                 else history.pushState(state, '', url)
             }
@@ -214,6 +215,9 @@ class Router {
         const fragment = this._createRouteFragment(route)
         view.appendChild(fragment)
 
+        // Translate before custom components read their attributes (page title)
+        I18n.apply(view)
+
         // Post-process custom components (vue-title, geom, etc.)
         processCustomComponents(view)
 
@@ -235,6 +239,7 @@ class Router {
 
         // Update active menu tabs
         updateActiveMenu(to.path)
+        I18n.pageChanged(to.fullPath)
 
         // Run after hooks
         this._runAfterEach(to, from)
@@ -338,7 +343,7 @@ function updateActiveMenu(path) {
     const normalized = path.replace(/\/?$/, '') || '/'
     document.querySelectorAll('.menu-tab').forEach(el => {
         const href = el.getAttribute('href') || ''
-        const anchorPath = (href.split('?')[0] || '/').replace(/\/?$/, '') || '/'
+        const anchorPath = I18n.stripLocale((href.split('?')[0] || '/').replace(/\/?$/, '') || '/')
         el.classList.toggle('active', anchorPath === normalized)
     })
 }
@@ -359,6 +364,9 @@ function safeClickHandler(event) {
 }
 
 function initApp() {
+    // Wrong language for this visitor: the browser is already navigating to the right one
+    if (I18n.redirecting) return
+
     const routes = [
         { path: '/', component: HomeComponent },
         { path: '/gallery', component: GalleryComponent },
@@ -386,6 +394,9 @@ function initApp() {
         footer.addEventListener('click', rotateLeHue)
     }
 
+    // Translate the static parts of the page (head, menu, footer) before their custom components are processed
+    I18n.apply(document)
+
     // Display first page
     Global.router.navigate({ path: window.location.pathname, query: Global.router.parseQuery(window.location.search) }, { replace: true, skipHistory: true })
 
@@ -395,6 +406,7 @@ function initApp() {
     // Animations
     fadeInTitles()
     fadeInBanner()
+    I18n.finish()
 
     const headerNode = document.getElementsByClassName('header')[0]
     const mobileBurgerNode = document.getElementById('menu-mobile-burger')
@@ -518,7 +530,7 @@ let fadeInBanner = () => {
 
 // Kick off app
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initApp)
+    document.addEventListener('DOMContentLoaded', () => I18n.ready.then(initApp))
 } else {
-    initApp()
+    I18n.ready.then(initApp)
 }
