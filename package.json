@@ -4,14 +4,15 @@
   "description": "Alex Andrix website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "i18n:check": "node scripts/i18n.js check",
+    "i18n:tag": "node scripts/i18n.js tag"
   },
   "author": "Alex Andrix",
   "license": "ISC",
-  "dependencies": {
-  },
   "devDependencies": {
     "express": "^4.17.1",
-    "less": "^3.13.1"
+    "less": "^3.13.1",
+    "parse5": "^7.1.2"
   }
 }

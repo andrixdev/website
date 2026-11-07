@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 
 app.use(express.static(__dirname + "/"));
+app.get(/^\/fr(\/.*)?$/, (req, res) => res.sendFile(path.join(__dirname, 'index.html')))
 app.get('/', (req, res) => {
     res.render('index.html')
 })

@@ -24,6 +24,12 @@ function formatVerboseDate(dateString) {
     var monthIndex = parseInt(parts[1], 10) - 1
     var day = parseInt(parts[2], 10)
 
+    // Other languages: let the browser name the month (and write 1er in French)
+    if (I18n.locale !== I18n.defaultLocale) {
+        return new Intl.DateTimeFormat(I18n.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+            .format(new Date(Date.UTC(Number(year), monthIndex, day)))
+    }
+
     var shortMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     var monthName = shortMonths[monthIndex] || ""
 
