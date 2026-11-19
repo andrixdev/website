@@ -353,9 +353,15 @@ function rotateLeHue() {
     document.body.style.filter = 'hue-rotate(' + hue + 'deg)'
 }
 
+function resetLeHue() {
+    document.body.style.filter = ''
+}
+
 function safeClickHandler(event) {
     const link = event.target.closest('a[data-route]')
     if (!link) return
+    // Footer easter egg escape hatch: any menu tab restores the original colors
+    if (link.classList.contains('menu-tab')) resetLeHue()
     if (event.defaultPrevented) return
     const href = link.getAttribute('href')
     if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#')) return
